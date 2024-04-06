@@ -27,6 +27,14 @@ const links = [{
     <template #right>
       <UButton
         size="xs"
+        to="https://wa.me/32473344656"
+        icon="i-logos-whatsapp-icon"
+        variant="soft"
+        target="_blank"
+        aria-label="contact me on WhatsApp"
+      />
+      <UButton
+        size="xs"
         variant="soft"
         icon="i-mdi-github"
         to="https://github.com/vernaillen/vernaillen.dev/"

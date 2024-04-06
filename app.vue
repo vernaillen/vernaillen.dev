@@ -34,7 +34,7 @@ useSeoMeta({
     </NuxtLayout>
 
     <UNotifications />
-    <div class="absolute left-0 bottom-5 z-[-1]">
+    <div class="sticky right-0 bottom-14 z-[-1]">
       <SvgoFooter class="w-20" />
     </div>
   </div>

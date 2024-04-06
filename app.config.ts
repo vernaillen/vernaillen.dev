@@ -12,6 +12,18 @@ export default defineAppConfig({
     },
     header: {
       logo: 'absolute top-0',
-    }
+      links: {
+        base: 'border-t-2 h-16 px-1',
+        inactive: 'border-transparent',
+        active: 'border-vernaillen-500',
+      },
+    },
+    aside: {
+      links: {
+        base: 'border-l-2 border-r-2 border-transparent hover:border-vernaillen-500',
+        inactive: '',
+        active: 'border-vernaillen-500',
+      },
+    },
   },
 })
