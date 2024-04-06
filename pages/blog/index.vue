@@ -19,7 +19,7 @@ useSeoMeta({
 })
 
 defineOgImage({
-  component: 'Saas',
+  component: 'Vernaillen',
   title: page.value.title,
   description: page.value.description
 })
@@ -30,7 +30,7 @@ defineOgImage({
     <UPageHeader v-bind="page" class="py-[50px]" />
 
     <UPageBody>
-      <UBlogList>
+      <UBlogList class="slide-enter-content">
         <UBlogPost
           v-for="(post, index) in posts"
           :key="index"
@@ -46,6 +46,8 @@ defineOgImage({
           :ui="{
             description: 'line-clamp-2'
           }"
+          class="slide-enter"
+          :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
         />
       </UBlogList>
     </UPageBody>

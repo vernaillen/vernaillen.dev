@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-ui-pro-template-saas",
+  "name": "vernaillen.nuxt",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,6 +12,7 @@
     "typecheck": "nuxt typecheck"
   },
   "dependencies": {
+    "@iconify-json/carbon": "^1.1.31",
     "@iconify-json/heroicons": "^1.1.20",
     "@iconify-json/mdi": "^1.1.65",
     "@iconify-json/simple-icons": "^1.1.98",

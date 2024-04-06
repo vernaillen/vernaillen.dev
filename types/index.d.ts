@@ -12,3 +12,14 @@ export interface BlogPost extends ParsedContent {
     avatar?: Avatar
   } & Link)[]
 }
+
+export interface CareerStep {
+  client: string
+  contract?: string
+  date: string
+  project: string
+  projectUrl?: string
+  role: string
+  stack: string
+  imageUrl?: string
+}

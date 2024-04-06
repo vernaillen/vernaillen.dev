@@ -19,15 +19,15 @@ useHead({
 
 useSeoMeta({
   titleTemplate: '%s - Vernaillen.dev by Wouter Vernaillen',
-  ogImage: 'https://saas-template.nuxt.dev/social-card.png',
-  twitterImage: 'https://saas-template.nuxt.dev/social-card.png',
+  ogImage: 'https://vernaillen.dev/social-card.png',
+  twitterImage: 'https://vernaillen.dev/social-card.png',
   twitterCard: 'summary_large_image'
 })
 </script>
 
 <template>
   <div>
-    <NuxtLoadingIndicator />
+    <NuxtLoadingIndicator color="repeating-linear-gradient(to right,rgb(156 142 27/40%) 0%,rgb(156 142 27/60%) 80%,rgb(156 142 27/40%) 100%)" />
 
     <NuxtLayout>
       <NuxtPage />
@@ -36,3 +36,28 @@ useSeoMeta({
     <UNotifications />
   </div>
 </template>
+
+<style>
+@keyframes slide-enter {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 100
+  }
+}
+
+@media (prefers-reduced-motion:no-preference) {
+  :not(.no-sliding) .slide-enter-content :not(.no-sliding) [slide-enter],
+  :not(.no-sliding) .slide-enter-content :not(.no-sliding) .slide-enter {
+    --enter-stage: 0;
+    --enter-step: 30ms;
+    --enter-initial: 0ms;
+    animation: slide-enter 0.1s both 0.1s;
+    animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
+  }
+}
+
+</style>

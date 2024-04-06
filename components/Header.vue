@@ -4,11 +4,14 @@ import type { NavItem } from '@nuxt/content/dist/runtime/types'
 const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 
 const links = [{
-  label: 'Docs',
-  to: '/docs'
+  label: 'Home',
+  to: '/'
 }, {
-  label: 'Pricing',
-  to: '/pricing'
+  label: 'Career',
+  to: '/career'
+}, {
+  label: 'Projects',
+  to: '/projects'
 }, {
   label: 'Blog',
   to: '/blog'

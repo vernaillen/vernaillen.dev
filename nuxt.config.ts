@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     }
   },
   ui: {
-    icons: ['heroicons', 'simple-icons', 'mdi']
+    icons: ['heroicons', 'simple-icons', 'mdi', 'carbon']
   },
   svgo: {
     svgo: true,
@@ -39,8 +39,7 @@ export default defineNuxtConfig({
     preference: 'light'
   },
   routeRules: {
-    '/api/search.json': { prerender: true },
-    '/docs': { redirect: '/docs/getting-started', prerender: false }
+    '/api/search.json': { prerender: true }
   },
   devtools: {
     enabled: true

@@ -1,5 +1,5 @@
-title: Nuxt UI Pro - SaaS template
-description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+title: Wouter Vernaillen - Freelance Full Stack Developer
+description: Java, Spring, Nuxt & DevOps
 navigation: false
 hero:
   title: Wouter Vernaillen
@@ -11,17 +11,16 @@ hero:
       to: '/blog'
       size: xl
       color: primary
-      icon: i-mdi-blogger
+      icon: i-heroicons-newspaper
       trailing: true
-    - label: Github
-      icon: i-simple-icons-github
+    - label: Projects
+      icon: i-carbon-ibm-cloud-projects
       size: xl
       color: gray
-      to: https://github.com/vernaillen
-      target: _blank
+      to: /projects
 sections:
-  - title: The power of our service
-    description: Aliqua labore laboris fugiat. Reprehenderit exercitation eu commodo. Officia nostrud sit et aliqua ea ex sunt minim incididunt sunt.
+  - title: Discover WPNuxt
+    description: Use WordPress as a headless CMS with Nuxt
     id: features
     align: left
     features:
@@ -42,7 +41,7 @@ sections:
         trailing: true
         size: md
         class: ml-8
-  - title: The speed of our service
+  - title: Web Development
     description: Cillum sint enim excepteur ut deserunt qui nisi in deserunt in. Deserunt aliquip quis aliquip eu quis ex velit velit nostrud sit.
     align: right
     features:
@@ -64,7 +63,7 @@ sections:
         size: md
         class: ml-8
 features:
-  title: Why choose our service?
+  title: Consultancy services
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   items:
     - title: Easy to use
@@ -87,7 +86,7 @@ features:
       icon: i-heroicons-chart-bar
 testimonials:
   headline: Testimonials
-  title: What our customers are saying.
+  title: What my customers are saying.
   description: Proident sunt exercitation minim laborum enim laboris labore esse.
   items:
     - quote: Nostrud tempor sunt fugiat. Dolor in sint dolore labore non occaecat adipisicing Lorem labore ullamco enim excepteur. In fugiat Lorem sit velit id veniam esse eiusmod non ea voluptate cupidatat reprehenderit ullamco dolore. Mollit laborum occaecat aliquip.
@@ -132,11 +131,3 @@ testimonials:
         avatar:
           src: https://i.pravatar.cc/120?img=9
           loading: lazy
-cta:
-  title: Get started today
-  description: Nisi mollit id aliquip sunt est laborum sit sit.
-  links:
-    - label: Buy now
-      size: xl
-      color: black
-      to: /pricing

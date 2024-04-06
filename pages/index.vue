@@ -16,7 +16,7 @@ useSeoMeta({
 <template>
   <div v-if="page">
     <ULandingHero :title="page.hero.title" :description="page.hero.description" :links="page.hero.links">
-      <div class="absolute inset-0 landing-grid z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
+      <div class="absolute inset-0 z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
 
       <template #headline>
         <UBadge v-if="page.hero.headline" variant="subtle" size="lg" class="relative rounded-full font-semibold">
@@ -30,10 +30,6 @@ useSeoMeta({
         </UBadge>
       </template>
     </ULandingHero>
-
-    <ULandingSection class="!pt-0">
-      <Placeholder />
-    </ULandingSection>
 
     <ULandingSection
       v-for="(section, index) in page.sections"
@@ -59,25 +55,5 @@ useSeoMeta({
         </div>
       </UPageColumns>
     </ULandingSection>
-
-    <ULandingSection>
-      <ULandingCTA v-bind="page.cta" class="bg-gray-100/50 dark:bg-gray-800/50" />
-    </ULandingSection>
   </div>
 </template>
-
-<style scoped>
-.landing-grid {
-  background-size: 100px 100px;
-  background-image:
-    linear-gradient(to right, rgb(var(--color-gray-200)) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(var(--color-gray-200)) 1px, transparent 1px);
-}
-.dark {
-  .landing-grid {
-    background-image:
-      linear-gradient(to right, rgb(var(--color-gray-800)) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(var(--color-gray-800)) 1px, transparent 1px);
-  }
-}
-</style>
