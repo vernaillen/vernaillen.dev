@@ -9,6 +9,11 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@vueuse/nuxt',
     'nuxt-og-image',
+    'nuxt-svgo'
+  ],
+  css: [
+    '~/assets/css/main.css',
+    'animate.css/animate.min.css'
   ],
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
@@ -19,7 +24,19 @@ export default defineNuxtConfig({
     }
   },
   ui: {
-    icons: ['heroicons', 'simple-icons']
+    icons: ['heroicons', 'simple-icons', 'mdi']
+  },
+  svgo: {
+    svgo: true,
+    autoImportPath: './assets/svg/',
+
+    defaultImport: 'component',
+    svgoConfig: {
+      multipass: true
+    }
+  },
+  colorMode: {
+    preference: 'light'
   },
   routeRules: {
     '/api/search.json': { prerender: true },

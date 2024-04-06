@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const colorMode = useColorMode()
 
-const color = computed(() => colorMode.value === 'dark' ? '#111827' : 'white')
+const color = computed(() => colorMode.value === 'dark' ? '#0c0c0d' : 'white')
 
 useHead({
   meta: [
@@ -18,7 +18,7 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Nuxt UI Pro - SaaS template',
+  titleTemplate: '%s - Vernaillen.dev by Wouter Vernaillen',
   ogImage: 'https://saas-template.nuxt.dev/social-card.png',
   twitterImage: 'https://saas-template.nuxt.dev/social-card.png',
   twitterCard: 'summary_large_image'

@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .fill-black {
+    fill: #231F20;
+  }
+  .fill-white {
+    fill: #FFFFFF;
+  }
+  .stroke-primary {
+    stroke: #9C8E1B;
+  }
+  .stroke-black {
+    stroke: #231F20;
+  }
+  .stroke-white {
+    stroke: #FFFFFF;
+  }
+}

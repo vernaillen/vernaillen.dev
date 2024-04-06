@@ -2,33 +2,16 @@ export default defineAppConfig({
   ui: {
     primary: 'vernaillen',
     gray: 'neutral',
-    button: {
-      rounded: 'rounded-full',
-      default: {
-        size: 'md'
-      }
-    },
-    input: {
-      default: {
-        size: 'md'
-      }
-    },
-    card: {
-      rounded: 'rounded-xl'
-    },
-    footer: {
-      top: {
-        wrapper: 'border-t border-gray-200 dark:border-gray-800',
-        container: 'py-8 lg:py-16'
+    variables: {
+      light: {
+        background: '255 255 255'
       },
-      bottom: {
-        wrapper: 'border-t border-gray-200 dark:border-gray-800'
+      dark: {
+        background: '12 12 13'
       }
     },
-    page: {
-      hero: {
-        wrapper: 'lg:py-24'
-      }
+    header: {
+      logo: 'absolute top-0',
     }
-  }
+  },
 })
