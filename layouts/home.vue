@@ -16,12 +16,12 @@ provide('navigation', navigation)
     </UMain>
 
     <Footer />
-    <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
-      <SvgoBackgroundLeft1 class="w-full" />
-    </span>
-    <span class="absolute right-[-160px] top-10 z-[-1] animate__animated animate__fadeIn">
-      <SvgoBackgroundRight1 class="w-full" />
-    </span>
+    <div class="svg-right absolute top-0 right-0 left-1/2 lg:left-2/3 pl-8 sm:pl-14 z-[-1] overflow-hidden">
+      <SvgoHomeRight class="w-full h-screen" />
+    </div>
+    <div class="svg-left absolute bottom-24 left-10 z-[-1] opacity-30 block overflow-hidden">
+      <SvgoHomeLeft class="w-full" />
+    </div>
     <ClientOnly>
       <LazyUContentSearch :files="files" :navigation="navigation" />
     </ClientOnly>

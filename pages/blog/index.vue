@@ -50,6 +50,9 @@ defineOgImage({
           :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
         />
       </UBlogList>
+      <span class="absolute top-10 left-0 z-[-1] overflow-hidden">
+        <SvgoBackgroundLeft1 class="w-full" />
+      </span>
     </UPageBody>
   </UContainer>
 </template>
