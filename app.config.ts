@@ -29,8 +29,8 @@ export default defineAppConfig({
       hero: {
         wrapper: 'py-20 sm:py-24 md:py-32 relative',
         headline: 'mt-0 mb-10',
-        title: 'text-4xl sm:text-5xl md:text-6xl animate__animated animate__pulse',
-        description: 'my-24',
+        title: 'text-3xl sm:text-5xl md:text-6xl animate__animated animate__pulse',
+        description: 'my-16 md:my-24',
       }
     },
     page: {
