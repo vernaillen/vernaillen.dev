@@ -2,9 +2,9 @@ title: Home
 description: Java, Spring, Nuxt & DevOps
 hero:
   title: Wouter Vernaillen
-  description: Freelance Full Stack Developer
+  description: Java, Spring, Nuxt & DevOps
   headline:
-    label: Java, Spring, Nuxt & DevOps
+    label: Freelance Full Stack Developer
   links:
     - label: Blog
       to: '/blog'
@@ -19,7 +19,7 @@ hero:
       to: /projects
 sections:
   - title: Discover WPNuxt
-    description: Use WordPress as a headless CMS with Nuxt
+    description: Creating a new Nuxt module to use WordPress as a headless CMS with a Nuxt frontend.
     id: features
     align: left
     features:

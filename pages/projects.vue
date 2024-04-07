@@ -25,8 +25,8 @@ const isYearly = ref(false)
     <UContainer>
       <UPageHeader v-bind="page" class="py-[50px]" />
 
-      <UPageBody>
-        <UBlogList v-if="page?.projects" class="projectList slide-enter-content">
+      <UPageBody class="slide-enter-content">
+        <UBlogList v-if="page?.projects">
           <UBlogPost
             v-for="(project, index) in page.projects"
             :key="index"

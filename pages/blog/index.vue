@@ -29,8 +29,8 @@ defineOgImage({
   <UContainer>
     <UPageHeader v-bind="page" class="py-[50px]" />
 
-    <UPageBody>
-      <UBlogList class="slide-enter-content">
+    <UPageBody class="slide-enter-content">
+      <UBlogList>
         <UBlogPost
           v-for="(post, index) in posts"
           :key="index"
@@ -42,7 +42,7 @@ defineOgImage({
           :authors="post.authors"
           :badge="post.badge"
           :orientation="index === 0 ? 'horizontal' : 'vertical'"
-          :class="[index === 0 && 'col-span-full']"
+          :class="[index === 0 && 'lg:col-span-full']"
           :ui="{
             description: 'line-clamp-2'
           }"

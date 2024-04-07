@@ -8,7 +8,7 @@ provide('navigation', navigation)
 </script>
 
 <template>
-  <div>
+  <div class="overflow-hidden">
     <Header />
 
     <UMain>
@@ -19,7 +19,7 @@ provide('navigation', navigation)
     <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
       <SvgoBackgroundLeft1 class="w-full" />
     </span>
-    <span class="absolute right-[-160px] top-10 z-[-1] animate__animated animate__fadeIn">
+    <span class="absolute right-0 top-10 z-[-1] animate__animated animate__fadeIn">
       <SvgoBackgroundRight1 class="w-full" />
     </span>
     <ClientOnly>

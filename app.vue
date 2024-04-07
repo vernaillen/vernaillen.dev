@@ -18,7 +18,7 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Vernaillen.dev by Wouter Vernaillen',
+  titleTemplate: '%s - Wouter Vernaillen - Freelance Full Stack Developer',
   ogImage: 'https://vernaillen.dev/social-card.png',
   twitterImage: 'https://vernaillen.dev/social-card.png',
   twitterCard: 'summary_large_image'
@@ -39,28 +39,3 @@ useSeoMeta({
     </div>
   </div>
 </template>
-
-<style>
-@keyframes slide-enter {
-  0% {
-    transform: translateY(10px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 100
-  }
-}
-
-@media (prefers-reduced-motion:no-preference) {
-  :not(.no-sliding) .slide-enter-content :not(.no-sliding) [slide-enter],
-  :not(.no-sliding) .slide-enter-content :not(.no-sliding) .slide-enter {
-    --enter-stage: 0;
-    --enter-step: 30ms;
-    --enter-initial: 0ms;
-    animation: slide-enter 0.1s both 0.1s;
-    animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
-  }
-}
-
-</style>

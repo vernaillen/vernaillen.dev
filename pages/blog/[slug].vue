@@ -69,7 +69,7 @@ if (post.value.image?.src) {
     </UPageHeader>
 
     <UPage>
-      <UPageBody prose>
+      <UPageBody prose class="slide-enter-content">
         <ContentRenderer v-if="post && post.body" :value="post" />
 
         <hr v-if="surround?.length">

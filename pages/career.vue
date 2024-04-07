@@ -22,13 +22,13 @@ defineOgImage({
   <UContainer>
     <UPageHeader v-bind="page" class="py-[50px]" />
 
-    <UPageBody>
+    <UPageBody class="slide-enter-content">
       <ol v-if="page?.careerSteps">
         <li
           v-for="(careerStep, index) in page.careerSteps"
           :key="index"
-          :style="{'--animate-duration': `${index/5 + 0.3}s`}"
-          class="animate__animated animate__fadeIn"
+          class="slide-enter"
+          :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
         >
           <career-step :career-step="careerStep" />
         </li>

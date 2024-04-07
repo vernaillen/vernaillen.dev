@@ -25,5 +25,23 @@ export default defineAppConfig({
         active: 'border-vernaillen-500',
       },
     },
+    landing: {
+      hero: {
+        wrapper: 'py-20 sm:py-24 md:py-32 relative',
+        headline: 'mt-0 mb-10',
+        title: 'text-4xl sm:text-5xl md:text-6xl animate__animated animate__pulse',
+        description: 'my-24',
+      }
+    },
+    page: {
+      header: {
+        title: 'animate__animated animate__pulse'
+      }
+    },
+    blog: {
+      list: {
+        wrapper: 'md:grid md:grid-cols-2'
+      }
+    },
   },
 })

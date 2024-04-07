@@ -1,37 +1,58 @@
 <script setup lang="ts">
 const links = [{
-  label: 'Resources',
-  children: [{
-    label: 'Help center'
-  }, {
-    label: 'Docs'
-  }, {
-    label: 'Roadmap'
-  }, {
-    label: 'Changelog'
-  }]
-}, {
-  label: 'Features',
-  children: [{
-    label: 'Affiliates'
-  }, {
-    label: 'Portal'
-  }, {
-    label: 'Jobs'
-  }, {
-    label: 'Sponsors'
-  }]
-}, {
-  label: 'Company',
-  children: [{
-    label: 'About'
-  }, {
-    label: 'Pricing'
-  }, {
-    label: 'Careers'
-  }, {
-    label: 'Blog'
-  }]
+  label: 'Pages',
+  children: [
+    {
+      label: 'Career',
+      to: '/career'
+    },
+    {
+      label: 'Projects',
+      to: '/projects'
+    },
+    {
+      label: 'Blog',
+      to: '/blog'
+    },
+    {
+      label: 'Feed'
+    }
+  ]
+},
+{
+  label: 'Projects',
+  children: [
+    {
+      label: 'WPnuxt',
+      to: 'https://wpnuxt.com',
+      target: '_blank'
+    },
+    {
+      label: 'Vue Audiomotion Analyzer',
+      to: 'https://vue-audiomotion-analyzer.dev/',
+      target: '_blank'
+    },
+    {
+      label: 'Radio App',
+      to: 'https://radio.vernaillen.dev/',
+      target: '_blank'
+    }
+  ]
+},
+{
+  label: 'Other Websites',
+  children: [
+    {
+      label: 'Harmonics.be',
+      to: 'https://harmonics.be',
+      target: '_blank'
+    },
+    {
+      label: 'bio.wouter.net',
+      to: 'https://bio.wouter.net',
+      target: '_blank'
+    }
+  ]
 }]
 
 const toast = useToast()
@@ -58,15 +79,22 @@ function onSubmit () {
     <template #top>
       <UFooterColumns :links="links">
         <template #right>
-          <form @submit.prevent="onSubmit">
-            <UFormGroup label="Subscribe to our newsletter" :ui="{ container: 'mt-3' }">
-              <UInput v-model="email" type="email" placeholder="Enter your email" :ui="{ icon: { trailing: { pointer: '' } } }" required size="xl" autocomplete="off" class="max-w-sm" input-class="rounded-full">
-                <template #trailing>
-                  <UButton type="submit" size="xs" color="primary" :label="loading ? 'Subscribing' : 'Subscribe'" :loading="loading" />
-                </template>
-              </UInput>
-            </UFormGroup>
-          </form>
+          <UButton
+            size="xs"
+            to="https://wa.me/32473344656"
+            icon="i-logos-whatsapp-icon"
+            variant="soft"
+            target="_blank"
+            aria-label="contact me on WhatsApp"
+          />
+          <UButton
+            size="xs"
+            variant="soft"
+            icon="i-mdi-github"
+            to="https://github.com/vernaillen/vernaillen.dev/"
+            target="_blank"
+            class="ml-1 sm:ml-2"
+          />
         </template>
       </UFooterColumns>
     </template>
