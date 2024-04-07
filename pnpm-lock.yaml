@@ -39,8 +39,8 @@ dependencies:
     specifier: ^3.11.2
     version: 3.11.2(@unocss/reset@0.59.0)(eslint@8.57.0)(floating-vue@5.2.2)(typescript@5.4.4)(unocss@0.59.0)(vite@5.2.8)(vue-tsc@2.0.10)
   nuxt-og-image:
-    specifier: 3.0.0-rc.50
-    version: 3.0.0-rc.50(@lezer/common@1.2.1)(@nuxt/devtools@1.1.5)(@vue/compiler-core@3.4.21)(nuxt@3.11.2)(postcss@8.4.38)(vite@5.2.8)(vue@3.4.21)(webpack@5.91.0)
+    specifier: 3.0.0-rc.51
+    version: 3.0.0-rc.51(@lezer/common@1.2.1)(@nuxt/devtools@1.1.5)(@vue/compiler-core@3.4.21)(nuxt@3.11.2)(postcss@8.4.38)(vite@5.2.8)(vue@3.4.21)(webpack@5.91.0)
 
 devDependencies:
   '@nuxt/eslint-config':
@@ -3373,10 +3373,6 @@ packages:
     resolution: {integrity: sha512-9tXL6TV4FRpmFy70dHryA5NHsS7bV/x771LOPnZyiw+TRK4oGVk96IsATOflcn7L3FbXQY1mV+8Uzhkhx2PY0A==}
     dev: false
 
-  /@unocss/core@0.59.0-beta.1:
-    resolution: {integrity: sha512-a5loAfM7G5sDqARBGaQzwitURY0+JiGLIezLuVnB2OzmEubI53OwOr18Nb27gceWu7yLybQFY0xJfD7Dh7Tm+A==}
-    dev: false
-
   /@unocss/extractor-arbitrary-variants@0.58.9:
     resolution: {integrity: sha512-M/BvPdbEEMdhcFQh/z2Bf9gylO1Ky/ZnpIvKWS1YJPLt4KA7UWXSUf+ZNTFxX+X58Is5qAb5hNh/XBQmL3gbXg==}
     dependencies:
@@ -3387,12 +3383,6 @@ packages:
     resolution: {integrity: sha512-KYprrpJXgdoJZa4iVejW9uqht4W712Ra0x1gvznPW0BupIPF7vEyNAGvPTnB2y5Wb6OjNMiPbGnqL7BfBoxYSQ==}
     dependencies:
       '@unocss/core': 0.59.0
-    dev: false
-
-  /@unocss/extractor-arbitrary-variants@0.59.0-beta.1:
-    resolution: {integrity: sha512-qzf6K3RlV2XFcmwHwHRvb802mhmEAGpxLkzVhsJtfNZZWmYnB5glLvukkUa1SXc23x3vJSNzpPAiXzAMcnvCgw==}
-    dependencies:
-      '@unocss/core': 0.59.0-beta.1
     dev: false
 
   /@unocss/inspector@0.58.9:
@@ -3516,14 +3506,6 @@ packages:
       '@unocss/rule-utils': 0.59.0
     dev: false
 
-  /@unocss/preset-mini@0.59.0-beta.1:
-    resolution: {integrity: sha512-3be99/O3YdGCPVKFE+oI/kCL2nTFH7pzkdYIRLGU5DBofZpnECp6IYSssJTN0VuUTe1eK5l7/dFzkLp5/QTkig==}
-    dependencies:
-      '@unocss/core': 0.59.0-beta.1
-      '@unocss/extractor-arbitrary-variants': 0.59.0-beta.1
-      '@unocss/rule-utils': 0.59.0-beta.1
-    dev: false
-
   /@unocss/preset-tagify@0.58.9:
     resolution: {integrity: sha512-obh75XrRmxYwrQMflzvhQUMeHwd/R9bEDhTWUW9aBTolBy4eNypmQwOhHCKh5Xi4Dg6o0xj6GWC/jcCj1SPLog==}
     dependencies:
@@ -3598,14 +3580,6 @@ packages:
       '@unocss/rule-utils': 0.59.0
     dev: false
 
-  /@unocss/preset-wind@0.59.0-beta.1:
-    resolution: {integrity: sha512-FAEUTPFa6zQaas44cETdSkVSN6Bw5VEriYBAyap34/jyPLESVafdGhLF026tt0BvXzDiSjBNCdXDLhaxIMP6Jw==}
-    dependencies:
-      '@unocss/core': 0.59.0-beta.1
-      '@unocss/preset-mini': 0.59.0-beta.1
-      '@unocss/rule-utils': 0.59.0-beta.1
-    dev: false
-
   /@unocss/reset@0.58.9:
     resolution: {integrity: sha512-nA2pg3tnwlquq+FDOHyKwZvs20A6iBsKPU7Yjb48JrNnzoaXqE+O9oN6782IG2yKVW4AcnsAnAnM4cxXhGzy1w==}
     dev: false
@@ -3627,14 +3601,6 @@ packages:
     engines: {node: '>=14'}
     dependencies:
       '@unocss/core': 0.59.0
-      magic-string: 0.30.9
-    dev: false
-
-  /@unocss/rule-utils@0.59.0-beta.1:
-    resolution: {integrity: sha512-afWVZZdMBJD5t3TPq/Mh7EWWNAfy5DVu6Be0d6h4+9DjYUNgrv1hCKWfX1jrs97DP6AJak53JJV51u2nlA30Yg==}
-    engines: {node: '>=14'}
-    dependencies:
-      '@unocss/core': 0.59.0-beta.1
       magic-string: 0.30.9
     dev: false
 
@@ -7273,8 +7239,8 @@ packages:
   /json-buffer@3.0.1:
     resolution: {integrity: sha512-4bV5BfR2mqfQTJm+V5tPPdf+ZpuhiIvTuAB5g8kcrXOZpTT/QwwVRWBywX1ozr6lEuPdbHxwaJlm9G6mI2sfSQ==}
 
-  /json-editor-vue@0.12.0(@lezer/common@1.2.1)(vue@3.4.21):
-    resolution: {integrity: sha512-VOsWy2EiAUY+iD5zdKssG/lBVVTNbDEgkUWnq4FJbOVNuVXwdRdX76zWvtbhh6MSjlFVCxZc/7V0VEayZbcGeQ==}
+  /json-editor-vue@0.13.0(@lezer/common@1.2.1)(vue@3.4.21):
+    resolution: {integrity: sha512-lxYJgeF9NLuDdju3RgjSC2NdVFoxzIGUTF8nur+9L/YOOuUMmXJCzKM1VyjkdEG6udEK3SQT44mvtgiKrH5ZHA==}
     requiresBuild: true
     peerDependencies:
       '@vue/composition-api': '>=1'
@@ -7283,7 +7249,7 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      vanilla-jsoneditor: 0.21.6(@lezer/common@1.2.1)
+      vanilla-jsoneditor: 0.23.1(@lezer/common@1.2.1)
       vue: 3.4.21(typescript@5.4.4)
       vue-demi: 0.14.7(vue@3.4.21)
     transitivePeerDependencies:
@@ -8707,8 +8673,8 @@ packages:
       - vue
     dev: false
 
-  /nuxt-og-image@3.0.0-rc.50(@lezer/common@1.2.1)(@nuxt/devtools@1.1.5)(@vue/compiler-core@3.4.21)(nuxt@3.11.2)(postcss@8.4.38)(vite@5.2.8)(vue@3.4.21)(webpack@5.91.0):
-    resolution: {integrity: sha512-ZHuuNf0hZewV41NwgJirjhgxzazPtiwnOTa9bDV533j0pirU6RRM5uyF9yVF/YK/l4sm4mDLYW9t5wDWiAajVA==}
+  /nuxt-og-image@3.0.0-rc.51(@lezer/common@1.2.1)(@nuxt/devtools@1.1.5)(@vue/compiler-core@3.4.21)(nuxt@3.11.2)(postcss@8.4.38)(vite@5.2.8)(vue@3.4.21)(webpack@5.91.0):
+    resolution: {integrity: sha512-YiECfQQaXSTggyGZGDEAoWCMacJTBtjVmJNgGol1U+icGoHv5WX4G+LZvo2Eaf82sQ+b7DNhoqKf4tyWpfMJlw==}
     dependencies:
       '@css-inline/css-inline': 0.14.0
       '@css-inline/css-inline-wasm': 0.14.0
@@ -8716,8 +8682,8 @@ packages:
       '@nuxt/kit': 3.11.2
       '@resvg/resvg-js': 2.6.2
       '@resvg/resvg-wasm': 2.6.2
-      '@unocss/core': 0.59.0-beta.1
-      '@unocss/preset-wind': 0.59.0-beta.1
+      '@unocss/core': 0.59.0
+      '@unocss/preset-wind': 0.59.0
       '@vueuse/core': 10.9.0(vue@3.4.21)
       chrome-launcher: 1.1.1
       defu: 6.1.4
@@ -8725,10 +8691,10 @@ packages:
       flatted: 3.3.1
       floating-vue: 5.2.2(@nuxt/kit@3.11.2)(vue@3.4.21)
       image-size: 1.1.1
-      json-editor-vue: 0.12.0(@lezer/common@1.2.1)(vue@3.4.21)
+      json-editor-vue: 0.13.0(@lezer/common@1.2.1)(vue@3.4.21)
       nuxt-icon: 0.6.10(nuxt@3.11.2)(vite@5.2.8)(vue@3.4.21)
-      nuxt-site-config: 2.2.11(@nuxt/devtools@1.1.5)(@vue/compiler-core@3.4.21)(nuxt@3.11.2)(postcss@8.4.38)(vite@5.2.8)(vue@3.4.21)(webpack@5.91.0)
-      nuxt-site-config-kit: 2.2.11(vue@3.4.21)
+      nuxt-site-config: 2.2.12(@nuxt/devtools@1.1.5)(@vue/compiler-core@3.4.21)(nuxt@3.11.2)(postcss@8.4.38)(vite@5.2.8)(vue@3.4.21)(webpack@5.91.0)
+      nuxt-site-config-kit: 2.2.12(vue@3.4.21)
       nypm: 0.3.8
       ofetch: 1.3.4
       ohash: 1.1.3
@@ -8773,13 +8739,13 @@ packages:
       - webpack
     dev: false
 
-  /nuxt-site-config-kit@2.2.11(vue@3.4.21):
-    resolution: {integrity: sha512-ApoVYvJDJq0//Y20C2sn6NjWV1Xg+zfyRfPVKs1GKtuk0fvUKzkmedwt6V15MhkMdNBIYwaMB0wfWzm6Pw9DyA==}
+  /nuxt-site-config-kit@2.2.12(vue@3.4.21):
+    resolution: {integrity: sha512-8amzGtBzHZervHgRkKXNI3lq0E1kP73vX+373uiBI9qGBFClFayuUSTDXAJreI7Yx0vB78iAjAA3a+YKM5iIdw==}
     dependencies:
       '@nuxt/kit': 3.11.2
       '@nuxt/schema': 3.11.2
       pkg-types: 1.0.3
-      site-config-stack: 2.2.11(vue@3.4.21)
+      site-config-stack: 2.2.12(vue@3.4.21)
       std-env: 3.7.0
       ufo: 1.5.3
     transitivePeerDependencies:
@@ -8788,20 +8754,20 @@ packages:
       - vue
     dev: false
 
-  /nuxt-site-config@2.2.11(@nuxt/devtools@1.1.5)(@vue/compiler-core@3.4.21)(nuxt@3.11.2)(postcss@8.4.38)(vite@5.2.8)(vue@3.4.21)(webpack@5.91.0):
-    resolution: {integrity: sha512-yYR5g9wjc3aULpyv1Ne7FlmXA8pXr1JVf2ZOx40TT7DkGY86zNntOF9RWaQjrvFgw0fTJAQyrNxdbzWJc8O+mA==}
+  /nuxt-site-config@2.2.12(@nuxt/devtools@1.1.5)(@vue/compiler-core@3.4.21)(nuxt@3.11.2)(postcss@8.4.38)(vite@5.2.8)(vue@3.4.21)(webpack@5.91.0):
+    resolution: {integrity: sha512-a2pmr4NEa1ZgZoD0guKrX+gpVpntOpqBTRBJ6zv+PqAwvltdeau2zRZBGZ2N7kFnGaGolonb2fBN+YzQh3dSDQ==}
     dependencies:
       '@nuxt/devtools-kit': 1.1.5(nuxt@3.11.2)(vite@5.2.8)
       '@nuxt/devtools-ui-kit': 1.1.5(@nuxt/devtools@1.1.5)(@vue/compiler-core@3.4.21)(nuxt@3.11.2)(postcss@8.4.38)(vite@5.2.8)(vue@3.4.21)(webpack@5.91.0)
       '@nuxt/kit': 3.11.2
       '@nuxt/schema': 3.11.2
       floating-vue: 5.2.2(@nuxt/kit@3.11.2)(vue@3.4.21)
-      nuxt-site-config-kit: 2.2.11(vue@3.4.21)
+      nuxt-site-config-kit: 2.2.12(vue@3.4.21)
       pathe: 1.1.2
       pkg-types: 1.0.3
       shiki: 1.2.4
       sirv: 2.0.4
-      site-config-stack: 2.2.11(vue@3.4.21)
+      site-config-stack: 2.2.12(vue@3.4.21)
       ufo: 1.5.3
     transitivePeerDependencies:
       - '@nuxt/devtools'
@@ -10508,8 +10474,8 @@ packages:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: false
 
-  /site-config-stack@2.2.11(vue@3.4.21):
-    resolution: {integrity: sha512-j3okTVJiZV1QH4XJLCeO4UgaJzv4ogtFOOkAu1TlEcKSTSDBZ7PKBvZiyaW90TLnCTaB29JAAB/jmrJK7zlxdA==}
+  /site-config-stack@2.2.12(vue@3.4.21):
+    resolution: {integrity: sha512-U+nyw2vZ6E2zF/JYlFFEmDsqXSJbf0/6ZBCKXI4FZ2509iQwnEesfQXvWNuJ2JCemUJdAXAoiIturxEJtV4z0g==}
     peerDependencies:
       vue: ^3
     dependencies:
@@ -11665,38 +11631,6 @@ packages:
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
       builtins: 5.0.1
-    dev: false
-
-  /vanilla-jsoneditor@0.21.6(@lezer/common@1.2.1):
-    resolution: {integrity: sha512-qKWVW2qXrVazurZ5gZ+Ah7vTkxArUdv6JxlWJJlO3v4K+dowytku4KgfdOEkACpA6HQI2hyHL9GaGnWjwdj4dQ==}
-    dependencies:
-      '@codemirror/autocomplete': 6.15.0(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.1)(@lezer/common@1.2.1)
-      '@codemirror/commands': 6.3.3
-      '@codemirror/lang-json': 6.0.1
-      '@codemirror/language': 6.10.1
-      '@codemirror/lint': 6.5.0
-      '@codemirror/search': 6.5.6
-      '@codemirror/state': 6.4.1
-      '@codemirror/view': 6.26.1
-      '@fortawesome/free-regular-svg-icons': 6.5.2
-      '@fortawesome/free-solid-svg-icons': 6.5.2
-      '@lezer/highlight': 1.2.0
-      '@replit/codemirror-indentation-markers': 6.5.1(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.1)
-      ajv: 8.12.0
-      codemirror-wrapped-line-indent: 1.0.8(@codemirror/language@6.10.1)(@codemirror/state@6.4.1)(@codemirror/view@6.26.1)
-      diff-sequences: 29.6.3
-      immutable-json-patch: 6.0.1
-      jmespath: 0.16.0
-      json-source-map: 0.6.1
-      jsonrepair: 3.6.0
-      lodash-es: 4.17.21
-      memoize-one: 6.0.0
-      natural-compare-lite: 1.4.0
-      sass: 1.74.1
-      svelte: 4.2.12
-      vanilla-picker: 2.12.3
-    transitivePeerDependencies:
-      - '@lezer/common'
     dev: false
 
   /vanilla-jsoneditor@0.23.1(@lezer/common@1.2.1):
