@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     'nuxt-svgo'
   ],
+  site: {
+    // production URL
+    url: 'https://vernaillen-nuxt.vercel.app',
+  },
   css: [
     '~/assets/css/main.css',
     'animate.css/animate.min.css'
