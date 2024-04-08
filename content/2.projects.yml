@@ -28,7 +28,7 @@ projects:
     badge:
       label: vernaillen.dev
     image:
-      src: /images/projects/vernaillendev-light.png
+      src: /images/vernaillendev-light.png
       alt: Vernaillen.dev
   - title: Vue Audiomotion Analyzer
     description: High-resolution real-time audio spectrum analyzer. Vue plugin wrapping Henrique Vianna's audioMotion-analyzer

@@ -19,9 +19,6 @@ useHead({
 
 useSeoMeta({
   titleTemplate: '%s - Wouter Vernaillen - Freelance Full Stack Developer',
-  ogImage: 'https://vernaillen.dev/social-card.png',
-  twitterImage: 'https://vernaillen.dev/social-card.png',
-  twitterCard: 'summary_large_image'
 })
 </script>
 

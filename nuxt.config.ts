@@ -12,8 +12,11 @@ export default defineNuxtConfig({
     'nuxt-svgo'
   ],
   site: {
-    // production URL
+    name: 'Wouter Vernaillen',
+    logo: '/images/vernaillendev-light.png',
     url: 'https://vernaillen-nuxt.vercel.app',
+    description: 'Freelance Full Stack Developer',
+    defaultLocale: 'en',
   },
   css: [
     '~/assets/css/main.css',
