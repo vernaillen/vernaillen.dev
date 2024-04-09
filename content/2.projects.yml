@@ -7,17 +7,20 @@ projects:
     description: Nuxt 3 + Headless WordPress, a new nuxt module
     to: https://wpnuxt.com
     target: _blank
-    badge:
-      label: wpnuxt.com
+    categories:
+     - WPNuxt
+     - Nuxt
+     - Wordpress
     image:
-      src: /images/projects/wpnuxt-logo-dark.png
+      src: /images/index/wpnuxt.png
       alt: WPNuxt
   - title: Harmonics
     description: Healing power of sound, music & dance
     to: https://harmonics.be
     target: _blank
-    badge:
-      label: harmonics.be
+    categories:
+     - Nuxt
+     - Markdown
     image:
       src: /images/projects/harmonics.png
       alt: Harmonics
@@ -25,17 +28,19 @@ projects:
     description: My website and blog as freelance developer.
     to: https://vernaillen.dev
     target: _blank
-    badge:
-      label: vernaillen.dev
+    categories:
+     - Nuxt
+     - UI Pro
+     - Markdown
     image:
-      src: /images/vernaillendev-light.png
+      src: /social-card.png
       alt: Vernaillen.dev
   - title: Vue Audiomotion Analyzer
     description: High-resolution real-time audio spectrum analyzer. Vue plugin wrapping Henrique Vianna's audioMotion-analyzer
     to: https://vue-audiomotion-analyzer.dev/
     target: _blank
-    badge:
-      label: vue-audiomotion-analyzer.dev
+    categories:
+     - Nuxt
     image:
       src: /images/projects/vue-audiomotion-analyzer.gif
       alt: Vue Audiomotion Analyzer
@@ -43,8 +48,8 @@ projects:
     description: App made with Nuxt & Vue Audiomotion Analyzer to play my favourite internet radio channels
     to: https://radio.vernaillen.dev/
     target: _blank
-    badge:
-      label: radio.vernaillen.dev
+    categories:
+     - Nuxt
     image:
       src: /images/projects/radio.png
       alt: Radio app
@@ -52,8 +57,8 @@ projects:
     description: a "links in bio" app, made with Nuxt 3
     to: https://bio.wouter.net
     target: _blank
-    badge:
-      label: bio.wouter.net
+    categories:
+     - Nuxt
     image:
       src: /images/projects/biowouternet.png
       alt: bio.wouter.net

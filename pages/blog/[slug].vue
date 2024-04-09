@@ -47,9 +47,9 @@ if (post.value.image?.src) {
   <UContainer v-if="post">
     <UPageHeader :title="post.title" :description="post.description">
       <template #headline>
-        <UBadge v-bind="post.badge" variant="subtle" />
+        <NuxtTime locale="en-GB" :datetime="post.date" date-style="long" class="text-gray-500 dark:text-gray-400" />
         <span class="text-gray-500 dark:text-gray-400">&middot;</span>
-        <time class="text-gray-500 dark:text-gray-400">{{ new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' }) }}</time>
+        <UBadge v-if="post.badge" v-bind="post.badge" variant="subtle" /> <UIcon v-if="post.location" size="xs" name="i-mdi-location" class="mx-0 px-0" /><span class="text-sm">{{ post.location }}</span>
       </template>
 
       <div class="flex flex-wrap items-center gap-3 mt-4">

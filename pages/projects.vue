@@ -32,20 +32,27 @@ const isYearly = ref(false)
               v-for="(project, index) in page.projects"
               :key="index"
               v-bind="project"
-              :ui="{ image: { wrapper: 'aspect-[40/15]' }, badge: { wrapper: 'mb-0'} }"
+              :ui="{ image: { wrapper: 'aspect-[2/1]' }, badge: { wrapper: 'mb-0'} }"
               class="slide-enter"
               :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
             >
               <template #badge>
-                <UButton
-                  v-if="project?.badge"
-                  icon="i-ci-external-link"
-                  size="2xs"
-                  color="primary"
-                  variant="ghost"
-                  class="absolute right-0 top-1"
-                  :label="project.badge.label"
-                  :trailing="true"
+                <div v-if="project?.categories" class="mb-2">
+                  <UButton
+                    v-for="(cat, catIndex) in project.categories"
+                    :key="catIndex"
+                    :label="cat"
+                    size="2xs"
+                    color="primary"
+                    variant="outline"
+                    class="ml-1"
+                  />
+                </div>
+              </template>
+              <template #image>
+                <NuxtImg
+                  :src="project.image?.src" :alt="project.image?.alt" width="384" height="192" format="webp" fit="cover"
+                  class="object-cover object-top w-full h-full transform transition-transform duration-200 group-hover:scale-105"
                 />
               </template>
             </UBlogPost>

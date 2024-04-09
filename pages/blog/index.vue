@@ -43,12 +43,40 @@ defineOgImage({
           :badge="post.badge"
           :orientation="index === 0 ? 'horizontal' : 'vertical'"
           :class="[index === 0 && 'lg:col-span-full']"
-          :ui="{
-            description: 'line-clamp-2'
-          }"
+          :ui="{ image: { wrapper: 'aspect-[21/9]' }, description: 'line-clamp-2' }"
           class="slide-enter"
           :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
-        />
+        >
+          <template #badge>
+            <div v-if="post?.categories" class="mb-2">
+              <UButton
+                v-for="(cat, catIndex) in post.categories"
+                :key="catIndex"
+                :label="cat"
+                size="2xs"
+                color="primary"
+                variant="outline"
+                class="ml-1"
+              />
+            </div>
+          </template>
+          <template #image>
+            <NuxtImg
+              :src="post.thumbnail_dark ? post.thumbnail_dark : post.image?.src" :alt="post.image?.alt" width="384" height="160" format="webp" fit="cover"
+              class="object-cover object-top w-full h-full group-hover:scale-105 opacity-100 dark:opacity-0 dark:h-0 transform transition-transform duration-200"
+            />
+            <NuxtImg
+              :src="post.thumbnail_light ? post.thumbnail_light : post.image?.src" :alt="post.image?.alt" width="384" height="160" format="webp" fit="cover"
+              class="object-cover object-top w-full h-0 group-hover:scale-105 opacity-0 dark:opacity-100 dark:h-full transform transition-transform duration-200"
+            />
+          </template>
+          <template #date>
+            <NuxtTime locale="en-GB" :datetime="post.date" date-style="long" class="text-sm" />
+            <span v-if="post.location" class="text-sm">
+              <UIcon size="xs" name="i-mdi-location" class="-mb-[1px] mx-1" /> {{ post.location }}
+            </span>
+          </template>
+        </UBlogPost>
       </UBlogList>
       <span class="absolute top-10 left-0 z-[-1] overflow-hidden">
         <SvgoBackgroundLeft1 class="w-full" />

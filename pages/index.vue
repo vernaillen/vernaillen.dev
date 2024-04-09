@@ -42,9 +42,9 @@ definePageMeta({
           :class="section.imageAspectRatio ? section.imageAspectRatio : 'aspect-w-16 aspect-h-9'"
         >
           <NuxtLink v-if="section.url" :to="section.url" target="_blank" :aria-label="section.title">
-            <NuxtImg :src="section.image" :alt="section.title" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all duration-500" />
+            <NuxtImg :src="section.image" format="webp" :alt="section.title" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all duration-500" />
           </NuxtLink>
-          <NuxtImg v-else :alt="section.title" :src="section.image" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all duration-500" />
+          <NuxtImg v-else :alt="section.title" format="webp" :src="section.image" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all duration-500" />
         </div>
       </div>
     </ULandingSection>

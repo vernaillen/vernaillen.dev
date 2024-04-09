@@ -1,4 +1,6 @@
 export default defineAppConfig({
+  longDateFormat: 'DD MMMM YYYY',
+  shortDateFormat: 'DD MMM YYYY',
   ui: {
     primary: 'vernaillen',
     gray: 'neutral',
@@ -46,7 +48,7 @@ export default defineAppConfig({
     },
     blog: {
       post: {
-        wrapper: 'lg:items-start',
+        wrapper: 'lg:items-start gap-y-3',
         title: 'text-ellipsis overflow-hidden',
         image: {
           wrapper: 'aspect-[21/10]',

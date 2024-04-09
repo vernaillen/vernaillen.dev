@@ -42,7 +42,7 @@ export default defineNuxtConfig({
   image: {
     domains: ['cdn.fosstodon.org'],
     provider: 'twicpics',
-    formats: ['webp'],
+    format: ['webp'],
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/vernaillennuxt'
     }
