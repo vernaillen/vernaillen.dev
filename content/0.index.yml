@@ -10,12 +10,13 @@ hero:
       to: '/blog'
       size: xl
       color: primary
+      variant: outline
       icon: i-heroicons-newspaper
       trailing: true
     - label: Projects
       icon: i-carbon-ibm-cloud-projects
       size: xl
-      color: gray
+      variant: subtle
       to: /projects
 sections:
   - title: Bringing you WPNuxt

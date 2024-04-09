@@ -25,9 +25,7 @@ definePageMeta({
           <NuxtLink :to="page.hero.headline.to" target="_blank" class="focus:outline-none" tabindex="-1">
             <span class="absolute inset-0" aria-hidden="true" />
           </NuxtLink>
-
           {{ page.hero.headline.label }}
-
           <UIcon v-if="page.hero.headline.icon" :name="page.hero.headline.icon" class="ml-1 w-4 h-4 pointer-events-none" />
         </UBadge>
       </template>
@@ -48,9 +46,9 @@ definePageMeta({
           :class="section.imageAspectRatio ? section.imageAspectRatio : 'aspect-w-16 aspect-h-9'"
         >
           <NuxtLink v-if="section.url" :to="section.url" target="_blank">
-            <NuxtImg :src="section.image" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all" />
+            <NuxtImg :src="section.image" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all duration-500" />
           </NuxtLink>
-          <NuxtImg v-else :src="section.image" class="opacity-80 hover:opacity-100 hover:scale-[101%] transform transition-all" />
+          <NuxtImg v-else :src="section.image" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all duration-500" />
         </div>
       </div>
     </ULandingSection>

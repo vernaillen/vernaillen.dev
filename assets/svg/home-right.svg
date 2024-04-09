@@ -13,7 +13,7 @@
         r="18"
         fill="url(#paint1_radial_25:217)"
     />
-    <circle
+    <circle class="animateCircle"
         cx="76.9997"
         cy="288"
         r="34"

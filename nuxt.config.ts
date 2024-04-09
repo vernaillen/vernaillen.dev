@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   extends: [process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro'],
   modules: [
+    '@hypernym/nuxt-anime',
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/ui',
@@ -35,6 +36,9 @@ export default defineNuxtConfig({
     '~/assets/css/main.css',
     'animate.css/animate.min.css'
   ],
+  anime: {
+    composables: true
+  },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {

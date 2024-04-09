@@ -10,6 +10,12 @@ export default defineAppConfig({
         background: '12 12 13'
       }
     },
+    button: {
+      variant: {
+        outline: 'ring-{color}-500/70',
+        subtle: 'text-{color}-500 dark:text-{color}-400 bg-{color}-50 hover:bg-{color}-100 disabled:bg-transparent dark:bg-{color}-950 dark:hover:bg-{color}-900 dark:disabled:bg-transparent focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-{color}-500 dark:focus-visible:ring-{color}-400',
+      }
+    },
     header: {
       logo: 'absolute top-0',
       links: {
@@ -30,7 +36,7 @@ export default defineAppConfig({
         wrapper: 'py-20 sm:py-24 md:py-36 relative',
         headline: 'mt-0 mb-12',
         title: 'text-3xl sm:text-5xl md:text-6xl animate__animated animate__pulse',
-        description: 'my-16 md:my-24',
+        description: 'my-16 md:my-24'
       },
     },
     page: {
