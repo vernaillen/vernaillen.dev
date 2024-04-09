@@ -19,7 +19,6 @@ definePageMeta({
   <div v-if="page">
     <ULandingHero :title="page.hero.title" :description="page.hero.description" :links="page.hero.links">
       <div class="absolute inset-0 z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
-
       <template #headline>
         <UBadge v-if="page.hero.headline" variant="subtle" size="lg" class="relative rounded-lg font-semibold">
           {{ page.hero.headline.label }}
@@ -36,17 +35,12 @@ definePageMeta({
       :features="section.features"
       :ui="{ container: 'lg:items-start' }"
     >
-      <div class="bg-gray-900/5 dark:bg-white/5 ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 rounded-xl lg:-m-4 p-4 align-top content-start">
-        <div
-          class="rounded-lg relative overflow-hidden border border-dashed border-gray-900/10 dark:border-white/10"
-          :class="section.imageAspectRatio ? section.imageAspectRatio : 'aspect-w-16 aspect-h-9'"
-        >
-          <NuxtLink v-if="section.url" :to="section.url" target="_blank" :aria-label="section.title">
-            <NuxtImg :src="section.image" format="webp" :alt="section.title" class="opacity-95 hover:opacity-100 hover:scale-[103%] transform transition-all duration-500" />
-          </NuxtLink>
-          <NuxtImg v-else :alt="section.title" format="webp" :src="section.image" class="opacity-95 hover:opacity-100 hover:scale-[103%] transform transition-all duration-500" />
-        </div>
-      </div>
+      <ShowcaseImage
+        v-if="section.image"
+        :image="section.image"
+        :url="section.url"
+        :alt="section.title"
+      />
     </ULandingSection>
 
     <ULandingSection :title="page.features.title" :description="page.features.description">
