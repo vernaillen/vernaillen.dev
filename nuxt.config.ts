@@ -70,9 +70,6 @@ export default defineNuxtConfig({
       multipass: true
     }
   },
-  colorMode: {
-    preference: 'light'
-  },
   routeRules: {
     '/' : { prerender: true },
     '/career' : { prerender: true },
