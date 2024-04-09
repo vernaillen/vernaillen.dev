@@ -1,31 +1,4 @@
 export default defineAppConfig({
-  socials: [
-    {
-      name: 'GitHub',
-      url: 'https://github.com/vernaillen/',
-      icon: 'i-mdi-github'
-    },
-    {
-      name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/woutervernaillen/',
-      icon: 'i-mdi-linkedin'
-    },
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/woutervernaillen/',
-      icon: 'i-mdi-instagram'
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/vernaillen',
-      icon: 'i-mdi-twitter'
-    },
-    {
-      name: 'Mastodon',
-      url: 'https://fosstodon.org/@vernaillen',
-      icon: 'i-mdi-mastodon'
-    }
-  ],
   ui: {
     primary: 'vernaillen',
     gray: 'neutral',
@@ -54,8 +27,8 @@ export default defineAppConfig({
     },
     landing: {
       hero: {
-        wrapper: 'py-20 sm:py-24 md:py-32 relative',
-        headline: 'mt-0 mb-10',
+        wrapper: 'py-20 sm:py-24 md:py-36 relative',
+        headline: 'mt-0 mb-12',
         title: 'text-3xl sm:text-5xl md:text-6xl animate__animated animate__pulse',
         description: 'my-16 md:my-24',
       },
@@ -70,7 +43,7 @@ export default defineAppConfig({
         wrapper: 'lg:items-start',
         title: 'text-ellipsis overflow-hidden',
         image: {
-          wrapper: 'aspect-[21/8]',
+          wrapper: 'aspect-[21/10]',
         }
       },
       list: {
@@ -78,4 +51,31 @@ export default defineAppConfig({
       }
     },
   },
+  socials: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/vernaillen/',
+      icon: 'i-mdi-github'
+    },
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/woutervernaillen/',
+      icon: 'i-mdi-linkedin'
+    },
+    {
+      name: 'Instagram',
+      url: 'https://www.instagram.com/woutervernaillen/',
+      icon: 'i-mdi-instagram'
+    },
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/vernaillen',
+      icon: 'i-mdi-twitter'
+    },
+    {
+      name: 'Mastodon',
+      url: 'https://fosstodon.org/@vernaillen',
+      icon: 'i-mdi-mastodon'
+    }
+  ],
 })

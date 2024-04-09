@@ -33,7 +33,7 @@ sections:
         description: Many website owners or content editors are already familiar with the WordPress backend.
         icon: i-ic-baseline-wordpress
       - name: Cutting edge frontend
-        description: Nuxt 3 is a modern frontend framework that allows you to build fast and responsive websites.
+        description: Use the full power of the modern frontend framework that is Nuxt 3, allowing you to build fast and responsive cutting-edge websites.
         icon: i-logos-nuxt-icon
   - title: Web Development
     description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
