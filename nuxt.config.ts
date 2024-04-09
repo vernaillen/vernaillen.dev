@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    'nuxt-svgo'
+    'nuxt-svgo',
+    'nuxt-time'
   ],
   site: {
     name: 'Wouter Vernaillen',
@@ -17,6 +18,18 @@ export default defineNuxtConfig({
     url: 'https://vernaillen-nuxt.vercel.app',
     description: 'Freelance Full Stack Developer',
     defaultLocale: 'en',
+  },
+  social: {
+    networks: {
+      mastodon: {
+        identifier: 'vernaillen@fosstodon.org',
+        options: {
+          excludeReplies: true,
+          excludeReblogs: false,
+          limit: 100
+        }
+      }
+    }
   },
   css: [
     '~/assets/css/main.css',
