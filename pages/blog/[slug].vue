@@ -79,6 +79,8 @@ if (post.value.image?.src) {
 
       <template #right>
         <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" />
+        <hr v-if="post.mastodonPost || post.twitterPost">
+        <SocialComments v-if="post.mastodonPost || post.twitterPost" :page="post" />
       </template>
     </UPage>
   </UContainer>
