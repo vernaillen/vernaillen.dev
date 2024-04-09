@@ -36,6 +36,9 @@ export default defineNuxtConfig({
     '~/assets/css/main.css',
     'animate.css/animate.min.css'
   ],
+  colorMode: {
+    preference: 'dark'
+  },
   image: {
     domains: ['cdn.fosstodon.org'],
     provider: 'twicpics',
