@@ -33,7 +33,7 @@ projects:
      - UI Pro
      - Markdown
     image:
-      src: /social-card.png
+      src: /images/projects/vernaillendev.png
       alt: Vernaillen.dev
   - title: Vue Audiomotion Analyzer
     description: High-resolution real-time audio spectrum analyzer. Vue plugin wrapping Henrique Vianna's audioMotion-analyzer
