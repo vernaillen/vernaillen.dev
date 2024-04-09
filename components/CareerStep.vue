@@ -9,6 +9,7 @@ defineProps<{
 <template>
   <div class="flex flex-start items-center">
     <div
+      :id="careerStep.id"
       class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
     >
       <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary-500">
@@ -34,9 +35,9 @@ defineProps<{
     </div>
     <h4 class="text-gray-800 dark:text-white font-semibold -mt-2">
       <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary-500">
-        {{ careerStep.client }}
+        {{ careerStep.text }}
       </NuxtLink>
-      <span v-else>{{ careerStep.client }}</span>
+      <span v-else>{{ careerStep.text }}</span>
     </h4>
   </div>
   <div class="border-l-2 border-primary mt-2">

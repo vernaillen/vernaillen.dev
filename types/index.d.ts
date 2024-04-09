@@ -14,7 +14,7 @@ export interface BlogPost extends ParsedContent {
 }
 
 export interface CareerStep {
-  client: string
+  text: string
   contract?: string
   date: string
   project: string
@@ -22,4 +22,5 @@ export interface CareerStep {
   role: string
   stack: string
   imageUrl?: string
+  id: string
 }

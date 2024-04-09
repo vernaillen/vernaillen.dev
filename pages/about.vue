@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import SocialFeed from '~/components/SocialFeed.vue';
-
-const { data: page } = await useAsyncData('feed', () => queryContent('/feed').findOne())
+const { data: page } = await useAsyncData('about', () => queryContent('/about').findOne())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
@@ -23,10 +21,16 @@ defineOgImage({
 <template>
   <UContainer class="">
     <UPageHeader v-bind="page" class="py-[50px]" />
+
     <UPage>
-      <UPageBody class="slide-enter-content max-w-2xl mx-auto">
-        <SocialFeed/>
+      <UPageBody prose class="slide-enter-content">
+        <ContentRenderer v-if="page && page.body" :value="page" />
       </UPageBody>
+
+      <template #right>
+        {{ page.body.toc.links }}
+        <UContentToc v-if="page?.body?.toc" :links="page.body.toc.links" />
+      </template>
     </UPage>
   </UContainer>
 </template>

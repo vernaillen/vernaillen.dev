@@ -18,6 +18,9 @@ const links = [{
 }, {
   label: 'Feed',
   to: '/feed'
+}, {
+  label: 'About',
+  to: '/about'
 }]
 </script>
 
@@ -28,14 +31,7 @@ const links = [{
     </template>
 
     <template #right>
-      <UButton
-        size="xs"
-        to="https://wa.me/32473344656"
-        icon="i-logos-whatsapp-icon"
-        variant="soft"
-        target="_blank"
-        aria-label="contact me on WhatsApp"
-      />
+      <WhatsAppLink nr="+32473344656" />
       <UButton
         size="xs"
         variant="soft"
