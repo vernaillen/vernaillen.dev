@@ -58,7 +58,7 @@ export default defineAppConfig({
         headline: 'mt-0 mb-10',
         title: 'text-3xl sm:text-5xl md:text-6xl animate__animated animate__pulse',
         description: 'my-16 md:my-24',
-      }
+      },
     },
     page: {
       header: {
@@ -66,6 +66,13 @@ export default defineAppConfig({
       }
     },
     blog: {
+      post: {
+        wrapper: 'lg:items-start',
+        title: 'text-ellipsis overflow-hidden',
+        image: {
+          wrapper: 'aspect-[21/8]',
+        }
+      },
       list: {
         wrapper: 'md:grid md:grid-cols-2'
       }

@@ -40,8 +40,16 @@ definePageMeta({
       :description="section.description"
       :align="section.align"
       :features="section.features"
+      :ui="{ container: 'lg:items-start' }"
     >
-      <Placeholder />
+      <div class="bg-gray-900/5 dark:bg-white/5 ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 rounded-xl lg:-m-4 p-4 align-top content-start">
+        <div
+          class="rounded-lg relative overflow-hidden border border-dashed border-gray-900/10 dark:border-white/10"
+          :class="section.imageAspectRatio ? section.imageAspectRatio : 'aspect-w-16 aspect-h-9'"
+        >
+          <NuxtImg :src="section.image" class="object-cover" />
+        </div>
+      </div>
     </ULandingSection>
 
     <ULandingSection :title="page.features.title" :description="page.features.description">
@@ -51,7 +59,7 @@ definePageMeta({
     </ULandingSection>
 
     <ULandingSection :headline="page.testimonials.headline" :title="page.testimonials.title" :description="page.testimonials.description">
-      <UPageColumns class="xl:columns-4">
+      <UPageColumns>
         <div v-for="(testimonial, index) in page.testimonials.items" :key="index" class="break-inside-avoid">
           <ULandingTestimonial v-bind="testimonial" class="bg-gray-100/50 dark:bg-gray-800/50" />
         </div>

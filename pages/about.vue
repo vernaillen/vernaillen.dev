@@ -28,7 +28,6 @@ defineOgImage({
       </UPageBody>
 
       <template #right>
-        {{ page.body.toc.links }}
         <UContentToc v-if="page?.body?.toc" :links="page.body.toc.links" />
       </template>
     </UPage>

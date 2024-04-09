@@ -18,9 +18,11 @@ hero:
       color: gray
       to: /projects
 sections:
-  - title: Discover WPNuxt
+  - title: Developing WPNuxt
     description: Creating a new Nuxt module to use WordPress as a headless CMS with a Nuxt frontend.
     id: features
+    image: /images/blog/06.wpnuxt/tmp-logo-dark.png
+    imageAspectRatio: aspect-w-16 aspect-h-6
     align: left
     features:
       - name: Easy to use
@@ -32,101 +34,72 @@ sections:
       - name: Secure
         description: Proident nostrud excepteur sint ut culpa consectetur aute adipisicing.
         icon: i-heroicons-lock-closed
-    links:
-      - label: Explore components
-        to: /pro/components
-        color: gray
-        icon: i-heroicons-arrow-right-20-solid
-        trailing: true
-        size: md
-        class: ml-8
   - title: Web Development
-    description: Cillum sint enim excepteur ut deserunt qui nisi in deserunt in. Deserunt aliquip quis aliquip eu quis ex velit velit nostrud sit.
+    description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
+    image: /images/index/istockphoto-1291641896-1024x1024.jpg
     align: right
-    features:
-      - name: Fast
-        description: Qui reprehenderit nostrud dolore nisi ad fugiat labore eiusmod.
-        icon: i-heroicons-rocket-launch
-      - name: Affordable
-        description: Reprehenderit fugiat elit in do ipsum ut pariatur.
-        icon: i-heroicons-currency-dollar
-      - name: Scalable
-        description: Lorem deserunt et eiusmod. Ea in consectetur minim officia.
-        icon: i-heroicons-chart-bar
-    links:
-      - label: Learn more
-        to: /pro/guide/content
-        color: gray
-        icon: i-heroicons-arrow-right-20-solid
-        trailing: true
-        size: md
-        class: ml-8
+  - title: Proven record as Consultant
+    description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
+    image: /images/index/istockphoto-1428394940-1024x1024.jpg
+    align: left
 features:
-  title: Consultancy services
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  title: My Values
+  description: This is what I stand for
   items:
-    - title: Easy to use
-      description: Id laborum laboris duis nostrud excepteur ut velit nulla magna Lorem proident non.
-      icon: i-heroicons-cog
+    - title: Loyal to my clients
+      description: I'm with you all the way, committed until the end of the project and beyond.
+      icon: i-carbon-commit
     - title: Reliable
-      description: Magna Lorem ex cillum fugiat ad enim aute irure sit duis minim.
+      description: You can always count on me.
       icon: i-heroicons-check
-    - title: Secure
-      description: Proident nostrud excepteur sint ut culpa consectetur aute adipisicing non anim ullamco.
-      icon: i-heroicons-lock-closed
+    - title: Honesty and integrity
+      description: I'm always upfront and honest with you.
+      icon: i-ic-round-balance
     - title: Fast
-      description: Qui reprehenderit nostrud dolore nisi ad fugiat labore eiusmod sint aliquip nisi voluptate.
+      description: Delivering on time and on budget.
       icon: i-heroicons-rocket-launch
-    - title: Affordable
-      description: Reprehenderit fugiat elit in do ipsum ut pariatur.
-      icon: i-heroicons-currency-dollar
-    - title: Scalable
-      description: Lorem deserunt et eiusmod. Ea in consectetur minim officia ullamco enim deserunt est.
-      icon: i-heroicons-chart-bar
+    - title: Rolling up my sleeves
+      description: I'm a hands-on developer, not afraid to get my hands dirty and code myself.
+      icon: i-heroicons-star
+    - title: Techie with a heart
+      description: I care about what your project means to you and to your clients and customers.
+      icon: i-heroicons-heart
 testimonials:
   headline: Testimonials
-  title: What my customers are saying.
-  description: Proident sunt exercitation minim laborum enim laboris labore esse.
+  title: What my clients & co-workers are saying.
   items:
-    - quote: Nostrud tempor sunt fugiat. Dolor in sint dolore labore non occaecat adipisicing Lorem labore ullamco enim excepteur. In fugiat Lorem sit velit id veniam esse eiusmod non ea voluptate cupidatat reprehenderit ullamco dolore. Mollit laborum occaecat aliquip.
+    - quote: Ik had het genoegen samen met Wouter te werken op het IDEWE IT-project Klantenportaal. Vooral de aangename, rustige manier van overleggen van Wouter is een pluspunt binnen de hectiek van deadlines en onverwachte issues en bugs. Daarnaast beschikt Wouter over een scherp analytisch vermogen en kan hij problemen/oplossingen in begrijpbare taal overbrengen naar de rest van het team (wat ook uit niet-software people bestaat). Wouter levert correct op wat van hem gevraagd word en hij denkt zelf na over mogelijke alternieven van eerder gedefinieerde oplossingen. Ik kijk al uit naar de volgende samenwerking!
       author:
-        name: Rose Roberson
-        description: CEO at Company
+        name: Kurt Eeckhout
+        description: Key Account Manager at Group Idewe
         avatar:
-          src: https://i.pravatar.cc/120?img=1
+          src: https://media.licdn.com/dms/image/C5603AQEZa6tTV8Zang/profile-displayphoto-shrink_100_100/0/1563368078430?e=1718236800&v=beta&t=1qLvP3RAy9U8cpmjXxHryM4ENEPqxjzQ9ppn_4ZTtNA
           loading: lazy
-    - quote: Eiusmod dolor aute ut nulla pariatur officia consequat aute amet exercitation.
+    - quote: Wouter's expertise in IBM Websphere portal helped us in reaching key projects. His ability to think user-led allows to work rapidly and meet expectations.
       author:
-        name: Chace Rodgers
-        description: CEO at Company
+        name: Björn Minne
+        description: Online Sales & Marketing Manager B2B at Van Marcke
         avatar:
-          src: https://i.pravatar.cc/120?img=7
+          src: https://media.licdn.com/dms/image/C5603AQHa-31uquBv_w/profile-displayphoto-shrink_100_100/0/1560369739694?e=1718236800&v=beta&t=-e7QX2qzWTZ1Qnu5E5gNQQVZzmBNBU6uhhHTsTcY6Ik
           loading: lazy
-    - quote: Id duis velit enim officia ad nisi incididunt magna ex dolor minim deserunt dolor. Esse incididunt cillum nostrud esse do quis amet labore amet nulla eiusmod amet nulla Lorem. Incididunt ex voluptate irure officia laboris ea proident est qui.
+    - quote: Wouter is a dedicated professional with who I had the pleasure to work with on two strategic projects at Van Marcke. He was the go to IT professional and project leader on both the new intranet and the roll out of an enterprise wide search engine and social media collaboration platform. Wouter is also a great colleague to work with and a strong team player and leader. I would recommend him without hesitation.
       author:
-        name: Cornelius Sheppard
-        description: CEO at Company
+        name: Philip Borremans
+        description: Chief Social Media Officer & CSR Coordinator.
         avatar:
-          src: https://i.pravatar.cc/120?img=3
+          src: https://media.licdn.com/dms/image/D4D03AQHKAkQ_-tORSA/profile-displayphoto-shrink_100_100/0/1697207150806?e=1718236800&v=beta&t=ctGv0IBwCKxIOBIpC1OR2FCGXjwMVV3PGTAy_O0yJ10
           loading: lazy
-    - quote: Velit consectetur in adipisicing culpa eiusmod commodo eu ex dolore. Officia irure nisi dolor dolore velit fugiat. Aliqua sint aliqua aute elit eu sunt.
+    - quote: Wouter's passion for technology and dedication to success have made and continue to make it a pleasure to work with him. The combination of a broad interest with deep knowledge & experience make for a great developer cocktail.
       author:
-        name: Destinee Woods
-        description: CEO at Company
+        name: Jonathan Bosmans
+        description: Senior Consultant at IBM
         avatar:
-          src: https://i.pravatar.cc/120?img=5
+          src: https://media.licdn.com/dms/image/C5603AQHGhp_dd_xgPA/profile-displayphoto-shrink_100_100/0/1516237245090?e=1718236800&v=beta&t=gMdvWka5r50LkjVIXu1frAijuPnud07Bfqd14Ly9V5c
           loading: lazy
-    - quote: Proident quis deserunt qui ex exercitation veniam id Lorem est cupidatat ipsum irure aliquip ad.
+    - quote: Extremely skilled developer that delivers high output and excellent quality.
       author:
-        name: Kaleb Mccormick
-        description: CEO at Company
+        name: Davy Vanherbergen
+        description: IT Team Lead at UPM-Kymmene
         avatar:
-          src: https://i.pravatar.cc/120?img=8
-          loading: lazy
-    - quote: Magna officia quis ea ea in officia non voluptate ipsum culpa do labore sunt. Aute est dolore commodo sint officia ad laboris dolor magna aliquip exercitation tempor commodo.
-      author:
-        name: Jazmin Mccall
-        description: CEO at Company
-        avatar:
-          src: https://i.pravatar.cc/120?img=9
+          src: https://media.licdn.com/dms/image/D4E03AQHv7rZ5itolAQ/profile-displayphoto-shrink_100_100/0/1699534602857?e=1718236800&v=beta&t=omtteaLIcnWkQbPOAg9ss4sFbWuCOjnRXAP7ZQewyZA
           loading: lazy
