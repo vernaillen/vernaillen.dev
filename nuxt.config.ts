@@ -36,6 +36,13 @@ export default defineNuxtConfig({
     '~/assets/css/main.css',
     'animate.css/animate.min.css'
   ],
+  image: {
+    domains: ['cdn.fosstodon.org'],
+    provider: 'twicpics',
+    twicpics: {
+      baseURL: 'https://vernaillen.twic.pics/vernaillennuxt'
+    }
+  },
   anime: {
     composables: true
   },
