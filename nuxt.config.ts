@@ -59,6 +59,11 @@ export default defineNuxtConfig({
     preference: 'light'
   },
   routeRules: {
+    '/' : { prerender: true },
+    '/career' : { prerender: true },
+    '/projects' : { prerender: true },
+    '/blog' : { prerender: true },
+    '/blog/**' : { prerender: true },
     '/api/search.json': { prerender: true }
   },
   devtools: {
