@@ -10,7 +10,6 @@ hero:
       to: '/blog'
       size: xl
       color: primary
-      variant: outline
       icon: i-heroicons-newspaper
       trailing: true
     - label: Projects
@@ -39,11 +38,12 @@ sections:
   - title: Web Development
     description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
     image: /images/index/istockphoto-832282452-1024x1024.jpg
+    imageAspectRatio: aspect-w-4 aspect-h-3
     align: right
   - title: Proven record as Consultant
     description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
     image: /images/index/istockphoto-1395719189-1024x1024.jpg
-    imageAspectRatio: aspect-w-16 aspect-h-11
+    imageAspectRatio: aspect-w-4 aspect-h-3
     align: left
 features:
   title: My Values

@@ -37,6 +37,7 @@ const links = [{
         variant="soft"
         icon="i-mdi-github"
         to="https://github.com/vernaillen/vernaillen.dev/"
+        aria-label="Wouter Vernaillen's GitHub"
         target="_blank"
         class="ml-1 sm:ml-2"
       />

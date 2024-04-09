@@ -21,12 +21,8 @@ definePageMeta({
       <div class="absolute inset-0 z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
 
       <template #headline>
-        <UBadge v-if="page.hero.headline" variant="subtle" size="lg" class="relative rounded-full font-semibold">
-          <NuxtLink :to="page.hero.headline.to" target="_blank" class="focus:outline-none" tabindex="-1">
-            <span class="absolute inset-0" aria-hidden="true" />
-          </NuxtLink>
+        <UBadge v-if="page.hero.headline" variant="subtle" size="lg" class="relative rounded-lg font-semibold">
           {{ page.hero.headline.label }}
-          <UIcon v-if="page.hero.headline.icon" :name="page.hero.headline.icon" class="ml-1 w-4 h-4 pointer-events-none" />
         </UBadge>
       </template>
     </ULandingHero>
@@ -45,8 +41,12 @@ definePageMeta({
           class="rounded-lg relative overflow-hidden border border-dashed border-gray-900/10 dark:border-white/10"
           :class="section.imageAspectRatio ? section.imageAspectRatio : 'aspect-w-16 aspect-h-9'"
         >
-          <NuxtLink v-if="section.url" :to="section.url" target="_blank">
-            <NuxtImg :src="section.image" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all duration-500" />
+          <NuxtLink v-if="section.url" :to="section.url" target="_blank" :aria-label="section.title">
+            <NuxtImg
+              :src="section.image"
+              :alt="section.title"
+              class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all duration-500"
+            />
           </NuxtLink>
           <NuxtImg v-else :src="section.image" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all duration-500" />
         </div>
