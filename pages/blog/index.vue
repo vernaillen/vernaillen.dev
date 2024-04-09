@@ -63,11 +63,11 @@ defineOgImage({
           <template #image>
             <NuxtImg
               :src="post.thumbnail_dark ? post.thumbnail_dark : post.image?.src" :alt="post.image?.alt" width="384" height="160" format="webp" fit="cover"
-              class="object-cover object-top w-full h-full group-hover:scale-105 opacity-100 dark:opacity-0 dark:h-0 transform transition-transform duration-200"
+              class="object-cover object-top w-full h-full group-hover:scale-[103%] opacity-100 dark:opacity-0 dark:h-0 transform transition-transform duration-200"
             />
             <NuxtImg
               :src="post.thumbnail_light ? post.thumbnail_light : post.image?.src" :alt="post.image?.alt" width="384" height="160" format="webp" fit="cover"
-              class="object-cover object-top w-full h-0 group-hover:scale-105 opacity-0 dark:opacity-100 dark:h-full transform transition-transform duration-200"
+              class="object-cover object-top w-full h-0 group-hover:scale-[103%] opacity-0 dark:opacity-100 dark:h-full transform transition-transform duration-200"
             />
           </template>
           <template #date>
