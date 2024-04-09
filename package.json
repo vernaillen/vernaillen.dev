@@ -14,8 +14,8 @@
   "dependencies": {
     "@iconify-json/carbon": "^1.1.31",
     "@iconify-json/heroicons": "^1.1.20",
-    "@iconify-json/mdi": "^1.1.65",
-    "@iconify-json/simple-icons": "^1.1.98",
+    "@iconify-json/mdi": "^1.1.66",
+    "@iconify-json/simple-icons": "^1.1.99",
     "@nuxt/content": "^2.12.1",
     "@nuxt/fonts": "^0.6.1",
     "@nuxt/image": "^1.5.0",
@@ -23,14 +23,14 @@
     "@vueuse/nuxt": "^10.9.0",
     "animate.css": "^4.1.1",
     "nuxt": "^3.11.2",
-    "nuxt-og-image": "3.0.0-rc.51"
+    "nuxt-og-image": "3.0.0-rc.52"
   },
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.3.1",
+    "@nuxt/eslint-config": "^0.3.2",
     "@nuxthq/studio": "^1.0.13",
     "eslint": "^8.57.0",
     "nuxt-svgo": "^4.0.0",
     "prism-theme-vars": "^0.2.4",
-    "vue-tsc": "^2.0.10"
+    "vue-tsc": "^2.0.11"
   }
 }
