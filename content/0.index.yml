@@ -18,35 +18,37 @@ hero:
       color: gray
       to: /projects
 sections:
-  - title: Developing WPNuxt
-    description: Creating a new Nuxt module to use WordPress as a headless CMS with a Nuxt frontend.
+  - title: Bringing you WPNuxt
+    description: A new Nuxt module to use WordPress as a headless CMS with a Nuxt frontend.
     id: features
-    image: /images/blog/06.wpnuxt/tmp-logo-dark.png
-    imageAspectRatio: aspect-w-16 aspect-h-6
+    image: /images/index/wpnuxt.png
+    imageAspectRatio: aspect-w-16 aspect-h-9
+    url: https://wpnuxt.com
     align: left
     features:
       - name: Easy to use
-        description: Id laborum laboris duis nostrud excepteur ut velit.
-        icon: i-heroicons-cog
-      - name: Reliable
-        description: Magna Lorem ex cillum fugiat ad enim aute irure sit duis minim.
+        description: Easily fetch content from WordPress using composables and render it with Nuxt 3 components. Based on standard Gutenberg blocks.
         icon: i-heroicons-check
-      - name: Secure
-        description: Proident nostrud excepteur sint ut culpa consectetur aute adipisicing.
-        icon: i-heroicons-lock-closed
+      - name: Familiar backend for editors
+        description: Many website owners or content editors are already familiar with the WordPress backend.
+        icon: i-ic-baseline-wordpress
+      - name: Cutting edge frontend
+        description: Nuxt 3 is a modern frontend framework that allows you to build fast and responsive websites.
+        icon: i-logos-nuxt-icon
   - title: Web Development
     description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
-    image: /images/index/istockphoto-1291641896-1024x1024.jpg
+    image: /images/index/istockphoto-832282452-1024x1024.jpg
     align: right
   - title: Proven record as Consultant
     description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
-    image: /images/index/istockphoto-1428394940-1024x1024.jpg
+    image: /images/index/istockphoto-1395719189-1024x1024.jpg
+    imageAspectRatio: aspect-w-16 aspect-h-11
     align: left
 features:
   title: My Values
   description: This is what I stand for
   items:
-    - title: Loyal to my clients
+    - title: Committed to my clients
       description: I'm with you all the way, committed until the end of the project and beyond.
       icon: i-carbon-commit
     - title: Reliable

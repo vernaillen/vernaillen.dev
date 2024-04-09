@@ -47,7 +47,10 @@ definePageMeta({
           class="rounded-lg relative overflow-hidden border border-dashed border-gray-900/10 dark:border-white/10"
           :class="section.imageAspectRatio ? section.imageAspectRatio : 'aspect-w-16 aspect-h-9'"
         >
-          <NuxtImg :src="section.image" class="object-cover" />
+          <NuxtLink v-if="section.url" :to="section.url" target="_blank">
+            <NuxtImg :src="section.image" class="opacity-95 hover:opacity-100 hover:scale-[101%] transform transition-all" />
+          </NuxtLink>
+          <NuxtImg v-else :src="section.image" class="opacity-80 hover:opacity-100 hover:scale-[101%] transform transition-all" />
         </div>
       </div>
     </ULandingSection>
