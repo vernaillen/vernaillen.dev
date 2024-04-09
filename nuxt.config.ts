@@ -40,7 +40,7 @@ export default defineNuxtConfig({
     preference: 'dark'
   },
   image: {
-    domains: ['cdn.fosstodon.org'],
+    domains: ['cdn.fosstodon.org', 'ui.nuxt.com'],
     provider: 'twicpics',
     format: ['webp'],
     twicpics: {
