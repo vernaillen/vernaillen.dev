@@ -7,7 +7,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-start items-center">
+  <div class="flex flex-start items-center prose">
     <div
       :id="careerStep.id"
       class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
@@ -33,12 +33,12 @@ defineProps<{
         />
       </span>
     </div>
-    <h4 class="text-gray-800 dark:text-white font-semibold -mt-2">
+    <h2 class="text-gray-800 text-2xl dark:text-white font-semibold -mt-2">
       <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary-500">
         {{ careerStep.text }}
       </NuxtLink>
       <span v-else>{{ careerStep.text }}</span>
-    </h4>
+    </h2>
   </div>
   <div class="border-l-2 border-primary mt-2">
     <div
