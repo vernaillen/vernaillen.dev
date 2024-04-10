@@ -1,3 +1,5 @@
+import nuxtPkg from 'nuxt/package.json'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: [process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro'],
@@ -14,6 +16,11 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     'nuxt-time',
   ],
+  runtimeConfig: {
+    public: {
+      nuxtVersion: nuxtPkg.version
+    }
+  },
   eslint: {
     config: {
       stylistic: true, // <---

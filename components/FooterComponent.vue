@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const config = useRuntimeConfig()
+
 const links = [{
   label: 'Pages',
   children: [
@@ -72,6 +74,23 @@ const links = [{
     <template #left>
       <p class="text-gray-500 dark:text-gray-400 text-sm">
         Copyright © {{ new Date().getFullYear() }}. All rights reserved.
+      </p>
+    </template>
+    <template #center>
+      <p class="text-sm">
+        built with <UIcon
+          name="i-mdi-heart"
+          class="bg-red-500 -mb-[2px] mx-1"
+        />
+        using <NuxtLink
+          href="https://nuxt.com"
+          target="_blank"
+        >
+          <UIcon
+            class="-mb-[2px] mx-1"
+            name="i-logos-nuxt-icon"
+          /> Nuxt {{ config.public.nuxtVersion }}
+        </NuxtLink>
       </p>
     </template>
 
