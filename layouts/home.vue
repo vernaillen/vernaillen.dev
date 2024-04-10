@@ -15,7 +15,7 @@ onMounted(() => {
     autoplay: true,
     loop: true,
     easing: 'easeInOutSine',
-    direction: 'alternate'
+    direction: 'alternate',
   })
   useAnime({
     targets: '.svg-right svg .animateCircle',
@@ -23,20 +23,20 @@ onMounted(() => {
     scale: 1.02,
     loop: true,
     easing: 'easeInOutSine',
-    direction: 'alternate'
+    direction: 'alternate',
   })
 })
 </script>
 
 <template>
   <div>
-    <Header />
+    <HeaderComponent />
 
     <UMain>
       <slot />
     </UMain>
 
-    <Footer />
+    <FooterComponent />
     <div class="svg-right absolute top-0 right-0 left-1/2 lg:left-2/3 pl-8 sm:pl-14 z-[-1] overflow-hidden">
       <SvgoHomeRight class="w-full h-screen" />
     </div>
@@ -44,7 +44,10 @@ onMounted(() => {
       <SvgoHomeLeft class="w-full" />
     </div>
     <ClientOnly>
-      <LazyUContentSearch :files="files" :navigation="navigation" />
+      <LazyUContentSearch
+        :files="files"
+        :navigation="navigation"
+      />
     </ClientOnly>
   </div>
 </template>

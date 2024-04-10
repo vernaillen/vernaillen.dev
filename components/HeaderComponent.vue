@@ -5,19 +5,19 @@ const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 
 const links = [{
   label: 'Home',
-  to: '/'
+  to: '/',
 }, {
   label: 'Career',
-  to: '/career'
+  to: '/career',
 }, {
   label: 'Projects',
-  to: '/projects'
+  to: '/projects',
 }, {
   label: 'Blog',
-  to: '/blog'
+  to: '/blog',
 }, {
   label: 'About',
-  to: '/about'
+  to: '/about',
 }]
 </script>
 
@@ -41,7 +41,11 @@ const links = [{
     </template>
 
     <template #panel>
-      <UNavigationTree :links="mapContentNavigation(navigation)" :multiple="false" default-open />
+      <UNavigationTree
+        :links="mapContentNavigation(navigation)"
+        :multiple="false"
+        default-open
+      />
     </template>
   </UHeader>
 </template>

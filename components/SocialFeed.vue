@@ -2,17 +2,17 @@
 const showReblogs = ref(false)
 const fetchedFeed = ref()
 const filteredFeed = ref()
-async function fetchPosts () {
+async function fetchPosts() {
   const [mastodon] = await Promise.all([
-    $fetch('/_social/mastodon')
+    $fetch('/_social/mastodon'),
   ])
   fetchedFeed.value = [...mastodon]
     .sort(
-      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
     )
   filterPosts()
 }
-function filterPosts () {
+function filterPosts() {
   filteredFeed.value = fetchedFeed.value.filter(item => showReblogs.value || !item.reblogged)
 }
 onMounted(() => {
@@ -32,7 +32,10 @@ watch(() => showReblogs.value, () => {
     style="--enter-stage:0;--enter-step:10ms;"
   >
     <div class="pb-5 -mt-5 text-right">
-      Show reblogs: <UToggle v-model="showReblogs" class="-mb-[20px]" />
+      Show reblogs: <UToggle
+        v-model="showReblogs"
+        class="-mb-[20px]"
+      />
     </div>
     <div v-show="filteredFeed">
       <FeedPost
@@ -44,7 +47,10 @@ watch(() => showReblogs.value, () => {
     </div>
     <div v-show="!filteredFeed">
       <div class="flex space-x-4 w-full">
-        <USkeleton class="h-10 w-10 align-top dark:bg-opacity-100" :ui="{ rounded: 'rounded-full' }" />
+        <USkeleton
+          class="h-10 w-10 align-top dark:bg-opacity-100"
+          :ui="{ rounded: 'rounded-full' }"
+        />
         <div class="space-y-2 w-full mb-10">
           <header class="mb-5">
             <USkeleton class="h-5 w-[150px] mb-2 dark:bg-opacity-100" />
@@ -56,7 +62,10 @@ watch(() => showReblogs.value, () => {
         </div>
       </div>
       <div class="flex space-x-4 w-full">
-        <USkeleton class="h-10 w-10 align-top dark:bg-opacity-50" :ui="{ rounded: 'rounded-full' }" />
+        <USkeleton
+          class="h-10 w-10 align-top dark:bg-opacity-50"
+          :ui="{ rounded: 'rounded-full' }"
+        />
         <div class="space-y-2 w-full mb-10">
           <header class="mb-5">
             <USkeleton class="h-5 w-[150px] mb-2 dark:bg-opacity-50" />

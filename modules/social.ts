@@ -2,41 +2,42 @@ import {
   addServerHandler,
   createResolver,
   defineNuxtModule,
-  useNuxt
+  useNuxt,
 } from 'nuxt/kit'
 import { defu } from 'defu'
 
 const networks = {
-  mastodon: 'mastodon'
+  mastodon: 'mastodon',
 }
 
 type Network = keyof typeof networks
 
 type NetworkOptions = {
-    mastodon?: {
-        identifier: string,
-        options?: {
-            excludeReplies?: boolean,
-            excludeReblogs?: boolean,
-            limit?: number
-        }
+  mastodon?: {
+    identifier: string
+    options?: {
+      excludeReplies?: boolean
+      excludeReblogs?: boolean
+      limit?: number
     }
+  }
 }
 
 export default defineNuxtModule({
   meta: {
     name: 'social-sync',
-    configKey: 'social'
+    configKey: 'social',
   },
   defaults: {
-    networks: {} as NetworkOptions
+    networks: {} as NetworkOptions,
   },
-  setup (options) {
+  setup(options) {
     const nuxt = useNuxt()
     const resolver = createResolver(import.meta.url)
 
     nuxt.options.runtimeConfig.social = {
-      networks: options.networks as any
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      networks: options.networks as any,
     }
 
     // Prevent all the extra stuff `masto` will add
@@ -44,23 +45,23 @@ export default defineNuxtModule({
     nuxt.options.build.transpile.push(
       'masto',
       '@mastojs/ponyfills',
-      'magic-string'
+      'magic-string',
     )
 
     nuxt.options.nitro = defu(nuxt.options.nitro, {
       alias: {
-        eventemitter3: 'unenv/runtime/mock/proxy',
-        'isomorphic-ws': 'unenv/runtime/mock/proxy'
-      }
+        'eventemitter3': 'unenv/runtime/mock/proxy',
+        'isomorphic-ws': 'unenv/runtime/mock/proxy',
+      },
     })
 
     nuxt.options.alias = defu(nuxt.options.alias, {
       '@jridgewell/sourcemap-codec': resolver.resolve(
-        './mocks/sourcemap-codec'
+        './mocks/sourcemap-codec',
       ),
-      qs: 'rollup-plugin-node-polyfills/polyfills/qs',
+      'qs': 'rollup-plugin-node-polyfills/polyfills/qs',
       'change-case': 'scule',
-      semver: resolver.resolve('./mocks/semver')
+      'semver': resolver.resolve('./mocks/semver'),
     })
 
     for (const network in options.networks) {
@@ -70,7 +71,7 @@ export default defineNuxtModule({
       }
       addServerHandler({
         route: `/_social/${network}`,
-        handler: resolver.resolve(`./runtime/server/_social/${network}.get.ts`)
+        handler: resolver.resolve(`./runtime/server/_social/${network}.get.ts`),
       })
     }
 
@@ -78,12 +79,12 @@ export default defineNuxtModule({
       nuxt.options.nitro.routeRules ||= {}
       nuxt.options.nitro.routeRules['/_social/**'] = {
         isr: 60,
-        swr: 60
+        swr: 60,
       }
     }
-  }
+  },
 })
 
-function isSupportedNetwork (id: string): id is Network {
+function isSupportedNetwork(id: string): id is Network {
   return id in networks
 }

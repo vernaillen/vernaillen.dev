@@ -15,19 +15,22 @@ useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
   description: page.value.description,
-  ogDescription: page.value.description
+  ogDescription: page.value.description,
 })
 
 defineOgImage({
   component: 'Vernaillen',
   title: page.value.title,
-  description: page.value.description
+  description: page.value.description,
 })
 </script>
 
 <template>
   <UContainer>
-    <UPageHeader v-bind="page" class="py-[50px]" />
+    <UPageHeader
+      v-bind="page"
+      class="py-[50px]"
+    />
 
     <UPageBody class="slide-enter-content">
       <UBlogList>
@@ -48,7 +51,10 @@ defineOgImage({
           :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
         >
           <template #badge>
-            <div v-if="post?.categories" class="mb-2">
+            <div
+              v-if="post?.categories"
+              class="mb-2"
+            >
               <UButton
                 v-for="(cat, catIndex) in post.categories"
                 :key="catIndex"
@@ -62,18 +68,40 @@ defineOgImage({
           </template>
           <template #image>
             <NuxtImg
-              :src="post.thumbnail_dark ? post.thumbnail_dark : post.image?.src" :alt="post.image?.alt" width="384" height="160" format="webp" fit="cover"
+              :src="post.thumbnail_dark ? post.thumbnail_dark : post.image?.src"
+              :alt="post.image?.alt"
+              width="384"
+              height="160"
+              format="webp"
+              fit="cover"
               class="object-cover object-top w-full h-full group-hover:scale-[103%] opacity-100 dark:opacity-0 dark:h-0 transform transition-transform duration-200"
             />
             <NuxtImg
-              :src="post.thumbnail_light ? post.thumbnail_light : post.image?.src" :alt="post.image?.alt" width="384" height="160" format="webp" fit="cover"
+              :src="post.thumbnail_light ? post.thumbnail_light : post.image?.src"
+              :alt="post.image?.alt"
+              width="384"
+              height="160"
+              format="webp"
+              fit="cover"
               class="object-cover object-top w-full h-0 group-hover:scale-[103%] opacity-0 dark:opacity-100 dark:h-full transform transition-transform duration-200"
             />
           </template>
           <template #date>
-            <NuxtTime locale="en-GB" :datetime="post.date" date-style="long" class="text-sm" />
-            <span v-if="post.location" class="text-sm">
-              <UIcon size="xs" name="i-mdi-location" class="-mb-[1px] mx-1" /> {{ post.location }}
+            <NuxtTime
+              locale="en-GB"
+              :datetime="post.date"
+              date-style="long"
+              class="text-sm"
+            />
+            <span
+              v-if="post.location"
+              class="text-sm"
+            >
+              <UIcon
+                size="xs"
+                name="i-mdi-location"
+                class="-mb-[1px] mx-1"
+              /> {{ post.location }}
             </span>
           </template>
         </UBlogPost>

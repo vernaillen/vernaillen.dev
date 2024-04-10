@@ -31,25 +31,43 @@ if (post.value.image?.src) {
 
   useSeoMeta({
     ogImage: joinURL(site.url, post.value.image.src),
-    twitterImage: joinURL(site.url, post.value.image.src)
+    twitterImage: joinURL(site.url, post.value.image.src),
   })
-} else {
+}
+else {
   defineOgImage({
-  component: 'Vernaillen',
+    component: 'Vernaillen',
     title,
     description,
-    headline: 'Blog'
+    headline: 'Blog',
   })
 }
 </script>
 
 <template>
   <UContainer v-if="post">
-    <UPageHeader :title="post.title" :description="post.description">
+    <UPageHeader
+      :title="post.title"
+      :description="post.description"
+    >
       <template #headline>
-        <NuxtTime locale="en-GB" :datetime="post.date" date-style="long" class="text-gray-500 dark:text-gray-400" />
+        <NuxtTime
+          locale="en-GB"
+          :datetime="post.date"
+          date-style="long"
+          class="text-gray-500 dark:text-gray-400"
+        />
         <span class="text-gray-500 dark:text-gray-400">&middot;</span>
-        <UBadge v-if="post.badge" v-bind="post.badge" variant="subtle" /> <UIcon v-if="post.location" size="xs" name="i-mdi-location" class="mx-0 px-0" /><span class="text-sm">{{ post.location }}</span>
+        <UBadge
+          v-if="post.badge"
+          v-bind="post.badge"
+          variant="subtle"
+        /> <UIcon
+          v-if="post.location"
+          size="xs"
+          name="i-mdi-location"
+          class="mx-0 px-0"
+        /><span class="text-sm">{{ post.location }}</span>
       </template>
 
       <div class="flex flex-wrap items-center gap-3 mt-4">
@@ -61,7 +79,11 @@ if (post.value.image?.src) {
           target="_blank"
           size="sm"
         >
-          <UAvatar v-bind="author.avatar" :alt="author.name" size="2xs" />
+          <UAvatar
+            v-bind="author.avatar"
+            :alt="author.name"
+            size="2xs"
+          />
 
           {{ author.name }}
         </UButton>
@@ -69,8 +91,14 @@ if (post.value.image?.src) {
     </UPageHeader>
 
     <UPage>
-      <UPageBody prose class="slide-enter-content">
-        <ContentRenderer v-if="post && post.body" :value="post" />
+      <UPageBody
+        prose
+        class="slide-enter-content"
+      >
+        <ContentRenderer
+          v-if="post && post.body"
+          :value="post"
+        />
 
         <hr v-if="surround?.length">
 
@@ -78,9 +106,15 @@ if (post.value.image?.src) {
       </UPageBody>
 
       <template #right>
-        <UContentToc v-if="post.body && post.body.toc" :links="post.body.toc.links" />
+        <UContentToc
+          v-if="post.body && post.body.toc"
+          :links="post.body.toc.links"
+        />
         <hr v-if="post.mastodonPost || post.twitterPost">
-        <SocialComments v-if="post.mastodonPost || post.twitterPost" :page="post" />
+        <SocialComments
+          v-if="post.mastodonPost || post.twitterPost"
+          :page="post"
+        />
       </template>
     </UPage>
   </UContainer>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SocialFeed from '~/components/SocialFeed.vue';
+import SocialFeed from '~/components/SocialFeed.vue'
 
 const { data: page } = await useAsyncData('feed', () => queryContent('/feed').findOne())
 if (!page.value) {
@@ -10,22 +10,25 @@ useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
   description: page.value.description,
-  ogDescription: page.value.description
+  ogDescription: page.value.description,
 })
 
 defineOgImage({
   component: 'Vernaillen',
   title: page.value.title,
-  description: page.value.description
+  description: page.value.description,
 })
 </script>
 
 <template>
   <UContainer class="">
-    <UPageHeader v-bind="page" class="py-[50px]" />
+    <UPageHeader
+      v-bind="page"
+      class="py-[50px]"
+    />
     <UPage>
       <UPageBody class="slide-enter-content max-w-2xl mx-auto">
-        <SocialFeed/>
+        <SocialFeed />
       </UPageBody>
     </UPage>
   </UContainer>

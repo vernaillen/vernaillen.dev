@@ -8,27 +8,39 @@ useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
   description: page.value.description,
-  ogDescription: page.value.description
+  ogDescription: page.value.description,
 })
 
 defineOgImage({
   component: 'Vernaillen',
   title: page.value.title,
-  description: page.value.description
+  description: page.value.description,
 })
 </script>
 
 <template>
   <UContainer class="">
-    <UPageHeader v-bind="page" class="py-[50px]" />
+    <UPageHeader
+      v-bind="page"
+      class="py-[50px]"
+    />
 
     <UPage>
-      <UPageBody prose class="slide-enter-content">
-        <ContentRenderer v-if="page && page.body" :value="page" />
+      <UPageBody
+        prose
+        class="slide-enter-content"
+      >
+        <ContentRenderer
+          v-if="page && page.body"
+          :value="page"
+        />
       </UPageBody>
 
       <template #right>
-        <UContentToc v-if="page?.body?.toc" :links="page.body.toc.links" />
+        <UContentToc
+          v-if="page?.body?.toc"
+          :links="page.body.toc.links"
+        />
       </template>
     </UPage>
   </UContainer>

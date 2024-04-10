@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: [
     '@hypernym/nuxt-anime',
     '@nuxt/content',
+    '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/fonts',
@@ -11,8 +12,13 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     'nuxt-svgo',
-    'nuxt-time'
+    'nuxt-time',
   ],
+  eslint: {
+    config: {
+      stylistic: true, // <---
+    },
+  },
   site: {
     name: 'Wouter Vernaillen',
     logo: '/images/vernaillendev-light.png',
@@ -27,39 +33,39 @@ export default defineNuxtConfig({
         options: {
           excludeReplies: true,
           excludeReblogs: false,
-          limit: 100
-        }
-      }
-    }
+          limit: 100,
+        },
+      },
+    },
   },
   css: [
     '~/assets/css/main.css',
-    'animate.css/animate.min.css'
+    'animate.css/animate.min.css',
   ],
   colorMode: {
-    preference: 'dark'
+    preference: 'dark',
   },
   image: {
     domains: ['cdn.fosstodon.org', 'ui.nuxt.com'],
     provider: 'twicpics',
     format: ['webp'],
     twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/vernaillennuxt'
-    }
+      baseURL: 'https://vernaillen.twic.pics/vernaillennuxt',
+    },
   },
   anime: {
-    composables: true
+    composables: true,
   },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
-      const globals = components.filter((c) => ['UButton'].includes(c.pascalName))
+      const globals = components.filter(c => ['UButton'].includes(c.pascalName))
 
-      globals.forEach((c) => c.global = true)
-    }
+      globals.forEach(c => c.global = true)
+    },
   },
   ui: {
-    icons: ['heroicons', 'simple-icons', 'mdi', 'carbon', 'logos', 'ic']
+    icons: ['heroicons', 'simple-icons', 'mdi', 'carbon', 'logos', 'ic'],
   },
   svgo: {
     svgo: true,
@@ -67,18 +73,18 @@ export default defineNuxtConfig({
 
     defaultImport: 'component',
     svgoConfig: {
-      multipass: true
-    }
+      multipass: true,
+    },
   },
   routeRules: {
-    '/' : { prerender: true },
-    '/career' : { prerender: true },
-    '/projects' : { prerender: true },
-    '/blog' : { prerender: true },
-    '/blog/**' : { prerender: true },
-    '/api/search.json': { prerender: true }
+    '/': { prerender: true },
+    '/career': { prerender: true },
+    '/projects': { prerender: true },
+    '/blog': { prerender: true },
+    '/blog/**': { prerender: true },
+    '/api/search.json': { prerender: true },
   },
   devtools: {
-    enabled: true
-  }
+    enabled: true,
+  },
 })

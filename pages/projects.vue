@@ -8,22 +8,23 @@ useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
   description: page.value.description,
-  ogDescription: page.value.description
+  ogDescription: page.value.description,
 })
 
 defineOgImage({
   component: 'Vernaillen',
   title: page.value.title,
-  description: page.value.description
+  description: page.value.description,
 })
-
-const isYearly = ref(false)
 </script>
 
 <template>
   <div v-if="page">
     <UContainer>
-      <UPageHeader v-bind="page" class="py-[50px]" />
+      <UPageHeader
+        v-bind="page"
+        class="py-[50px]"
+      />
 
       <UPage>
         <UPageBody class="slide-enter-content">
@@ -32,12 +33,15 @@ const isYearly = ref(false)
               v-for="(project, index) in page.projects"
               :key="index"
               v-bind="project"
-              :ui="{ image: { wrapper: 'aspect-[2/1]' }, badge: { wrapper: 'mb-0'} }"
+              :ui="{ image: { wrapper: 'aspect-[2/1]' }, badge: { wrapper: 'mb-0' } }"
               class="slide-enter"
               :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
             >
               <template #badge>
-                <div v-if="project?.categories" class="mb-2">
+                <div
+                  v-if="project?.categories"
+                  class="mb-2"
+                >
                   <UButton
                     v-for="(cat, catIndex) in project.categories"
                     :key="catIndex"
@@ -51,7 +55,12 @@ const isYearly = ref(false)
               </template>
               <template #image>
                 <NuxtImg
-                  :src="project.image?.src" :alt="project.image?.alt" width="384" height="192" format="webp" fit="cover"
+                  :src="project.image?.src"
+                  :alt="project.image?.alt"
+                  width="384"
+                  height="192"
+                  format="webp"
+                  fit="cover"
                   class="object-cover object-top w-full h-full transform transition-transform duration-200 group-hover:scale-[103%]"
                 />
               </template>

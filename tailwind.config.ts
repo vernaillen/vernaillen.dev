@@ -9,14 +9,14 @@ export default <Partial<Config>>{
     './components/**/*.vue',
     './content/**/*.md',
     './layouts/**/*.vue',
-    './pages/**/*.vue'
+    './pages/**/*.vue',
   ],
   theme: {
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         serif: ['Inter', ...defaultTheme.fontFamily.serif],
-        mono: ['PT Mono', ...defaultTheme.fontFamily.mono]
+        mono: ['PT Mono', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         white: '#FFFFFF',
@@ -34,9 +34,9 @@ export default <Partial<Config>>{
           700: '#755d0f',
           800: '#5e4509',
           900: '#452e06',
-          950: '#2e1b02'
-        }
+          950: '#2e1b02',
+        },
       },
-    }
-  }
+    },
+  },
 }

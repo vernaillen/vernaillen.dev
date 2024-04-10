@@ -4,21 +4,21 @@ const links = [{
   children: [
     {
       label: 'Career',
-      to: '/career'
+      to: '/career',
     },
     {
       label: 'Projects',
-      to: '/projects'
+      to: '/projects',
     },
     {
       label: 'Blog',
-      to: '/blog'
+      to: '/blog',
     },
     {
       label: 'About',
-      to: '/about'
-    }
-  ]
+      to: '/about',
+    },
+  ],
 },
 {
   label: 'Projects',
@@ -26,19 +26,19 @@ const links = [{
     {
       label: 'WPnuxt',
       to: 'https://wpnuxt.com',
-      target: '_blank'
+      target: '_blank',
     },
     {
       label: 'Vue Audiomotion Analyzer',
       to: 'https://vue-audiomotion-analyzer.dev/',
-      target: '_blank'
+      target: '_blank',
     },
     {
       label: 'Radio App',
       to: 'https://radio.vernaillen.dev/',
-      target: '_blank'
-    }
-  ]
+      target: '_blank',
+    },
+  ],
 },
 {
   label: 'Other Websites',
@@ -46,33 +46,15 @@ const links = [{
     {
       label: 'Harmonics.be',
       to: 'https://harmonics.be',
-      target: '_blank'
+      target: '_blank',
     },
     {
       label: 'bio.wouter.net',
       to: 'https://bio.wouter.net',
-      target: '_blank'
-    }
-  ]
+      target: '_blank',
+    },
+  ],
 }]
-
-const toast = useToast()
-
-const email = ref('')
-const loading = ref(false)
-
-function onSubmit () {
-  loading.value = true
-
-  setTimeout(() => {
-    toast.add({
-      title: 'Subscribed!',
-      description: 'You\'ve been subscribed to our newsletter.'
-    })
-
-    loading.value = false
-  }, 1000)
-}
 </script>
 
 <template>
@@ -96,7 +78,14 @@ function onSubmit () {
     <template #right>
       <UColorModeButton size="sm" />
 
-      <UButton to="https://github.com/vernaillen/vernaillen.dev" target="_blank" icon="i-simple-icons-github" aria-label="GitHub" color="gray" variant="ghost" />
+      <UButton
+        to="https://github.com/vernaillen/vernaillen.dev"
+        target="_blank"
+        icon="i-simple-icons-github"
+        aria-label="GitHub"
+        color="gray"
+        variant="ghost"
+      />
     </template>
   </UFooter>
 </template>

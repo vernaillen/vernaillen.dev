@@ -8,19 +8,28 @@ useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
   description: page.value.description,
-  ogDescription: page.value.description
+  ogDescription: page.value.description,
 })
 definePageMeta({
-  layout: 'home'
+  layout: 'home',
 })
 </script>
 
 <template>
   <div v-if="page">
-    <ULandingHero :title="page.hero.title" :description="page.hero.description" :links="page.hero.links">
+    <ULandingHero
+      :title="page.hero.title"
+      :description="page.hero.description"
+      :links="page.hero.links"
+    >
       <div class="absolute inset-0 z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
       <template #headline>
-        <UBadge v-if="page.hero.headline" variant="subtle" size="lg" class="relative rounded-lg font-semibold">
+        <UBadge
+          v-if="page.hero.headline"
+          variant="subtle"
+          size="lg"
+          class="relative rounded-lg font-semibold"
+        >
           {{ page.hero.headline.label }}
         </UBadge>
       </template>
@@ -43,16 +52,34 @@ definePageMeta({
       />
     </ULandingSection>
 
-    <ULandingSection :title="page.features.title" :description="page.features.description">
+    <ULandingSection
+      :title="page.features.title"
+      :description="page.features.description"
+    >
       <UPageGrid>
-        <ULandingCard v-for="(item, index) in page.features.items" :key="index" v-bind="item" />
+        <ULandingCard
+          v-for="(item, index) in page.features.items"
+          :key="index"
+          v-bind="item"
+        />
       </UPageGrid>
     </ULandingSection>
 
-    <ULandingSection :headline="page.testimonials.headline" :title="page.testimonials.title" :description="page.testimonials.description">
+    <ULandingSection
+      :headline="page.testimonials.headline"
+      :title="page.testimonials.title"
+      :description="page.testimonials.description"
+    >
       <UPageColumns>
-        <div v-for="(testimonial, index) in page.testimonials.items" :key="index" class="break-inside-avoid">
-          <ULandingTestimonial v-bind="testimonial" class="bg-gray-100/50 dark:bg-gray-800/50" />
+        <div
+          v-for="(testimonial, index) in page.testimonials.items"
+          :key="index"
+          class="break-inside-avoid"
+        >
+          <ULandingTestimonial
+            v-bind="testimonial"
+            class="bg-gray-100/50 dark:bg-gray-800/50"
+          />
         </div>
       </UPageColumns>
     </ULandingSection>

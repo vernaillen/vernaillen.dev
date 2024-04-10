@@ -9,13 +9,13 @@ provide('navigation', navigation)
 
 <template>
   <div class="overflow-hidden">
-    <Header />
+    <HeaderComponent />
 
     <UMain>
       <slot />
     </UMain>
 
-    <Footer />
+    <FooterComponent />
     <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
       <SvgoBackgroundLeft1 class="w-full" />
     </span>
@@ -23,7 +23,10 @@ provide('navigation', navigation)
       <SvgoBackgroundRight1 class="w-full" />
     </span>
     <ClientOnly>
-      <LazyUContentSearch :files="files" :navigation="navigation" />
+      <LazyUContentSearch
+        :files="files"
+        :navigation="navigation"
+      />
     </ClientOnly>
   </div>
 </template>

@@ -8,21 +8,22 @@ useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title,
   description: page.value.description,
-  ogDescription: page.value.description
+  ogDescription: page.value.description,
 })
 
 defineOgImage({
   component: 'Vernaillen',
   title: page.value.title,
-  description: page.value.description
+  description: page.value.description,
 })
-
-const toc = [ { "id": "passions", "depth": 2, "text": "Passions" }, { "id": "career", "depth": 2, "text": "Career" }, { "id": "contact", "depth": 2, "text": "Contact" } ]
 </script>
 
 <template>
   <UContainer>
-    <UPageHeader v-bind="page" class="py-[50px]" />
+    <UPageHeader
+      v-bind="page"
+      class="py-[50px]"
+    />
 
     <UPage>
       <UPageBody class="slide-enter-content">
@@ -38,7 +39,10 @@ const toc = [ { "id": "passions", "depth": 2, "text": "Passions" }, { "id": "car
         </ol>
       </UPageBody>
       <template #right>
-        <UContentToc v-if="page?.careerSteps" title="Career steps" :links="page?.careerSteps" />
+        <UContentToc
+          v-if="page?.careerSteps"
+          :links="page?.careerSteps"
+        />
       </template>
     </UPage>
   </UContainer>

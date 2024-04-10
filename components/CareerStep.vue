@@ -12,7 +12,12 @@ defineProps<{
       :id="careerStep.id"
       class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
     >
-      <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary-500">
+      <NuxtLink
+        v-if="careerStep.projectUrl"
+        :href="careerStep.projectUrl"
+        target="_blank"
+        class="text-primary-500"
+      >
         <NuxtImg
           v-if="careerStep.imageUrl"
           :src="careerStep.imageUrl"
@@ -36,7 +41,12 @@ defineProps<{
       </span>
     </div>
     <h2 class="text-gray-800 text-2xl dark:text-white font-semibold -mt-2">
-      <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary-500">
+      <NuxtLink
+        v-if="careerStep.projectUrl"
+        :href="careerStep.projectUrl"
+        target="_blank"
+        class="text-primary-500"
+      >
         {{ careerStep.text }}
       </NuxtLink>
       <span v-else>{{ careerStep.text }}</span>
@@ -58,7 +68,12 @@ defineProps<{
         <div
           class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
         >
-          <NuxtLink v-if="careerStep.projectUrl" :href="careerStep.projectUrl" target="_blank" class="text-primary-500">
+          <NuxtLink
+            v-if="careerStep.projectUrl"
+            :href="careerStep.projectUrl"
+            target="_blank"
+            class="text-primary-500"
+          >
             {{ careerStep.project }}
           </NuxtLink>
           <span v-else>{{ careerStep.project }}</span>

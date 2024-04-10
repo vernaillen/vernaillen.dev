@@ -5,19 +5,19 @@ export default defineLazyEventHandler(async () => {
   const acct = useRuntimeConfig().social.networks.mastodon.identifier
   const options = useRuntimeConfig().social.networks.mastodon.options
 
-  const data = await $fetch<{ subject: string; aliases: string[] }>(
+  const data = await $fetch<{ subject: string, aliases: string[] }>(
     '.well-known/webfinger',
     {
       baseURL: withProtocol(acct.split('@')[1], 'https://'),
       query: {
-        resource: `acct:${acct}`
-      }
-    }
+        resource: `acct:${acct}`,
+      },
+    },
   )
   const { host, protocol } = parseURL(data.aliases[0])
 
   const client = createRestAPIClient({
-    url: withProtocol(host!, protocol!)
+    url: withProtocol(host!, protocol!),
   })
   const { id } = await client.v1.accounts.lookup({ acct })
 
@@ -35,11 +35,13 @@ export default defineLazyEventHandler(async () => {
               /:([a-z-]+):/g,
               (string, shortcode) => {
                 const emoji = p.account.emojis.find(
-                  e => e.shortcode === shortcode
+                  e => e.shortcode === shortcode,
                 )
-                if (!emoji) { return string }
+                if (!emoji) {
+                  return string
+                }
                 return `<img src="${emoji.url}" style="height:1em" alt="${shortcode} emoji" />`
-              }
+              },
             ),
             createdAt: p.createdAt,
             permalink: p.url?.replace('https://', 'https://elk.zone/') ?? p.uri,
@@ -47,7 +49,7 @@ export default defineLazyEventHandler(async () => {
               url: m.url,
               width: m.meta?.original?.width,
               height: m.meta?.original?.height,
-              alt: m.description
+              alt: m.description,
             })),
             html: p.content,
             repliesCount: p.repliesCount,
@@ -62,11 +64,13 @@ export default defineLazyEventHandler(async () => {
                 /:([a-z-]+):/g,
                 (string, shortcode) => {
                   const emoji = p.account.emojis.find(
-                    e => e.shortcode === shortcode
+                    e => e.shortcode === shortcode,
                   )
-                  if (!emoji) { return string }
+                  if (!emoji) {
+                    return string
+                  }
                   return `<img src="${emoji.url}" style="height:1em" alt="${shortcode} emoji" />`
-                }
+                },
               ),
               createdAt: p.reblog?.createdAt,
               permalink: p.reblog?.url?.replace('https://', 'https://elk.zone/') ?? p.reblog?.uri,
@@ -74,14 +78,14 @@ export default defineLazyEventHandler(async () => {
                 url: m.url,
                 width: m.meta?.original?.width,
                 height: m.meta?.original?.height,
-                alt: m.description
+                alt: m.description,
               })),
               html: p.reblog?.content,
               favouritesCount: p.reblog?.favouritesCount,
               repliesCount: p.reblog?.repliesCount,
-              reblogsCount: p.reblog?.reblogsCount
-            }
-          }))
+              reblogsCount: p.reblog?.reblogsCount,
+            },
+          })),
     )
   })
 })
