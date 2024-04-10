@@ -26,7 +26,7 @@ const links = [{
   label: 'Projects',
   children: [
     {
-      label: 'WPnuxt',
+      label: 'WPNuxt',
       to: 'https://wpnuxt.com',
       target: '_blank',
     },
