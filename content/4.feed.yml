@@ -1,2 +1,3 @@
 title: Social feed
 description: posts fetched from Mastodon API
+navigation: false
