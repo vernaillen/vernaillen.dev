@@ -28,7 +28,16 @@ const links = [{
     </template>
 
     <template #right>
-      <WhatsAppLink nr="+32473344656" />
+      <UColorModeButton
+        size="xs"
+        color="primary"
+        variant="soft"
+        class="hidden lg:flex"
+      />
+      <WhatsAppLink
+        nr="+32473344656"
+        class="ml-1 sm:ml-2"
+      />
       <UButton
         size="xs"
         variant="soft"

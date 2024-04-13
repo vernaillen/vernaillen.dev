@@ -87,7 +87,7 @@ const links = [{
           target="_blank"
         >
           <UIcon
-            class="-mb-[2px] mx-1"
+            class="-mb-[2px] mx-1 w-4 h-4"
             name="i-logos-nuxt-icon"
           /> Nuxt {{ config.public.nuxtVersion }}
         </NuxtLink>
