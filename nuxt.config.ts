@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   site: {
     name: 'Wouter Vernaillen',
     logo: '/images/vernaillendev-light.png',
-    url: 'https://vernaillen.dev',
+    url: 'https://vernaillen-nuxt.vercel.app/',
     description: 'Freelance Full Stack Developer',
     defaultLocale: 'en',
   },
