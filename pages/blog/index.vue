@@ -98,7 +98,7 @@ defineOgImageComponent('Vernaillen', {
               <UIcon
                 size="xs"
                 name="i-mdi-location"
-                class="-mb-[1px] mx-1"
+                class="-mb-[2px] mx-1 w-4 h-4"
               /> {{ post.location }}
             </span>
           </template>

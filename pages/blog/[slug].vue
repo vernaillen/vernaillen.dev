@@ -55,7 +55,7 @@ defineOgImageComponent('VernaillenBlog', {
           v-if="post.location"
           size="xs"
           name="i-mdi-location"
-          class="mx-0 px-0"
+          class="mx-0 px-0 w-4 h-4"
         /><span class="text-sm">{{ post.location }}</span>
       </template>
 
