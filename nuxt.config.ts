@@ -18,8 +18,8 @@ export default defineNuxtConfig({
   ],
   runtimeConfig: {
     public: {
-      nuxtVersion: nuxtPkg.version
-    }
+      nuxtVersion: nuxtPkg.version,
+    },
   },
   eslint: {
     config: {
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
   site: {
     name: 'Wouter Vernaillen',
     logo: '/images/vernaillendev-light.png',
-    url: 'https://vernaillen-nuxt.vercel.app',
+    url: 'https://vernaillen.dev',
     description: 'Freelance Full Stack Developer',
     defaultLocale: 'en',
   },

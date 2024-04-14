@@ -6,12 +6,17 @@ if (!page.value) {
 
 useSeoMeta({
   title: page.value.title,
-  ogTitle: page.value.title,
+  ogTitle: page.value.title + ' - Wouter Vernaillen - Freelance Full Stack Developer',
   description: page.value.description,
   ogDescription: page.value.description,
 })
 definePageMeta({
   layout: 'home',
+})
+defineOgImageComponent('Vernaillen', {
+  title: 'Wouter Vernaillen',
+  subTitle: 'Freelance Full Stack Developer',
+  description: page.value.description,
 })
 </script>
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { withoutTrailingSlash, joinURL } from 'ufo'
+import { withoutTrailingSlash } from 'ufo'
 import type { BlogPost } from '~/types'
 
 const route = useRoute()
@@ -21,27 +21,16 @@ const description = post.value.head?.description || post.value.description
 
 useSeoMeta({
   title,
-  ogTitle: title,
+  ogTitle: title + ' - Wouter Vernaillen - Freelance Full Stack Developer',
   description,
   ogDescription: description,
 })
 
-if (post.value.image?.src) {
-  const site = useSiteConfig()
-
-  useSeoMeta({
-    ogImage: joinURL(site.url, post.value.image.src),
-    twitterImage: joinURL(site.url, post.value.image.src),
-  })
-}
-else {
-  defineOgImage({
-    component: 'Vernaillen',
-    title,
-    description,
-    headline: 'Blog',
-  })
-}
+defineOgImageComponent('VernaillenBlog', {
+  title,
+  description,
+  img: post.value.image?.src,
+})
 </script>
 
 <template>
