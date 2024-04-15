@@ -1,6 +1,31 @@
 export default defineAppConfig({
   longDateFormat: 'DD MMMM YYYY',
   shortDateFormat: 'DD MMM YYYY',
+  meta: {
+    titleSuffix: ' | Wouter Vernaillen: Freelance Full Stack Developer',
+  },
+  navigation: [
+    {
+      label: 'Career',
+      to: '/career',
+    },
+    {
+      label: 'Expertise',
+      to: '/expertise',
+    },
+    {
+      label: 'Projects',
+      to: '/projects',
+    },
+    {
+      label: 'Blog',
+      to: '/blog',
+    },
+    {
+      label: 'About',
+      to: '/about',
+    },
+  ],
   ui: {
     primary: 'vernaillen',
     gray: 'neutral',

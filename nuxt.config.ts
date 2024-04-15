@@ -74,6 +74,9 @@ export default defineNuxtConfig({
   ui: {
     icons: ['heroicons', 'simple-icons', 'mdi', 'carbon', 'logos', 'ic'],
   },
+  uiPro: {
+    routerOptions: false,
+  },
   svgo: {
     svgo: true,
     autoImportPath: './assets/svg/',

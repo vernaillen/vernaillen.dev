@@ -6,7 +6,7 @@ if (!page.value) {
 
 useSeoMeta({
   title: page.value.title,
-  ogTitle: page.value.title + ' - Wouter Vernaillen - Freelance Full Stack Developer',
+  ogTitle: page.value.title + useAppConfig().meta.titleSuffix,
   description: page.value.description,
   ogDescription: page.value.description,
 })
@@ -18,7 +18,7 @@ defineOgImageComponent('Vernaillen', {
 </script>
 
 <template>
-  <UContainer class="">
+  <div>
     <UPageHeader
       v-bind="page"
       class="py-[50px]"
@@ -42,5 +42,5 @@ defineOgImageComponent('Vernaillen', {
         />
       </template>
     </UPage>
-  </UContainer>
+  </div>
 </template>

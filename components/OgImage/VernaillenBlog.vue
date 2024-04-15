@@ -37,7 +37,7 @@ defineProps<{
         </svg>
       </div>
       <div class="w-2/3 text-gray-200 text-2xl flex justify-end mt-3 mx-12">
-        Wouter Vernaillen - Freelance Full Stack Developer
+        Wouter Vernaillen: Freelance Full Stack Developer
       </div>
     </div>
     <div

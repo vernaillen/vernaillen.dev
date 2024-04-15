@@ -3,24 +3,7 @@ const config = useRuntimeConfig()
 
 const links = [{
   label: 'Pages',
-  children: [
-    {
-      label: 'Career',
-      to: '/career',
-    },
-    {
-      label: 'Projects',
-      to: '/projects',
-    },
-    {
-      label: 'Blog',
-      to: '/blog',
-    },
-    {
-      label: 'About',
-      to: '/about',
-    },
-  ],
+  children: useAppConfig().navigation,
 },
 {
   label: 'Projects',

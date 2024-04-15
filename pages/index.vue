@@ -5,8 +5,8 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  title: page.value.title,
-  ogTitle: page.value.title + ' - Wouter Vernaillen - Freelance Full Stack Developer',
+  title: 'Wouter Vernaillen: Freelance Full Stack Developer',
+  ogTitle: 'Wouter Vernaillen: Freelance Full Stack Developer',
   description: page.value.description,
   ogDescription: page.value.description,
 })
@@ -45,6 +45,7 @@ defineOgImageComponent('Vernaillen', {
       :key="index"
       :title="section.title"
       :description="section.description"
+      :links="section.links"
       :align="section.align"
       :features="section.features"
       :ui="{ container: 'lg:items-start' }"

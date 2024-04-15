@@ -18,8 +18,8 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s - Wouter Vernaillen - Freelance Full Stack Developer',
-  ogTitle: 'Wouter Vernaillen - Freelance Full Stack Developer',
+  titleTemplate: '%s ' + useAppConfig().meta.titleSuffix,
+  ogTitle: 'Wouter Vernaillen: Freelance Full Stack Developer',
 })
 </script>
 

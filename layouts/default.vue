@@ -12,7 +12,9 @@ provide('navigation', navigation)
     <HeaderComponent />
 
     <UMain>
-      <slot />
+      <UContainer>
+        <slot />
+      </UContainer>
     </UMain>
 
     <FooterComponent />

@@ -21,7 +21,7 @@ const description = post.value.head?.description || post.value.description
 
 useSeoMeta({
   title,
-  ogTitle: title + ' - Wouter Vernaillen - Freelance Full Stack Developer',
+  ogTitle: title + useAppConfig().meta.titleSuffix,
   description,
   ogDescription: description,
 })
@@ -34,7 +34,7 @@ defineOgImageComponent('VernaillenBlog', {
 </script>
 
 <template>
-  <UContainer v-if="post">
+  <div v-if="post">
     <UPageHeader
       :title="post.title"
       :description="post.description"
@@ -106,5 +106,5 @@ defineOgImageComponent('VernaillenBlog', {
         />
       </template>
     </UPage>
-  </UContainer>
+  </div>
 </template>

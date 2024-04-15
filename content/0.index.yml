@@ -35,13 +35,26 @@ sections:
         description: Use the full power of the modern frontend framework that is Nuxt 3, allowing you to build fast and responsive cutting-edge websites.
         icon: i-logos-nuxt-icon
   - title: Passionate about Web Development
-    description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
+    description: "I am proud to bring almost 30 years of expertise to the field of web development, from making static websites in HTML in the pioneering days of the internet, developing my own content management systems with PHP
+    to designing and implementing innovative web portals with complex back-end integrations for large companies and organisations."
+    links:
+      - label: 'Expertise'
+        color: 'gray'
+        trailing-icon: 'i-heroicons-arrow-right'
+        size: 'lg'
+        to: '/expertise'
     image: /images/index/vernaillen_a_laptop_on_the_table_of_a_tropical_co-working_space_d2d51564-d0fb-48d6-9d7a-608e27609392.png
     align: right
   - title: Proven record as Consultant
     description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
     image: /images/index/40_year_old_man_with_trimmed_hair_and_glasses_work_ad8b5b8e-440a-45f5-a1f6-94dab28b24d2.png
     align: left
+    links:
+      - label: 'Career'
+        color: 'gray'
+        trailing-icon: 'i-heroicons-arrow-right'
+        size: 'lg'
+        to: '/career'
 features:
   title: My Values
   description: This is what I stand for
