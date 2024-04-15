@@ -63,7 +63,7 @@ defineProps<{
       </h3>
     </div>
   </div>
-  <div class="flex absolute top-0 right-0 z-[-1] opacity-50 overflow-hidden">
+  <div class="flex absolute top-0 right-0 z-[-1] overflow-hidden">
     <svg
       width="450"
       height="556"
@@ -71,7 +71,12 @@ defineProps<{
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)" />
+      <circle
+        cx="277"
+        cy="63"
+        r="225"
+        fill="url(#paint0_linear_25:217)"
+      />
       <circle
         cx="17.9997"
         cy="182"
@@ -125,7 +130,11 @@ defineProps<{
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#9c8e1b" />
-          <stop offset="1" stop-color="#9c8e1b" stop-opacity="0" />
+          <stop
+            offset="1"
+            stop-color="#9c8e1b"
+            stop-opacity="0"
+          />
         </linearGradient>
         <radialGradient
           id="paint1_radial_25:217"

@@ -28,8 +28,7 @@ if (!page.value) {
               size="lg"
               class="flex-row-reverse items-center slide-enter"
               :style="'--enter-stage:' + index + ';--enter-step:20ms;'"
-              :ui="{ label: { base: 'flex-shrink-0 w-24' }, indicator: { container: '!w-auto' }, meter: { base: 'flex-1' } }"
-              indicator
+              :ui="{ label: { base: 'flex-shrink-0 w-24' }, meter: { base: 'flex-1' } }"
             />
           </div>
         </UDashboardCard>

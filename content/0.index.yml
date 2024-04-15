@@ -34,6 +34,13 @@ sections:
       - name: Cutting edge frontend
         description: Use the full power of the modern frontend framework that is Nuxt 3, allowing you to build fast and responsive cutting-edge websites.
         icon: i-logos-nuxt-icon
+    links:
+      - label: 'Discover WPNuxt'
+        color: 'gray'
+        trailing-icon: 'i-heroicons-arrow-up-right'
+        size: 'lg'
+        to: 'https://wpnuxt.com'
+        target: '_blank'
   - title: Passionate about Web Development
     description: "I am proud to bring almost 30 years of expertise to the field of web development, from making static websites in HTML in the pioneering days of the internet, developing my own content management systems with PHP
     to designing and implementing innovative web portals with complex back-end integrations for large companies and organisations."
