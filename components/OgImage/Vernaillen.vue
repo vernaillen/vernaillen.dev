@@ -12,7 +12,7 @@ defineProps<{
 
 <template>
   <div class="w-full h-full bg-[#0c0c0d] pt-0 mt-0">
-    <div class="mx-6 mb-6 flex columns-2 justify-between w-full pt-0 mt-0">
+    <div class="mx-24 mb-8 flex columns-2 justify-between w-full pt-0 mt-0">
       <div class="w-1/3 flex justify-start pt-0 mt-0">
         <svg
           class="pt-0 mt-0"
@@ -48,19 +48,19 @@ defineProps<{
         class="object-cover"
       >
     </div>
-    <div class="relative mx-6 mt-8">
-      <h1 class="text-6xl my-16 text-white">
+    <div class="relative mx-24 mt-6">
+      <h1 class="text-6xl my-20 text-white">
         {{ title }}
       </h1>
       <h2
         v-if="subTitle"
-        class="text-3xl my-4 text-[#9c8e1b]"
+        class="text-3xl my-8 text-[#9c8e1b]"
       >
         {{ subTitle }}
       </h2>
-      <p class="text-4xl text-gray-200 leading-tight">
+      <h3 class="text-4xl text-gray-200 font-light">
         {{ description }}
-      </p>
+      </h3>
     </div>
   </div>
   <div class="flex absolute top-0 right-0 z-[-1] opacity-50 overflow-hidden">
