@@ -34,7 +34,7 @@
     "@nuxt/eslint": "^0.3.6",
     "@nuxt/eslint-config": "^0.3.6",
     "@nuxthq/studio": "^1.0.13",
-    "eslint": "^8.57.0",
+    "eslint": "^9.1.1",
     "nuxt-og-image": "3.0.0-rc.52",
     "nuxt-svgo": "^4.0.0",
     "prism-theme-vars": "^0.2.4",
