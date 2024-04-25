@@ -72,7 +72,7 @@ export default defineNuxtConfig({
     },
   },
   ui: {
-    icons: ['heroicons', 'simple-icons', 'mdi', 'carbon', 'logos', 'ic'],
+    icons: ['heroicons', 'simple-icons', 'mdi', 'carbon', 'logos', 'ic', 'logos'],
   },
   uiPro: {
     routerOptions: false,

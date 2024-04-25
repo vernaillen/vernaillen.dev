@@ -1,28 +1,40 @@
 title: Expertise
-description: An overview of the expertise
+description: An overview of the technologies I currently specialise in.
 pageName: Career
 technologies:
   - label: Java
-    value: 31
-    color: red
+    icon: i-logos-java
+    value: 95
+    color: java
   - label: Spring
-    value: 21
-    color: orange
+    icon: i-logos-spring-icon
+    value: 90
+    color: springframework
   - label: Nuxt
-    value: 15
-    color: yellow
+    icon: i-logos-nuxt-icon
+    value: 80
+    color: nuxt
   - label: Vue.js
-    value: 10
-    color: green
-  - label: Japan
-    value: 6
-    color: teal
-  - label: India
-    value: 1
-    color: blue
-  - label: Brazil
-    value: 1
-    color: indigo
-  - label: Belgium
-    value: 1
-    color: pink
+    icon: i-logos-vue
+    value: 70
+    color: vue
+  - label: Jenkins
+    icon: i-logos-jenkins
+    value: 80
+    color: jenkins
+  - label: Docker
+    icon: i-logos-docker-icon
+    value: 85
+    color: docker
+  - label: Kubernetes
+    icon: i-logos-kubernetes
+    value: 75
+    color: kubernetes
+  - label: Liferay
+    icon: i-custom-liferay
+    value: 70
+    color: liferay
+  - label: Angular
+    icon: i-logos-angular-icon
+    value: 50
+    color: angular

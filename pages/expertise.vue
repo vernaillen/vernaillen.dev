@@ -3,6 +3,17 @@ const { data: page } = await useAsyncData('expertise', () => queryContent('/expe
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
+
+onMounted(() => {
+  page.value?.technologies?.forEach((technology: { value: any; }, index: number) => {
+    useAnime({
+      targets: '#technology-' + index + ' meter',
+      value: technology.value,
+      easing: 'spring',
+      autoplay: true
+    })
+  })
+})
 </script>
 
 <template>
@@ -15,24 +26,36 @@ if (!page.value) {
       <UPageBody class="slide-enter-content">
         <UDashboardCard
           title="Technologies"
-          description="We are experts in the following technologies"
+          :description="page?.description"
           icon="i-ic-baseline-code"
         >
           <div class="space-y-2 slide-enter">
             <UMeter
-              v-for="(country, index) in page?.technologies"
+              v-for="(technology, index) in page?.technologies"
               :key="index"
-              :value="country.value"
-              :label="country.label"
-              :color="country.color"
+              :id="'technology-' + index"
+              :value="0"
+              :label="technology.label"
+              :color="technology.color"
+              :icon="technology.icon"
               size="lg"
-              class="flex-row-reverse items-center slide-enter"
+              class="progress flex-row-reverse items-center slide-enter"
               :style="'--enter-stage:' + index + ';--enter-step:20ms;'"
-              :ui="{ label: { base: 'flex-shrink-0 w-24' }, meter: { base: 'flex-1' } }"
-            />
+              :ui="{ meter: { base: 'flex-1' } }"
+            >
+              <template #label="{ percent, value }">
+                <slot name="label" v-bind="{ percent, value }">
+                  <div class="flex gap-2 items-center flex-shrink-0 h-6 font-semibold truncate text-sm">
+                    <span class="w-5"><UIcon v-if="technology.icon" :name="technology.icon" class="w-5 h-5" /></span>
+                    <span class="w-20">{{ technology.label }}</span>
+                  </div>
+                </slot>
+              </template>
+            </UMeter>
           </div>
         </UDashboardCard>
       </UPageBody>
     </UPage>
   </div>
 </template>
+
