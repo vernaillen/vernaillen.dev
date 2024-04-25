@@ -79,9 +79,9 @@ export default <Partial<Config>>{
           500: '#326de6',
         },
         jenkins: {
-          DEFAULT: '#212529',
-          400: '#212529',
-          500: '#212529',
+          DEFAULT: '#4b758b',
+          400: '#4b758b',
+          500: '#4b758b',
         },
         liferay: {
           DEFAULT: '#0b63ce',

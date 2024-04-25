@@ -1,6 +1,6 @@
 title: Expertise
+pageName: Expertise
 description: An overview of the technologies I currently specialise in.
-pageName: Career
 technologies:
   - label: Java
     icon: i-logos-java
