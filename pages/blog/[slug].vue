@@ -51,7 +51,8 @@ defineOgImageComponent('VernaillenBlog', {
           v-if="post.badge"
           v-bind="post.badge"
           variant="subtle"
-        /> <UIcon
+        />
+        <UIcon
           v-if="post.location"
           size="xs"
           name="i-mdi-location"

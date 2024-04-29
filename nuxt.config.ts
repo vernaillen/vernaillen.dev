@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   },
   eslint: {
     config: {
-      stylistic: true, // <---
+      stylistic: true,
     },
   },
   site: {
@@ -76,6 +76,11 @@ export default defineNuxtConfig({
   },
   uiPro: {
     routerOptions: false,
+  },
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth'
+    }
   },
   svgo: {
     svgo: true,
