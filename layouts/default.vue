@@ -8,7 +8,7 @@ provide('navigation', navigation)
 </script>
 
 <template>
-  <div class="overflow-hidden">
+  <div>
     <HeaderComponent />
 
     <UMain>

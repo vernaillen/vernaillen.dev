@@ -7,9 +7,11 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-start items-center prose">
+  <div
+    :id="careerStep.id"
+    class="flex flex-start items-center prose pt-28 -mt-28"
+  >
     <div
-      :id="careerStep.id"
       class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
     >
       <NuxtLink

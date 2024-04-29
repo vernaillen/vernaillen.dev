@@ -99,12 +99,15 @@ defineOgImageComponent('VernaillenBlog', {
         <UContentToc
           v-if="post.body && post.body.toc"
           :links="post.body.toc.links"
-        />
-        <hr v-if="post.mastodonPost || post.twitterPost">
-        <SocialComments
-          v-if="post.mastodonPost || post.twitterPost"
-          :page="post"
-        />
+        >
+          <template #bottom>
+            <hr v-if="post.mastodonPost || post.twitterPost">
+            <SocialComments
+              v-if="post.mastodonPost || post.twitterPost"
+              :page="post"
+            />
+          </template>
+        </UContentToc>
       </template>
     </UPage>
   </div>
