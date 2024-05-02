@@ -32,7 +32,6 @@ useSeoMeta({
     </NuxtLayout>
 
     <UNotifications />
-    <EasyLightbox />
     <div class="sticky right-0 bottom-14 z-[-1]">
       <SvgoFooter class="w-20" />
     </div>

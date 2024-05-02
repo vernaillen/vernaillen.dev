@@ -28,26 +28,12 @@ export default defineNuxtConfig({
   },
   site: {
     name: 'Wouter Vernaillen',
-    logo: '/images/vernaillendev-light.png',
     url: 'https://vernaillen-nuxt.vercel.app/',
     description: 'Freelance Full Stack Developer',
     defaultLocale: 'en',
   },
-  social: {
-    networks: {
-      mastodon: {
-        identifier: 'vernaillen@fosstodon.org',
-        options: {
-          excludeReplies: true,
-          excludeReblogs: false,
-          limit: 100,
-        },
-      },
-    },
-  },
   css: [
     '~/assets/css/main.css',
-    'animate.css/animate.min.css',
   ],
   colorMode: {
     preference: 'dark',
@@ -79,8 +65,8 @@ export default defineNuxtConfig({
   },
   router: {
     options: {
-      scrollBehaviorType: 'smooth'
-    }
+      scrollBehaviorType: 'smooth',
+    },
   },
   svgo: {
     svgo: true,
