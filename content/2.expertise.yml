@@ -8,11 +8,11 @@ technologies:
     color: java
   - label: Spring
     icon: i-logos-spring-icon
-    value: 90
+    value: 93
     color: springframework
   - label: Nuxt
     icon: i-logos-nuxt-icon
-    value: 80
+    value: 90
     color: nuxt
   - label: Vue.js
     icon: i-logos-vue

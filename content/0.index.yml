@@ -41,9 +41,25 @@ sections:
         size: 'lg'
         to: 'https://wpnuxt.com'
         target: '_blank'
-  - title: Passionate about Web Development
+  - title: Passion for Web Development
     description: "I am proud to bring almost 30 years of expertise to the field of web development, from making static websites in HTML in the pioneering days of the internet, developing my own content management systems with PHP
     to designing and implementing innovative web portals with complex back-end integrations for large companies and organisations."
+    features:
+      - name: Strong expertise on both Front- and Backend
+        description: Allowing me to deliver full-stack solutions.
+        icon: i-tabler-stack-2-filled
+      - name: Nuxt
+        description: My favourite frontend framework is Nuxt, which I use to build fast and responsive websites.
+        icon: i-tabler-stack-forward
+      - name: Api Development & Integration
+        description: I have a proven track record in developing and integrating APIs build with Java & Spring Framework.
+        icon: i-tabler-stack-backward
+      - name: Quality Assurance
+        description: I have a keen eye for detail and a passion for quality assurance.
+        icon: i-custom-qa
+      - name: DevOps
+        description: I have experience in setting up and maintaining CI/CD pipelines and deploying applications in the cloud.
+        icon: i-tabler-infinity
     links:
       - label: 'Expertise'
         color: 'gray'
