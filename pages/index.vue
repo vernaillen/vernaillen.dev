@@ -23,6 +23,7 @@ defineOgImageComponent('Vernaillen', {
 <template>
   <div
     v-if="page"
+    class="slide-enter-content"
   >
     <ULandingHero
       :title="page.hero.title"
@@ -55,7 +56,7 @@ defineOgImageComponent('Vernaillen', {
       :links="section.links"
       :align="section.align"
       :features="section.features"
-      :ui="{ container: `lg:items-start slide-enter slide-enter-stage${4+index}` }"
+      :ui="{ container: 'lg:items-start slide-enter' }"
     >
       <ShowcaseImage
         v-if="section.image"
