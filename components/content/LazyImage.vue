@@ -17,17 +17,21 @@ const props = withDefaults(defineProps<Props>(), {
   placeholder: 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=',
   fit: 'cover',
   format: 'webp',
-  finalOpacity: 1
+  finalOpacity: 1,
 })
-const imgUrl = img(props.src, {
+const imgUrlBig = img(props.src, {
   width: props.width,
   height: props.height,
   fit: props.fit,
   format: props.format,
-  ...props.modifiers
+  ...props.modifiers,
 })
-const wrapperClass = computed(() => {
-  return 'w-[' + props.width + 'px] h-[' + props.height + 'px] max-w-full'
+const imgUrlSmaller = img(props.src, {
+  width: 558,
+  height: 352,
+  fit: props.fit,
+  format: props.format,
+  ...props.modifiers,
 })
 const imgSrc = ref(props.placeholder)
 watch(() => props.src, (newUrl) => {
@@ -36,15 +40,24 @@ watch(() => props.src, (newUrl) => {
 </script>
 
 <template>
-  <div :class="wrapperClass">
+  <div class="max-w-full">
     <img
-      v-lazy="imgUrl"
+      v-lazy="imgUrlBig"
       :src="imgSrc"
       :alt="alt"
       :width="width"
       :height="height"
       :class="imgClass"
-      class="object-cover opacity-0 transform transition-all duration-100 max-w-full"
+      class="hidden sm:block lg:hidden object-cover opacity-0 transform transition-all duration-100 max-w-full"
+    >
+    <img
+      v-lazy="imgUrlSmaller"
+      :src="imgSrc"
+      :alt="alt"
+      :width="558"
+      :height="352"
+      :class="imgClass"
+      class="block sm:hidden lg:block object-cover opacity-0 transform transition-all duration-100 max-w-full"
     >
   </div>
 </template>
