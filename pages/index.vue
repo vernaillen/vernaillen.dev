@@ -21,11 +21,19 @@ defineOgImageComponent('Vernaillen', {
 </script>
 
 <template>
-  <div v-if="page">
+  <div
+    v-if="page"
+    class="slide-enter-content"
+  >
     <ULandingHero
       :title="page.hero.title"
       :description="page.hero.description"
       :links="page.hero.links"
+      :ui="{
+        headline: 'slide-enter slide-enter-stage1',
+        description: 'slide-enter slide-enter-stage2',
+        links: 'slide-enter slide-enter-stage3',
+      }"
     >
       <div class="absolute inset-0 z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
       <template #headline>
@@ -48,7 +56,7 @@ defineOgImageComponent('Vernaillen', {
       :links="section.links"
       :align="section.align"
       :features="section.features"
-      :ui="{ container: 'lg:items-start' }"
+      :ui="{ container: `lg:items-start slide-enter slide-enter-stage${4+index}` }"
     >
       <ShowcaseImage
         v-if="section.image"

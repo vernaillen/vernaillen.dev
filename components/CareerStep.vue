@@ -3,13 +3,15 @@ import type { CareerStep } from '~~/types'
 
 defineProps<{
   careerStep: CareerStep
+  index: number
 }>()
 </script>
 
 <template>
   <div
     :id="careerStep.id"
-    class="flex flex-start items-center prose pt-28 -mt-28"
+    class="flex flex-start items-center prose pt-28 -mt-28 slide-enter"
+    :style="'--enter-stage:' + index + ';--enter-step:10ms;'"
   >
     <div
       class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
@@ -54,16 +56,23 @@ defineProps<{
       <span v-else>{{ careerStep.text }}</span>
     </h2>
   </div>
-  <div class="border-l-2 border-primary mt-2">
+  <div
+    class="border-l-2 border-primary mt-2 slide-enter"
+    :style="'--enter-stage:' + (index + 2) + ';--enter-step:10ms;'"
+  >
     <div
       class="ml-6 mb-4 pb-4 font-medium text-base text-body-color"
     >
       <div
-        class="ml-1 mb-2 text-primary text-sm"
+        class="ml-1 mb-2 text-primary text-sm slide-enter"
+        :style="'--enter-stage:' + (index + 2) + ';--enter-step:10ms;'"
       >
         {{ careerStep.date }}
       </div>
-      <div class="ml-2 mt-1 mb-1 flex flex-wrap">
+      <div
+        class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+        :style="'--enter-stage:' + (index + 3) + ';--enter-step:10ms;'"
+      >
         <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
           project:
         </div>
@@ -81,7 +90,9 @@ defineProps<{
           <span v-else>{{ careerStep.project }}</span>
         </div>
       </div>
-      <div class="ml-2 mt-1 mb-1 flex flex-wrap">
+      <div class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+        :style="'--enter-stage:' + (index + 4) + ';--enter-step:10ms;'"
+      >
         <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
           role:
         </div>
@@ -91,7 +102,9 @@ defineProps<{
           {{ careerStep.role }}
         </div>
       </div>
-      <div class="ml-2 mt-1 mb-1 flex flex-wrap">
+      <div class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+        :style="'--enter-stage:' + (index + 5) + ';--enter-step:10ms;'"
+      >
         <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
           stack:
         </div>
@@ -101,7 +114,9 @@ defineProps<{
           {{ careerStep.stack }}
         </div>
       </div>
-      <div class="ml-2 mt-1 mb-1 flex flex-wrap">
+      <div class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+        :style="'--enter-stage:' + (index + 6) + ';--enter-step:10ms;'"
+      >
         <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
           contract:
         </div>

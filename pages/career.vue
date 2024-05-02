@@ -30,10 +30,11 @@ defineOgImageComponent('Vernaillen', {
           <li
             v-for="(careerStep, index) in page.careerSteps"
             :key="index"
-            class="slide-enter"
-            :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
           >
-            <career-step :career-step="careerStep" />
+            <career-step
+              :career-step="careerStep"
+              :index="index * 10"
+            />
           </li>
         </ol>
       </UPageBody>

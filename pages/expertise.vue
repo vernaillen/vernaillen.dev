@@ -32,22 +32,36 @@ onMounted(() => {
           <div class="space-y-2 slide-enter">
             <UMeter
               v-for="(technology, index) in page?.technologies"
-              :key="index"
               :id="'technology-' + index"
+              :key="index"
               :value="0"
               :label="technology.label"
               :color="technology.color"
               :icon="technology.icon"
               size="lg"
               class="progress flex-row-reverse items-center slide-enter"
-              :style="'--enter-stage:' + index + ';--enter-step:20ms;'"
+              :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
               :ui="{ meter: { base: 'flex-1 text-opacity-90 dark:text-opacity-90 hover:text-opacity-100' } }"
             >
               <template #label="{ percent, value }">
-                <slot name="label" v-bind="{ percent, value }">
+                <slot
+                  name="label"
+                  v-bind="{ percent, value }"
+                >
                   <div class="flex gap-2 items-center flex-shrink-0 h-6 font-semibold truncate text-sm">
-                    <span class="w-5"><UIcon v-if="technology.icon" :name="technology.icon" class="w-5 h-5" /></span>
-                    <span class="w-20" :class="'text-'+ technology.color + '-400 hover:text-'+ technology.color + '-500'">{{ technology.label }}</span>
+                    <span class="w-5">
+                      <UIcon
+                        v-if="technology.icon"
+                        :name="technology.icon"
+                        class="w-5 h-5"
+                      />
+                    </span>
+                    <span
+                      class="w-20"
+                      :class="'text-'+ technology.color + '-400 hover:text-'+ technology.color + '-500'"
+                    >
+                      {{ technology.label }}
+                    </span>
                   </div>
                 </slot>
               </template>
