@@ -46,7 +46,7 @@ defineOgImageComponent('Vernaillen', {
           :class="[index === 0 && 'lg:col-span-full']"
           :ui="{ image: { wrapper: 'aspect-[21/9]' }, description: 'line-clamp-2' }"
           class="slide-enter"
-          :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
+          :style="'--enter-stage:' + (index + 1) + ';'"
         >
           <template #badge>
             <div

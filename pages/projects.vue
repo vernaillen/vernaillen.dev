@@ -33,7 +33,7 @@ defineOgImageComponent('Vernaillen', {
             v-bind="project"
             :ui="{ image: { wrapper: 'aspect-[2/1]' }, badge: { wrapper: 'mb-0' } }"
             class="slide-enter"
-            :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
+            :style="'--enter-stage:' + (index + 1) + ';'"
           >
             <template #badge>
               <div

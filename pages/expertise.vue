@@ -17,19 +17,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="slide-enter-content">
     <UPageHeader
       v-bind="page"
       class="py-[50px]"
     />
     <UPage>
-      <UPageBody class="slide-enter-content">
+      <UPageBody>
         <UDashboardCard
           title="Technologies"
           :description="page?.description"
           icon="i-ic-baseline-code"
+          :ui="{ base: 'slide-enter slide-enter-stage1' }"
         >
-          <div class="space-y-2 slide-enter">
+          <div class="space-y-2">
             <UMeter
               v-for="(technology, index) in page?.technologies"
               :id="'technology-' + index"
@@ -39,9 +40,10 @@ onMounted(() => {
               :color="technology.color"
               :icon="technology.icon"
               size="lg"
-              class="progress flex-row-reverse items-center slide-enter"
-              :style="'--enter-stage:' + index + ';--enter-step:60ms;'"
-              :ui="{ meter: { base: 'flex-1 text-opacity-90 dark:text-opacity-90 hover:text-opacity-100' } }"
+              :ui="{
+                wrapper: `progress flex-row-reverse items-center slide-enter slide-enter-stage${index+2}`,
+                meter: { base: 'flex-1 text-opacity-90 dark:text-opacity-90 hover:text-opacity-100' },
+              }"
             >
               <template #label="{ percent, value }">
                 <slot
