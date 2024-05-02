@@ -51,21 +51,10 @@ export default defineAppConfig({
         active: 'border-vernaillen-500',
       },
     },
-    navigation: {
-      tree: {
-        wrapper: 'space-y-2',
-      },
-      accordion: {
-        wrapper: 'px-5 py-2 space-y-2',
-        button: {
-          trailingIcon: {
-            active: 'text-vernaillen-500 dark:text-vernaillen-400',
-            inactive: 'text-vernaillen-500 dark:text-vernaillen-400',
-          },
-        },
-      },
+    aside: {
       links: {
-        base: 'px-5 py-2 gap-1 bg-primary-500 bg-opacity-0 border-l-2 border-r-2 border-transparent hover:border-vernaillen-500 hover:bg-opacity-5',
+        wrapper: 'px-10 py-6 sm:px-32 md:px-48',
+        base: 'px-5 py-2 gap-1 block w-full mx-auto text-center bg-primary-500 bg-opacity-0 border-l-2 border-r-2 border-transparent hover:border-vernaillen-500 hover:bg-opacity-5',
         inactive: '',
         active: 'border-vernaillen-500 bg-opacity-10 dark:bg-opacity-5',
       },
