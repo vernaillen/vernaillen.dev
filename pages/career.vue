@@ -19,13 +19,9 @@ defineOgImageComponent('Vernaillen', {
 
 <template>
   <div>
-    <UPageHeader
-      v-bind="page"
-      class="py-[50px]"
-    />
-
+    <UPageHeader v-bind="page" />
     <UPage>
-      <UPageBody class="slide-enter-content">
+      <UPageBody>
         <ol v-if="page?.careerSteps">
           <li
             v-for="(careerStep, index) in page.careerSteps"

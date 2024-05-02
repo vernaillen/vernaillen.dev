@@ -23,7 +23,6 @@ defineOgImageComponent('Vernaillen', {
 <template>
   <div
     v-if="page"
-    class="slide-enter-content"
   >
     <ULandingHero
       :title="page.hero.title"

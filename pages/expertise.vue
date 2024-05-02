@@ -17,11 +17,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="slide-enter-content">
-    <UPageHeader
-      v-bind="page"
-      class="py-[50px]"
-    />
+  <div>
+    <UPageHeader v-bind="page" />
     <UPage>
       <UPageBody>
         <UDashboardCard

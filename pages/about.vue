@@ -19,16 +19,9 @@ defineOgImageComponent('Vernaillen', {
 
 <template>
   <div>
-    <UPageHeader
-      v-bind="page"
-      class="py-[50px]"
-    />
-
+    <UPageHeader v-bind="page" />
     <UPage>
-      <UPageBody
-        prose
-        class="slide-enter-content"
-      >
+      <UPageBody prose>
         <ContentRenderer
           v-if="page && page.body"
           :value="page"

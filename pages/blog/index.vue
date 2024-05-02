@@ -25,12 +25,8 @@ defineOgImageComponent('Vernaillen', {
 
 <template>
   <div>
-    <UPageHeader
-      v-bind="page"
-      class="py-[50px]"
-    />
-
-    <UPageBody class="slide-enter-content">
+    <UPageHeader v-bind="page" />
+    <UPageBody>
       <UBlogList>
         <UBlogPost
           v-for="(post, index) in posts"

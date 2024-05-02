@@ -81,10 +81,7 @@ defineOgImageComponent('VernaillenBlog', {
     </UPageHeader>
 
     <UPage>
-      <UPageBody
-        prose
-        class="slide-enter-content"
-      >
+      <UPageBody prose>
         <ContentRenderer
           v-if="post && post.body"
           :value="post"

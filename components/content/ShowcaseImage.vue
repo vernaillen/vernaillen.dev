@@ -19,19 +19,23 @@ defineProps<{
         target="_blank"
         :aria-label="alt"
       >
-        <NuxtImg
+        <LazyImage
           :src="image"
-          format="webp"
           :alt="alt"
+          :width="950"
+          :height="600"
+          format="webp"
           fit="cover"
           class="opacity-95 hover:opacity-100 hover:scale-[103%] transform transition-all duration-500 m-0 object-cover object-top w-full h-full "
         />
       </NuxtLink>
-      <NuxtImg
+      <LazyImage
         v-else
-        :alt="alt"
-        format="webp"
         :src="image"
+        :alt="alt"
+        :width="950"
+        :height="600"
+        format="webp"
         fit="cover"
         class="opacity-95 hover:opacity-100 hover:scale-[103%] transform transition-all duration-500 m-0 object-cover object-top w-full h-full"
       />

@@ -21,12 +21,9 @@ defineOgImageComponent('Vernaillen', {
 
 <template>
   <div>
-    <UPageHeader
-      v-bind="page"
-      class="py-[50px]"
-    />
+    <UPageHeader v-bind="page" />
     <UPage>
-      <UPageBody class="slide-enter-content max-w-2xl mx-auto">
+      <UPageBody :ui="{ wrapper: 'max-w-2xl mx-auto' }">
         <SocialFeed />
       </UPageBody>
     </UPage>

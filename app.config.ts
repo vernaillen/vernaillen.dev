@@ -6,12 +6,12 @@ export default defineAppConfig({
   },
   navigation: [
     {
-      label: 'Career',
-      to: '/career',
-    },
-    {
       label: 'Expertise',
       to: '/expertise',
+    },
+    {
+      label: 'Career',
+      to: '/career',
     },
     {
       label: 'Projects',
@@ -43,6 +43,9 @@ export default defineAppConfig({
         subtle: 'text-{color}-500 dark:text-{color}-400 bg-{color}-50 hover:bg-{color}-100 disabled:bg-transparent dark:bg-{color}-950 dark:hover:bg-{color}-900 dark:disabled:bg-transparent focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-{color}-500 dark:focus-visible:ring-{color}-400',
       },
     },
+    main: {
+      wrapper: 'slide-enter-content',
+    },
     header: {
       logo: 'absolute top-0',
       links: {
@@ -69,6 +72,7 @@ export default defineAppConfig({
     },
     page: {
       header: {
+        wrapper: 'py-[40px] slide-enter',
         title: 'animate__animated animate__pulse',
       },
     },
