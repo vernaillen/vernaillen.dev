@@ -24,7 +24,7 @@ defineProps<{
           :alt="alt"
           :width="558"
           :height="352"
-          :opacity="0.8"
+          :opacity="1"
           fit="cover"
           class="m-0 object-top w-full h-full"
         />
@@ -35,7 +35,7 @@ defineProps<{
         :alt="alt"
         :width="558"
         :height="352"
-        :opacity="0.8"
+        :opacity="1"
         fit="cover"
         class="m-0 object-top w-full h-full"
       />
