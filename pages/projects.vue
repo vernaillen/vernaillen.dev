@@ -56,8 +56,9 @@ onMounted(() => {
                 :alt="project.image?.alt"
                 :width="384"
                 :height="192"
-                format="webp"
+                :opacity="0.8"
                 fit="cover"
+                class="h-full"
               />
             </template>
           </UBlogPost>

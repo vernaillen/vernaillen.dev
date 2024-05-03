@@ -45,7 +45,7 @@ onMounted(() => {
           :class="[index === 0 && 'lg:col-span-full']"
           :ui="{
             image: { base: '', wrapper: 'aspect-[21/9]' },
-            description: 'line-clamp-2'
+            description: 'line-clamp-2',
           }"
           class="slide-enter"
           :style="'--enter-stage:' + (index + 1) + ';'"
@@ -72,7 +72,7 @@ onMounted(() => {
               :alt="post.image?.alt ? post.image?.alt : post.title"
               :width="index === 0 ? 592 : 384"
               :height="index === 0 ? 247 : 160"
-              format="webp"
+              :opacity="0.8"
               fit="cover"
               class="object-top w-full h-full dark:h-0"
             />
@@ -81,7 +81,7 @@ onMounted(() => {
               :alt="post.image?.alt ? post.image?.alt : post.title"
               :width="index === 0 ? 592 : 384"
               :height="index === 0 ? 247 : 160"
-              format="webp"
+              :opacity="0.8"
               fit="cover"
               class="object-top w-full h-0 dark:h-full"
             />

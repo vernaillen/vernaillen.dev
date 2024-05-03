@@ -10,14 +10,14 @@ export interface Props {
   fit?: string
   format?: string
   modifiers?: object
-  finalOpacity?: number
+  opacity?: number
 }
 const props = withDefaults(defineProps<Props>(), {
   imgClass: '',
   placeholder: 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=',
   fit: 'cover',
   format: 'webp',
-  finalOpacity: 1,
+  opacity: 1,
 })
 const imgUrlSmaller = img(props.src, {
   width: props.width,
@@ -40,7 +40,7 @@ watch(() => props.src, (newUrl) => {
     :width
     :height
     :class="imgClass"
-    class="object-cover opacity-0 transform transition-all duration-300 max-w-full"
+    class="object-cover opacity-0 transform transition-all duration-200 max-w-full group-hover:opacity-100 group-hover:scale-[102%]"
   >
 </template>
 
@@ -50,6 +50,6 @@ img[lazy=loading] {
 }
 
 img[lazy=loaded] {
-  opacity: v-bind(finalOpacity);
+  opacity: v-bind(opacity);
 }
 </style>

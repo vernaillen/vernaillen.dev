@@ -24,6 +24,10 @@ export default defineNuxtConfig({
     config: {
       stylistic: true,
     },
+    checker: {
+      lintOnStart: true,
+      fix: true,
+    },
   },
   site: {
     name: 'Wouter Vernaillen',

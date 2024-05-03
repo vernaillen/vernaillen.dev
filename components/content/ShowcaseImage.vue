@@ -24,9 +24,9 @@ defineProps<{
           :alt="alt"
           :width="558"
           :height="352"
-          format="webp"
+          :opacity="0.8"
           fit="cover"
-          class="opacity-90 hover:opacity-100 hover:scale-[102%] transform transition-all duration-500 m-0 object-cover object-top w-full h-full "
+          class="m-0 object-top w-full h-full"
         />
       </NuxtLink>
       <LazyImage
@@ -35,9 +35,9 @@ defineProps<{
         :alt="alt"
         :width="558"
         :height="352"
-        format="webp"
+        :opacity="0.8"
         fit="cover"
-        class="opacity-90 hover:opacity-100 hover:scale-[102%] transform transition-all duration-500 m-0 object-cover object-top w-full h-full"
+        class="m-0 object-top w-full h-full"
       />
     </div>
   </div>

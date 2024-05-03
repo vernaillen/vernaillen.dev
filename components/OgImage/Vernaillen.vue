@@ -149,7 +149,11 @@ defineProps<{
             stop-color="#9c8e1b"
             stop-opacity="0"
           />
-          <stop offset="1" stop-color="#9c8e1b" stop-opacity="0.08" />
+          <stop
+            offset="1"
+            stop-color="#9c8e1b"
+            stop-opacity="0.08"
+          />
         </radialGradient>
         <radialGradient
           id="paint2_radial_25:217"
@@ -164,7 +168,11 @@ defineProps<{
             stop-color="#9c8e1b"
             stop-opacity="0"
           />
-          <stop offset="1" stop-color="#9c8e1b" stop-opacity="0.08" />
+          <stop
+            offset="1"
+            stop-color="#9c8e1b"
+            stop-opacity="0.08"
+          />
         </radialGradient>
         <linearGradient
           id="paint3_linear_25:217"
@@ -175,7 +183,11 @@ defineProps<{
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#9c8e1b" />
-          <stop offset="1" stop-color="#9c8e1b" stop-opacity="0" />
+          <stop
+            offset="1"
+            stop-color="#9c8e1b"
+            stop-opacity="0"
+          />
         </linearGradient>
         <linearGradient
           id="paint4_linear_25:217"
@@ -186,7 +198,11 @@ defineProps<{
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#9c8e1b" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop
+            offset="1"
+            stop-color="white"
+            stop-opacity="0"
+          />
         </linearGradient>
         <linearGradient
           id="paint5_linear_25:217"
@@ -197,7 +213,11 @@ defineProps<{
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#9c8e1b" />
-          <stop offset="1" stop-color="white" stop-opacity="0" />
+          <stop
+            offset="1"
+            stop-color="white"
+            stop-opacity="0"
+          />
         </linearGradient>
         <linearGradient
           id="paint6_linear_25:217"
@@ -208,7 +228,11 @@ defineProps<{
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#9c8e1b" />
-          <stop offset="1" stop-color="#9c8e1b" stop-opacity="0" />
+          <stop
+            offset="1"
+            stop-color="#9c8e1b"
+            stop-opacity="0"
+          />
         </linearGradient>
       </defs>
     </svg>

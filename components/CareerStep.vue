@@ -22,7 +22,7 @@ defineProps<{
         target="_blank"
         class="text-primary-500"
       >
-        <NuxtImg
+        <LazyImage
           v-if="careerStep.imageUrl"
           :src="careerStep.imageUrl"
           :alt="careerStep.project"
@@ -33,7 +33,7 @@ defineProps<{
         />
       </NuxtLink>
       <span v-else>
-        <NuxtImg
+        <LazyImage
           v-if="careerStep.imageUrl"
           :src="careerStep.imageUrl"
           :alt="careerStep.project"
@@ -90,7 +90,8 @@ defineProps<{
           <span v-else>{{ careerStep.project }}</span>
         </div>
       </div>
-      <div class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+      <div
+        class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
         :style="'--enter-stage:' + (index + 4) + ';--enter-step:10ms;'"
       >
         <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
@@ -102,7 +103,8 @@ defineProps<{
           {{ careerStep.role }}
         </div>
       </div>
-      <div class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+      <div
+        class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
         :style="'--enter-stage:' + (index + 5) + ';--enter-step:10ms;'"
       >
         <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
@@ -114,7 +116,8 @@ defineProps<{
           {{ careerStep.stack }}
         </div>
       </div>
-      <div class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+      <div
+        class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
         :style="'--enter-stage:' + (index + 6) + ';--enter-step:10ms;'"
       >
         <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">

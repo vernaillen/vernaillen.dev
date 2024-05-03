@@ -105,7 +105,7 @@ export default <Partial<Config>>{
     iconsPlugin({
       collections: {
         custom: customIconSet,
-        ...getIconCollections(['heroicons', 'simple-icons', 'mdi', 'carbon', 'logos', 'ic', 'logos', 'tabler'])
+        ...getIconCollections(['heroicons', 'simple-icons', 'mdi', 'carbon', 'logos', 'ic', 'logos', 'tabler']),
       },
     }),
   ],

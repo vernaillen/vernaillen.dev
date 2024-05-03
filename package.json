@@ -34,6 +34,7 @@
     "@nuxthq/studio": "^1.0.15",
     "nuxt-og-image": "3.0.0-rc.53",
     "nuxt-svgo": "^4.0.0",
+    "vite-plugin-eslint2": "^4.4.0",
     "vue-tsc": "^2.0.16"
   }
 }

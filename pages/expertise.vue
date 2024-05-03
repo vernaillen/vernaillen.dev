@@ -5,7 +5,7 @@ if (!page.value) {
 }
 
 onMounted(() => {
-  page.value?.technologies?.forEach((technology: { value: any; }, index: number) => {
+  page.value?.technologies?.forEach((technology: { value: string }, index: number) => {
     useAnime({
       targets: '#technology-' + index + ' meter',
       value: technology.value,
@@ -72,4 +72,3 @@ onMounted(() => {
     </UPage>
   </div>
 </template>
-
