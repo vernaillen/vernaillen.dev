@@ -46,7 +46,7 @@ watch(() => props.src, (newUrl) => {
         :width
         :height
         :class="imgClass"
-        class="p-0 m-0 object-cover opacity-0 transform transition-all duration-300 max-w-full hover:opacity-100 group-hover:opacity-100 hover:scale-[102%] group-hover:scale-[102%]"
+        class="p-0 m-0 object-cover opacity-0 transform transition-all duration-500 max-w-full hover:opacity-100 group-hover:opacity-100 hover:scale-[102%] group-hover:scale-[102%]"
       >
     </div>
   </div>

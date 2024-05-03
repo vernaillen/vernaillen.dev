@@ -48,7 +48,7 @@ onMounted(() => {
             description: 'line-clamp-2',
           }"
           class="slide-enter"
-          :style="'--enter-stage:' + (index + 1) + ';'"
+          :style="'--enter-stage:' + (index * 3) + ';'"
         >
           <template #badge>
             <div

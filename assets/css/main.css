@@ -34,8 +34,8 @@
     --enter-stage: 0;
     --enter-step: 30ms;
     --enter-initial: 0ms;
-    animation: slide-enter 0.1s both 0.1s;
-    animation-delay: calc(var(--enter-initial) + (var(--enter-stage)/2) * var(--enter-step));
+    animation: slide-enter 0.4s both 0.4s;
+    animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
   }
   :not(.no-sliding) .slide-enter-content :not(.no-sliding) .slide-enter.slide-enter-stage0 {
     --enter-stage: 0;

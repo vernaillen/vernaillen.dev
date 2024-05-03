@@ -11,7 +11,7 @@ onMounted(() => {
     targets: '.svg-left svg',
     translateX: 2,
     translateY: 2,
-    scale: 1.05,
+    scale: 1.07,
     autoplay: true,
     loop: true,
     easing: 'easeInOutSine',

@@ -34,8 +34,9 @@ onMounted(() => {
       :links="page.hero.links"
       :ui="{
         headline: 'slide-enter slide-enter-stage1',
-        description: 'slide-enter slide-enter-stage2',
-        links: 'slide-enter slide-enter-stage3',
+        title: 'slide-enter slide-enter-stage2',
+        description: 'slide-enter slide-enter-stage4',
+        links: 'slide-enter slide-enter-stage6',
       }"
     >
       <div class="absolute inset-0 z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
