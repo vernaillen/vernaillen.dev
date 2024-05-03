@@ -16,7 +16,7 @@ onMounted(() => {
   >
     <UIcon
       name="i-mdi-comment-multiple-outline"
-      class="comments-icon w-2 h-2 mr-2"
+      class="comments-icon w-4 h-4 -mb-[3px] mr-1"
     />
     comment on
     <NuxtLink
