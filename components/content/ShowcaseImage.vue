@@ -22,22 +22,22 @@ defineProps<{
         <LazyImage
           :src="image"
           :alt="alt"
-          :width="950"
-          :height="600"
+          :width="558"
+          :height="352"
           format="webp"
           fit="cover"
-          class="opacity-95 hover:opacity-100 hover:scale-[103%] transform transition-all duration-500 m-0 object-cover object-top w-full h-full "
+          class="opacity-90 hover:opacity-100 hover:scale-[102%] transform transition-all duration-500 m-0 object-cover object-top w-full h-full "
         />
       </NuxtLink>
       <LazyImage
         v-else
         :src="image"
         :alt="alt"
-        :width="950"
-        :height="600"
+        :width="558"
+        :height="352"
         format="webp"
         fit="cover"
-        class="opacity-95 hover:opacity-100 hover:scale-[103%] transform transition-all duration-500 m-0 object-cover object-top w-full h-full"
+        class="opacity-90 hover:opacity-100 hover:scale-[102%] transform transition-all duration-500 m-0 object-cover object-top w-full h-full"
       />
     </div>
   </div>

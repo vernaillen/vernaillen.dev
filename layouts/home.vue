@@ -18,6 +18,11 @@ onMounted(() => {
     direction: 'alternate',
   })
   useAnime({
+    targets: '.svg-right svg',
+    // translateX: [50, 0],
+    scale: 1.03,
+  })
+  useAnime({
     targets: '.svg-right svg .animateCircle',
     autoplay: true,
     scale: 1.02,

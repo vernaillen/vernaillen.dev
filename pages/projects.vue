@@ -15,6 +15,9 @@ defineOgImageComponent('Vernaillen', {
   title: page.value.title,
   description: page.value.description,
 })
+onMounted(() => {
+  useAnime(useH1Effect())
+})
 </script>
 
 <template>
@@ -48,11 +51,11 @@ defineOgImageComponent('Vernaillen', {
               </div>
             </template>
             <template #image>
-              <NuxtImg
+              <LazyImage
                 :src="project.image?.src"
                 :alt="project.image?.alt"
-                width="384"
-                height="192"
+                :width="384"
+                :height="192"
                 format="webp"
                 fit="cover"
                 class="object-cover object-top w-full h-full transform transition-transform duration-200 group-hover:scale-[103%]"

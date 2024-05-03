@@ -5,6 +5,17 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { default: () => [], server: false })
 
 provide('navigation', navigation)
+
+onMounted(() => {
+  useAnime({
+    targets: 'h1',
+    translateX: [-10, 0],
+  })
+  useAnime({
+    targets: '.svg-right svg',
+    translateX: [50, 0],
+  })
+})
 </script>
 
 <template>
@@ -21,7 +32,7 @@ provide('navigation', navigation)
     <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
       <SvgoBackgroundLeft1 class="w-full" />
     </span>
-    <span class="absolute right-0 top-10 z-[-1] animate__animated animate__fadeIn">
+    <span class="svg-right absolute right-0 top-10 z-[-1] animate__animated animate__fadeIn">
       <SvgoBackgroundRight1 class="w-full" />
     </span>
     <ClientOnly>

@@ -21,6 +21,9 @@ defineOgImageComponent('Vernaillen', {
   title: page.value.title,
   description: page.value.description,
 })
+onMounted(() => {
+  useAnime(useH1Effect())
+})
 </script>
 
 <template>
@@ -40,7 +43,10 @@ defineOgImageComponent('Vernaillen', {
           :badge="post.badge"
           :orientation="index === 0 ? 'horizontal' : 'vertical'"
           :class="[index === 0 && 'lg:col-span-full']"
-          :ui="{ image: { wrapper: 'aspect-[21/9]' }, description: 'line-clamp-2' }"
+          :ui="{
+            image: { base: '', wrapper: 'aspect-[21/9]' },
+            description: 'line-clamp-2'
+          }"
           class="slide-enter"
           :style="'--enter-stage:' + (index + 1) + ';'"
         >
@@ -61,20 +67,20 @@ defineOgImageComponent('Vernaillen', {
             </div>
           </template>
           <template #image>
-            <NuxtImg
+            <LazyImage
               :src="post.thumbnail_dark ? post.thumbnail_dark : post.image?.src"
-              :alt="post.image?.alt"
-              width="384"
-              height="160"
+              :alt="post.image?.alt ? post.image?.alt : post.title"
+              :width="index === 0 ? 592 : 384"
+              :height="index === 0 ? 247 : 160"
               format="webp"
               fit="cover"
               class="object-cover object-top w-full h-full group-hover:scale-[103%] opacity-100 dark:opacity-0 dark:h-0 transform transition-transform duration-200"
             />
-            <NuxtImg
+            <LazyImage
               :src="post.thumbnail_light ? post.thumbnail_light : post.image?.src"
-              :alt="post.image?.alt"
-              width="384"
-              height="160"
+              :alt="post.image?.alt ? post.image?.alt : post.title"
+              :width="index === 0 ? 592 : 384"
+              :height="index === 0 ? 247 : 160"
               format="webp"
               fit="cover"
               class="object-cover object-top w-full h-0 group-hover:scale-[103%] opacity-0 dark:opacity-100 dark:h-full transform transition-transform duration-200"

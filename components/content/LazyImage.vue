@@ -19,16 +19,9 @@ const props = withDefaults(defineProps<Props>(), {
   format: 'webp',
   finalOpacity: 1,
 })
-const imgUrlBig = img(props.src, {
+const imgUrlSmaller = img(props.src, {
   width: props.width,
   height: props.height,
-  fit: props.fit,
-  format: props.format,
-  ...props.modifiers,
-})
-const imgUrlSmaller = img(props.src, {
-  width: 558,
-  height: 352,
   fit: props.fit,
   format: props.format,
   ...props.modifiers,
@@ -40,26 +33,15 @@ watch(() => props.src, (newUrl) => {
 </script>
 
 <template>
-  <div class="max-w-full">
-    <img
-      v-lazy="imgUrlBig"
-      :src="imgSrc"
-      :alt="alt"
-      :width="width"
-      :height="height"
-      :class="imgClass"
-      class="hidden sm:block lg:hidden object-cover opacity-0 transform transition-all duration-100 max-w-full"
-    >
-    <img
-      v-lazy="imgUrlSmaller"
-      :src="imgSrc"
-      :alt="alt"
-      :width="558"
-      :height="352"
-      :class="imgClass"
-      class="block sm:hidden lg:block object-cover opacity-0 transform transition-all duration-100 max-w-full"
-    >
-  </div>
+  <img
+    v-lazy="imgUrlSmaller"
+    :src="imgSrc"
+    :alt="alt"
+    :width="width"
+    :height="height"
+    :class="imgClass"
+    class=" object-cover opacity-0 transform transition-all duration-100 w-full max-w-full"
+  >
 </template>
 
 <style>

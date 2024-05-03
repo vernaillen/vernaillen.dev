@@ -80,3 +80,7 @@
 .prose > div > p:first-of-type > h2:first-of-type {
   margin-top: 0;
 }
+
+h1 {
+  text-shadow: 0 0 0 rgba(156, 142, 27, 0.01);
+}

@@ -15,11 +15,18 @@ defineOgImageComponent('Vernaillen', {
   title: page.value.title,
   description: page.value.description,
 })
+
+onMounted(() => {
+  useAnime(useH1Effect())
+})
 </script>
 
 <template>
   <div>
-    <UPageHeader v-bind="page" />
+    <UPageHeader
+      id="career"
+      v-bind="page"
+    />
     <UPage>
       <UPageBody>
         <ol v-if="page?.careerSteps">
