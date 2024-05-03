@@ -29,6 +29,7 @@ defineProps<{
           format="webp"
           :width="34"
           :height="34"
+          :show-ring="false"
           class="rounded-full"
         />
       </NuxtLink>
@@ -40,6 +41,7 @@ defineProps<{
           format="webp"
           :width="34"
           :height="34"
+          :show-ring="false"
           class="rounded-full"
         />
       </span>

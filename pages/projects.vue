@@ -56,7 +56,7 @@ onMounted(() => {
                 :alt="project.image?.alt"
                 :width="384"
                 :height="192"
-                :opacity="0.8"
+                :show-ring="false"
                 fit="cover"
                 class="h-full"
               />

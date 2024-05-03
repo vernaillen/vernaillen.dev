@@ -61,12 +61,21 @@ onMounted(() => {
       :features="section.features"
       :ui="{ container: `lg:items-start slide-enter slide-enter-stage${1+index}` }"
     >
-      <ShowcaseImage
-        v-if="section.image"
-        :image="section.image"
-        :url="section.url"
-        :alt="section.title"
-      />
+      <NuxtLink
+        :to="section.url"
+        target="_blank"
+        :aria-label="section.title"
+      >
+        <LazyImage
+          v-if="section.image"
+          :src="section.image"
+          :url="section.url"
+          :alt="section.title"
+          :width="558"
+          :height="352"
+          :show-ring="true"
+        />
+      </NuxtLink>
     </ULandingSection>
 
     <ULandingSection

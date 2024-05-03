@@ -11,13 +11,15 @@ export interface Props {
   format?: string
   modifiers?: object
   opacity?: number
+  showRing?: boolean
 }
 const props = withDefaults(defineProps<Props>(), {
   imgClass: '',
   placeholder: 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=',
   fit: 'cover',
   format: 'webp',
-  opacity: 1,
+  opacity: 0.9,
+  showRing: true,
 })
 const imgUrlSmaller = img(props.src, {
   width: props.width,
@@ -33,15 +35,21 @@ watch(() => props.src, (newUrl) => {
 </script>
 
 <template>
-  <img
-    v-lazy="imgUrlSmaller"
-    :src="imgSrc"
-    :alt
-    :width
-    :height
-    :class="imgClass"
-    class="object-cover opacity-0 transform transition-all duration-200 max-w-full group-hover:opacity-100 group-hover:scale-[102%]"
+  <div
+    :class="showRing ? 'ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 rounded-xl p-2 align-top content-start' : 'p-0 m-0'"
   >
+    <div :class="showRing ? 'rounded-lg relative overflow-hidden h-full w-full border border-dashed border-gray-900/10 dark:border-white/10' : 'p-0 m-0 rounded-lg'">
+      <img
+        v-lazy="imgUrlSmaller"
+        :src="imgSrc"
+        :alt
+        :width
+        :height
+        :class="imgClass"
+        class="p-0 m-0 object-cover opacity-0 transform transition-all duration-300 max-w-full hover:opacity-100 group-hover:opacity-100 hover:scale-[102%] group-hover:scale-[102%]"
+      >
+    </div>
+  </div>
 </template>
 
 <style>
