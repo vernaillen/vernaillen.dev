@@ -3,8 +3,8 @@ const img = useImage()
 export interface Props {
   src: string
   alt: string
-  width: number
-  height: number
+  width?: number
+  height?: number
   imgClass?: string
   placeholder?: string
   fit?: string
@@ -36,9 +36,9 @@ watch(() => props.src, (newUrl) => {
   <img
     v-lazy="imgUrlSmaller"
     :src="imgSrc"
-    :alt="alt"
-    :width="width"
-    :height="height"
+    :alt
+    :width
+    :height
     :class="imgClass"
     class="object-cover opacity-0 transform transition-all duration-300 max-w-full"
   >

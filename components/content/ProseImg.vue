@@ -1,11 +1,10 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   src: string
   alt: string
   width?: number
   height?: number
 }>()
-console.log(props)
 </script>
 
 <template>
