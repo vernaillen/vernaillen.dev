@@ -40,7 +40,7 @@ watch(() => props.src, (newUrl) => {
     :width="width"
     :height="height"
     :class="imgClass"
-    class=" object-cover opacity-0 transform transition-all duration-100 w-full max-w-full"
+    class="object-cover opacity-0 transform transition-all duration-300 max-w-full"
   >
 </template>
 

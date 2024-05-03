@@ -58,7 +58,6 @@ onMounted(() => {
                 :height="192"
                 format="webp"
                 fit="cover"
-                class="object-cover object-top w-full h-full transform transition-transform duration-200 group-hover:scale-[103%]"
               />
             </template>
           </UBlogPost>

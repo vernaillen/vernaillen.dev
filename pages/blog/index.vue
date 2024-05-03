@@ -74,7 +74,7 @@ onMounted(() => {
               :height="index === 0 ? 247 : 160"
               format="webp"
               fit="cover"
-              class="object-cover object-top w-full h-full group-hover:scale-[103%] opacity-100 dark:opacity-0 dark:h-0 transform transition-transform duration-200"
+              class="object-top w-full h-full dark:h-0"
             />
             <LazyImage
               :src="post.thumbnail_light ? post.thumbnail_light : post.image?.src"
@@ -83,7 +83,7 @@ onMounted(() => {
               :height="index === 0 ? 247 : 160"
               format="webp"
               fit="cover"
-              class="object-cover object-top w-full h-0 group-hover:scale-[103%] opacity-0 dark:opacity-100 dark:h-full transform transition-transform duration-200"
+              class="object-top w-full h-0 dark:h-full"
             />
           </template>
           <template #date>
