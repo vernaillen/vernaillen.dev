@@ -17,11 +17,7 @@ onMounted(() => {
     easing: 'easeInOutSine',
     direction: 'alternate',
   })
-  useAnime({
-    targets: '.svg-right svg',
-    // translateX: [50, 0],
-    scale: 1.03,
-  })
+  useFadeIn('.svg-right svg')
   useAnime({
     targets: '.svg-right svg .animateCircle',
     autoplay: true,

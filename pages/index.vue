@@ -19,7 +19,7 @@ defineOgImageComponent('Vernaillen', {
   description: page.value.description,
 })
 onMounted(() => {
-  useAnime(useH1Effect())
+  useH1Effect()
 })
 </script>
 
@@ -59,7 +59,7 @@ onMounted(() => {
       :links="section.links"
       :align="section.align"
       :features="section.features"
-      :ui="{ container: `slide-enter slide-enter-stage${1+index}` }"
+      :ui="{ container: `lg:items-start slide-enter slide-enter-stage${1+index}` }"
     >
       <ShowcaseImage
         v-if="section.image"

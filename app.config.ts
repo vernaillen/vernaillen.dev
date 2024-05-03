@@ -66,14 +66,13 @@ export default defineAppConfig({
       hero: {
         wrapper: 'py-20 sm:py-24 md:py-36 relative',
         headline: 'mt-0 mb-12',
-        title: 'text-3xl sm:text-5xl md:text-6xl animate__animated animate__pulse',
+        title: 'text-3xl sm:text-5xl md:text-6xl',
         description: 'my-16 md:my-24',
       },
     },
     page: {
       header: {
         wrapper: 'py-[40px] slide-enter',
-        title: 'animate__animated animate__pulse',
       },
     },
     blog: {

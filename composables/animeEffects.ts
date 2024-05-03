@@ -1,19 +1,32 @@
-import { _backgroundImage, _backgroundOpacity, _backgroundPosition, _opacity } from "#tailwind-config/theme"
-
-const _useH1Effect = () => {
-  return {
+export const useH1Effect = () => {
+  return useAnime({
     targets: 'h1',
     translateX: [-50, 0],
-    // backgroundColor: '#2e1b02',
-    // backgroundImage: 'linear-gradient(to bottom left, #2e1b02, #ee4b2b)',
-    // borderRadius: ['0%', '50%'],
-    // textShadow: '6px 2px 5px rgba(168,158,32,0.8)',
-    // textShadow: '40px 18px 8px rgba(156, 142, 27, 0.5)',
-    textShadow: '-1px 2px 5px rgba(156, 142, 27, 0.4)',
-    // easing: 'easeInOutQuad',
-    // endDelay: 100,
-    // backgroundOpacity: 0.5,
-  }
+    opacity: [0, 1],
+    easing: 'spring',
+  })
 }
-
-export const useH1Effect = _useH1Effect
+export const useFadeIn = (targets: string) => {
+  return useAnime({
+    targets,
+    opacity: [0, 1],
+    scale: 1.1,
+    easing: 'linear',
+    duration: 300,
+  })
+}
+export const useBounceEffect = (targets: string) => {
+  return useAnime({
+    targets,
+    rotate: {
+      value: 360,
+      duration: 300,
+      easing: 'easeInOutSine',
+    },
+    scale: {
+      value: 2,
+      duration: 600,
+      easing: 'easeInOutQuart',
+    },
+  })
+}

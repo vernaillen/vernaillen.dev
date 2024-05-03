@@ -42,7 +42,6 @@ watch(() => showReblogs.value, () => {
         v-for="item, index in filteredFeed"
         :key="index"
         :post="item"
-        class="animate__animated animate__fadeIn"
       />
     </div>
     <div v-show="!filteredFeed">

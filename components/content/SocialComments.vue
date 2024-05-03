@@ -4,6 +4,9 @@ import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 defineProps<{
   page: ParsedContent
 }>()
+onMounted(() => {
+  useBounceEffect('.comments-icon')
+})
 </script>
 
 <template>
@@ -13,7 +16,7 @@ defineProps<{
   >
     <UIcon
       name="i-mdi-comment-multiple-outline"
-      class="w-4 h-4 -mb-[3px] mr-1 animate__animated animate__bounceIn"
+      class="comments-icon w-2 h-2 mr-2"
     />
     comment on
     <NuxtLink

@@ -32,7 +32,7 @@ defineOgImageComponent('VernaillenBlog', {
   img: post.value.image?.src,
 })
 onMounted(() => {
-  useAnime(useH1Effect())
+  useH1Effect()
 })
 </script>
 

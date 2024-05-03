@@ -22,7 +22,7 @@ defineOgImageComponent('Vernaillen', {
   description: page.value.description,
 })
 onMounted(() => {
-  useAnime(useH1Effect())
+  useH1Effect()
 })
 </script>
 

@@ -7,14 +7,9 @@ const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { defa
 provide('navigation', navigation)
 
 onMounted(() => {
-  useAnime({
-    targets: 'h1',
-    translateX: [-10, 0],
-  })
-  useAnime({
-    targets: '.svg-right svg',
-    translateX: [50, 0],
-  })
+  useH1Effect()
+  useFadeIn('.svg-left svg')
+  useFadeIn('.svg-right svg')
 })
 </script>
 
@@ -29,10 +24,10 @@ onMounted(() => {
     </UMain>
 
     <FooterComponent />
-    <span class="absolute top-10 left-0 z-[-1] animate__animated animate__fadeIn">
+    <span class="svg-left absolute top-10 left-0 z-[-1]">
       <SvgoBackgroundLeft1 class="w-full" />
     </span>
-    <span class="svg-right absolute right-0 top-10 z-[-1] animate__animated animate__fadeIn">
+    <span class="svg-right absolute right-0 top-10 z-[-1]">
       <SvgoBackgroundRight1 class="w-full" />
     </span>
     <ClientOnly>

@@ -13,7 +13,7 @@ onMounted(() => {
       autoplay: true,
     })
   })
-  useAnime(useH1Effect())
+  useH1Effect()
 })
 </script>
 
