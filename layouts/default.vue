@@ -7,7 +7,6 @@ const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { defa
 provide('navigation', navigation)
 
 onMounted(() => {
-  useH1Effect()
   useFadeIn('.svg-left svg')
   useFadeIn('.svg-right svg')
 })

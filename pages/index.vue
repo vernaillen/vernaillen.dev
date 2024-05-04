@@ -18,9 +18,6 @@ defineOgImageComponent('Vernaillen', {
   subTitle: 'Freelance Full Stack Developer',
   description: page.value.description,
 })
-onMounted(() => {
-  useH1Effect()
-})
 </script>
 
 <template>

@@ -32,9 +32,9 @@
   :not(.no-sliding) .slide-enter-content :not(.no-sliding) [slide-enter],
   :not(.no-sliding) .slide-enter-content :not(.no-sliding) .slide-enter {
     --enter-stage: 0;
-    --enter-step: 30ms;
+    --enter-step: 20ms;
     --enter-initial: 0ms;
-    animation: slide-enter 0.4s both 0.4s;
+    animation: slide-enter 0.2s both 0.2s;
     animation-delay: calc(var(--enter-initial) + var(--enter-stage) * var(--enter-step));
   }
   :not(.no-sliding) .slide-enter-content :not(.no-sliding) .slide-enter.slide-enter-stage0 {

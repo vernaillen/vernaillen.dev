@@ -72,7 +72,7 @@ export default defineAppConfig({
     },
     page: {
       header: {
-        wrapper: 'py-[40px] slide-enter',
+        wrapper: 'py-[40px]',
       },
     },
     blog: {

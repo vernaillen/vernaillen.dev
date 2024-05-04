@@ -31,9 +31,6 @@ defineOgImageComponent('VernaillenBlog', {
   description,
   img: post.value.image?.src,
 })
-onMounted(() => {
-  useH1Effect()
-})
 </script>
 
 <template>

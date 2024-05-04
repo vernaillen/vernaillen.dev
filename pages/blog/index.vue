@@ -21,9 +21,6 @@ defineOgImageComponent('Vernaillen', {
   title: page.value.title,
   description: page.value.description,
 })
-onMounted(() => {
-  useH1Effect()
-})
 </script>
 
 <template>

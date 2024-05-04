@@ -10,10 +10,8 @@ onMounted(() => {
       targets: '#technology-' + index + ' meter',
       value: technology.value,
       easing: 'spring',
-      autoplay: true,
     })
   })
-  useH1Effect()
 })
 </script>
 

@@ -1,10 +1,3 @@
-export const useH1Effect = () => {
-  return useAnime({
-    targets: 'h1',
-    scale: [0.9, 1],
-    easing: 'spring',
-  })
-}
 export const useFadeIn = (targets: string) => {
   return useAnime({
     targets,
