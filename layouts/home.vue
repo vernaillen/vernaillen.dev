@@ -5,28 +5,6 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { default: () => [], server: false })
 
 provide('navigation', navigation)
-
-onMounted(() => {
-  useAnime({
-    targets: '.svg-left svg',
-    translateX: 2,
-    translateY: 2,
-    scale: 1.07,
-    autoplay: true,
-    loop: true,
-    easing: 'easeInOutSine',
-    direction: 'alternate',
-  })
-  useFadeIn('.svg-right svg')
-  useAnime({
-    targets: '.svg-right svg .animateCircle',
-    autoplay: true,
-    scale: 1.02,
-    loop: true,
-    easing: 'easeInOutSine',
-    direction: 'alternate',
-  })
-})
 </script>
 
 <template>
