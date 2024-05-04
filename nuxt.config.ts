@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/fonts',
     '@nuxthq/studio',
+    '@nuxtjs/plausible',
     '@vueuse/nuxt',
     'nuxt-og-image',
     'nuxt-svgo',
@@ -77,6 +78,9 @@ export default defineNuxtConfig({
     svgoConfig: {
       multipass: true,
     },
+  },
+  plausible: {
+    apiHost: 'https://vernaillen.dev/plio',
   },
   routeRules: {
     '/': { prerender: true },
