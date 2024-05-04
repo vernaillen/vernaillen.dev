@@ -10,13 +10,14 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description,
 })
-definePageMeta({
-  layout: 'home',
-})
 defineOgImageComponent('Vernaillen', {
   title: 'Wouter Vernaillen',
   subTitle: 'Freelance Full Stack Developer',
   description: page.value.description,
+})
+definePageMeta({
+  layout: 'home',
+  colorMode: 'dark',
 })
 </script>
 

@@ -9,10 +9,12 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description,
 })
-
 defineOgImageComponent('Vernaillen', {
   title: page.value.title,
   description: page.value.description,
+})
+definePageMeta({
+  colorMode: 'dark',
 })
 </script>
 

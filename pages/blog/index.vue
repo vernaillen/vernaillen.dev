@@ -21,6 +21,9 @@ defineOgImageComponent('Vernaillen', {
   title: page.value.title,
   description: page.value.description,
 })
+definePageMeta({
+  colorMode: 'dark',
+})
 </script>
 
 <template>

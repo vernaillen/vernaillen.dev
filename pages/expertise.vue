@@ -4,6 +4,19 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
+useSeoMeta({
+  title: 'Wouter Vernaillen: Freelance Full Stack Developer',
+  ogTitle: 'Wouter Vernaillen: Freelance Full Stack Developer',
+  description: page.value.description,
+  ogDescription: page.value.description,
+})
+defineOgImageComponent('Vernaillen', {
+  title: page.value.title,
+  description: page.value.description,
+})
+definePageMeta({
+  colorMode: 'dark',
+})
 onMounted(() => {
   page.value?.technologies?.forEach((technology: { value: string }, index: number) => {
     useAnime({

@@ -25,11 +25,13 @@ useSeoMeta({
   description,
   ogDescription: description,
 })
-
 defineOgImageComponent('VernaillenBlog', {
   title,
   description,
   img: post.value.image?.src,
+})
+definePageMeta({
+  colorMode: 'dark',
 })
 </script>
 
