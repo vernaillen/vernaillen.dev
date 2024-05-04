@@ -46,17 +46,17 @@ onMounted(() => {
                   name="label"
                   v-bind="{ percent, value }"
                 >
-                  <div class="flex gap-2 items-center flex-shrink-0 h-6 font-semibold truncate text-sm">
+                  <div class="flex gap-2 items-center flex-shrink-0 h-6 font-semibold truncate text-sm relative">
                     <span class="w-5">
                       <UIcon
                         v-if="technology.icon"
                         :name="technology.icon"
-                        class="w-5 h-5"
+                        :class="technology.class ? technology.class : 'w-5 h-5'"
                       />
                     </span>
                     <span
                       class="w-20"
-                      :class="'text-'+ technology.color + '-400 hover:text-'+ technology.color + '-500'"
+                      :class="'text-'+ technology.color + '-500 text-opacity-100'"
                     >
                       {{ technology.label }}
                     </span>

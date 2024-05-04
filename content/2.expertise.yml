@@ -2,37 +2,40 @@ title: Expertise
 pageName: Expertise
 description: An overview of the technologies I currently specialise in.
 technologies:
-  - label: Java
-    icon: i-logos-java
-    value: 95
-    color: java
+  - label: Nuxt
+    icon: i-logos-nuxt-icon
+    value: 85
+    color: nuxt
+    class: 'w-5 h-4'
   - label: Spring
     icon: i-logos-spring-icon
     value: 93
     color: springframework
-  - label: Nuxt
-    icon: i-logos-nuxt-icon
-    value: 90
-    color: nuxt
+  - label: Java
+    icon: i-logos-java
+    value: 96
+    color: java
+    class: 'w-7 h-7 -ml-1'
   - label: Vue.js
     icon: i-logos-vue
-    value: 70
+    value: 75
     color: vue
-  - label: Jenkins
-    icon: i-logos-jenkins
-    value: 80
-    color: jenkins
   - label: Docker
     icon: i-logos-docker-icon
-    value: 85
+    value: 80
     color: docker
   - label: Kubernetes
     icon: i-logos-kubernetes
     value: 75
     color: kubernetes
+  - label: Jenkins
+    icon: i-logos-jenkins
+    value: 70
+    color: jenkins
+    class: 'w-7 h-7 -ml-1'
   - label: Liferay
     icon: i-custom-liferay
-    value: 70
+    value: 60
     color: liferay
   - label: Angular
     icon: i-logos-angular-icon
