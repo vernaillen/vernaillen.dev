@@ -1,5 +1,7 @@
 {
   "eslint.experimental.useFlatConfig": true,
-  "circleci.persistedProjectSelection": [],
+  "circleci.persistedProjectSelection": [
+    "gh/vernaillen/vernaillen.dev"
+  ],
   "circleci.filters.branchFilter": "allBranches"
 }

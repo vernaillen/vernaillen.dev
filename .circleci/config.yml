@@ -30,6 +30,9 @@ jobs:
           paths:
             - ./node_modules
       - run:
+          name: Lint
+          command: pnpm run lint
+      - run:
           name: Build
           command: pnpm run build
       - persist_to_workspace:
