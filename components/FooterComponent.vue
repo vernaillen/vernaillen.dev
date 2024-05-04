@@ -83,7 +83,7 @@ const links = [{
       <UButton
         to="https://github.com/vernaillen/vernaillen.dev"
         target="_blank"
-        icon="i-simple-icons-github"
+        icon="i-mdi-github"
         aria-label="GitHub"
         color="gray"
         variant="ghost"

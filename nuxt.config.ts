@@ -54,13 +54,12 @@ export default defineNuxtConfig({
   },
   hooks: {
     'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton'].includes(c.pascalName))
-
+      const globals = components.filter(c => ['UButton', 'UIcon', 'UColorModeButton'].includes(c.pascalName))
       globals.forEach(c => c.global = true)
     },
   },
   ui: {
-    icons: ['heroicons', 'simple-icons', 'mdi', 'carbon', 'logos', 'ic', 'logos', 'tabler'],
+    icons: ['heroicons', 'mdi', 'ic', 'logos', 'tabler', 'twemoji'],
   },
   uiPro: {
     routerOptions: false,

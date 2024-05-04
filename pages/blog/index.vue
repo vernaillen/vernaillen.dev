@@ -72,7 +72,6 @@ onMounted(() => {
               :alt="post.image?.alt ? post.image?.alt : post.title"
               :width="index === 0 ? 592 : 384"
               :height="index === 0 ? 247 : 170"
-              :show-ring="false"
               fit="cover"
               class="object-top w-full h-full dark:h-0"
             />
@@ -80,10 +79,9 @@ onMounted(() => {
               :src="post.thumbnail_light ? post.thumbnail_light : post.image?.src"
               :alt="post.image?.alt ? post.image?.alt : post.title"
               :width="index === 0 ? 592 : 384"
-              :height="index === 0 ? 247 : 160"
-              :show-ring="false"
+              :height="index === 0 ? 247 : 170"
               fit="cover"
-              img-class="object-top w-full h-0 dark:h-full"
+              class="object-top w-full h-0 dark:h-full"
             />
           </template>
           <template #date>

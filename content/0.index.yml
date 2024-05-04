@@ -13,7 +13,7 @@ hero:
       icon: i-heroicons-newspaper
       trailing: true
     - label: Projects
-      icon: i-carbon-ibm-cloud-projects
+      icon: i-mdi-folder-multiple
       size: xl
       variant: subtle
       to: /projects
@@ -84,7 +84,7 @@ features:
   items:
     - title: Committed to my clients
       description: I'm with you all the way, committed until the end of the project and beyond.
-      icon: i-carbon-commit
+      icon: i-ic-baseline-commit
     - title: Reliable
       description: You can always count on me.
       icon: i-heroicons-check

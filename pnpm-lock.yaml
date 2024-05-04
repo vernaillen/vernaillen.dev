@@ -8,21 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@iconify-json/carbon':
-        specifier: ^1.1.32
-        version: 1.1.32
-      '@iconify-json/heroicons':
-        specifier: ^1.1.21
-        version: 1.1.21
-      '@iconify-json/ic':
-        specifier: ^1.1.17
-        version: 1.1.17
-      '@iconify-json/mdi':
-        specifier: ^1.1.66
-        version: 1.1.66
-      '@iconify-json/simple-icons':
-        specifier: ^1.1.101
-        version: 1.1.101
       '@nuxt/content':
         specifier: ^2.12.1
         version: 2.12.1(ioredis@5.4.1)(nuxt@3.11.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.12.8)(@unocss/reset@0.59.4)(axios@1.6.8)(encoding@0.1.13)(eslint@8.57.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.17.2))(vue@3.4.26(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.4.1)(optionator@0.9.4)(rollup@4.17.2)(sass@1.76.0)(terser@5.31.0)(typescript@5.4.5)(unocss@0.59.4(@unocss/webpack@0.59.4(rollup@4.17.2)(webpack@5.91.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0)))(vite@5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0))(vue-tsc@2.0.16(typescript@5.4.5))(xml2js@0.4.23))(rollup@4.17.2)(vue@3.4.26(typescript@5.4.5))
@@ -54,6 +39,9 @@ importers:
       '@hypernym/nuxt-anime':
         specifier: ^2.1.1
         version: 2.1.1
+      '@iconify/json':
+        specifier: ^2.2.206
+        version: 2.2.206
       '@nuxt/eslint':
         specifier: ^0.3.10
         version: 0.3.10(eslint@8.57.0)(nuxt@3.11.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.12.8)(@unocss/reset@0.59.4)(axios@1.6.8)(encoding@0.1.13)(eslint@8.57.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.17.2))(vue@3.4.26(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.4.1)(optionator@0.9.4)(rollup@4.17.2)(sass@1.76.0)(terser@5.31.0)(typescript@5.4.5)(unocss@0.59.4(@unocss/webpack@0.59.4(rollup@4.17.2)(webpack@5.91.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0)))(vite@5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0))(vue-tsc@2.0.16(typescript@5.4.5))(xml2js@0.4.23))(rollup@4.17.2)(typescript@5.4.5)(vite-plugin-eslint2@4.4.0(@types/eslint@8.56.10)(eslint@8.57.0)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0)))(vite@5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0))
@@ -650,26 +638,20 @@ packages:
   '@iconify-json/heroicons@1.1.21':
     resolution: {integrity: sha512-A+3L4KN+TjH3V8fQ2N2dkOOnLLxMgMBzO8RDT0P9YL+YzvLMIbe/lkDLSB8NB8x0DKWmkvTimoo1l4DKMwi7Zg==}
 
-  '@iconify-json/ic@1.1.17':
-    resolution: {integrity: sha512-EvAjZzVESmN36zlyefylePUNaU2BQ3eRKVZ6KQSQ2bG01ppoZaiFZRri74VTyvp5Mlv2yn68ux1fgCoT+etGmA==}
-
   '@iconify-json/logos@1.1.42':
     resolution: {integrity: sha512-/f+frtPm3m3Z30oy8Pk+QqRDkbmAiIaWGPl5CmsCXm15MVfvw9a/V/gD7WzdyuSGAZcFuQaqbHXj92y/n+2ifg==}
 
-  '@iconify-json/mdi@1.1.66':
-    resolution: {integrity: sha512-7KPF2RVUUWav/hXCM8Ti/smqu3cmgePJpiX9CSkldiL+80+eBRBeKlc4vPOc9jhAItlqIU1vKsbKoPP0JIfgbg==}
-
   '@iconify-json/ri@1.1.20':
     resolution: {integrity: sha512-yScIGjLFBCJKWKskQTWRjNI2Awoq+VRDkRxEsCQvSfdz41n+xkRtFG2K6J1OVI90ClRHfjFC8VJ2+WzxxyFjTQ==}
-
-  '@iconify-json/simple-icons@1.1.101':
-    resolution: {integrity: sha512-7h7iUvCok031UcYUt2+wPD21tOwu/AzFB2I2PzzoC3R1jsNJjn5YV3v1q0g2CXcMYAzcsCyH00RbpFPFAiqjcw==}
 
   '@iconify-json/tabler@1.1.111':
     resolution: {integrity: sha512-0qCmOCUUgcBXtvSUwaKMM4yum6XNrjPLxZBwueRPn14pAmWhS7Un15chxJ+ULfE1hBaVM7gSPIYz4JAUOo28Aw==}
 
   '@iconify/collections@1.0.419':
     resolution: {integrity: sha512-DD1BQBrdXiIS9txIYdExjyT+Lvc6ZSU5lAqMK1W4lMU7QcBDT7J/Qc8QFZNZ4LG+wXyUgo0rhSIHvO8gTMOBtQ==}
+
+  '@iconify/json@2.2.206':
+    resolution: {integrity: sha512-Vbi8BTvbEKZtCQDJDqMRDZenU8HYMHFtMkEx92pvyQN/Il5OfGwCNaR+bf9Sv2TkotnoiyqqickeWpdo0hllGQ==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -778,8 +760,8 @@ packages:
     resolution: {integrity: sha512-7kZUAaLscfgbwBQRbvdMYaZOWyMEcPTH/tJjnyAWJ/dvvs9Ef+CERx/qJb9GExJpl1qipaDGn7KqHnFGGixd0w==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  '@npmcli/git@5.0.6':
-    resolution: {integrity: sha512-4x/182sKXmQkf0EtXxT26GEsaOATpD7WVtza5hrYivWZeo6QefC6xq9KAXrnjtFKBZ4rZwR7aX/zClYYXgtwLw==}
+  '@npmcli/git@5.0.7':
+    resolution: {integrity: sha512-WaOVvto604d5IpdCRV2KjQu8PzkfE96d50CQGKgywXh2GxXmDeUO5EWcBC4V57uFyrNqx83+MewuJh3WTR3xPA==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
   '@npmcli/installed-package-contents@2.1.0':
@@ -795,8 +777,8 @@ packages:
     resolution: {integrity: sha512-1aL4TuVrLS9sf8quCLerU3H9J4vtCtgu8VauYozrmEyU57i/EdKleCnsQ7vpnABIH6c9mnTxcH5sFkO3BlV8wQ==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
-  '@npmcli/promise-spawn@7.0.1':
-    resolution: {integrity: sha512-P4KkF9jX3y+7yFUxgcUdDtLy+t4OlDGuEBLNs57AZsfSfg+uV6MLndqGpnl4831ggaEdXwR50XFoZP4VFtHolg==}
+  '@npmcli/promise-spawn@7.0.2':
+    resolution: {integrity: sha512-xhfYPXoV5Dy4UkY0D+v2KkwvnDfiA/8Mt3sWCGI/hM03NsYIH8ZaG6QzS9x7pje5vHZBZJ2v6VRFVTWACnqcmQ==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
   '@npmcli/redact@2.0.0':
@@ -2349,8 +2331,8 @@ packages:
     resolution: {integrity: sha512-b6Ilus+c3RrdDk+JhLKUAQfzzgLEPy6wcXqS7f/xe1EETvsDP6GORG7SFuOs6cID5YkqchW/LXZbX5bc8j7ZcQ==}
     engines: {node: '>=8'}
 
-  cacache@18.0.2:
-    resolution: {integrity: sha512-r3NU8h/P+4lVUHfeRw1dtgQYar3DZMm4/cm2bZgOvrFC/su7budSOeqh52VJIC4U4iG1WWwV6vRW0znqBvxNuw==}
+  cacache@18.0.3:
+    resolution: {integrity: sha512-qXCd4rh6I07cnDqh8V48/94Tc/WSfj+o3Gn6NZ0aZovS255bUx8O13uKxRFd2eWG0xgsco7+YItQNPaa5E85hg==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
   cache-content-type@1.0.1:
@@ -3540,8 +3522,8 @@ packages:
   hosted-git-info@2.8.9:
     resolution: {integrity: sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==}
 
-  hosted-git-info@7.0.1:
-    resolution: {integrity: sha512-+K84LB1DYwMHoHSgaOY/Jfhw3ucPmSET5v98Ke/HdNSw4a0UktWzyW1mjhjpuxxTqOOsfWT/7iVshHmVZ4IpOA==}
+  hosted-git-info@7.0.2:
+    resolution: {integrity: sha512-puUZAUKT5m8Zzvs72XWy3HtvVbTWljRE66cP60bxJzAqf2DgICo7lYTY2IHUmLnNpjYvw5bvmoHvPc0QO2a62w==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
   html-tags@3.3.1:
@@ -3619,8 +3601,8 @@ packages:
   ieee754@1.2.1:
     resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
 
-  ignore-walk@6.0.4:
-    resolution: {integrity: sha512-t7sv42WkwFkyKbivUCglsQW5YWMskWtbEf4MNKX5u/CCWHKSPzN4FtBQGsQZgCLbxOzpVlcbWVK5KB3auIOjSw==}
+  ignore-walk@6.0.5:
+    resolution: {integrity: sha512-VuuG0wCnjhnylG1ABXT3dAuIpTNDs/G8jlpmwXY03fXoXy/8ZK8/T+hMzt8L4WnrLCJgdybqgPagnF/f97cg3A==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
   ignore@5.3.1:
@@ -3913,8 +3895,8 @@ packages:
   json-parse-even-better-errors@2.3.1:
     resolution: {integrity: sha512-xyFwyhro/JEof6Ghe2iz2NcXoj2sloNsWr/XsERDK/oiPCfaNhl5ONfp+jQdAZRQQ0IJWNzH9zIZF7li91kh2w==}
 
-  json-parse-even-better-errors@3.0.1:
-    resolution: {integrity: sha512-aatBvbL26wVUCLmbWdCpeu9iF5wOyWpagiKkInA+kfws3sWdBrTnsvN2CKcyCYyUrc7rebNBlK6+kteg7ksecg==}
+  json-parse-even-better-errors@3.0.2:
+    resolution: {integrity: sha512-fi0NG4bPjCHunUJffmLd0gxssIgkNmArMvis4iNah6Owg1MCJjWhEcDLmsK6iGkJq3tHwbDkTlce70/tmXN4cQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
   json-schema-to-typescript-lite@14.0.1:
@@ -4375,8 +4357,8 @@ packages:
     resolution: {integrity: sha512-D7V8PO9oaz7PWGLbCACuI1qEOsq7UKfLotx/C0Aet43fCUB/wfQ7DYeq2oR/svFJGYDHPr38SHATeaj/ZoKHKw==}
     engines: {node: '>=16 || 14 >=14.17'}
 
-  minipass-fetch@3.0.4:
-    resolution: {integrity: sha512-jHAqnA728uUpIaFm7NWsCnqKT6UqZz7GcI/bDpPATuwYyKwJwW0remxSCxUlKiEty+eopHGa3oc8WxgQ1FFJqg==}
+  minipass-fetch@3.0.5:
+    resolution: {integrity: sha512-2N8elDQAtSnFV0Dk7gt15KHsS0Fyz6CbYZ360h0WTYV1Ty46li3rAXVOQj1THMNLdmrD9Vt5pBPtWtVkpwGBqg==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
   minipass-flush@1.0.5:
@@ -4402,8 +4384,8 @@ packages:
     resolution: {integrity: sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==}
     engines: {node: '>=8'}
 
-  minipass@7.0.4:
-    resolution: {integrity: sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==}
+  minipass@7.1.0:
+    resolution: {integrity: sha512-oGZRv2OT1lO2UF1zUcwdTb3wqUwI0kBGTgt/T7OdSj6M6N5m3o5uPf0AIW6lVxGGoiWUR7e2AwTE+xiwK8WQig==}
     engines: {node: '>=16 || 14 >=14.17'}
 
   minisearch@6.3.0:
@@ -4548,16 +4530,16 @@ packages:
     engines: {node: '>=6'}
     hasBin: true
 
-  nopt@7.2.0:
-    resolution: {integrity: sha512-CVDtwCdhYIvnAzFoJ6NJ6dX3oga9/HyciQDnG1vQDjSLMeKLJ4A93ZqYKDrgYSr1FBY5/hMYC+2VCi24pgpkGA==}
+  nopt@7.2.1:
+    resolution: {integrity: sha512-taM24ViiimT/XntxbPyJQzCG+p4EKOpgD3mxFwW38mGjVUrfERQOeY4EDHjdnptttfHuHQXFx+lTP08Q+mLa/w==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     hasBin: true
 
   normalize-package-data@2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
 
-  normalize-package-data@6.0.0:
-    resolution: {integrity: sha512-UL7ELRVxYBHBgYEtZCXjxuD5vPxnmvMGq0jp/dGPKKrN7tfsBh2IY7TlJ15WWwdjRWD3RJbnsygUurTK3xkPkg==}
+  normalize-package-data@6.0.1:
+    resolution: {integrity: sha512-6rvCfeRW+OEZagAB4lMLSNuTNYZWLVtKccK79VSTf//yTY5VOCgcpH80O+bZK8Neps7pUnd5G+QlMg1yV/2iZQ==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
   normalize-path@3.0.0:
@@ -4592,8 +4574,8 @@ packages:
     resolution: {integrity: sha512-shYrPFIS/JLP4oQmAwDyk5HcyysKW8/JLTEA32S0Z5TzvpaeeX2yMFfoK1fjEBnCBvVyIB/Jj/GBFdm0wsgzbA==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
-  npm-pick-manifest@9.0.0:
-    resolution: {integrity: sha512-VfvRSs/b6n9ol4Qb+bDwNGUXutpy76x6MARw/XssevE0TnctIKcmklJZM5Z7nqs5z5aW+0S63pgCNbpkUNNXBg==}
+  npm-pick-manifest@9.0.1:
+    resolution: {integrity: sha512-Udm1f0l2nXb3wxDpKjfohwgdFUSV50UVwzEIpDXVsbDMXVIEF81a/i0UhuQbhrPMMmdiq3+YMFLFIRVLs3hxQw==}
     engines: {node: ^16.14.0 || >=18.0.0}
 
   npm-registry-fetch@17.0.1:
@@ -4774,8 +4756,8 @@ packages:
     resolution: {integrity: sha512-5NPgf87AT2STgwa2ntRMr45jTKrYBGkVU36yT0ig/n/GMAa3oPqhZfIQ2kMEimReg0+t9kZViDVZ83qfVUlckg==}
     engines: {node: '>= 14'}
 
-  pacote@18.0.3:
-    resolution: {integrity: sha512-GFCGn27RSf2xa5DHShI7DzI8dCf5F0+9N+fbSpItZvi9ykSouPRXMKzfl2jF35Zoi9QysNF/aqeqQyU2tOJBbA==}
+  pacote@18.0.4:
+    resolution: {integrity: sha512-V912GIsY6UJx+oL1o3MgFXSocUBiqVqVYuHhTxpuYSpBgfoM2kitpimil3xUGd7hU/soGGAoR5mc58daDys45A==}
     engines: {node: ^16.14.0 || >=18.0.0}
     hasBin: true
 
@@ -5653,8 +5635,8 @@ packages:
   sprintf-js@1.1.3:
     resolution: {integrity: sha512-Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==}
 
-  ssri@10.0.5:
-    resolution: {integrity: sha512-bSf16tAFkGeRlUNDjXu8FzaMQt6g2HZJrun7mtMbIPOddxt3GLMSz5VWUWcqTJUPfLEaDIepGxv+bYQW49596A==}
+  ssri@10.0.6:
+    resolution: {integrity: sha512-MGrFH9Z4NP9Iyhqn16sDtBpRRNJ0Y2hNa6D65h736fVSaPCHr4DM4sWUNvVaSuC+0OBGhwsrydQwmgfg5LncqQ==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
 
   standard-as-callback@2.1.0:
@@ -7220,23 +7202,11 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/ic@1.1.17':
-    dependencies:
-      '@iconify/types': 2.0.0
-
   '@iconify-json/logos@1.1.42':
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/mdi@1.1.66':
-    dependencies:
-      '@iconify/types': 2.0.0
-
   '@iconify-json/ri@1.1.20':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify-json/simple-icons@1.1.101':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -7247,6 +7217,11 @@ snapshots:
   '@iconify/collections@1.0.419':
     dependencies:
       '@iconify/types': 2.0.0
+
+  '@iconify/json@2.2.206':
+    dependencies:
+      '@iconify/types': 2.0.0
+      pathe: 1.1.2
 
   '@iconify/types@2.0.0': {}
 
@@ -7420,11 +7395,11 @@ snapshots:
     dependencies:
       semver: 7.6.0
 
-  '@npmcli/git@5.0.6':
+  '@npmcli/git@5.0.7':
     dependencies:
-      '@npmcli/promise-spawn': 7.0.1
+      '@npmcli/promise-spawn': 7.0.2
       lru-cache: 10.2.2
-      npm-pick-manifest: 9.0.0
+      npm-pick-manifest: 9.0.1
       proc-log: 4.2.0
       promise-inflight: 1.0.1
       promise-retry: 2.0.1
@@ -7442,17 +7417,17 @@ snapshots:
 
   '@npmcli/package-json@5.1.0':
     dependencies:
-      '@npmcli/git': 5.0.6
+      '@npmcli/git': 5.0.7
       glob: 10.3.12
-      hosted-git-info: 7.0.1
-      json-parse-even-better-errors: 3.0.1
-      normalize-package-data: 6.0.0
+      hosted-git-info: 7.0.2
+      json-parse-even-better-errors: 3.0.2
+      normalize-package-data: 6.0.1
       proc-log: 4.2.0
       semver: 7.6.0
     transitivePeerDependencies:
       - bluebird
 
-  '@npmcli/promise-spawn@7.0.1':
+  '@npmcli/promise-spawn@7.0.2':
     dependencies:
       which: 4.0.0
 
@@ -7462,7 +7437,7 @@ snapshots:
     dependencies:
       '@npmcli/node-gyp': 3.0.0
       '@npmcli/package-json': 5.1.0
-      '@npmcli/promise-spawn': 7.0.1
+      '@npmcli/promise-spawn': 7.0.2
       node-gyp: 10.1.0
       proc-log: 4.2.0
       which: 4.0.0
@@ -7622,7 +7597,7 @@ snapshots:
       nuxt: 3.11.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.12.8)(@unocss/reset@0.59.4)(axios@1.6.8)(encoding@0.1.13)(eslint@8.57.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.17.2))(vue@3.4.26(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.4.1)(optionator@0.9.4)(rollup@4.17.2)(sass@1.76.0)(terser@5.31.0)(typescript@5.4.5)(unocss@0.59.4(@unocss/webpack@0.59.4(rollup@4.17.2)(webpack@5.91.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0)))(vite@5.2.11(@types/node@20.12.8)(sass@1.76.0)(terser@5.31.0))(vue-tsc@2.0.16(typescript@5.4.5))(xml2js@0.4.23)
       nypm: 0.3.8
       ohash: 1.1.3
-      pacote: 18.0.3
+      pacote: 18.0.4
       pathe: 1.1.2
       perfect-debounce: 1.0.0
       pkg-types: 1.1.0
@@ -9962,18 +9937,18 @@ snapshots:
 
   cac@6.7.14: {}
 
-  cacache@18.0.2:
+  cacache@18.0.3:
     dependencies:
       '@npmcli/fs': 3.1.0
       fs-minipass: 3.0.3
       glob: 10.3.12
       lru-cache: 10.2.2
-      minipass: 7.0.4
+      minipass: 7.1.0
       minipass-collect: 2.0.1
       minipass-flush: 1.0.5
       minipass-pipeline: 1.2.4
       p-map: 4.0.0
-      ssri: 10.0.5
+      ssri: 10.0.6
       tar: 6.2.1
       unique-filename: 3.0.0
 
@@ -11050,7 +11025,7 @@ snapshots:
 
   fs-minipass@3.0.3:
     dependencies:
-      minipass: 7.0.4
+      minipass: 7.1.0
 
   fs.realpath@1.0.0: {}
 
@@ -11146,7 +11121,7 @@ snapshots:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
       minimatch: 9.0.4
-      minipass: 7.0.4
+      minipass: 7.1.0
       path-scurry: 1.10.2
 
   glob@7.2.3:
@@ -11324,7 +11299,7 @@ snapshots:
 
   hosted-git-info@2.8.9: {}
 
-  hosted-git-info@7.0.1:
+  hosted-git-info@7.0.2:
     dependencies:
       lru-cache: 10.2.2
 
@@ -11414,7 +11389,7 @@ snapshots:
 
   ieee754@1.2.1: {}
 
-  ignore-walk@6.0.4:
+  ignore-walk@6.0.5:
     dependencies:
       minimatch: 9.0.4
 
@@ -11690,7 +11665,7 @@ snapshots:
 
   json-parse-even-better-errors@2.3.1: {}
 
-  json-parse-even-better-errors@3.0.1: {}
+  json-parse-even-better-errors@3.0.2: {}
 
   json-schema-to-typescript-lite@14.0.1:
     dependencies:
@@ -12010,17 +11985,17 @@ snapshots:
   make-fetch-happen@13.0.1:
     dependencies:
       '@npmcli/agent': 2.2.2
-      cacache: 18.0.2
+      cacache: 18.0.3
       http-cache-semantics: 4.1.1
       is-lambda: 1.0.1
-      minipass: 7.0.4
-      minipass-fetch: 3.0.4
+      minipass: 7.1.0
+      minipass-fetch: 3.0.5
       minipass-flush: 1.0.5
       minipass-pipeline: 1.2.4
       negotiator: 0.6.3
       proc-log: 4.2.0
       promise-retry: 2.0.1
-      ssri: 10.0.5
+      ssri: 10.0.6
     transitivePeerDependencies:
       - supports-color
 
@@ -12401,11 +12376,11 @@ snapshots:
 
   minipass-collect@2.0.1:
     dependencies:
-      minipass: 7.0.4
+      minipass: 7.1.0
 
-  minipass-fetch@3.0.4:
+  minipass-fetch@3.0.5:
     dependencies:
-      minipass: 7.0.4
+      minipass: 7.1.0
       minipass-sized: 1.0.3
       minizlib: 2.1.2
     optionalDependencies:
@@ -12434,7 +12409,7 @@ snapshots:
 
   minipass@5.0.0: {}
 
-  minipass@7.0.4: {}
+  minipass@7.1.0: {}
 
   minisearch@6.3.0: {}
 
@@ -12627,7 +12602,7 @@ snapshots:
       glob: 10.3.12
       graceful-fs: 4.2.11
       make-fetch-happen: 13.0.1
-      nopt: 7.2.0
+      nopt: 7.2.1
       proc-log: 3.0.0
       semver: 7.6.0
       tar: 6.2.1
@@ -12641,7 +12616,7 @@ snapshots:
     dependencies:
       abbrev: 1.1.1
 
-  nopt@7.2.0:
+  nopt@7.2.1:
     dependencies:
       abbrev: 2.0.0
 
@@ -12652,9 +12627,9 @@ snapshots:
       semver: 5.7.2
       validate-npm-package-license: 3.0.4
 
-  normalize-package-data@6.0.0:
+  normalize-package-data@6.0.1:
     dependencies:
-      hosted-git-info: 7.0.1
+      hosted-git-info: 7.0.2
       is-core-module: 2.13.1
       semver: 7.6.0
       validate-npm-package-license: 3.0.4
@@ -12677,16 +12652,16 @@ snapshots:
 
   npm-package-arg@11.0.2:
     dependencies:
-      hosted-git-info: 7.0.1
+      hosted-git-info: 7.0.2
       proc-log: 4.2.0
       semver: 7.6.0
       validate-npm-package-name: 5.0.0
 
   npm-packlist@8.0.2:
     dependencies:
-      ignore-walk: 6.0.4
+      ignore-walk: 6.0.5
 
-  npm-pick-manifest@9.0.0:
+  npm-pick-manifest@9.0.1:
     dependencies:
       npm-install-checks: 6.3.0
       npm-normalize-package-bin: 3.0.1
@@ -12697,8 +12672,8 @@ snapshots:
     dependencies:
       '@npmcli/redact': 2.0.0
       make-fetch-happen: 13.0.1
-      minipass: 7.0.4
-      minipass-fetch: 3.0.4
+      minipass: 7.1.0
+      minipass-fetch: 3.0.5
       minipass-json-stream: 1.0.1
       minizlib: 2.1.2
       npm-package-arg: 11.0.2
@@ -13132,24 +13107,24 @@ snapshots:
       degenerator: 5.0.1
       netmask: 2.0.2
 
-  pacote@18.0.3:
+  pacote@18.0.4:
     dependencies:
-      '@npmcli/git': 5.0.6
+      '@npmcli/git': 5.0.7
       '@npmcli/installed-package-contents': 2.1.0
       '@npmcli/package-json': 5.1.0
-      '@npmcli/promise-spawn': 7.0.1
+      '@npmcli/promise-spawn': 7.0.2
       '@npmcli/run-script': 8.1.0
-      cacache: 18.0.2
+      cacache: 18.0.3
       fs-minipass: 3.0.3
-      minipass: 7.0.4
+      minipass: 7.1.0
       npm-package-arg: 11.0.2
       npm-packlist: 8.0.2
-      npm-pick-manifest: 9.0.0
+      npm-pick-manifest: 9.0.1
       npm-registry-fetch: 17.0.1
       proc-log: 4.2.0
       promise-retry: 2.0.1
       sigstore: 2.3.0
-      ssri: 10.0.5
+      ssri: 10.0.6
       tar: 6.2.1
     transitivePeerDependencies:
       - bluebird
@@ -13229,7 +13204,7 @@ snapshots:
   path-scurry@1.10.2:
     dependencies:
       lru-cache: 10.2.2
-      minipass: 7.0.4
+      minipass: 7.1.0
 
   path-to-regexp@6.2.2: {}
 
@@ -14166,9 +14141,9 @@ snapshots:
 
   sprintf-js@1.1.3: {}
 
-  ssri@10.0.5:
+  ssri@10.0.6:
     dependencies:
-      minipass: 7.0.4
+      minipass: 7.1.0
 
   standard-as-callback@2.1.0: {}
 

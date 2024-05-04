@@ -63,6 +63,7 @@ onMounted(() => {
       :ui="{ container: `lg:items-start slide-enter slide-enter-stage${1+index}` }"
     >
       <NuxtLink
+        v-if="section.url"
         :to="section.url"
         target="_blank"
         :aria-label="section.title"
@@ -74,9 +75,18 @@ onMounted(() => {
           :alt="section.title"
           :width="558"
           :height="352"
-          :show-ring="true"
+          show-ring
         />
       </NuxtLink>
+      <LazyImage
+        v-else
+        :src="section.image"
+        :url="section.url"
+        :alt="section.title"
+        :width="558"
+        :height="352"
+        show-ring
+      />
     </ULandingSection>
 
     <ULandingSection

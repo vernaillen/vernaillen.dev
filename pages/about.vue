@@ -3,7 +3,6 @@ const { data: page } = await useAsyncData('about', () => queryContent('/about').
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
-
 useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title + useAppConfig().meta.titleSuffix,
