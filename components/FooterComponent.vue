@@ -78,8 +78,6 @@ const links = [{
     </template>
 
     <template #right>
-      <UColorModeButton size="sm" />
-
       <UButton
         to="https://github.com/vernaillen/vernaillen.dev"
         target="_blank"

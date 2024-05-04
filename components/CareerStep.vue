@@ -16,44 +16,18 @@ defineProps<{
     <div
       class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
     >
-      <NuxtLink
-        v-if="careerStep.projectUrl"
-        :href="careerStep.projectUrl"
-        target="_blank"
-        class="text-primary-500"
-      >
-        <LazyImage
-          v-if="careerStep.imageUrl"
-          :src="careerStep.imageUrl"
-          :alt="careerStep.project"
-          format="webp"
-          :width="34"
-          :height="34"
-          class="rounded-full"
-        />
-      </NuxtLink>
-      <span v-else>
-        <LazyImage
-          v-if="careerStep.imageUrl"
-          :src="careerStep.imageUrl"
-          :alt="careerStep.project"
-          format="webp"
-          :width="34"
-          :height="34"
-          class="rounded-full"
-        />
-      </span>
+      <LazyImage
+        v-if="careerStep.imageUrl"
+        :src="careerStep.imageUrl"
+        :alt="careerStep.project"
+        format="webp"
+        :width="34"
+        :height="34"
+        class="rounded-full"
+      />
     </div>
     <h2 class="text-gray-800 text-2xl dark:text-white font-semibold -mt-2">
-      <NuxtLink
-        v-if="careerStep.projectUrl"
-        :href="careerStep.projectUrl"
-        target="_blank"
-        class="text-primary-500"
-      >
-        {{ careerStep.text }}
-      </NuxtLink>
-      <span v-else>{{ careerStep.text }}</span>
+      {{ careerStep.text }}
     </h2>
   </div>
   <div
