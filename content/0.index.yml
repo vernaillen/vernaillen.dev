@@ -18,8 +18,38 @@ hero:
       variant: subtle
       to: /projects
 sections:
-  - title: Bringing you WPNuxt
-    description: A new Nuxt module to use WordPress as a headless CMS with a Nuxt frontend.
+  - title: Passion for Web Development
+    description: "I am proud to bring almost 30 years of expertise to the field of web development, from static HTML websites in the pioneering days of the internet, to innovative web portals with complex back-end integrations for governmental organisations."
+    features:
+      - name: Strong expertise on both Front- and Backend development.
+        description: Allowing me to deliver full-stack solutions for the web.
+        icon: i-tabler-stack-2-filled
+      - name: Nuxt
+        description: My favourite frontend framework, which I use to build fast and responsive websites.
+        icon: i-tabler-stack-forward
+      - name: Api Development & Integration
+        description: Lot's of experience in developing and integrating APIs with Java & Spring Framework.
+        icon: i-tabler-stack-backward
+      - name: Quality Assurance
+        description: A keen eye for detail and a passion for quality assurance.
+        icon: i-custom-qa
+      - name: DevOps
+        description: Setting up and maintaining CI/CD pipelines and deploying applications in the cloud.
+        icon: i-tabler-infinity
+    links:
+      - label: 'Expertise'
+        variant: subtle
+        trailing-icon: 'i-heroicons-arrow-right'
+        size: 'lg'
+        to: '/expertise'
+      - label: 'Career'
+        trailing-icon: 'i-heroicons-arrow-right'
+        size: 'lg'
+        to: '/career'
+    image: /images/index/vernaillen_a_laptop_on_the_table_of_a_tropical_co-working_space_d2d51564-d0fb-48d6-9d7a-608e27609392.png
+    align: right
+  - title: Developing WPNuxt
+    description: A brand new Nuxt module to use WordPress as a headless CMS with a Nuxt frontend.
     id: features
     image: /images/index/wpnuxt.png
     url: https://wpnuxt.com
@@ -36,48 +66,11 @@ sections:
         icon: i-logos-nuxt-icon
     links:
       - label: 'Discover WPNuxt'
-        color: 'gray'
+        variant: subtle
         trailing-icon: 'i-heroicons-arrow-up-right'
         size: 'lg'
         to: 'https://wpnuxt.com'
         target: '_blank'
-  - title: Passion for Web Development
-    description: "I am proud to bring almost 30 years of expertise to the field of web development, from making static websites in HTML in the pioneering days of the internet, developing my own content management systems with PHP
-    to designing and implementing innovative web portals with complex back-end integrations for large companies and organisations."
-    features:
-      - name: Strong expertise on both Front- and Backend
-        description: Allowing me to deliver full-stack solutions.
-        icon: i-tabler-stack-2-filled
-      - name: Nuxt
-        description: My favourite frontend framework is Nuxt, which I use to build fast and responsive websites.
-        icon: i-tabler-stack-forward
-      - name: Api Development & Integration
-        description: I have a proven track record in developing and integrating APIs build with Java & Spring Framework.
-        icon: i-tabler-stack-backward
-      - name: Quality Assurance
-        description: I have a keen eye for detail and a passion for quality assurance.
-        icon: i-custom-qa
-      - name: DevOps
-        description: I have experience in setting up and maintaining CI/CD pipelines and deploying applications in the cloud.
-        icon: i-tabler-infinity
-    links:
-      - label: 'Expertise'
-        color: 'gray'
-        trailing-icon: 'i-heroicons-arrow-right'
-        size: 'lg'
-        to: '/expertise'
-    image: /images/index/vernaillen_a_laptop_on_the_table_of_a_tropical_co-working_space_d2d51564-d0fb-48d6-9d7a-608e27609392.png
-    align: right
-  - title: Proven record as Consultant
-    description: "With over 25 years of experience in the IT and web development sector, I have carved a niche in designing and deploying innovative web portals and robust and easy to use content management systems (CMS). My journey, from employee of one of the first big Belgian intenet companies, to a dedicated IBM consultant and passionate freelance consultant, has been driven by a single mission: to transform businesses and organisations through technology."
-    image: /images/index/40_year_old_man_with_trimmed_hair_and_glasses_work_ad8b5b8e-440a-45f5-a1f6-94dab28b24d2.png
-    align: left
-    links:
-      - label: 'Career'
-        color: 'gray'
-        trailing-icon: 'i-heroicons-arrow-right'
-        size: 'lg'
-        to: '/career'
 features:
   title: My Values
   description: This is what I stand for
@@ -85,15 +78,6 @@ features:
     - title: Committed to my clients
       description: I'm with you all the way, committed until the end of the project and beyond.
       icon: i-ic-baseline-commit
-    - title: Reliable
-      description: You can always count on me.
-      icon: i-heroicons-check
-    - title: Honesty and integrity
-      description: I'm always upfront and honest with you.
-      icon: i-ic-round-balance
-    - title: Fast
-      description: Delivering on time and on budget.
-      icon: i-heroicons-rocket-launch
     - title: Rolling up my sleeves
       description: I'm a hands-on developer, not afraid to get my hands dirty and code myself.
       icon: i-heroicons-star
