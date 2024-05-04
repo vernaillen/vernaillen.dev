@@ -1,6 +1,7 @@
 {
   "eslint.experimental.useFlatConfig": true,
   "circleci.persistedProjectSelection": [
-    "gh/vernaillen/vernaillen.nuxt"
-  ]
+    "gh/vernaillen/vernaillen.dev"
+  ],
+  "circleci.filters.branchFilter": "allBranches"
 }
