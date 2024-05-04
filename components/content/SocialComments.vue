@@ -4,9 +4,6 @@ import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 defineProps<{
   page: ParsedContent
 }>()
-onMounted(() => {
-  useBounceEffect('.comments-icon')
-})
 </script>
 
 <template>

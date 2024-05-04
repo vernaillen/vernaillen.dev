@@ -24,17 +24,6 @@ const { data: navigation } = await useAsyncData('navigation', () => fetchContent
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { default: () => [], server: false })
 
 provide('navigation', navigation)
-
-onMounted(() => {
-  useAnime({
-    targets: '.svg-left svg',
-    translateY: 10,
-    autoplay: true,
-    loop: true,
-    easing: 'easeInOutSine',
-    direction: 'alternate',
-  })
-})
 </script>
 
 <template>
