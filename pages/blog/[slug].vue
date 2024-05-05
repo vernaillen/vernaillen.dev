@@ -3,6 +3,7 @@ import { withoutTrailingSlash } from 'ufo'
 import type { BlogPost } from '~/types'
 
 const route = useRoute()
+const img = useImage()
 
 const { data: post } = await useAsyncData(route.path, () => queryContent<BlogPost>(route.path).findOne())
 if (!post.value) {
@@ -74,7 +75,7 @@ definePageMeta({
           size="sm"
         >
           <UAvatar
-            v-bind="author.avatar"
+            :src="img(author.avatar.src, { width: 32, height: 32, fit: 'cover', format: 'webp' })"
             :alt="`Avatar of ${author.name}`"
             size="2xs"
           />
