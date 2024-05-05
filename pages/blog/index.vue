@@ -69,20 +69,13 @@ definePageMeta({
           </template>
           <template #image>
             <LazyImage
-              :src="post.thumbnail_dark ? post.thumbnail_dark : post.image?.src"
+              v-if="post.image?.src"
+              :src="post.image.src"
               :alt="post.image?.alt ? post.image?.alt : post.title"
               :width="index === 0 ? 592 : 384"
               :height="index === 0 ? 247 : 170"
               fit="cover"
-              class="object-top w-full h-full dark:h-0"
-            />
-            <LazyImage
-              :src="post.thumbnail_light ? post.thumbnail_light : post.image?.src"
-              :alt="post.image?.alt ? post.image?.alt : post.title"
-              :width="index === 0 ? 592 : 384"
-              :height="index === 0 ? 247 : 170"
-              fit="cover"
-              class="object-top w-full h-0 dark:h-full"
+              class="object-top w-full h-full"
             />
           </template>
           <template #authors>
@@ -93,7 +86,7 @@ definePageMeta({
                 :src="img(author.avatar.src, { width: 24, height: 24, fit: 'cover', format: 'webp' })"
                 :alt="`Avatar of ${author.name}`"
                 size="xs"
-                class="relative ring-1 lg:hover:scale-105 lg:hover:ring-primary-500 dark:lg:hover:ring-primary-400 transition-transform"
+                class="relative ring-1 lg:hover:scale-105 lg:hover:ring-primary-400 transition-transform"
               >
                 <NuxtLink
                   v-if="author.to"

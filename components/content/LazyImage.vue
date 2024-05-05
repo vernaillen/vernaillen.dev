@@ -13,7 +13,7 @@ export interface Props {
   showRing?: boolean
 }
 const props = withDefaults(defineProps<Props>(), {
-  placeholder: 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=',
+  placeholder: '/placeholder.svg',
   fit: 'cover',
   format: 'webp',
   opacity: 0.9,
@@ -38,14 +38,43 @@ watch(() => props.src, (newUrl) => {
       v-bind="$attrs"
       :class="showRing ? 'rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 p-2 align-top content-start' : 'p-0'"
     >
-      <div class="overflow-hidden rounded-lg">
+      <div class="overflow-hidden rounded-lg relative">
+        <svg
+          class="absolute inset-0 h-full w-full stroke-gray-950/10 dark:stroke-white/10"
+          fill="none"
+          data-v-15931d44=""
+        >
+          <defs data-v-15931d44="">
+            <pattern
+              id="pattern-5c1e4f0e-62d5-498b-8ff0-cf77bb448c8e"
+              x="0"
+              y="0"
+              width="10"
+              height="10"
+              patternUnits="userSpaceOnUse"
+              data-v-15931d44=""
+            >
+              <path
+                d="M-3 13 15-5M-5 5l18-18M-1 21 17 3"
+                data-v-15931d44=""
+              />
+            </pattern>
+          </defs>
+          <rect
+            stroke="none"
+            fill="url(#pattern-5c1e4f0e-62d5-498b-8ff0-cf77bb448c8e)"
+            width="100%"
+            height="100%"
+            data-v-15931d44=""
+          />
+        </svg>
         <img
           v-lazy="optimisedImg"
           :src="placeholder"
           :alt
           :width
           :height
-          class="m-0 object-cover opacity-0 rounded-lg transform transition-all duration-200 max-w-full hover:opacity-100 group-hover:opacity-100 hover:scale-[103%] group-hover:scale-[103%]"
+          class="lazyImg m-0 object-cover opacity-0 rounded-lg transform transition-all duration-500 delay-75 w-full h-full hover:opacity-100 group-hover:opacity-100 hover:scale-[103%] group-hover:scale-[103%]"
         >
       </div>
     </div>
@@ -53,11 +82,10 @@ watch(() => props.src, (newUrl) => {
 </template>
 
 <style>
-img[lazy=loading] {
+.lazyImg[lazy=loading] {
   opacity: 0;
 }
-
-img[lazy=loaded] {
+.lazyImg[lazy=loaded] {
   opacity: v-bind(opacity);
 }
 </style>
