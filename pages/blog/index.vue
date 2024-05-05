@@ -98,6 +98,7 @@ definePageMeta({
                   v-if="author.to"
                   :to="author.to"
                   :alt="`Twitter profile of ${author.name}`"
+                  :aria-label="`Twitter profile of ${author.name}`"
                   target="_blank"
                   class="focus:outline-none"
                   tabindex="-1"

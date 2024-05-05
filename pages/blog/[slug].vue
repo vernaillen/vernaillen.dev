@@ -68,6 +68,7 @@ definePageMeta({
           :key="index"
           :to="author.to"
           :alt="`Twitter profile of ${author.name}`"
+          :aria-label="`Twitter profile of ${author.name}`"
           color="white"
           target="_blank"
           size="sm"
