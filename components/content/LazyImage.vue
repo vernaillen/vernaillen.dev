@@ -33,15 +33,23 @@ watch(() => props.src, (newUrl) => {
 </script>
 
 <template>
-  <img
-    v-lazy="optimisedImg"
-    :src="placeholder"
-    :alt
-    :width
-    :height
-    :class="showRing ? 'ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 p-2 align-top content-start' : 'p-0'"
-    class="m-0 object-cover opacity-0 rounded-lg transform transition-opacity duration-200 max-w-full hover:opacity-100 group-hover:opacity-100 hover:scale-[102%] group-hover:scale-[102%]"
-  >
+  <ClientOnly>
+    <div
+      v-bind="$attrs"
+      :class="showRing ? 'rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 p-2 align-top content-start' : 'p-0'"
+    >
+      <div class="overflow-hidden rounded-xl">
+        <img
+          v-lazy="optimisedImg"
+          :src="placeholder"
+          :alt
+          :width
+          :height
+          class="m-0 object-cover opacity-0 rounded-lg transform transition-opacity duration-500 max-w-full hover:opacity-100 group-hover:opacity-100 hover:scale-[102%] group-hover:scale-[102%]"
+        >
+      </div>
+    </div>
+  </ClientOnly>
 </template>
 
 <style>
