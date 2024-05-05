@@ -48,7 +48,7 @@ export default defineNuxtConfig({
     provider: 'twicpics',
     format: ['webp'],
     twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/vernaillennuxt',
+      baseURL: 'https://vernaillen.twic.pics/vernaillendev',
     },
   },
   anime: {
