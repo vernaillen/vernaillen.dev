@@ -67,13 +67,14 @@ definePageMeta({
           v-for="(author, index) in post.authors"
           :key="index"
           :to="author.to"
+          :alt="`Twitter profile of ${author.name}`"
           color="white"
           target="_blank"
           size="sm"
         >
           <UAvatar
             v-bind="author.avatar"
-            :alt="author.name"
+            :alt="`Avatar of ${author.name}`"
             size="2xs"
           />
 

@@ -5,8 +5,8 @@ if (!page.value) {
 }
 
 useSeoMeta({
-  title: 'Wouter Vernaillen: Freelance Full Stack Developer',
-  ogTitle: 'Wouter Vernaillen: Freelance Full Stack Developer',
+  title: page.value.title,
+  ogTitle: page.value.title + useAppConfig().meta.titleSuffix,
   description: page.value.description,
   ogDescription: page.value.description,
 })
@@ -34,11 +34,14 @@ onMounted(() => {
     <UPage>
       <UPageBody>
         <UDashboardCard
-          title="Technologies"
-          :description="page?.description"
+          :description="page?.cardDescription"
           icon="i-ic-baseline-code"
-          :ui="{ base: 'slide-enter slide-enter-stage1' }"
         >
+          <template #title>
+            <h2 class="text-gray-900 dark:text-white font-semibold">
+              {{ page?.cardTitle }}
+            </h2>
+          </template>
           <div class="space-y-2">
             <UMeter
               v-for="(technology, index) in page?.technologies"

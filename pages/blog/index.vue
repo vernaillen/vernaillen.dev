@@ -84,6 +84,32 @@ definePageMeta({
               class="object-top w-full h-0 dark:h-full"
             />
           </template>
+          <template #authors>
+            <UAvatarGroup v-if="post.authors?.length">
+              <UAvatar
+                v-for="(author, index2) in post.authors"
+                v-bind="author.avatar"
+                :key="index2"
+                :alt="`Avatar of ${author.name}`"
+                size="xs"
+                class="relative ring-1 lg:hover:scale-105 lg:hover:ring-primary-500 dark:lg:hover:ring-primary-400 transition-transform"
+              >
+                <NuxtLink
+                  v-if="author.to"
+                  :to="author.to"
+                  :alt="`Twitter profile of ${author.name}`"
+                  target="_blank"
+                  class="focus:outline-none"
+                  tabindex="-1"
+                >
+                  <span
+                    class="absolute inset-0"
+                    aria-hidden="true"
+                  />
+                </NuxtLink>
+              </UAvatar>
+            </UAvatarGroup>
+          </template>
           <template #date>
             <NuxtTime
               locale="en-GB"
