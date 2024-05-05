@@ -27,6 +27,5 @@ const refinedSrc = computed(() => {
     :width
     :height
     :show-ring="showRing"
-    format="webp"
   />
 </template>
