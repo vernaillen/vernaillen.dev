@@ -30,6 +30,17 @@ const placeholder = ref(props.placeholder)
 watch(() => props.src, (newUrl) => {
   placeholder.value = newUrl
 })
+const svgPlaceholder = ref<SVGElement | null>(null)
+const imageLifecycle = {
+  loaded: (_el: HTMLImageElement) => {
+    setTimeout(() => {
+      svgPlaceholder.value?.classList.add('opacity-0')
+    }, 100)
+  },
+  error: (_el: HTMLImageElement) => {
+    svgPlaceholder.value?.classList.add('opacity-100')
+  },
+}
 </script>
 
 <template>
@@ -39,8 +50,10 @@ watch(() => props.src, (newUrl) => {
       :class="showRing ? 'rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 p-2 align-top content-start' : 'p-0'"
     >
       <div class="overflow-hidden rounded-lg relative">
+        <USkeleton class="absolute inset-0 h-full w-full opacity-10" />
         <svg
-          class="absolute inset-0 h-full w-full stroke-gray-950/10 dark:stroke-white/10"
+          ref="svgPlaceholder"
+          class="absolute inset-0 h-full w-full opacity-0 stroke-gray-950/10 dark:stroke-white/10 transform transition-opacity duration-300"
           fill="none"
           data-v-15931d44=""
         >
@@ -69,12 +82,12 @@ watch(() => props.src, (newUrl) => {
           />
         </svg>
         <img
-          v-lazy="optimisedImg"
+          v-lazy="{ src: optimisedImg, lifecycle: imageLifecycle }"
           :src="placeholder"
           :alt
           :width
           :height
-          class="lazyImg m-0 object-cover opacity-0 rounded-lg transform transition-all duration-500 delay-75 w-full h-full hover:opacity-100 group-hover:opacity-100 hover:scale-[103%] group-hover:scale-[103%]"
+          class="lazyImg m-0 object-cover opacity-0 rounded-lg transform transition-all duration-300 delay-75 w-full h-full hover:opacity-100 group-hover:opacity-100 hover:scale-[103%] group-hover:scale-[103%]"
         >
       </div>
     </div>
