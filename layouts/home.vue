@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { SpeedInsights } from '@vercel/speed-insights/nuxt'
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(), { default: () => [] })
@@ -35,6 +34,5 @@ provide('navigation', navigation)
         :navigation="navigation"
       />
     </ClientOnly>
-    <SpeedInsights />
   </div>
 </template>
