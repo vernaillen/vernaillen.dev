@@ -75,7 +75,7 @@ definePageMeta({
           size="sm"
         >
           <UAvatar
-            :src="img(author.avatar.src, { width: 32, height: 32, fit: 'cover', format: 'webp' })"
+            :src="img(author.avatar.src, { width: 24, height: 24, fit: 'cover', format: 'webp' })"
             :alt="`Avatar of ${author.name}`"
             size="2xs"
           />

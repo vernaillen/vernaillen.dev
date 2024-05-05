@@ -90,7 +90,7 @@ definePageMeta({
               <UAvatar
                 v-for="(author, index2) in post.authors"
                 :key="index2"
-                :src="img(author.avatar.src, { width: 32, height: 32, fit: 'cover', format: 'webp' })"
+                :src="img(author.avatar.src, { width: 24, height: 24, fit: 'cover', format: 'webp' })"
                 :alt="`Avatar of ${author.name}`"
                 size="xs"
                 class="relative ring-1 lg:hover:scale-105 lg:hover:ring-primary-500 dark:lg:hover:ring-primary-400 transition-transform"
