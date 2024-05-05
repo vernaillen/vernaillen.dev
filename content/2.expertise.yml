@@ -1,6 +1,8 @@
 title: Expertise
 pageName: Expertise
 description: An overview of the technologies I currently specialise in.
+cardTitle: Tech Stack & Expertise
+cardDescription: A rather simplified, but accurate overview of the various technologies that I specialise in lately and love to use to develop web solutions for clients.
 technologies:
   - label: Nuxt
     icon: i-logos-nuxt-icon
