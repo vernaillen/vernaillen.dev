@@ -13,7 +13,7 @@ const links = [
     <template #logo>
       <SvgoLogo
         class="w-28 cursor-pointer"
-        @click="reloadNuxtApp({ path: '/', ttl: 100 });"
+        @click="$route.path == '/' ? reloadNuxtApp({ path: '/', ttl: 100 }) : $router.push('/')"
       />
     </template>
 
