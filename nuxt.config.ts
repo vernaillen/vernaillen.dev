@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxtjs/plausible',
     '@nuxtjs/sitemap',
     '@vueuse/nuxt',
+    'nuxt-beastcss',
     'nuxt-og-image',
     'nuxt-svgo',
     'nuxt-time',
