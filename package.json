@@ -30,7 +30,6 @@
     "@nuxthq/studio": "^1.0.15",
     "@nuxtjs/plausible": "^1.0.0",
     "@nuxtjs/sitemap": "^5.1.5",
-    "nuxt-beastcss": "^1.0.3",
     "nuxt-og-image": "3.0.0-rc.53",
     "nuxt-svgo": "^4.0.0",
     "unlighthouse": "^0.12.0",
