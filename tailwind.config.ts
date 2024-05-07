@@ -32,7 +32,6 @@ export default <Partial<Config>>{
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        serif: ['Inter', ...defaultTheme.fontFamily.serif],
         mono: ['PT Mono', ...defaultTheme.fontFamily.mono],
       },
       colors: {

@@ -87,7 +87,7 @@ const imageLifecycle = {
           :alt
           :width
           :height
-          class="lazyImg m-0 object-cover opacity-0 rounded-lg transform transition-all duration-300 delay-75 w-full h-full hover:opacity-100 group-hover:opacity-100 hover:scale-[103%] group-hover:scale-[103%]"
+          class="lazyImg m-0 object-cover opacity-0 rounded-lg transform transition-all duration-200 delay-75 w-full h-full hover:opacity-100 group-hover:opacity-100 hover:scale-[103%] group-hover:scale-[103%]"
         >
       </div>
     </div>

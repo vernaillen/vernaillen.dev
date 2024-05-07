@@ -11,7 +11,10 @@ const links = [
 <template>
   <UHeader :links="links">
     <template #logo>
-      <SvgoLogo class="w-28" />
+      <SvgoLogo
+        class="w-28 cursor-pointer"
+        @click="reloadNuxtApp({ path: '/', ttl: 100 });"
+      />
     </template>
 
     <template #right>

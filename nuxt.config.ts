@@ -60,6 +60,12 @@ export default defineNuxtConfig({
       globals.forEach(c => c.global = true)
     },
   },
+  fonts: {
+    defaults: {
+      preload: true,
+      weights: [400, 500, 600, 700],
+    },
+  },
   ui: {
     icons: ['heroicons', 'mdi', 'ic', 'logos', 'tabler', 'twemoji'],
   },

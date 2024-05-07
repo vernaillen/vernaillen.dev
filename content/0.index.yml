@@ -46,7 +46,7 @@ sections:
         trailing-icon: 'i-heroicons-arrow-right'
         size: 'lg'
         to: '/career'
-    image: /images/index/vernaillen_a_laptop_on_the_table_of_a_tropical_co-working_space_d2d51564-d0fb-48d6-9d7a-608e27609392.png
+    image: /images/index/vernaillen_a_laptop_on_the_table_of_a_tropical_co-working_space_eaa2867c-3098-421c-9bef-3a083677200c.png
     align: right
   - title: Developing WPNuxt
     description: A brand new Nuxt module to use WordPress as a headless CMS with a Nuxt frontend.
@@ -86,40 +86,40 @@ features:
       icon: i-heroicons-heart
 testimonials:
   headline: Testimonials
-  title: What my clients & co-workers are saying.
+  title: What my clients & co-workers are writing about me
   items:
     - quote: Ik had het genoegen samen met Wouter te werken op het IDEWE IT-project Klantenportaal. Vooral de aangename, rustige manier van overleggen van Wouter is een pluspunt binnen de hectiek van deadlines en onverwachte issues en bugs. Daarnaast beschikt Wouter over een scherp analytisch vermogen en kan hij problemen/oplossingen in begrijpbare taal overbrengen naar de rest van het team (wat ook uit niet-software people bestaat). Wouter levert correct op wat van hem gevraagd word en hij denkt zelf na over mogelijke alternieven van eerder gedefinieerde oplossingen. Ik kijk al uit naar de volgende samenwerking!
       author:
         name: Kurt Eeckhout
         description: Key Account Manager at Group Idewe
         avatar:
-          src: https://media.licdn.com/dms/image/C5603AQEZa6tTV8Zang/profile-displayphoto-shrink_100_100/0/1563368078430?e=1718236800&v=beta&t=1qLvP3RAy9U8cpmjXxHryM4ENEPqxjzQ9ppn_4ZTtNA
+          src: /images/index/1563368078430.jpeg
           loading: lazy
     - quote: Wouter's expertise in IBM Websphere portal helped us in reaching key projects. His ability to think user-led allows to work rapidly and meet expectations.
       author:
         name: Björn Minne
         description: Online Sales & Marketing Manager B2B at Van Marcke
         avatar:
-          src: https://media.licdn.com/dms/image/C5603AQHa-31uquBv_w/profile-displayphoto-shrink_100_100/0/1560369739694?e=1718236800&v=beta&t=-e7QX2qzWTZ1Qnu5E5gNQQVZzmBNBU6uhhHTsTcY6Ik
+          src: /images/index/1560369739694.jpeg
           loading: lazy
     - quote: Wouter is a dedicated professional with who I had the pleasure to work with on two strategic projects at Van Marcke. He was the go to IT professional and project leader on both the new intranet and the roll out of an enterprise wide search engine and social media collaboration platform. Wouter is also a great colleague to work with and a strong team player and leader. I would recommend him without hesitation.
       author:
         name: Philip Borremans
         description: Chief Social Media Officer & CSR Coordinator.
         avatar:
-          src: https://media.licdn.com/dms/image/D4D03AQHKAkQ_-tORSA/profile-displayphoto-shrink_100_100/0/1697207150806?e=1718236800&v=beta&t=ctGv0IBwCKxIOBIpC1OR2FCGXjwMVV3PGTAy_O0yJ10
+          src: /images/index/1697207150806.jpeg
           loading: lazy
     - quote: Wouter's passion for technology and dedication to success have made and continue to make it a pleasure to work with him. The combination of a broad interest with deep knowledge & experience make for a great developer cocktail.
       author:
         name: Jonathan Bosmans
         description: Senior Consultant at IBM
         avatar:
-          src: https://media.licdn.com/dms/image/C5603AQHGhp_dd_xgPA/profile-displayphoto-shrink_100_100/0/1516237245090?e=1718236800&v=beta&t=gMdvWka5r50LkjVIXu1frAijuPnud07Bfqd14Ly9V5c
+          src: /images/index/1516237245090.jpeg
           loading: lazy
     - quote: Extremely skilled developer that delivers high output and excellent quality.
       author:
         name: Davy Vanherbergen
         description: IT Team Lead at UPM-Kymmene
         avatar:
-          src: https://media.licdn.com/dms/image/D4E03AQHv7rZ5itolAQ/profile-displayphoto-shrink_100_100/0/1699534602857?e=1718236800&v=beta&t=omtteaLIcnWkQbPOAg9ss4sFbWuCOjnRXAP7ZQewyZA
+          src: /images/index/1699534602857.jpeg
           loading: lazy

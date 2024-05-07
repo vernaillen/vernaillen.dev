@@ -30,19 +30,13 @@ definePageMeta({
       :title="page.hero.title"
       :description="page.hero.description"
       :links="page.hero.links"
-      :ui="{
-        headline: 'slide-enter slide-enter-stage1',
-        description: 'slide-enter slide-enter-stage5',
-        links: 'slide-enter slide-enter-stage10',
-      }"
     >
-      <div class="absolute inset-0 z-[-1] [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" />
       <template #headline>
         <UBadge
           v-if="page.hero.headline"
           variant="subtle"
           size="lg"
-          class="relative rounded-lg font-semibold"
+          class="relative rounded-lg font-semibold slide-enter slide-enter-stage1"
         >
           {{ page.hero.headline.label }}
         </UBadge>
