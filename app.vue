@@ -16,6 +16,16 @@ useSeoMeta({
   titleTemplate: '%s ' + useAppConfig().meta.titleSuffix,
   ogTitle: 'Wouter Vernaillen: Freelance Full Stack Developer',
 })
+onMounted(() => {
+  useGsap.to('.svg-footer', {
+    scrollTrigger: {
+      trigger: '.homeLandingSection0',
+      start: 'top center',
+      toggleActions: 'play pause reverse reset',
+    },
+    opacity: 0.3,
+  })
+})
 </script>
 
 <template>
@@ -28,7 +38,7 @@ useSeoMeta({
 
     <UNotifications />
     <div class="sticky right-0 bottom-14 z-[-1]">
-      <SvgoFooter class="w-20" />
+      <SvgoFooter class="svg-footer w-20" />
     </div>
   </div>
 </template>
