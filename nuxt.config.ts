@@ -3,6 +3,7 @@ import nuxtPkg from 'nuxt/package.json'
 export default defineNuxtConfig({
   extends: [process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro'],
   modules: [
+    '@hypernym/nuxt-gsap',
     '@hypernym/nuxt-anime',
     '@nuxt/content',
     '@nuxt/eslint',
@@ -53,6 +54,12 @@ export default defineNuxtConfig({
   },
   anime: {
     composables: true,
+  },
+  gsap: {
+    composables: true,
+    extraPlugins: {
+      scrollTrigger: true,
+    },
   },
   hooks: {
     'components:extend': (components) => {

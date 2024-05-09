@@ -51,7 +51,7 @@ definePageMeta({
       :links="section.links"
       :align="section.align"
       :features="section.features"
-      :ui="{ container: `lg:items-start slide-enter` }"
+      :ui="{ wrapper: `homeLandingSection${index} slide-enter`, container: 'lg:items-start' }"
     >
       <NuxtLink
         v-if="section.url"
