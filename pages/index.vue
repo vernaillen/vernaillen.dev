@@ -31,7 +31,7 @@ onMounted(() => {
       },
       x: 0,
       y: 0,
-      scale: 0.5,
+      scale: 0.6,
     })
   }
 })
@@ -72,14 +72,25 @@ onMounted(() => {
         container: 'lg:items-start',
       }"
     >
-      <NuxtLink
-        v-if="section.url"
-        :to="section.url"
-        target="_blank"
-        :aria-label="section.title"
-      >
+      <div :class="`scaleAnimation${(index * 2) + 1}`">
+        <NuxtLink
+          v-if="section.url"
+          :to="section.url"
+          target="_blank"
+          :aria-label="section.title"
+        >
+          <LazyImage
+            v-if="section.image"
+            :src="section.image"
+            :url="section.url"
+            :alt="section.title"
+            :width="558"
+            :height="352"
+            show-ring
+          />
+        </NuxtLink>
         <LazyImage
-          v-if="section.image"
+          v-else
           :src="section.image"
           :url="section.url"
           :alt="section.title"
@@ -87,16 +98,7 @@ onMounted(() => {
           :height="352"
           show-ring
         />
-      </NuxtLink>
-      <LazyImage
-        v-else
-        :src="section.image"
-        :url="section.url"
-        :alt="section.title"
-        :width="558"
-        :height="352"
-        show-ring
-      />
+      </div>
     </ULandingSection>
 
     <ULandingSection
