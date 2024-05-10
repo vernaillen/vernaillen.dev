@@ -31,7 +31,7 @@ onMounted(() => {
       },
       x: 0,
       y: 0,
-      scale: 0.6,
+      scale: 0.5,
     })
   }
 })
