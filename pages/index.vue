@@ -19,6 +19,21 @@ definePageMeta({
   layout: 'home',
   colorMode: 'dark',
 })
+onMounted(() => {
+  for (let i = 0; i < 4; i++) {
+    useGsap.from(`.scaleAnimation${i}`, {
+      scrollTrigger: {
+        trigger: `.scaleAnimation${i}`,
+        start: 'top bottom',
+        end: 'bottom center',
+        scrub: true,
+        toggleActions: 'play pause reverse play',
+      },
+      x: 0,
+      scale: 0.75,
+    })
+  }
+})
 </script>
 
 <template>
@@ -51,16 +66,31 @@ definePageMeta({
       :links="section.links"
       :align="section.align"
       :features="section.features"
-      :ui="{ wrapper: `homeLandingSection${index} slide-enter`, container: 'lg:items-start' }"
+      :ui="{
+        base: `scaleAnimation${index} homeLandingSection${index}`,
+        wrapper: 'slide-enter',
+        container: 'lg:items-start',
+      }"
     >
-      <NuxtLink
-        v-if="section.url"
-        :to="section.url"
-        target="_blank"
-        :aria-label="section.title"
-      >
+      <div :class="`scaleAnimation${index}`">
+        <NuxtLink
+          v-if="section.url"
+          :to="section.url"
+          target="_blank"
+          :aria-label="section.title"
+        >
+          <LazyImage
+            v-if="section.image"
+            :src="section.image"
+            :url="section.url"
+            :alt="section.title"
+            :width="558"
+            :height="352"
+            show-ring
+          />
+        </NuxtLink>
         <LazyImage
-          v-if="section.image"
+          v-else
           :src="section.image"
           :url="section.url"
           :alt="section.title"
@@ -68,23 +98,21 @@ definePageMeta({
           :height="352"
           show-ring
         />
-      </NuxtLink>
-      <LazyImage
-        v-else
-        :src="section.image"
-        :url="section.url"
-        :alt="section.title"
-        :width="558"
-        :height="352"
-        show-ring
-      />
+      </div>
     </ULandingSection>
 
     <ULandingSection
       :title="page.features.title"
       :description="page.features.description"
+      :ui="{
+        base: 'scaleAnimation2',
+      }"
     >
-      <UPageGrid>
+      <UPageGrid
+        :ui="{
+          wrapper: 'scaleAnimation2',
+        }"
+      >
         <ULandingCard
           v-for="(item, index) in page.features.items"
           :key="index"
@@ -97,8 +125,15 @@ definePageMeta({
       :headline="page.testimonials.headline"
       :title="page.testimonials.title"
       :description="page.testimonials.description"
+      :ui="{
+        base: 'scaleAnimation3',
+      }"
     >
-      <UPageColumns>
+      <UPageColumns
+        :ui="{
+          wrapper: 'scaleAnimation3',
+        }"
+      >
         <div
           v-for="(testimonial, index) in page.testimonials.items"
           :key="index"
