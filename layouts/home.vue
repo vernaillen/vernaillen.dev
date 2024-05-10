@@ -15,6 +15,7 @@ onMounted(() => {
       toggleActions: 'play pause reverse reset',
     },
     opacity: 0.3,
+    duration: 1,
   })
 })
 </script>

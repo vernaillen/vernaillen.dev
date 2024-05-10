@@ -20,7 +20,7 @@ definePageMeta({
   colorMode: 'dark',
 })
 onMounted(() => {
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 8; i++) {
     useGsap.from(`.scaleAnimation${i}`, {
       scrollTrigger: {
         trigger: `.scaleAnimation${i}`,
@@ -30,7 +30,8 @@ onMounted(() => {
         toggleActions: 'play pause reverse play',
       },
       x: 0,
-      scale: 0.75,
+      y: 0,
+      scale: 0.5,
     })
   }
 })
@@ -67,30 +68,18 @@ onMounted(() => {
       :align="section.align"
       :features="section.features"
       :ui="{
-        base: `scaleAnimation${index} homeLandingSection${index}`,
-        wrapper: 'slide-enter',
+        wrapper: `scaleAnimation${index * 2} homeLandingSection${index}`,
         container: 'lg:items-start',
       }"
     >
-      <div :class="`scaleAnimation${index}`">
-        <NuxtLink
-          v-if="section.url"
-          :to="section.url"
-          target="_blank"
-          :aria-label="section.title"
-        >
-          <LazyImage
-            v-if="section.image"
-            :src="section.image"
-            :url="section.url"
-            :alt="section.title"
-            :width="558"
-            :height="352"
-            show-ring
-          />
-        </NuxtLink>
+      <NuxtLink
+        v-if="section.url"
+        :to="section.url"
+        target="_blank"
+        :aria-label="section.title"
+      >
         <LazyImage
-          v-else
+          v-if="section.image"
           :src="section.image"
           :url="section.url"
           :alt="section.title"
@@ -98,19 +87,28 @@ onMounted(() => {
           :height="352"
           show-ring
         />
-      </div>
+      </NuxtLink>
+      <LazyImage
+        v-else
+        :src="section.image"
+        :url="section.url"
+        :alt="section.title"
+        :width="558"
+        :height="352"
+        show-ring
+      />
     </ULandingSection>
 
     <ULandingSection
       :title="page.features.title"
       :description="page.features.description"
       :ui="{
-        base: 'scaleAnimation2',
+        base: 'scaleAnimation4',
       }"
     >
       <UPageGrid
         :ui="{
-          wrapper: 'scaleAnimation2',
+          wrapper: 'scaleAnimation5',
         }"
       >
         <ULandingCard
@@ -126,12 +124,12 @@ onMounted(() => {
       :title="page.testimonials.title"
       :description="page.testimonials.description"
       :ui="{
-        base: 'scaleAnimation3',
+        base: 'scaleAnimation6',
       }"
     >
       <UPageColumns
         :ui="{
-          wrapper: 'scaleAnimation3',
+          wrapper: 'scaleAnimation7',
         }"
       >
         <div
