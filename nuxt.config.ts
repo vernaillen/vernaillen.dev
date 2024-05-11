@@ -18,6 +18,9 @@ export default defineNuxtConfig({
     'nuxt-svgo',
     'nuxt-time'
   ],
+  future: {
+    compatibilityVersion: 4
+  },
   runtimeConfig: {
     public: {
       nuxtVersion: nuxtPkg.version
