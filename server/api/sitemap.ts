@@ -11,8 +11,8 @@ export default defineSitemapEventHandler(async (e) => {
         loc: c._path,
         lastmod: new Date(),
         images: [
-          { loc: c.image?.src },
-        ],
+          { loc: c.image?.src }
+        ]
       })
     })
 })

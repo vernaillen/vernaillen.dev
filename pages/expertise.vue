@@ -8,21 +8,21 @@ useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title + useAppConfig().meta.titleSuffix,
   description: page.value.description,
-  ogDescription: page.value.description,
+  ogDescription: page.value.description
 })
 defineOgImageComponent('Vernaillen', {
   title: page.value.title,
-  description: page.value.description,
+  description: page.value.description
 })
 definePageMeta({
-  colorMode: 'dark',
+  colorMode: 'dark'
 })
 onMounted(() => {
   page.value?.technologies?.forEach((technology: { value: string }, index: number) => {
     useAnime({
       targets: '#technology-' + index + ' meter',
       value: technology.value,
-      easing: 'spring',
+      easing: 'spring'
     })
   })
 })
@@ -54,7 +54,7 @@ onMounted(() => {
               size="lg"
               :ui="{
                 wrapper: `progress flex-row-reverse items-center slide-enter slide-enter-stage${index+2}`,
-                meter: { base: 'flex-1 text-opacity-90 dark:text-opacity-90 hover:text-opacity-100' },
+                meter: { base: 'flex-1 text-opacity-90 dark:text-opacity-90 hover:text-opacity-100' }
               }"
             >
               <template #label="{ percent, value }">

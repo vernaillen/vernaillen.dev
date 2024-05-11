@@ -16,14 +16,14 @@ useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title + useAppConfig().meta.titleSuffix,
   description: page.value.description,
-  ogDescription: page.value.description,
+  ogDescription: page.value.description
 })
 defineOgImageComponent('Vernaillen', {
   title: page.value.title,
-  description: page.value.description,
+  description: page.value.description
 })
 definePageMeta({
-  colorMode: 'dark',
+  colorMode: 'dark'
 })
 </script>
 
@@ -46,7 +46,7 @@ definePageMeta({
           :class="[index === 0 && 'lg:col-span-full']"
           :ui="{
             image: { base: '', wrapper: 'aspect-[21/9]' },
-            description: 'line-clamp-2',
+            description: 'line-clamp-2'
           }"
           class="slide-enter"
           :style="'--enter-stage:' + (index * 3) + ';'"

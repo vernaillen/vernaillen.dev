@@ -24,15 +24,15 @@ useSeoMeta({
   title,
   ogTitle: title + useAppConfig().meta.titleSuffix,
   description,
-  ogDescription: description,
+  ogDescription: description
 })
 defineOgImageComponent('VernaillenBlog', {
   title,
   description,
-  img: post.value.image?.src,
+  img: post.value.image?.src
 })
 definePageMeta({
-  colorMode: 'dark',
+  colorMode: 'dark'
 })
 </script>
 

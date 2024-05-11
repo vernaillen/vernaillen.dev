@@ -7,14 +7,14 @@ useSeoMeta({
   title: page.value.title,
   ogTitle: page.value.title + useAppConfig().meta.titleSuffix,
   description: page.value.description,
-  ogDescription: page.value.description,
+  ogDescription: page.value.description
 })
 defineOgImageComponent('Vernaillen', {
   title: page.value.title,
-  description: page.value.description,
+  description: page.value.description
 })
 definePageMeta({
-  colorMode: 'dark',
+  colorMode: 'dark'
 })
 </script>
 

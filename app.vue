@@ -3,27 +3,27 @@ useHead({
   meta: [
     { charset: 'utf-8' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { key: 'theme-color', name: 'theme-color', content: '#0c0c0d' },
+    { key: 'theme-color', name: 'theme-color', content: '#0c0c0d' }
   ],
   link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' },
+    { rel: 'icon', type: 'image/x-icon', href: '/favicon.svg' }
   ],
   htmlAttrs: {
-    lang: 'en',
-  },
+    lang: 'en'
+  }
 })
 useSeoMeta({
   titleTemplate: '%s ' + useAppConfig().meta.titleSuffix,
-  ogTitle: 'Wouter Vernaillen: Freelance Full Stack Developer',
+  ogTitle: 'Wouter Vernaillen: Freelance Full Stack Developer'
 })
 onMounted(() => {
   useGsap.to('.svg-footer', {
     scrollTrigger: {
       trigger: '.homeLandingSection0',
       start: 'top center',
-      toggleActions: 'play pause reverse reset',
+      toggleActions: 'play pause reverse reset'
     },
-    opacity: 0.3,
+    opacity: 0.3
   })
 })
 </script>

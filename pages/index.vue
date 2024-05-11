@@ -8,16 +8,16 @@ useSeoMeta({
   title: 'Wouter Vernaillen: Freelance Full Stack Developer',
   ogTitle: 'Wouter Vernaillen: Freelance Full Stack Developer',
   description: page.value.description,
-  ogDescription: page.value.description,
+  ogDescription: page.value.description
 })
 defineOgImageComponent('Vernaillen', {
   title: 'Wouter Vernaillen',
   subTitle: 'Freelance Full Stack Developer',
-  description: page.value.description,
+  description: page.value.description
 })
 definePageMeta({
   layout: 'home',
-  colorMode: 'dark',
+  colorMode: 'dark'
 })
 onMounted(() => {
   for (let i = 0; i < 8; i++) {
@@ -27,11 +27,11 @@ onMounted(() => {
         start: 'top bottom',
         end: 'bottom center',
         scrub: true,
-        toggleActions: 'play pause reverse play',
+        toggleActions: 'play pause reverse play'
       },
       x: 0,
       y: 0,
-      scale: 0.5,
+      scale: 0.5
     })
   }
 })
@@ -69,7 +69,7 @@ onMounted(() => {
       :features="section.features"
       :ui="{
         wrapper: `scaleAnimation${index * 2} homeLandingSection${index}`,
-        container: 'lg:items-start',
+        container: 'lg:items-start'
       }"
     >
       <div :class="`scaleAnimation${(index * 2) + 1}`">
@@ -105,12 +105,12 @@ onMounted(() => {
       :title="page.features.title"
       :description="page.features.description"
       :ui="{
-        base: 'scaleAnimation4',
+        base: 'scaleAnimation4'
       }"
     >
       <UPageGrid
         :ui="{
-          wrapper: 'scaleAnimation5',
+          wrapper: 'scaleAnimation5'
         }"
       >
         <ULandingCard
@@ -126,12 +126,12 @@ onMounted(() => {
       :title="page.testimonials.title"
       :description="page.testimonials.description"
       :ui="{
-        base: 'scaleAnimation6',
+        base: 'scaleAnimation6'
       }"
     >
       <UPageColumns
         :ui="{
-          wrapper: 'scaleAnimation7',
+          wrapper: 'scaleAnimation7'
         }"
       >
         <div

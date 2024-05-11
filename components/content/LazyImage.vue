@@ -17,14 +17,14 @@ const props = withDefaults(defineProps<Props>(), {
   fit: 'cover',
   format: 'webp',
   opacity: 0.9,
-  showRing: false,
+  showRing: false
 })
 const optimisedImg = img(props.src, {
   width: props.width,
   height: props.height,
   fit: props.fit,
   format: props.format,
-  ...props.modifiers,
+  ...props.modifiers
 })
 const placeholder = ref(props.placeholder)
 watch(() => props.src, (newUrl) => {
@@ -39,7 +39,7 @@ const imageLifecycle = {
   },
   error: (_el: HTMLImageElement) => {
     svgPlaceholder.value?.classList.add('opacity-100')
-  },
+  }
 }
 </script>
 

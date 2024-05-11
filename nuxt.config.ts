@@ -16,73 +16,76 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     'nuxt-svgo',
-    'nuxt-time',
+    'nuxt-time'
   ],
   runtimeConfig: {
     public: {
-      nuxtVersion: nuxtPkg.version,
-    },
+      nuxtVersion: nuxtPkg.version
+    }
   },
   eslint: {
     config: {
-      stylistic: true,
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
+      }
     },
     checker: {
       lintOnStart: true,
-      fix: true,
-    },
+      fix: true
+    }
   },
   site: {
     name: 'Wouter Vernaillen',
     url: 'https://vernaillen.dev/',
     description: 'Freelance Full Stack Developer',
-    defaultLocale: 'en',
+    defaultLocale: 'en'
   },
   css: [
-    '~/assets/css/main.css',
+    '~/assets/css/main.css'
   ],
   colorMode: {
-    preference: 'dark',
+    preference: 'dark'
   },
   image: {
     domains: ['cdn.fosstodon.org', 'ui.nuxt.com'],
     provider: 'twicpics',
     format: ['webp'],
     twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/vernaillendev',
-    },
+      baseURL: 'https://vernaillen.twic.pics/vernaillendev'
+    }
   },
   anime: {
-    composables: true,
+    composables: true
   },
   gsap: {
     composables: true,
     extraPlugins: {
-      scrollTrigger: true,
-    },
+      scrollTrigger: true
+    }
   },
   hooks: {
     'components:extend': (components) => {
       const globals = components.filter(c => ['UButton', 'UIcon', 'UColorModeButton'].includes(c.pascalName))
       globals.forEach(c => c.global = true)
-    },
+    }
   },
   fonts: {
     defaults: {
       preload: true,
-      weights: [400, 500, 600, 700],
-    },
+      weights: [400, 500, 600, 700]
+    }
   },
   ui: {
-    icons: ['heroicons', 'mdi', 'ic', 'logos', 'tabler', 'twemoji'],
+    icons: ['heroicons', 'mdi', 'ic', 'logos', 'tabler', 'twemoji']
   },
   uiPro: {
-    routerOptions: false,
+    routerOptions: false
   },
   router: {
     options: {
-      scrollBehaviorType: 'smooth',
-    },
+      scrollBehaviorType: 'smooth'
+    }
   },
   svgo: {
     svgo: true,
@@ -90,14 +93,14 @@ export default defineNuxtConfig({
 
     defaultImport: 'component',
     svgoConfig: {
-      multipass: true,
-    },
+      multipass: true
+    }
   },
   sitemap: {
-    sources: ['/api/sitemap'],
+    sources: ['/api/sitemap']
   },
   plausible: {
-    apiHost: 'https://vernaillen.dev/plio',
+    apiHost: 'https://vernaillen.dev/plio'
   },
   routeRules: {
     '/': { prerender: true },
@@ -105,9 +108,9 @@ export default defineNuxtConfig({
     '/projects': { prerender: true },
     '/blog': { prerender: true },
     '/blog/**': { prerender: true },
-    '/api/search.json': { prerender: true },
+    '/api/search.json': { prerender: true }
   },
   devtools: {
-    enabled: true,
-  },
+    enabled: true
+  }
 })

@@ -3,7 +3,7 @@ const config = useRuntimeConfig()
 
 const links = [{
   label: 'Pages',
-  children: useAppConfig().navigation,
+  children: useAppConfig().navigation
 },
 {
   label: 'Projects',
@@ -11,19 +11,19 @@ const links = [{
     {
       label: 'WPNuxt',
       to: 'https://wpnuxt.com',
-      target: '_blank',
+      target: '_blank'
     },
     {
       label: 'Vue Audiomotion Analyzer',
       to: 'https://vue-audiomotion-analyzer.dev/',
-      target: '_blank',
+      target: '_blank'
     },
     {
       label: 'Radio App',
       to: 'https://radio.vernaillen.dev/',
-      target: '_blank',
-    },
-  ],
+      target: '_blank'
+    }
+  ]
 },
 {
   label: 'Other Websites',
@@ -31,14 +31,14 @@ const links = [{
     {
       label: 'Harmonics.be',
       to: 'https://harmonics.be',
-      target: '_blank',
+      target: '_blank'
     },
     {
       label: 'bio.wouter.net',
       to: 'https://bio.wouter.net',
-      target: '_blank',
-    },
-  ],
+      target: '_blank'
+    }
+  ]
 }]
 </script>
 

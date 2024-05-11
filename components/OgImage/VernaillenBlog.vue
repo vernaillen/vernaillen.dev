@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 defineOptions({
-  inheritAttrs: false,
+  inheritAttrs: false
 })
 defineProps<{
   title: string

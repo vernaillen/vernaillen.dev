@@ -2,9 +2,9 @@
 const links = [
   {
     label: 'Home',
-    to: '/',
+    to: '/'
   },
-  ...useAppConfig().navigation,
+  ...useAppConfig().navigation
 ]
 </script>
 

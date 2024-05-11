@@ -12,10 +12,10 @@ onMounted(() => {
     scrollTrigger: {
       trigger: '.homeLandingSection0',
       start: 'top center',
-      toggleActions: 'play pause reverse reset',
+      toggleActions: 'play pause reverse reset'
     },
     opacity: 0.3,
-    duration: 1,
+    duration: 1
   })
 })
 </script>

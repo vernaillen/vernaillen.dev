@@ -6,7 +6,7 @@ const _useLightbox = () => {
   const visible = ref(false)
 
   return {
-    images, index, visible,
+    images, index, visible
   }
 }
 

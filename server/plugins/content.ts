@@ -8,11 +8,9 @@ export default defineNitroPlugin((nitroApp) => {
         if (ancestors.length === 1 && ancestors[0].type === 'root') {
           if (node.tag === 'div' && node.props.class && node.props.class.startsWith('col-')) {
             // do nothing
-          }
-          else if (node.props.class && node.props.class === 'no-sliding') {
+          } else if (node.props.class && node.props.class === 'no-sliding') {
             // do nothing
-          }
-          else {
+          } else {
             enrichNode(node, index++)
           }
         }

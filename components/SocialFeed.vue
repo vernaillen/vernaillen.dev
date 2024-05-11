@@ -4,11 +4,11 @@ const fetchedFeed = ref()
 const filteredFeed = ref()
 async function fetchPosts() {
   const [mastodon] = await Promise.all([
-    $fetch('/_social/mastodon'),
+    $fetch('/_social/mastodon')
   ])
   fetchedFeed.value = [...mastodon]
     .sort(
-      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     )
   filterPosts()
 }

@@ -12,7 +12,7 @@ export default defineConfig({
     // throttle: true,
   },
   chrome: {
-    useSystem: false,
+    useSystem: false
   },
-  debug: true,
+  debug: true
 })
