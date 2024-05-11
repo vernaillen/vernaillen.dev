@@ -20,13 +20,13 @@ const customIconSet = {
 
 export default <Partial<Config>>{
   content: [
-    './app.vue',
-    './assets/svg/*.svg',
-    './components/*.vue',
-    './components/**/*.vue',
-    './content/**/*.{md,yml}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue'
+    './app/app.vue',
+    './app/assets/svg/*.svg',
+    './app/components/*.vue',
+    './app/components/**/*.vue',
+    './app/content/**/*.{md,yml}',
+    './app/layouts/**/*.vue',
+    './app/pages/**/*.vue'
   ],
   theme: {
     extend: {
