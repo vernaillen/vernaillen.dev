@@ -20,15 +20,27 @@
   }
 }
 
+@keyframes title-enter {
+  0% {
+    @apply text-primary-500;
+  }
+  to {
+    @apply opacity-100;
+  }
+}
 @keyframes slide-enter {
   0% {
-    @apply opacity-5 blur-sm;
+    @apply opacity-10 blur-sm;
   }
   to {
     @apply opacity-100;
   }
 }
 @media (prefers-reduced-motion:no-preference) {
+  :not(.no-sliding) .slide-enter-content :not(.no-sliding) .title-enter {
+    animation: title-enter 0.8s both 0.8s;
+    animation-delay: 0s;
+  }
   :not(.no-sliding) .slide-enter-content :not(.no-sliding) [slide-enter],
   :not(.no-sliding) .slide-enter-content :not(.no-sliding) .slide-enter {
     --enter-stage: 0;
@@ -79,4 +91,8 @@
 .prose > div > h2:first-of-type,
 .prose > div > p:first-of-type > h2:first-of-type {
   margin-top: 0;
+}
+
+.scaleAnimation {
+  @apply scale-[0.3]
 }
