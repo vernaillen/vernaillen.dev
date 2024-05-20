@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import gsap from 'gsap'
+
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
@@ -20,10 +22,11 @@ definePageMeta({
   colorMode: 'dark'
 })
 onMounted(() => {
-  for (let i = 0; i < 8; i++) {
-    useGsap.from(`.scaleAnimation${i}`, {
+  const scaleAnimations = gsap.utils.toArray('.scaleAnimation')
+  scaleAnimations.forEach((an) => {
+    useGsap.to(an, {
       scrollTrigger: {
-        trigger: `.scaleAnimation${i}`,
+        trigger: an,
         start: 'top bottom',
         end: 'bottom center',
         scrub: true,
@@ -31,9 +34,9 @@ onMounted(() => {
       },
       x: 0,
       y: 0,
-      scale: 0.2
+      scale: 1
     })
-  }
+  })
 })
 </script>
 
@@ -68,11 +71,11 @@ onMounted(() => {
       :align="section.align"
       :features="section.features"
       :ui="{
-        wrapper: `scaleAnimation${index * 2} homeLandingSection${index}`,
+        wrapper: `homeLandingSection${index}`,
         container: 'lg:items-start'
       }"
     >
-      <div :class="`scaleAnimation${(index * 2) + 1}`">
+      <div class="scaleAnimation h-full">
         <NuxtLink
           v-if="section.url"
           :to="section.url"
@@ -104,13 +107,10 @@ onMounted(() => {
     <ULandingSection
       :title="page.features.title"
       :description="page.features.description"
-      :ui="{
-        base: 'scaleAnimation4'
-      }"
     >
       <UPageGrid
         :ui="{
-          wrapper: 'scaleAnimation5'
+          wrapper: 'scaleAnimation'
         }"
       >
         <ULandingCard
@@ -125,13 +125,10 @@ onMounted(() => {
       :headline="page.testimonials.headline"
       :title="page.testimonials.title"
       :description="page.testimonials.description"
-      :ui="{
-        base: 'scaleAnimation6'
-      }"
     >
       <UPageColumns
         :ui="{
-          wrapper: 'scaleAnimation7'
+          wrapper: 'scaleAnimation'
         }"
       >
         <div
