@@ -31,7 +31,7 @@ onMounted(() => {
       },
       x: 0,
       y: 0,
-      scale: 0.5
+      scale: 0.2
     })
   }
 })
@@ -52,7 +52,7 @@ onMounted(() => {
           v-if="page.hero.headline"
           variant="subtle"
           size="lg"
-          class="relative rounded-lg font-semibold slide-enter slide-enter-stage1"
+          class="relative rounded-lg font-semibold slide-enter slide-enter-stage8"
         >
           {{ page.hero.headline.label }}
         </UBadge>

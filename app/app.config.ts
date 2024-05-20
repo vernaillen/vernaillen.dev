@@ -67,13 +67,13 @@ export default defineAppConfig({
         wrapper: 'py-20 sm:py-24 md:py-36 relative',
         headline: 'mt-0 mb-12 font-normal',
         title: 'text-3xl sm:text-5xl md:text-6xl',
-        description: 'my-16 md:my-24 slide-enter slide-enter-stage5',
-        links: 'slide-enter slide-enter-stage10'
+        description: 'my-16 md:my-24 slide-enter slide-enter-stage5'
       }
     },
     page: {
       header: {
-        wrapper: 'py-[40px]'
+        wrapper: 'py-[40px] ',
+        title: 'title-enter transition-all transform duration-300'
       }
     },
     blog: {
