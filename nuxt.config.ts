@@ -103,11 +103,7 @@ export default defineNuxtConfig({
     apiHost: 'https://vernaillen.dev/plio'
   },
   routeRules: {
-    '/': { prerender: true },
-    '/career': { prerender: true },
-    '/projects': { prerender: true },
-    '/blog': { prerender: true },
-    '/blog/**': { prerender: true },
+    '/**': { prerender: true },
     '/api/search.json': { prerender: true }
   },
   devtools: {
