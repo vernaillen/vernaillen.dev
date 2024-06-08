@@ -33,7 +33,7 @@
     "@nuxtjs/sitemap": "^5.1.5",
     "nuxt-og-image": "3.0.0-rc.53",
     "nuxt-svgo": "^4.0.1",
-    "unlighthouse": "^0.12.1",
+    "unlighthouse": "^0.13.0",
     "vite-plugin-eslint2": "^4.4.0",
     "vue-tsc": "^2.0.17"
   }
