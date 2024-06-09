@@ -51,6 +51,7 @@ onMounted(() => {
       <template #headline>
         <UBadge
           v-if="page.hero.headline"
+          id="hero-badge"
           variant="subtle"
           size="lg"
           class="relative rounded-lg font-semibold slide-enter slide-enter-stage8"

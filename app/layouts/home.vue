@@ -19,13 +19,15 @@ onMounted(() => {
   })
   useGsap.to('.svg-left', {
     scrollTrigger: {
-      trigger: '.svg-left',
-      start: 'center bottom',
+      trigger: 'main',
+      start: 'top top',
+      end: '+=1000',
       scrub: true,
       toggleActions: 'play pause reverse reset'
     },
-    y: 200,
-    scale: 0.5
+    y: 300,
+    scale: 0.5,
+    duration: 1
   })
 })
 </script>
@@ -44,9 +46,9 @@ onMounted(() => {
     </div>
     <div
       class="svg-left absolute
-        bottom-96 -left-10 scale-75
-        sm:bottom-64 sm:left-0 sm:scale-90
-        md:bottom-40 md:left-10 md:scale-100
+        top-[450px] -left-32 scale-75
+        sm:-left-20 sm:scale-90
+        md:left-10 md:scale-100
         z-[-1] opacity-30 block overflow-hidden"
     >
       <SvgoHomeLeft class="w-full" />
