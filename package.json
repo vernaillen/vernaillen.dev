@@ -35,6 +35,6 @@
     "nuxt-svgo": "^4.0.1",
     "unlighthouse": "^0.13.0",
     "vite-plugin-eslint2": "^4.4.0",
-    "vue-tsc": "^2.0.17"
+    "vue-tsc": "^2.0.21"
   }
 }
