@@ -24,17 +24,15 @@ definePageMeta({
 onMounted(() => {
   const scaleAnimations = gsap.utils.toArray('.scaleAnimation')
   scaleAnimations.forEach((an) => {
-    useGsap.to(an, {
+    useGsap.from(an, {
       scrollTrigger: {
         trigger: an,
         start: 'top bottom',
-        end: 'bottom center',
+        end: 'bottom bottom',
         scrub: true,
         toggleActions: 'play pause reverse play'
       },
-      x: 0,
-      y: 0,
-      scale: 1
+      scale: 0.5
     })
   })
 })
