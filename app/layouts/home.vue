@@ -26,7 +26,8 @@ onMounted(() => {
       toggleActions: 'play pause reverse reset'
     },
     y: 300,
-    scale: 0.5,
+    scale: 0.3,
+    opacity: 0.3,
     duration: 1
   })
 })
@@ -46,10 +47,10 @@ onMounted(() => {
     </div>
     <div
       class="svg-left absolute
-        top-[450px] -left-32 scale-75
-        sm:-left-20 sm:scale-90
+        top-[470px] -left-20 scale-75
+        sm:-left-10 sm:scale-90
         md:left-10 md:scale-100
-        z-[-1] opacity-30 block overflow-hidden"
+        z-[-1] opacity-50 block overflow-hidden"
     >
       <SvgoHomeLeft class="w-full" />
     </div>
