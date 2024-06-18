@@ -92,3 +92,7 @@
 .prose > div > p:first-of-type > h2:first-of-type {
   margin-top: 0;
 }
+
+.scaleAnimation {
+  @apply scale-[0.3]
+}
