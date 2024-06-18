@@ -135,10 +135,39 @@ onMounted(() => {
           :key="index"
           class="break-inside-avoid"
         >
-          <ULandingTestimonial
-            v-bind="testimonial"
-            class="bg-gray-100/50 dark:bg-gray-800/50"
-          />
+          <UCard>
+            <quote class="text-gray-600 dark:text-gray-300">
+              "{{ testimonial.quote }}"
+            </quote>
+            <div
+              v-if="testimonial.author"
+              class="flex items-center gap-3 mt-6 relative"
+            >
+              <NuxtImg
+                v-if="testimonial.author.avatar"
+                :src="testimonial.author.avatar.src"
+                :alt="'Avatar of ' + testimonial.author.name"
+                size="md"
+                width="40"
+                height="40"
+                class="rounded-full"
+              />
+              <div>
+                <p
+                  v-if="testimonial.author.name"
+                  class="font-semibold text-gray-900 dark:text-white text-sm"
+                >
+                  {{ testimonial.author.name }}
+                </p>
+                <p
+                  v-if="testimonial.author.description"
+                  class="text-gray-500 dark:text-gray-400 text-sm"
+                >
+                  {{ testimonial.author.description }}
+                </p>
+              </div>
+            </div>
+          </UCard>
         </div>
       </UPageColumns>
     </ULandingSection>
