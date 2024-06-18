@@ -16,16 +16,6 @@ useSeoMeta({
   titleTemplate: '%s ' + useAppConfig().meta.titleSuffix,
   ogTitle: 'Wouter Vernaillen: Freelance Full Stack Developer'
 })
-onMounted(() => {
-  useGsap.to('.svg-footer', {
-    scrollTrigger: {
-      trigger: '.homeLandingSection0',
-      start: 'top center',
-      toggleActions: 'play pause reverse reset'
-    },
-    opacity: 0.3
-  })
-})
 </script>
 
 <template>

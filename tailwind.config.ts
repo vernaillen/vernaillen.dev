@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons'
+import colors from 'tailwindcss/colors'
 
 const customIconSet = {
   prefix: 'custom',
@@ -20,15 +21,23 @@ const customIconSet = {
 
 export default <Partial<Config>>{
   content: [
-    './app.vue',
-    './assets/svg/*.svg',
-    './components/*.vue',
-    './components/**/*.vue',
-    './content/**/*.{md,yml}',
-    './layouts/**/*.vue',
-    './pages/**/*.vue'
+    './app/app.vue',
+    './app/assets/svg/*.svg',
+    './app/components/*.vue',
+    './app/components/**/*.vue',
+    './app/content/**/*.{md,yml}',
+    './app/layouts/**/*.vue',
+    './app/pages/**/*.vue'
   ],
   theme: {
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      black: colors.black,
+      white: colors.white,
+      gray: colors.gray,
+      neutral: colors.neutral
+    },
     extend: {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],

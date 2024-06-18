@@ -24,17 +24,15 @@ definePageMeta({
 onMounted(() => {
   const scaleAnimations = gsap.utils.toArray('.scaleAnimation')
   scaleAnimations.forEach((an) => {
-    useGsap.to(an, {
+    useGsap.from(an, {
       scrollTrigger: {
         trigger: an,
         start: 'top bottom',
-        end: 'bottom center',
+        end: 'bottom bottom',
         scrub: true,
         toggleActions: 'play pause reverse play'
       },
-      x: 0,
-      y: 0,
-      scale: 1
+      scale: 0.5
     })
   })
 })
@@ -53,6 +51,7 @@ onMounted(() => {
       <template #headline>
         <UBadge
           v-if="page.hero.headline"
+          id="hero-badge"
           variant="subtle"
           size="lg"
           class="relative rounded-lg font-semibold slide-enter slide-enter-stage8"
@@ -136,10 +135,40 @@ onMounted(() => {
           :key="index"
           class="break-inside-avoid"
         >
-          <ULandingTestimonial
-            v-bind="testimonial"
-            class="bg-gray-100/50 dark:bg-gray-800/50"
-          />
+          <UCard>
+            <p class="text-gray-600 dark:text-gray-300">
+              "{{ testimonial.quote }}"
+            </p>
+            <div
+              v-if="testimonial.author"
+              class="flex items-center gap-3 mt-6 relative"
+            >
+              <NuxtImg
+                v-if="testimonial.author.avatar"
+                :src="testimonial.author.avatar.src"
+                :alt="'Avatar of ' + testimonial.author.name"
+                size="md"
+                width="40"
+                height="40"
+                class="rounded-full"
+                loading="lazy"
+              />
+              <div>
+                <p
+                  v-if="testimonial.author.name"
+                  class="font-semibold text-gray-900 dark:text-white text-sm"
+                >
+                  {{ testimonial.author.name }}
+                </p>
+                <p
+                  v-if="testimonial.author.description"
+                  class="text-gray-500 dark:text-gray-400 text-sm"
+                >
+                  {{ testimonial.author.description }}
+                </p>
+              </div>
+            </div>
+          </UCard>
         </div>
       </UPageColumns>
     </ULandingSection>
