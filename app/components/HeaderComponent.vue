@@ -37,6 +37,9 @@ const links = [
         target="_blank"
         class="ml-1 sm:ml-2"
       />
+      <ClientOnly>
+        <ScrollProgress />
+      </ClientOnly>
     </template>
   </UHeader>
 </template>

@@ -136,9 +136,9 @@ onMounted(() => {
           class="break-inside-avoid"
         >
           <UCard>
-            <quote class="text-gray-600 dark:text-gray-300">
+            <p class="text-gray-600 dark:text-gray-300">
               "{{ testimonial.quote }}"
-            </quote>
+            </p>
             <div
               v-if="testimonial.author"
               class="flex items-center gap-3 mt-6 relative"
@@ -151,6 +151,7 @@ onMounted(() => {
                 width="40"
                 height="40"
                 class="rounded-full"
+                loading="lazy"
               />
               <div>
                 <p
