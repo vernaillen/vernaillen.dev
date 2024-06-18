@@ -18,10 +18,10 @@ importers:
         specifier: ^1.7.0
         version: 1.7.0(ioredis@5.4.1)(magicast@0.3.4)(rollup@4.18.0)
       '@nuxt/ui-pro':
-        specifier: ^1.2.0
+        specifier: ^1.3.0
         version: 1.3.0(axios@1.7.2)(focus-trap@7.5.4)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.5)(@unocss/reset@0.60.4)(axios@1.7.2)(encoding@0.1.13)(eslint@8.57.0)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(sass@1.77.6)(terser@5.31.1)(typescript@5.4.5)(unocss@0.60.4(@unocss/webpack@0.60.4(rollup@4.18.0)(webpack@5.92.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.5)(sass@1.77.6)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.5)(sass@1.77.6)(terser@5.31.1))(vue-tsc@2.0.21(typescript@5.4.5)))(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.5)(sass@1.77.6)(terser@5.31.1))(vue@3.4.29(typescript@5.4.5))
       '@vueuse/nuxt':
-        specifier: ^10.10.1
+        specifier: ^10.11.0
         version: 10.11.0(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.5)(@unocss/reset@0.60.4)(axios@1.7.2)(encoding@0.1.13)(eslint@8.57.0)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(sass@1.77.6)(terser@5.31.1)(typescript@5.4.5)(unocss@0.60.4(@unocss/webpack@0.60.4(rollup@4.18.0)(webpack@5.92.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.5)(sass@1.77.6)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.5)(sass@1.77.6)(terser@5.31.1))(vue-tsc@2.0.21(typescript@5.4.5)))(rollup@4.18.0)(vue@3.4.29(typescript@5.4.5))
       motion:
         specifier: ^10.18.0
@@ -37,7 +37,7 @@ importers:
         version: 0.3.8(vue@3.4.29(typescript@5.4.5))
     devDependencies:
       '@egoist/tailwindcss-icons':
-        specifier: ^1.8.0
+        specifier: ^1.8.1
         version: 1.8.1(tailwindcss@3.4.4)
       '@hypernym/nuxt-anime':
         specifier: ^2.1.1
@@ -46,10 +46,10 @@ importers:
         specifier: ^2.4.2
         version: 2.4.2
       '@iconify/json':
-        specifier: ^2.2.218
+        specifier: ^2.2.220
         version: 2.2.220
       '@nuxt/eslint':
-        specifier: ^0.3.12
+        specifier: ^0.3.13
         version: 0.3.13(eslint@8.57.0)(magicast@0.3.4)(nuxt@3.12.2(@opentelemetry/api@1.9.0)(@parcel/watcher@2.4.1)(@types/node@20.14.5)(@unocss/reset@0.60.4)(axios@1.7.2)(encoding@0.1.13)(eslint@8.57.0)(floating-vue@5.2.2(@nuxt/kit@3.12.2(magicast@0.3.4)(rollup@4.18.0))(vue@3.4.29(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.4.1)(magicast@0.3.4)(optionator@0.9.4)(rollup@4.18.0)(sass@1.77.6)(terser@5.31.1)(typescript@5.4.5)(unocss@0.60.4(@unocss/webpack@0.60.4(rollup@4.18.0)(webpack@5.92.0(esbuild@0.20.2)))(postcss@8.4.38)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.5)(sass@1.77.6)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.5)(sass@1.77.6)(terser@5.31.1))(vue-tsc@2.0.21(typescript@5.4.5)))(rollup@4.18.0)(typescript@5.4.5)(vite-plugin-eslint2@4.4.0(@types/eslint@8.56.10)(eslint@8.57.0)(rollup@4.18.0)(vite@5.3.1(@types/node@20.14.5)(sass@1.77.6)(terser@5.31.1)))(vite@5.3.1(@types/node@20.14.5)(sass@1.77.6)(terser@5.31.1))
       '@nuxthq/studio':
         specifier: ^2.0.0
@@ -67,7 +67,7 @@ importers:
         specifier: ^4.0.1
         version: 4.0.1(magicast@0.3.4)(rollup@4.18.0)(vue@3.4.29(typescript@5.4.5))
       unlighthouse:
-        specifier: ^0.13.0
+        specifier: ^0.13.1
         version: 0.13.1(encoding@0.1.13)(puppeteer@22.11.2(typescript@5.4.5))(rollup@4.18.0)(typescript@5.4.5)(vue@3.4.29(typescript@5.4.5))
       vite-plugin-eslint2:
         specifier: ^4.4.0
@@ -11342,7 +11342,7 @@ snapshots:
 
   extract-zip@2.0.1:
     dependencies:
-      debug: 4.3.4
+      debug: 4.3.5
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -14003,7 +14003,7 @@ snapshots:
   proxy-agent@6.4.0:
     dependencies:
       agent-base: 7.1.1
-      debug: 4.3.4
+      debug: 4.3.5
       http-proxy-agent: 7.0.2
       https-proxy-agent: 7.0.4
       lru-cache: 7.18.3
