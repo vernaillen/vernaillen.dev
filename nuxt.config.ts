@@ -117,6 +117,11 @@ export default defineNuxtConfig({
     '/**': { prerender: true },
     '/api/search.json': { prerender: true }
   },
+  nitro: {
+    compressPublicAssets: {
+      brotli: true
+    }
+  },
   devtools: {
     enabled: true
   }
