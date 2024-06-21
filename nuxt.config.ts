@@ -21,14 +21,6 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4
   },
-  content: {
-    sources: {
-      content: {
-        driver: 'fs',
-        base: './content'
-      }
-    }
-  },
   runtimeConfig: {
     public: {
       nuxtVersion: nuxtPkg.version
