@@ -32,7 +32,7 @@
     "@nuxthq/studio": "^2.0.1",
     "@nuxtjs/plausible": "^1.0.0",
     "@nuxtjs/sitemap": "^5.2.0",
-    "nuxt-og-image": "3.0.0-rc.53",
+    "nuxt-og-image": "3.0.0-rc.54",
     "nuxt-svgo": "^4.0.1",
     "unlighthouse": "^0.13.1",
     "vite-plugin-eslint2": "^4.4.0",
