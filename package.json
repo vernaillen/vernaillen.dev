@@ -27,15 +27,15 @@
     "@egoist/tailwindcss-icons": "^1.8.1",
     "@hypernym/nuxt-anime": "^2.1.1",
     "@hypernym/nuxt-gsap": "^2.4.2",
-    "@iconify/json": "^2.2.222",
+    "@iconify/json": "^2.2.224",
     "@nuxt/eslint": "^0.3.13",
-    "@nuxthq/studio": "^2.0.1",
+    "@nuxthq/studio": "^2.0.3",
     "@nuxtjs/plausible": "^1.0.0",
-    "@nuxtjs/sitemap": "^5.2.1",
+    "@nuxtjs/sitemap": "^5.3.2",
     "nuxt-og-image": "3.0.0-rc.54",
     "nuxt-svgo": "^4.0.1",
     "unlighthouse": "^0.13.1",
     "vite-plugin-eslint2": "^4.4.0",
-    "vue-tsc": "^2.0.22"
+    "vue-tsc": "^2.0.24"
   }
 }
