@@ -21,21 +21,6 @@ definePageMeta({
   layout: 'home',
   colorMode: 'dark'
 })
-onMounted(() => {
-  const scaleAnimations = gsap.utils.toArray('.scaleAnimation')
-  scaleAnimations.forEach((an) => {
-    useGsap.from(an, {
-      scrollTrigger: {
-        trigger: an,
-        start: 'top bottom',
-        end: 'bottom bottom',
-        scrub: true,
-        toggleActions: 'play pause reverse play'
-      },
-      scale: 0.5
-    })
-  })
-})
 </script>
 
 <template>
