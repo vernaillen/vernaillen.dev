@@ -17,15 +17,6 @@ defineOgImageComponent('Vernaillen', {
 definePageMeta({
   colorMode: 'dark'
 })
-onMounted(() => {
-  page.value?.technologies?.forEach((technology: { value: string }, index: number) => {
-    useAnime({
-      targets: '#technology-' + index + ' meter',
-      value: technology.value,
-      easing: 'spring'
-    })
-  })
-})
 </script>
 
 <template>

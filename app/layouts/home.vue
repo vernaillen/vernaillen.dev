@@ -1,36 +1,10 @@
 <script setup lang="ts">
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
-import { useGsap } from '#gsap'
 
 const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(), { default: () => [] })
 const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { default: () => [], server: false })
 
 provide('navigation', navigation)
-
-onMounted(() => {
-  useGsap.to('.svg-right', {
-    scrollTrigger: {
-      trigger: '.homeLandingSection0',
-      start: 'top center',
-      toggleActions: 'play pause reverse reset'
-    },
-    opacity: 0.3,
-    duration: 1
-  })
-  useGsap.to('.svg-left', {
-    scrollTrigger: {
-      trigger: 'main',
-      start: 'top top',
-      end: '+=1000',
-      scrub: true,
-      toggleActions: 'play pause reverse reset'
-    },
-    y: 300,
-    scale: 0.3,
-    opacity: 0.3,
-    duration: 1
-  })
-})
 </script>
 
 <template>

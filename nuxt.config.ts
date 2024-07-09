@@ -4,8 +4,6 @@ export default defineNuxtConfig({
   extends: [process.env.NUXT_UI_PRO_PATH || '@nuxt/ui-pro'],
 
   modules: [
-    '@hypernym/nuxt-gsap',
-    '@hypernym/nuxt-anime',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
@@ -64,17 +62,6 @@ export default defineNuxtConfig({
     format: ['webp'],
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/vernaillendev'
-    }
-  },
-
-  anime: {
-    composables: true
-  },
-
-  gsap: {
-    composables: true,
-    extraPlugins: {
-      scrollTrigger: true
     }
   },
 
