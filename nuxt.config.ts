@@ -135,6 +135,9 @@ export default defineNuxtConfig({
     }
   },
 
+  // workaround for "Cannot find module 'shiki'" error
+  build: { transpile: ['shiki'] },
+
   devtools: {
     enabled: true
   },
