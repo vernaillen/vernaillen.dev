@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import gsap from 'gsap'
-
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
