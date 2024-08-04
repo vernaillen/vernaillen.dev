@@ -14,8 +14,8 @@ const links = [{
       target: '_blank'
     },
     {
-      label: 'Vue Audiomotion Analyzer',
-      to: 'https://vue-audiomotion-analyzer.dev/',
+      label: 'Nuxt Audiomotion Analyzer',
+      to: 'https://nuxt-audiomotion-analyzer.vercel.app/',
       target: '_blank'
     },
     {
@@ -34,8 +34,8 @@ const links = [{
       target: '_blank'
     },
     {
-      label: 'bio.wouter.net',
-      to: 'https://bio.wouter.net',
+      label: 'My Links App',
+      to: 'https://links.vernaillen.dev',
       target: '_blank'
     }
   ]

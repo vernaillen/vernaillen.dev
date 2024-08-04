@@ -35,9 +35,9 @@ projects:
     image:
       src: /images/projects/vernaillendev.png
       alt: Vernaillen.dev
-  - title: Vue Audiomotion Analyzer
-    description: High-resolution real-time audio spectrum analyzer. Vue plugin wrapping Henrique Vianna's audioMotion-analyzer
-    to: https://vue-audiomotion-analyzer.dev/
+  - title: Nuxt Audiomotion Analyzer
+    description: High-resolution real-time audio spectrum analyzer. Nuxt plugin wrapping Henrique Vianna's audioMotion-analyzer
+    to: https://nuxt-audiomotion-analyzer-docs.vercel.app/
     target: _blank
     categories:
      - Nuxt
@@ -53,12 +53,12 @@ projects:
     image:
       src: /images/projects/radio.png
       alt: Radio app
-  - title: bio.wouter.net
+  - title: links.vernaillen.dev
     description: a "links in bio" app, made with Nuxt 3
-    to: https://bio.wouter.net
+    to: https://links.vernaillen.dev
     target: _blank
     categories:
      - Nuxt
     image:
       src: /images/projects/biowouternet.png
-      alt: bio.wouter.net
+      alt: links.vernaillen.dev
