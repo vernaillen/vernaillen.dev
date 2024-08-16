@@ -27,7 +27,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       nuxtVersion: nuxtPkg.version
-    }
+    },
+    githubToken: process.env.GITHUB_TOKEN,
+    githubLogin: process.env.GITHUB_LOGIN
   },
 
   eslint: {
@@ -93,7 +95,7 @@ export default defineNuxtConfig({
   },
 
   ui: {
-    icons: ['heroicons', 'mdi', 'ic', 'logos', 'tabler', 'twemoji']
+    icons: ['heroicons', 'mdi', 'ic', 'logos', 'tabler', 'twemoji', 'ph']
   },
 
   uiPro: {

@@ -18,6 +18,10 @@ export default defineAppConfig({
       to: '/projects'
     },
     {
+      label: 'Releases',
+      to: '/releases'
+    },
+    {
       label: 'Blog',
       to: '/blog'
     },
