@@ -19,8 +19,8 @@ definePageMeta({
   <div>
     <UPageHeader v-bind="page" />
     <UPage>
-      <UPageBody>
-        <div class="mb-3 max-w-[600px] mx-auto text-center">
+      <UPageBody class="max-w-[500px] mx-auto">
+        <div class="mb-3 max-w-[600px] mx-auto text-center slid-enter">
           GitHub releases by
           <a
             href="https://github.com/vernaillen"
@@ -36,10 +36,10 @@ definePageMeta({
         <div
           v-for="item, index of data"
           :key="index"
-          class="grid grid-cols-12 gap-4 mb-5 max-w-[600px] mx-auto slide-enter"
+          class="grid grid-cols-12 gap-4 mb-10 max-w-[600px] mx-auto slide-enter"
           :style="'--enter-stage:' + (index * 3) + ';'"
         >
-          <div class="col-span-1">
+          <div class="col-span-2">
             <a
               :href="`https://github.com/${item.repo}`"
               target="_blank"
@@ -47,19 +47,19 @@ definePageMeta({
             >
               <img
                 :src="`https://github.com/${item.repo.split('/')[0]}.png`"
-                class="h-10 w-10"
+                class="h-12 w-12"
                 :alt="item.repo"
                 :class="item.repo.startsWith('vernaillen/') ? 'rounded-full' : 'rounded'"
               >
             </a>
           </div>
-          <div class="col-span-8">
-            <div>
+          <div class="col-span-7">
+            <div class="mb-2">
               <a
                 :href="`https://github.com/${item.repo}`"
                 target="_blank"
               >
-                {{ item.repo.split('/')[0] }} / {{ item.repo.split('/')[1] }}
+                <span class="opacity-50">{{ item.repo.split('/')[0] }} /</span> {{ item.repo.split('/')[1] }}
               </a>
             </div>
             <div class="opacity-50 text-sm">
@@ -76,7 +76,7 @@ definePageMeta({
             </div>
           </div>
           <div class="col-span-3">
-            <div class="text-end">
+            <div class="text-end mb-2">
               <a
                 font-mono
                 :href="`https://github.com/${item.repo}/releases/tag/v${item.version}`"
@@ -86,7 +86,7 @@ definePageMeta({
                 v{{ item.version }}
               </a>
             </div>
-            <div class="text-end opacity-50">
+            <div class="text-end opacity-50 text-sm">
               <time
                 :datatime="item.created_at"
               >{{ formatTimeAgo(new Date(item.created_at)) }}</time>
