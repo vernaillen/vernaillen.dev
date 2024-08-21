@@ -63,10 +63,10 @@ definePageMeta({
                 target="_blank"
                 class="hover:underline"
               >
-                <span class="opacity-50">{{ item.repo.split('/')[0] }} /</span> {{ item.repo.split('/')[1] }}
+                <span class="opacity-60">{{ item.repo.split('/')[0] }} /</span> {{ item.repo.split('/')[1] }}
               </a>
             </div>
-            <div class="opacity-50 text-sm">
+            <div class="opacity-70 text-sm">
               <a
                 :href="item.commit"
                 target="_blank"
@@ -74,7 +74,7 @@ definePageMeta({
               >
                 <UIcon
                   name="i-ph-git-commit-duotone"
-                  class="rotate-90 -ml-[1px] -mb-[1px]"
+                  class="-ml-[1px] -mb-[1px] text-purple-500 dark:text-purple-400"
                 />
                 {{ item.title }}
               </a>
@@ -92,7 +92,7 @@ definePageMeta({
                 v{{ item.version }}
               </a>
             </div>
-            <div class="text-end opacity-50 text-sm">
+            <div class="text-end opacity-60 text-sm">
               <time
                 :datatime="item.created_at"
               >{{ formatTimeAgo(new Date(item.created_at)) }}</time>
@@ -147,13 +147,13 @@ definePageMeta({
                 <span class="truncate">{{ item.title }}</span>
               </a>
             </div>
-            <div class="opacity-50 text-sm">
+            <div class="opacity-80 text-sm">
               <a
                 :href="`https://github.com/${item.repo}`"
                 target="_blank"
                 class="hover:underline"
               >
-                <span class="opacity-50">{{ item.repo.split('/')[0] }} /</span> {{ item.repo.split('/')[1] }}
+                <span class="opacity-80">{{ item.repo.split('/')[0] }} /</span> {{ item.repo.split('/')[1] }}
               </a>
             </div>
           </div>
@@ -167,7 +167,7 @@ definePageMeta({
                 #{{ item.number }}
               </a>
             </div>
-            <div class="text-end opacity-50 text-sm">
+            <div class="text-end opacity-60 text-sm">
               <time
                 :datatime="item.created_at"
               >{{ formatTimeAgo(new Date(item.created_at)) }}</time>
