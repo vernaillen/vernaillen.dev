@@ -3,7 +3,7 @@ import { formatTimeAgo } from '@vueuse/core'
 import { useFetch } from 'nuxt/app'
 import type { ReleaseInfo, Contributions } from '../../types'
 
-const { data: page } = await useAsyncData('releases', () => queryContent('/releases').findOne())
+const { data: page } = await useAsyncData('releases-prs', () => queryContent('/releases-prs').findOne())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
@@ -22,7 +22,7 @@ definePageMeta({
     <UPageHeader v-bind="page" />
     <UPage>
       <UPageBody class="max-w-[600px] mx-auto">
-        <div class="mb-3 max-w-[600px] mx-auto text-center slid-enter">
+        <div class="mb-3 max-w-[600px] mx-auto text-center slide-enter">
           GitHub releases by
           <a
             href="https://github.com/vernaillen"
@@ -99,7 +99,10 @@ definePageMeta({
             </div>
           </div>
         </div>
-        <div class="mt-32 mb-10 max-w-[600px] mx-auto text-center slid-enter">
+        <div
+          class="mt-32 mb-10 max-w-[600px] mx-auto text-center slide-enter"
+          :style="'--enter-stage:' + (releases.length * 3) + ';'"
+        >
           GitHub Pull Requests by
           <a
             href="https://github.com/vernaillen"
@@ -113,7 +116,7 @@ definePageMeta({
           v-for="item, index of prs"
           :key="index"
           class="grid grid-cols-12 gap-4 mb-10 max-w-[600px] mx-auto slide-enter"
-          :style="'--enter-stage:' + (index * 3) + ';'"
+          :style="'--enter-stage:' + ((releases.length + index) * 3) + ';'"
         >
           <div class="col-span-2">
             <a

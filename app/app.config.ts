@@ -18,8 +18,8 @@ export default defineAppConfig({
       to: '/projects'
     },
     {
-      label: 'Releases',
-      to: '/releases'
+      label: 'Releases & PR\'s',
+      to: '/releases-prs'
     },
     {
       label: 'Blog',
