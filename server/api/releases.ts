@@ -8,13 +8,13 @@ import type { ReleaseInfo } from '../../types'
 const LIMIT = 100
 
 const ignoreRepos = [
-  'vernaillen/wpnuxt-module', // Not sure why the commit appears from a fork, filter it out temporarily
+  'vernaillen/wpnuxt-module' // Not sure why the commit appears from a fork, filter it out temporarily
 ]
 
 export default defineLazyEventHandler(() => {
   const config = useRuntimeConfig()
   const octokit = new Octokit({
-    auth: config.githubToken,
+    auth: config.githubToken
   })
 
   let infos: ReleaseInfo[] = []
@@ -29,7 +29,9 @@ export default defineLazyEventHandler(() => {
     return data
       .filter(item => item.type === 'PushEvent' && item.public && !ignoreRepos.includes(item.repo.name))
       .flatMap((item): ReleaseInfo => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const payload: any = item.payload || {}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         return (payload.commits || []).map((commit: any) => {
           const title = (commit?.message || '').split('\n')[0]
           const version = title.match(/v?(\d+\.\d+\.\d+(?:-[\w.]+)?)(?:\s|$)/)?.[1] || ''
@@ -43,7 +45,7 @@ export default defineLazyEventHandler(() => {
             sha: commit?.sha || '',
             commit: `https://github.com/${item.repo.name}/commit/${commit?.sha}`,
             created_at: item.created_at!,
-            version,
+            version
             // payload: item.payload,
           }
         })
@@ -67,8 +69,7 @@ export default defineLazyEventHandler(() => {
           }
           infos.push(current)
         }
-      }
-      catch (error) {
+      } catch (error) {
         console.error(error)
         goNextPage = false
         break

@@ -33,6 +33,7 @@ export interface ReleaseInfo {
   commit: string
   created_at: string
   version: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   payload?: any
 }
 export interface Contributions {
