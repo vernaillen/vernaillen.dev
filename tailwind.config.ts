@@ -37,7 +37,9 @@ export default <Partial<Config>>{
       white: colors.white,
       gray: colors.gray,
       neutral: colors.neutral,
-      red: colors.red
+      red: colors.red,
+      green: colors.green,
+      purple: colors.purple
     },
     extend: {
       fontFamily: {

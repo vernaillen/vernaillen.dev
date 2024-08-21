@@ -97,6 +97,6 @@ export default defineLazyEventHandler(() => {
     return infos
   }, {
     maxAge: 60 * 5 /* 5 minutes */,
-    swr: true,
+    swr: true
   })
 })
