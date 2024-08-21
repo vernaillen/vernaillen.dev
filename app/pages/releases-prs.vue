@@ -22,7 +22,7 @@ definePageMeta({
     <UPageHeader v-bind="page" />
     <UPage>
       <UPageBody class="max-w-[600px] mx-auto">
-        <div class="mb-3 max-w-[600px] mx-auto text-center slide-enter">
+        <div class="mt-12 mb-3 mx-auto text-center slide-enter">
           GitHub releases by
           <a
             href="https://github.com/vernaillen"
@@ -32,14 +32,14 @@ definePageMeta({
             Wouter Vernaillen
           </a>
         </div>
-        <div class="mb-10 opacity-50 text-sm max-w-[600px] mx-auto text-center">
+        <div class="mb-10 opacity-50 text-sm mx-auto text-center">
           Only the latest release of each repo is shown
         </div>
 
         <div
           v-for="item, index of releases"
           :key="index"
-          class="grid grid-cols-12 gap-4 mb-10 max-w-[600px] mx-auto slide-enter"
+          class="grid grid-cols-12 gap-4 mb-10 mx-auto slide-enter"
           :style="'--enter-stage:' + (index * 3) + ';'"
         >
           <div class="col-span-2">
@@ -100,7 +100,7 @@ definePageMeta({
           </div>
         </div>
         <div
-          class="mt-32 mb-10 max-w-[600px] mx-auto text-center slide-enter"
+          class="mt-24 mb-10 mx-auto text-center slide-enter"
           :style="'--enter-stage:' + (releases.length * 3) + ';'"
         >
           GitHub Pull Requests by
@@ -115,7 +115,7 @@ definePageMeta({
         <div
           v-for="item, index of prs"
           :key="index"
-          class="grid grid-cols-12 gap-4 mb-10 max-w-[600px] mx-auto slide-enter"
+          class="grid grid-cols-12 gap-4 mb-10 mx-auto slide-enter"
           :style="'--enter-stage:' + ((releases.length + index) * 3) + ';'"
         >
           <div class="col-span-2">
@@ -176,6 +176,20 @@ definePageMeta({
               >{{ formatTimeAgo(new Date(item.created_at)) }}</time>
             </div>
           </div>
+        </div>
+
+        <div class="mt-24 mx-auto text-md text-center slide-enter">
+          <span class="opacity-70 text-sm">This page was inspired by:</span> <br>
+          <a
+            href="https://github.com/antfu/releases.antfu.me"
+            target="_blank"
+            class="hover:underline"
+          ><span class="opacity-70">Anthony Fu's</span> releases.antfu.me</a><br>
+          <a
+            href="https://github.com/atinux/my-pull-requests/"
+            target="_blank"
+            class="hover:underline"
+          ><span class="opacity-70">Sébastien Chopin's</span> my-pull-requests</a>
         </div>
       </UPageBody>
     </UPage>
