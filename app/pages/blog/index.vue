@@ -68,7 +68,7 @@ definePageMeta({
             </div>
           </template>
           <template #image>
-            <LazyImage
+            <TheLazyImage
               v-if="post.image?.src"
               :src="post.image.src"
               :alt="post.image?.alt ? post.image?.alt : post.title"

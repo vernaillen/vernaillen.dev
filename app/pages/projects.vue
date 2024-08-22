@@ -50,7 +50,7 @@ definePageMeta({
               </div>
             </template>
             <template #image>
-              <LazyImage
+              <TheLazyImage
                 :src="project.image?.src"
                 :alt="project.image?.alt"
                 :width="384"

@@ -64,7 +64,7 @@ definePageMeta({
           target="_blank"
           :aria-label="section.title"
         >
-          <LazyImage
+          <TheLazyImage
             v-if="section.image"
             :src="section.image"
             :url="section.url"
@@ -74,7 +74,7 @@ definePageMeta({
             show-ring
           />
         </NuxtLink>
-        <LazyImage
+        <TheLazyImage
           v-else
           :src="section.image"
           :url="section.url"

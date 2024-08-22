@@ -16,7 +16,7 @@ defineProps<{
     <div
       class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
     >
-      <LazyImage
+      <TheLazyImage
         v-if="careerStep.imageUrl"
         :src="careerStep.imageUrl"
         :alt="careerStep.project"

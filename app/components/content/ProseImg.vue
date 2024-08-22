@@ -20,7 +20,7 @@ const refinedSrc = computed(() => {
 </script>
 
 <template>
-  <LazyImage
+  <TheLazyImage
     v-bind="$attrs"
     :src="refinedSrc"
     :alt
