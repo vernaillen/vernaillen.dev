@@ -128,7 +128,8 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/**': { prerender: true },
-    '/api/search.json': { prerender: true }
+    '/api/search.json': { prerender: true },
+    '/releases': { redirect: { to: '/releases-prs', statusCode: 301 } }
   },
 
   nitro: {
