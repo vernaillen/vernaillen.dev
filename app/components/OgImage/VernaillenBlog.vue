@@ -37,30 +37,16 @@ defineProps<{
         </svg>
       </div>
     </div>
-    <div
-      v-if="img"
-      class="w-[1200px] h-[250px]"
-    >
-      <img
-        :src="img"
-        :width="1200"
-        :height="250"
-        class="object-cover"
-      >
-    </div>
-    <div class="relative mx-24 mt-6">
-      <h1 class="text-6xl my-20 text-white">
+    <div class="relative mx-24">
+      <h1 class="text-5xl w-full mt-20 text-white">
         {{ title }}
       </h1>
-      <h2
-        v-if="subTitle"
-        class="text-3xl my-8 text-[#9c8e1b]"
-      >
-        {{ subTitle }}
-      </h2>
-      <h3 class="text-4xl text-gray-200 font-light">
+      <h3 class="text-2xl w-full my-10 text-gray-200 font-light">
         {{ description }}
       </h3>
+      <h1 class="text-4xl w-full text-right items-end justify-end flex my-20 text-gray-100">
+        by Wouter Vernailen
+      </h1>
     </div>
   </div>
   <div class="flex absolute top-0 right-0 z-[-1] overflow-hidden">
