@@ -23,6 +23,9 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4
   },
+  experimental: {
+    buildCache: true
+  },
 
   runtimeConfig: {
     public: {
@@ -145,5 +148,5 @@ export default defineNuxtConfig({
     enabled: true
   },
 
-  compatibilityDate: '2024-07-05'
+  compatibilityDate: '2024-09-12'
 })

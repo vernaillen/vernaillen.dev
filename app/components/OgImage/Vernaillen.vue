@@ -48,17 +48,17 @@ defineProps<{
         class="object-cover"
       >
     </div>
-    <div class="relative mx-24 mt-6">
-      <h1 class="text-6xl my-20 text-white">
+    <div class="relative mx-24">
+      <h1 class="text-6xl w-full my-20 text-white">
         {{ title }}
       </h1>
       <h2
         v-if="subTitle"
-        class="text-3xl my-8 text-[#9c8e1b]"
+        class="text-3xl w-full my-8 text-[#9c8e1b]"
       >
         {{ subTitle }}
       </h2>
-      <h3 class="text-4xl text-gray-200 font-light">
+      <h3 class="text-4xl w-full text-gray-200 font-light">
         {{ description }}
       </h3>
     </div>
