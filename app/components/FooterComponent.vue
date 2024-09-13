@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { CommitResponse } from '~/types/github'
+
 const config = useRuntimeConfig()
 
 const links = [{
@@ -40,6 +42,11 @@ const links = [{
     }
   ]
 }]
+
+const apiUrl = computed(() => 'https://api.github.com/repos/vernaillen/vernaillen.dev/commits')
+const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () =>
+  $fetch(apiUrl.value)
+)
 </script>
 
 <template>
@@ -60,7 +67,7 @@ const links = [{
       </p>
     </template>
     <template #center>
-      <p class="text-sm">
+      <p class="text-sm text-center">
         built with <UIcon
           name="i-mdi-heart"
           class="bg-red-500 -mb-[2px] mx-1"
@@ -74,6 +81,27 @@ const links = [{
             name="i-logos-nuxt-icon"
           /> Nuxt {{ config.public.nuxtVersion }}
         </NuxtLink>
+        <br><br>
+        <span
+          v-if="commits"
+          class="text-xs text-gray-500 dark:text-gray-400"
+        >
+          last updated on <NuxtLink
+            :href="commits[0].html_url"
+            target="_blank"
+          >
+            <NuxtTime
+              :datetime="commits[0].commit.committer.date"
+              month="short"
+              day="numeric"
+              year="numeric"
+              locale="en-GB"
+            /> <UIcon
+              name="i-mdi-github"
+              class="-mb-[2px]"
+            />
+          </NuxtLink>
+        </span>
       </p>
     </template>
 
