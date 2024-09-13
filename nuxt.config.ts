@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/fonts',
-    '@nuxt/scripts',
+    '@nuxtjs/plausible',
     '@nuxthq/studio',
     '@nuxtjs/sitemap',
     '@vueuse/nuxt',
@@ -105,6 +105,10 @@ export default defineNuxtConfig({
     routerOptions: false
   },
 
+  plausible: {
+    apiHost: 'https://vernaillen.dev/plio'
+  },
+
   router: {
     options: {
       scrollBehaviorType: 'smooth'
@@ -125,20 +129,12 @@ export default defineNuxtConfig({
     sources: ['/api/sitemap']
   },
 
-  $production: {
-    scripts: {
-      registry: {
-        plausibleAnalytics: {
-          domain: 'vernaillen.dev'
-        }
-      }
-    }
-  },
-
   routeRules: {
     '/**': { prerender: true },
     '/api/search.json': { prerender: true },
-    '/releases': { redirect: { to: '/releases-prs', statusCode: 301 } }
+    '/releases': { redirect: { to: '/releases-prs', statusCode: 301 } },
+    '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
+    '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
   },
 
   nitro: {
