@@ -39,7 +39,6 @@
     "@iconify/utils": "^2.1.32",
     "@nuxt/eslint": "^0.5.7",
     "@nuxthq/studio": "^2.1.0",
-    "@nuxtjs/plausible": "^1.0.1",
     "@nuxtjs/sitemap": "6.0.1",
     "nuxt-og-image": "3.0.2",
     "nuxt-svgo": "^4.0.5",
@@ -48,6 +47,6 @@
     "vue-tsc": "^2.1.6"
   },
   "engines": {
-    "pnpm": "^9.3.0"
+    "pnpm": "^9.10.0"
   }
 }
