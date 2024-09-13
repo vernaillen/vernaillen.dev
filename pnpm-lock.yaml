@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  shiki: ^1.17.5
+
 importers:
 
   .:
@@ -1553,9 +1556,6 @@ packages:
   '@sentry/utils@6.19.7':
     resolution: {integrity: sha512-z95ECmE3i9pbWoXQrD/7PgkBAzJYR+iXtPuTkpBjDKs86O3mT+PXOT3BAn79w2wkn7/i3vOGD2xVr1uiMl26dA==}
     engines: {node: '>=6'}
-
-  '@shikijs/core@1.16.2':
-    resolution: {integrity: sha512-XSVH5OZCvE4WLMgdoBqfPMYmGHGmCC3OgZhw0S7KcSi2XKZ+5oHGe71GFnTljgdOxvxx5WrRks6QoTLKrl1eAA==}
 
   '@shikijs/core@1.17.5':
     resolution: {integrity: sha512-JDgFZbJvfZ1g0lRVHtPTv6n2MwWnbTSGwncL/Qmlg7BZBzHCcDY2CxYGkNUm7k+lljOrFzXFGh38s8CRRZH+TQ==}
@@ -3114,8 +3114,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.5.21:
-    resolution: {integrity: sha512-+rBAerCpQvFSPyAO677i5gJuWGO2WFsoujENdcMzsrpP7Ebcc3pmpERgU8CV4fFF10a5haP4ivnFQ/AmLICBVg==}
+  electron-to-chromium@1.5.22:
+    resolution: {integrity: sha512-tKYm5YHPU1djz0O+CGJ+oJIvimtsCcwR2Z9w7Skh08lUdyzXY5djods3q+z2JkWdb7tCcmM//eVavSRAiaPRNg==}
 
   emoji-regex@10.4.0:
     resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
@@ -5528,9 +5528,6 @@ packages:
   shell-quote@1.8.1:
     resolution: {integrity: sha512-6j1W9l1iAs/4xYBI1SYOVZyFcCis9b4KCLQ8fgAGG07QvzaRLVVRQvAy85yNmmZSjYjg4MWh4gNvlPujU/5LpA==}
 
-  shiki@1.16.2:
-    resolution: {integrity: sha512-gSym0hZf5a1U0iDPsdoOAZbvoi+e0c6c3NKAi03FoSLTm7oG20tum29+gk0wzzivOasn3loxfGUPT+jZXIUbWg==}
-
   shiki@1.17.5:
     resolution: {integrity: sha512-8i4+fbTlnJPUYkgBEZ92QKmK3Gr23n2YVwqwyz0e+VmXqKpJZuV6P/CY00gSGHDXXjXT5l0BLwsMfO2Pe52TLQ==}
 
@@ -7878,7 +7875,7 @@ snapshots:
       pathe: 1.1.2
       pkg-types: 1.2.0
       semver: 7.6.3
-      shiki: 1.16.2
+      shiki: 1.17.5
       sirv: 2.0.4
       std-env: 3.7.0
       third-party-capital: 2.3.0
@@ -8674,11 +8671,6 @@ snapshots:
     dependencies:
       '@sentry/types': 6.19.7
       tslib: 1.14.1
-
-  '@shikijs/core@1.16.2':
-    dependencies:
-      '@shikijs/vscode-textmate': 9.2.2
-      '@types/hast': 3.0.4
 
   '@shikijs/core@1.17.5':
     dependencies:
@@ -10013,7 +10005,7 @@ snapshots:
   browserslist@4.23.3:
     dependencies:
       caniuse-lite: 1.0.30001660
-      electron-to-chromium: 1.5.21
+      electron-to-chromium: 1.5.22
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
@@ -10625,7 +10617,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.21: {}
+  electron-to-chromium@1.5.22: {}
 
   emoji-regex@10.4.0: {}
 
@@ -13931,12 +13923,6 @@ snapshots:
   shebang-regex@3.0.0: {}
 
   shell-quote@1.8.1: {}
-
-  shiki@1.16.2:
-    dependencies:
-      '@shikijs/core': 1.16.2
-      '@shikijs/vscode-textmate': 9.2.2
-      '@types/hast': 3.0.4
 
   shiki@1.17.5:
     dependencies:

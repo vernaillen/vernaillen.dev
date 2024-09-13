@@ -46,6 +46,9 @@
     "vite-plugin-eslint2": "^4.4.1",
     "vue-tsc": "^2.1.6"
   },
+  "resolutions": {
+    "shiki": "^1.17.5"
+  },
   "engines": {
     "pnpm": "^9.10.0"
   }
