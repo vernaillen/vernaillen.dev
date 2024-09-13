@@ -11,8 +11,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/fonts',
+    '@nuxt/scripts',
     '@nuxthq/studio',
-    '@nuxtjs/plausible',
     '@nuxtjs/sitemap',
     '@vueuse/nuxt',
     'nuxt-og-image',
@@ -125,8 +125,14 @@ export default defineNuxtConfig({
     sources: ['/api/sitemap']
   },
 
-  plausible: {
-    apiHost: 'https://vernaillen.dev/plio'
+  $production: {
+    scripts: {
+      registry: {
+        plausibleAnalytics: {
+          domain: 'vernaillen.dev'
+        }
+      }
+    }
   },
 
   routeRules: {
