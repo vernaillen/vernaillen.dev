@@ -12,7 +12,8 @@ useSeoMeta({
 })
 defineOgImageComponent('Vernaillen', {
   title: page.value.title,
-  description: page.value.description
+  description: page.value.description,
+  author: 'Wouter Vernaillen'
 })
 definePageMeta({
   colorMode: 'dark'

@@ -49,7 +49,7 @@ defineProps<{
       </h1>
     </div>
   </div>
-  <div class="flex absolute top-0 right-0 z-[-1] overflow-hidden">
+  <div class="flex absolute top-0 right-0 overflow-hidden">
     <svg
       width="450"
       height="556"

@@ -26,10 +26,10 @@ useSeoMeta({
   description,
   ogDescription: description
 })
-defineOgImageComponent('VernaillenBlog', {
+defineOgImageComponent('Vernaillen', {
   title,
   description,
-  img: post.value.image?.src
+  author: post.value.authors[0].name
 })
 definePageMeta({
   colorMode: 'dark'

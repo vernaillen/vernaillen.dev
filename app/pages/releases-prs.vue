@@ -12,6 +12,17 @@ const { data: releases = [] } = await useFetch<ReleaseInfo[]>('/api/releases')
 const { data: contributions = [] } = await useFetch<Contributions>('/api/contributions')
 const { prs } = contributions.value
 
+useSeoMeta({
+  title: page.value.title,
+  ogTitle: page.value.title + useAppConfig().meta.titleSuffix,
+  description: page.value.description,
+  ogDescription: page.value.description
+})
+defineOgImageComponent('Vernaillen', {
+  title: page.value.title,
+  description: page.value.description,
+  author: 'Wouter Vernaillen'
+})
 definePageMeta({
   colorMode: 'dark'
 })
