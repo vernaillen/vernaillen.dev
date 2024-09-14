@@ -62,11 +62,11 @@ export default defineLazyEventHandler(() => {
         const items = await getDataAtPage(page)
         for (let index = items.length - 1; index >= 0; index--) {
           const current = items[index]!
-          const found = infos.find(item => item.id === current.id)
+          /* const found = infos.find(item => item.id === current.id)
           if (found) {
             goNextPage = false
             continue
-          }
+          } */
           infos.push(current)
         }
       } catch (error) {
