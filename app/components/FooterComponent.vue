@@ -42,11 +42,7 @@ const links = [{
     }
   ]
 }]
-
-const apiUrl = computed(() => 'https://api.github.com/repos/vernaillen/vernaillen.dev/commits')
-const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () =>
-  $fetch(apiUrl.value)
-)
+const { data: commits } = await useFetch<CommitResponse[]>('/api/commits')
 </script>
 
 <template>
@@ -83,7 +79,7 @@ const { data: commits } = useLazyAsyncData<CommitResponse[]>('commits', () =>
         </NuxtLink>
         <br><br>
         <span
-          v-if="commits"
+          v-if="commits?.length"
           class="text-xs text-gray-500 dark:text-gray-400"
         >
           last updated on <NuxtLink
