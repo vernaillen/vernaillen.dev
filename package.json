@@ -50,6 +50,7 @@
   "resolutions": {
     "shiki": "^1.17.6"
   },
+  "packageManager": "pnpm@9.10.0",
   "engines": {
     "pnpm": "^9.10.0"
   }
