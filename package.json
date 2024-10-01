@@ -44,7 +44,7 @@
     "nuxt-og-image": "3.0.2",
     "nuxt-svgo": "^4.0.6",
     "unlighthouse": "^0.13.2",
-    "vite-plugin-eslint2": "^4.4.1",
+    "vite-plugin-eslint2": "^5.0.0",
     "vue-tsc": "^2.1.6"
   },
   "resolutions": {
