@@ -48,7 +48,8 @@
     "vue-tsc": "^2.1.10"
   },
   "resolutions": {
-    "shiki": "^1.17.6"
+    "shiki": "^1.17.6",
+    "cookie": ">=0.7.0"
   },
   "packageManager": "pnpm@9.10.0",
   "engines": {
