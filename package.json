@@ -40,7 +40,7 @@
     "@nuxt/eslint": "^0.7.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/plausible": "^1.1.1",
-    "@nuxtjs/sitemap": "6.1.5",
+    "@nuxtjs/sitemap": "7.0.0",
     "nuxt-og-image": "3.0.8",
     "nuxt-svgo": "^4.0.8",
     "unlighthouse": "^0.14.0",
