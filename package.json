@@ -51,8 +51,5 @@
     "shiki": "^1.17.6",
     "cookie": ">=0.7.0"
   },
-  "packageManager": "pnpm@9.10.0",
-  "engines": {
-    "pnpm": "^9.10.0"
-  }
+  "packageManager": "bun@1.1.37"
 }

@@ -1,4 +1,2 @@
-providers = ["bun"]
-
 [phases.install]
-cmds = ["bun install"]
+cmds = ["npx bun install"]
