@@ -20,11 +20,33 @@ export default defineNuxtConfig({
     'nuxt-time'
   ],
 
-  future: {
-    compatibilityVersion: 4
+  devtools: {
+    enabled: true
   },
-  experimental: {
-    buildCache: true
+
+  css: [
+    '~/assets/css/main.css'
+  ],
+
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth'
+    }
+  },
+
+  site: {
+    name: 'Wouter Vernaillen',
+    url: 'https://vernaillen.dev/',
+    description: 'Freelance Full Stack Developer',
+    defaultLocale: 'en'
+  },
+
+  colorMode: {
+    preference: 'dark'
+  },
+
+  ui: {
+    icons: ['heroicons', 'mdi', 'ic', 'logos', 'tabler', 'twemoji', 'ph']
   },
 
   runtimeConfig: {
@@ -33,6 +55,43 @@ export default defineNuxtConfig({
     },
     githubToken: process.env.GITHUB_TOKEN,
     githubLogin: process.env.GITHUB_LOGIN
+  },
+
+  // workaround for "Cannot find module 'shiki'" error
+  build: { transpile: ['shiki'] },
+
+  routeRules: {
+    '/**': { prerender: true },
+    '/api/search.json': { prerender: true },
+    '/releases': { redirect: { to: '/releases-prs', statusCode: 301 } },
+    '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
+    '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
+  },
+
+  future: {
+    compatibilityVersion: 4
+  },
+  experimental: {
+    buildCache: true
+  },
+
+  compatibilityDate: '2024-09-12',
+
+  nitro: {
+    compressPublicAssets: {
+      brotli: true
+    }
+  },
+
+  hooks: {
+    'components:extend': (components) => {
+      const globals = components.filter(c => ['UButton', 'UIcon', 'UColorModeButton'].includes(c.pascalName))
+      globals.forEach(c => c.global = true)
+    }
+  },
+
+  anime: {
+    composables: true
   },
 
   eslint: {
@@ -48,19 +107,18 @@ export default defineNuxtConfig({
     }
   },
 
-  site: {
-    name: 'Wouter Vernaillen',
-    url: 'https://vernaillen.dev/',
-    description: 'Freelance Full Stack Developer',
-    defaultLocale: 'en'
+  fonts: {
+    defaults: {
+      preload: true,
+      weights: [400, 500, 600, 700]
+    }
   },
 
-  css: [
-    '~/assets/css/main.css'
-  ],
-
-  colorMode: {
-    preference: 'dark'
+  gsap: {
+    composables: true,
+    extraPlugins: {
+      scrollTrigger: true
+    }
   },
 
   image: {
@@ -72,47 +130,12 @@ export default defineNuxtConfig({
     }
   },
 
-  anime: {
-    composables: true
-  },
-
-  gsap: {
-    composables: true,
-    extraPlugins: {
-      scrollTrigger: true
-    }
-  },
-
-  hooks: {
-    'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton', 'UIcon', 'UColorModeButton'].includes(c.pascalName))
-      globals.forEach(c => c.global = true)
-    }
-  },
-
-  fonts: {
-    defaults: {
-      preload: true,
-      weights: [400, 500, 600, 700]
-    }
-  },
-
-  ui: {
-    icons: ['heroicons', 'mdi', 'ic', 'logos', 'tabler', 'twemoji', 'ph']
-  },
-
-  uiPro: {
-    routerOptions: false
-  },
-
   plausible: {
     apiHost: 'https://vernaillen.dev/plio'
   },
 
-  router: {
-    options: {
-      scrollBehaviorType: 'smooth'
-    }
+  sitemap: {
+    sources: ['/api/sitemap']
   },
 
   svgo: {
@@ -125,30 +148,7 @@ export default defineNuxtConfig({
     }
   },
 
-  sitemap: {
-    sources: ['/api/sitemap']
+  uiPro: {
+    routerOptions: false
   },
-
-  routeRules: {
-    '/**': { prerender: true },
-    '/api/search.json': { prerender: true },
-    '/releases': { redirect: { to: '/releases-prs', statusCode: 301 } },
-    '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
-    '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
-  },
-
-  nitro: {
-    compressPublicAssets: {
-      brotli: true
-    }
-  },
-
-  // workaround for "Cannot find module 'shiki'" error
-  build: { transpile: ['shiki'] },
-
-  devtools: {
-    enabled: true
-  },
-
-  compatibilityDate: '2024-09-12'
 })
