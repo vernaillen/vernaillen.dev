@@ -150,5 +150,5 @@ export default defineNuxtConfig({
 
   uiPro: {
     routerOptions: false
-  },
+  }
 })
