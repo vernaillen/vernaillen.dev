@@ -18,9 +18,9 @@
     "@nuxt/fonts": "^0.10.2",
     "@nuxt/image": "^1.8.1",
     "@nuxt/ui-pro": "^1.5.0",
-    "@vueuse/nuxt": "^11.2.0",
+    "@vueuse/nuxt": "^12.0.0",
     "motion": "^11.11.17",
-    "nuxt": "^3.14.159",
+    "nuxt": "^3.14.1592",
     "nuxt-time": "^1.0.2",
     "octokit": "^4.0.2",
     "vue3-lazyload": "^0.3.8"
@@ -40,8 +40,8 @@
     "@nuxt/eslint": "^0.7.0",
     "@nuxthq/studio": "^2.2.1",
     "@nuxtjs/plausible": "^1.1.1",
-    "@nuxtjs/sitemap": "6.1.5",
-    "nuxt-og-image": "3.0.8",
+    "@nuxtjs/sitemap": "7.0.0",
+    "nuxt-og-image": "4.0.0",
     "nuxt-svgo": "^4.0.8",
     "unlighthouse": "^0.14.0",
     "vite-plugin-eslint2": "^5.0.2",
@@ -51,8 +51,8 @@
     "shiki": "^1.17.6",
     "cookie": ">=0.7.0"
   },
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@9.14.3",
   "engines": {
-    "pnpm": "^9.10.0"
+    "pnpm": "^9.14.3"
   }
 }
