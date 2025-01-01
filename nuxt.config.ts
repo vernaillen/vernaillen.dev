@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/fonts',
+    '@nuxt/test-utils/module',
     '@nuxtjs/plausible',
     '@nuxthq/studio',
     '@nuxtjs/sitemap',
@@ -75,7 +76,7 @@ export default defineNuxtConfig({
     buildCache: true
   },
 
-  compatibilityDate: '2024-09-12',
+  compatibilityDate: '2025-01-01',
 
   nitro: {
     compressPublicAssets: {
