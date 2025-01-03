@@ -52,10 +52,5 @@
     "unlighthouse": "^0.14.1",
     "vite-plugin-eslint2": "^5.0.3",
     "vitest": "^2.1.8"
-  },
-  "pnpm": {
-    "overrides": {
-      "vite": "5.4.11"
-    }
   }
 }
