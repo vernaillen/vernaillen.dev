@@ -66,14 +66,25 @@ const { data: commits } = await useFetch<CommitResponse[]>('/api/commits')
       <p class="text-sm text-center">
         built with <UIcon
           name="i-mdi-heart"
-          class="bg-red-500 -mb-[2px] mx-1"
+          class="bg-red-500 mx-1"
         />
+        by <NuxtLink
+          href="https://vernaillen.dev"
+          target="_blank"
+        >
+          <UAvatar
+            src="https://avatars.githubusercontent.com/u/102268?s=40&v=4"
+            alt="Avatar"
+            size="3xs"
+            class="-mb-[20px] mx-1"
+          />
+        </NuxtLink>
         using <NuxtLink
           href="https://nuxt.com"
           target="_blank"
         >
           <UIcon
-            class="-mb-[2px] mx-1 w-4 h-3"
+            class="mx-1 w-4 h-3"
             name="i-logos-nuxt-icon"
           /> Nuxt {{ config.public.nuxtVersion }}
         </NuxtLink>
@@ -82,7 +93,7 @@ const { data: commits } = await useFetch<CommitResponse[]>('/api/commits')
           v-if="commits?.length"
           class="text-xs text-gray-500 dark:text-gray-400"
         >
-          last updated on <NuxtLink
+          website last updated on <NuxtLink
             :href="commits[0].html_url"
             target="_blank"
           >
