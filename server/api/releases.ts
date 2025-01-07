@@ -12,16 +12,15 @@ const ignoreRepos = [
 ]
 
 export default defineLazyEventHandler(() => {
-  const config = useRuntimeConfig()
   const octokit = new Octokit({
-    auth: config.githubToken
+    auth: process.env.NUXT_GITHUB_TOKEN
   })
 
   let infos: ReleaseInfo[] = []
 
   async function getDataAtPage(page = 1): Promise<ReleaseInfo[]> {
     const { data } = await octokit.request('GET /users/{username}/events', {
-      username: config.githubLogin,
+      username: process.env.NUXT_GITHUB_LOGIN || '',
       per_page: 100,
       page
     })

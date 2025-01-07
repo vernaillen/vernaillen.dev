@@ -52,9 +52,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       nuxtVersion: nuxtPkg.version
-    },
-    githubToken: process.env.NUXT_GITHUB_TOKEN,
-    githubLogin: process.env.NUXT_GITHUB_LOGIN
+    }
   },
 
   // workaround for "Cannot find module 'shiki'" error
@@ -62,6 +60,7 @@ export default defineNuxtConfig({
 
   routeRules: {
     '/**': { prerender: true },
+    '/releases-prs': { prerender: false },
     '/api/search.json': { prerender: true },
     '/releases': { redirect: { to: '/releases-prs', statusCode: 301 } },
     '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
