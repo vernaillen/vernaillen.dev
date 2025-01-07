@@ -18,15 +18,6 @@ defineOgImageComponent('Vernaillen', {
 definePageMeta({
   colorMode: 'dark'
 })
-onMounted(() => {
-  page.value?.technologies?.forEach((technology: { value: string }, index: number) => {
-    useAnime({
-      targets: '#technology-' + index + ' meter',
-      value: technology.value,
-      easing: 'spring'
-    })
-  })
-})
 </script>
 
 <template>
@@ -44,43 +35,12 @@ onMounted(() => {
             </h2>
           </template>
           <div class="space-y-2">
-            <UMeter
+            <TechnologyMeter
               v-for="(technology, index) in page?.technologies"
-              :id="'technology-' + index"
               :key="index"
-              :value="0"
-              :label="technology.label"
-              :color="technology.color"
-              :icon="technology.icon"
-              size="lg"
-              :ui="{
-                wrapper: `progress flex-row-reverse items-center slide-enter slide-enter-stage${index+2}`,
-                meter: { base: 'flex-1 text-opacity-90 dark:text-opacity-90 hover:text-opacity-100' }
-              }"
-            >
-              <template #label="{ percent, value }">
-                <slot
-                  name="label"
-                  v-bind="{ percent, value }"
-                >
-                  <div class="flex gap-2 items-center flex-shrink-0 h-6 font-semibold truncate text-sm relative">
-                    <span class="w-5">
-                      <UIcon
-                        v-if="technology.icon"
-                        :name="technology.icon"
-                        :class="technology.class ? technology.class : 'w-5 h-5'"
-                      />
-                    </span>
-                    <span
-                      class="w-20"
-                      :class="'text-'+ technology.color + '-500 text-opacity-100'"
-                    >
-                      {{ technology.label }}
-                    </span>
-                  </div>
-                </slot>
-              </template>
-            </UMeter>
+              :technology="technology"
+              :index="index"
+            />
           </div>
         </UDashboardCard>
       </UPageBody>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { animate, scroll } from 'motion'
+import { scroll } from 'motion'
+import { animate } from 'motion/mini'
 
 const progress = ref(null)
 onMounted(() => {

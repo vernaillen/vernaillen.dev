@@ -5,7 +5,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@hypernym/nuxt-gsap',
-    '@hypernym/nuxt-anime',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
@@ -89,10 +88,6 @@ export default defineNuxtConfig({
       const globals = components.filter(c => ['UButton', 'UIcon', 'UColorModeButton'].includes(c.pascalName))
       globals.forEach(c => c.global = true)
     }
-  },
-
-  anime: {
-    composables: true
   },
 
   eslint: {
