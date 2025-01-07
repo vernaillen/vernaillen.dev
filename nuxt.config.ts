@@ -53,8 +53,8 @@ export default defineNuxtConfig({
     public: {
       nuxtVersion: nuxtPkg.version
     },
-    githubToken: process.env.GITHUB_TOKEN,
-    githubLogin: process.env.GITHUB_LOGIN
+    githubToken: process.env.NUXT_GITHUB_TOKEN,
+    githubLogin: process.env.NUXT_GITHUB_LOGIN
   },
 
   // workaround for "Cannot find module 'shiki'" error
