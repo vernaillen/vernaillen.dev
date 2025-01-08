@@ -44,7 +44,7 @@
     "@nuxtjs/plausible": "^1.2.0",
     "@nuxtjs/sitemap": "7.0.1",
     "@vue/test-utils": "^2.4.6",
-    "happy-dom": "^16.2.9",
+    "happy-dom": "^16.5.2",
     "nuxt-og-image": "4.0.2",
     "nuxt-svgo": "^4.0.11",
     "playwright-core": "^1.49.1",
