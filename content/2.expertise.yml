@@ -11,7 +11,7 @@ technologies:
     class: w-5 h-4
   - label: Spring
     icon: i-logos-spring-icon
-    value: 97
+    value: 94
     color: springframework
   - label: Java
     icon: i-logos-java
