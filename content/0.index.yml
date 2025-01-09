@@ -7,7 +7,7 @@ hero:
     label: Freelance Full Stack Developer
   links:
     - label: Blog
-      to: '/blog'
+      to: /blog
       size: xl
       color: primary
       icon: i-heroicons-newspaper
@@ -19,13 +19,13 @@ hero:
       to: /projects
 sections:
   - title: Passion for Web Development
-    description: "I am proud to bring 25 years of expertise to the field of web development, from static HTML websites in the pioneering days of the internet, to innovative web portals with complex back-end integrations for governmental organisations."
+    description: With 25 years of experience, I've crafted everything from the first static HTML sites to cutting-edge web portals with seamless back-end integrations for government organizations.
     features:
       - name: Strong expertise on both Front- and Backend development.
         description: Allowing me to deliver full-stack solutions for the web.
         icon: i-tabler-stack-2-filled
       - name: Nuxt
-        description: My favourite frontend framework, which I use to build fast and responsive websites.
+        description: The frontend framework I love for building fast, responsive websites.
         icon: i-tabler-stack-forward
       - name: Api Development & Integration
         description: Lot's of experience in developing and integrating APIs with Java & Spring Framework.
@@ -37,18 +37,18 @@ sections:
         description: Setting up and maintaining CI/CD pipelines and deploying applications in the cloud.
         icon: i-tabler-infinity
     links:
-      - label: 'Expertise'
+      - label: Expertise
         variant: subtle
-        trailing-icon: 'i-heroicons-arrow-right'
-        size: 'lg'
-        to: '/expertise'
-      - label: 'Career'
-        trailing-icon: 'i-heroicons-arrow-right'
-        size: 'lg'
-        to: '/career'
+        trailing-icon: i-heroicons-arrow-right
+        size: lg
+        to: /expertise
+      - label: Career
+        trailing-icon: i-heroicons-arrow-right
+        size: lg
+        to: /career
     image: /images/index/vernaillen_a_laptop_on_the_table_of_a_tropical_co-working_space_eaa2867c-3098-421c-9bef-3a083677200c.png
     align: right
-  - title: Developing WPNuxt
+  - title: Developing the WPNuxt module
     description: A brand new Nuxt module to use WordPress as a headless CMS with a Nuxt frontend.
     id: features
     image: /images/index/wpnuxt.png
@@ -56,21 +56,21 @@ sections:
     align: left
     features:
       - name: Easy to use
-        description: Easily fetch content from WordPress using composables and render it with Nuxt 3 components. Based on standard Gutenberg blocks.
+        description: Easily fetch content from WordPress using composables and render it with Nuxt components. Based on standard Gutenberg blocks.
         icon: i-heroicons-check
       - name: Familiar backend for editors
         description: Many website owners or content editors are already familiar with the WordPress backend.
         icon: i-ic-baseline-wordpress
       - name: Cutting edge frontend
-        description: Use the full power of the modern frontend framework that is Nuxt 3, allowing you to build fast and responsive cutting-edge websites.
+        description: Use the full power of the modern frontend framework that is Nuxt, allowing you to build stunning and fast cutting-edge websites that convert.
         icon: i-logos-nuxt-icon
     links:
-      - label: 'Discover WPNuxt'
+      - label: Discover WPNuxt
         variant: subtle
-        trailing-icon: 'i-heroicons-arrow-up-right'
-        size: 'lg'
-        to: 'https://wpnuxt.com'
-        target: '_blank'
+        trailing-icon: i-heroicons-arrow-up-right
+        size: lg
+        to: https://wpnuxt.com
+        target: _blank
 features:
   title: My Values
   description: This is what I stand for
