@@ -37,9 +37,9 @@ definePageMeta({
         <Motion
           as="h1"
           class="font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl md:text-6xl"
-          :initial="{ opacity: 0, y: 0, scale: 0.8 }"
-          :animate="{ opacity: 1, y: 0, scale: 1 }"
-          :transition="{ duration: 0.5, ease: 'easeInOut' }"
+          :initial="{ opacity: 0, scale: 0.8 }"
+          :animate="{ opacity: 1, scale: 1 }"
+          :transition="{ duration: 0.6, ease: 'easeInOut' }"
         >
           {{ page.hero.title }}
         </Motion>
@@ -48,7 +48,7 @@ definePageMeta({
         <Motion
           :initial="{ opacity: 0, scale: 0.5 }"
           :animate="{ opacity: 1, scale: 1 }"
-          :transition="{ duration: 0.7, ease: 'easeInOut' }"
+          :transition="{ duration: 0.3, ease: 'easeInOut' }"
         >
           <UBadge
             v-if="page.hero.headline"

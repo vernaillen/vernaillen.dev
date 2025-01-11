@@ -72,9 +72,6 @@ export default defineAppConfig({
         headline: 'mt-0 mb-12 font-normal',
         title: 'text-3xl sm:text-5xl md:text-6xl',
         description: 'my-16 md:my-24 slide-enter slide-enter-stage5'
-      },
-      section: {
-        base: 'scaleAnimation'
       }
     },
     page: {

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Motion } from 'motion-v'
 import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 import { useGsap } from '#gsap'
 
@@ -7,16 +8,18 @@ const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { defa
 
 provide('navigation', navigation)
 
+const { scrollYProgress } = useScroll()
+const scrollYProgressInverse = ref(1)
+
+useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+  if (latest < 0.2) {
+    scrollYProgressInverse.value = 1 - (latest * 3)
+  } else {
+    scrollYProgressInverse.value = 0.4
+  }
+})
+
 onMounted(() => {
-  useGsap.to('.svg-right', {
-    scrollTrigger: {
-      trigger: '.homeLandingSection0',
-      start: 'top center',
-      toggleActions: 'play pause reverse reset'
-    },
-    opacity: 0.3,
-    duration: 1
-  })
   useGsap.to('.svg-left', {
     scrollTrigger: {
       trigger: 'main',
@@ -43,7 +46,14 @@ onMounted(() => {
 
     <FooterComponent />
     <div class="svg-right fixed top-0 right-0 left-1/2 lg:left-2/3 pl-8 sm:pl-14 z-[-1] overflow-hidden">
-      <SvgoHomeRight class="w-full h-screen" />
+      <Motion
+        :initial="{ opacity: 0 }"
+        :animate="{ opacity: 1 }"
+        :transition="{ duration: 1, ease: 'easeInOut' }"
+        :style="{ opacity: scrollYProgressInverse }"
+      >
+        <SvgoHomeRight class="w-full h-screen" />
+      </Motion>
     </div>
     <div
       class="svg-left absolute
