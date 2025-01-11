@@ -15,6 +15,7 @@ export default defineNuxtConfig({
     '@nuxthq/studio',
     '@nuxtjs/sitemap',
     '@vueuse/nuxt',
+    'motion-v/nuxt',
     'nuxt-og-image',
     'nuxt-svgo',
     'nuxt-time'

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Motion } from 'motion-v'
+
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
@@ -31,16 +33,33 @@ definePageMeta({
       :description="page.hero.description"
       :links="page.hero.links"
     >
-      <template #headline>
-        <UBadge
-          v-if="page.hero.headline"
-          id="hero-badge"
-          variant="subtle"
-          size="lg"
-          class="relative rounded-lg font-semibold slide-enter slide-enter-stage8"
+      <template #title>
+        <Motion
+          as="h1"
+          class="font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl md:text-6xl"
+          :initial="{ opacity: 0, y: 0, scale: 0.8 }"
+          :animate="{ opacity: 1, y: 0, scale: 1 }"
+          :transition="{ duration: 0.5, ease: 'easeInOut' }"
         >
-          {{ page.hero.headline.label }}
-        </UBadge>
+          {{ page.hero.title }}
+        </Motion>
+      </template>
+      <template #headline>
+        <Motion
+          :initial="{ opacity: 0, scale: 0.5 }"
+          :animate="{ opacity: 1, scale: 1 }"
+          :transition="{ duration: 0.7, ease: 'easeInOut' }"
+        >
+          <UBadge
+            v-if="page.hero.headline"
+            id="hero-badge"
+            variant="subtle"
+            size="lg"
+            class="relative rounded-lg font-semibold slide-enter slide-enter-stage8"
+          >
+            {{ page.hero.headline.label }}
+          </UBadge>
+        </Motion>
       </template>
     </ULandingHero>
 
