@@ -23,7 +23,7 @@
     "@vueuse/nuxt": "^12.4.0",
     "motion": "^11.17.0",
     "motion-v": "^0.6.1",
-    "nuxt": "3.15.1",
+    "nuxt": "3.15.2",
     "nuxt-time": "^1.0.3",
     "octokit": "^4.1.0",
     "vue3-lazyload": "^0.3.8"
