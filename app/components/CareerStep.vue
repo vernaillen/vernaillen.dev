@@ -1,110 +1,122 @@
 <script setup lang="ts">
+import { useInView, Motion } from 'motion-v'
 import type { CareerStep } from '~~/types'
 
 defineProps<{
   careerStep: CareerStep
   index: number
 }>()
+
+const scope = ref<HTMLElement | null>(null)
+const isInView = useInView(scope as Ref<Element | Element>)
 </script>
 
 <template>
-  <div
-    :id="careerStep.id"
-    class="flex flex-start items-center prose pt-28 -mt-28 slide-enter"
-    :style="'--enter-stage:' + index + ';--enter-step:10ms;'"
+  <Motion
+    as="div"
+    :initial="{ opacity: 0, x: 0, y: 0, scale: 0.9 }"
+    :animate="{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 10, scale: isInView ? 1 : 0.9 }"
+    :transition="{ duration: 0.5 }"
   >
     <div
-      class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
-    >
-      <TheLazyImage
-        v-if="careerStep.imageUrl"
-        :src="careerStep.imageUrl"
-        :alt="careerStep.project"
-        format="webp"
-        :width="34"
-        :height="34"
-        class="rounded-full"
-      />
-    </div>
-    <h2 class="text-gray-800 text-2xl dark:text-white font-semibold -mt-2">
-      {{ careerStep.text }}
-    </h2>
-  </div>
-  <div
-    class="border-l-2 border-primary mt-2 slide-enter"
-    :style="'--enter-stage:' + (index + 2) + ';--enter-step:10ms;'"
-  >
-    <div
-      class="ml-6 mb-4 pb-4 font-medium text-base text-body-color"
+      :id="careerStep.id"
+      ref="scope"
+      class="flex flex-start items-center prose pt-28 -mt-28 slide-enter"
+      :style="'--enter-stage:' + index + ';--enter-step:10ms;'"
     >
       <div
-        class="ml-1 mb-2 text-primary text-sm slide-enter"
-        :style="'--enter-stage:' + (index + 2) + ';--enter-step:10ms;'"
+        class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
       >
-        {{ careerStep.date }}
+        <TheLazyImage
+          v-if="careerStep.imageUrl"
+          :src="careerStep.imageUrl"
+          :alt="careerStep.project"
+          format="webp"
+          :width="34"
+          :height="34"
+          class="rounded-full"
+        />
       </div>
+      <h2 class="text-gray-800 text-2xl dark:text-white font-semibold -mt-2">
+        {{ careerStep.text }}
+      </h2>
+    </div>
+    <div
+      class="border-l-2 border-primary slide-enter"
+      :style="'--enter-stage:' + (index + 2) + ';--enter-step:10ms;'"
+    >
       <div
-        class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
-        :style="'--enter-stage:' + (index + 3) + ';--enter-step:10ms;'"
+        class="ml-6 mb-6 pt-2 pb-2 font-medium text-base text-body-color"
       >
-        <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
-          project:
+        <div
+          class="ml-1 mb-2 text-primary text-sm slide-enter"
+          :style="'--enter-stage:' + (index + 2) + ';--enter-step:10ms;'"
+        >
+          {{ careerStep.date }}
         </div>
         <div
-          class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
+          class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+          :style="'--enter-stage:' + (index + 3) + ';--enter-step:10ms;'"
         >
-          <NuxtLink
-            v-if="careerStep.projectUrl"
-            :href="careerStep.projectUrl"
-            target="_blank"
-            class="text-primary-500"
+          <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
+            project:
+          </div>
+          <div
+            class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
           >
-            {{ careerStep.project }}
-          </NuxtLink>
-          <span v-else>{{ careerStep.project }}</span>
-        </div>
-      </div>
-      <div
-        class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
-        :style="'--enter-stage:' + (index + 4) + ';--enter-step:10ms;'"
-      >
-        <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
-          role:
-        </div>
-        <div
-          class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
-        >
-          {{ careerStep.role }}
-        </div>
-      </div>
-      <div
-        class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
-        :style="'--enter-stage:' + (index + 5) + ';--enter-step:10ms;'"
-      >
-        <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
-          stack:
+            <NuxtLink
+              v-if="careerStep.projectUrl"
+              :href="careerStep.projectUrl"
+              target="_blank"
+              class="text-primary-500"
+            >
+              {{ careerStep.project }}
+            </NuxtLink>
+            <span v-else>{{ careerStep.project }}</span>
+          </div>
         </div>
         <div
-          class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
+          class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+          :style="'--enter-stage:' + (index + 4) + ';--enter-step:10ms;'"
         >
-          {{ careerStep.stack }}
-        </div>
-      </div>
-      <div
-        class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
-        :style="'--enter-stage:' + (index + 6) + ';--enter-step:10ms;'"
-      >
-        <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
-          contract:
+          <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
+            role:
+          </div>
+          <div
+            class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
+          >
+            {{ careerStep.role }}
+          </div>
         </div>
         <div
-          class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
+          class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+          :style="'--enter-stage:' + (index + 5) + ';--enter-step:10ms;'"
         >
-          {{ careerStep.contract }}
+          <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
+            stack:
+          </div>
+          <div
+            class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
+          >
+            {{ careerStep.stack }}
+          </div>
+        </div>
+        <div
+          class="ml-2 mt-1 mb-1 flex flex-wrap slide-enter"
+          :style="'--enter-stage:' + (index + 6) + ';--enter-step:10ms;'"
+        >
+          <div class="w-full sm:w-1/5 md:w-1/6 xl:w-1/12">
+            contract:
+          </div>
+          <div
+            class="w-full ml-6 sm:ml-0 sm:w-4/5 md:w-5/6 xl:w-11/12"
+          >
+            {{ careerStep.contract }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </Motion>
 </template>
 
 <style scoped>
