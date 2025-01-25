@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Motion } from 'motion-v'
+import { useInView, Motion } from 'motion-v'
 
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 if (!page.value) {
@@ -21,6 +21,11 @@ definePageMeta({
   layout: 'home',
   colorMode: 'dark'
 })
+
+const homeLandingSection3 = ref<HTMLElement | null>(null)
+const section3InView = useInView(homeLandingSection3 as Ref<Element | Element>)
+const homeLandingSection4 = ref<HTMLElement | null>(null)
+const section4InView = useInView(homeLandingSection4 as Ref<Element | Element>)
 </script>
 
 <template>
@@ -63,116 +68,100 @@ definePageMeta({
       </template>
     </ULandingHero>
 
-    <ULandingSection
+    <HomeSection
       v-for="(section, index) in page.sections"
       :key="index"
-      :title="section.title"
-      :description="section.description"
-      :links="section.links"
-      :align="section.align"
-      :features="section.features"
-      :ui="{
-        wrapper: `homeLandingSection${index}`,
-        container: 'lg:items-start'
-      }"
-    >
-      <div class="scaleAnimation h-full">
-        <NuxtLink
-          v-if="section.url"
-          :to="section.url"
-          target="_blank"
-          :aria-label="section.title"
-        >
-          <TheLazyImage
-            v-if="section.image"
-            :src="section.image"
-            :url="section.url"
-            :alt="section.title"
-            :width="558"
-            :height="352"
-            show-ring
-          />
-        </NuxtLink>
-        <TheLazyImage
-          v-else
-          :src="section.image"
-          :url="section.url"
-          :alt="section.title"
-          :width="558"
-          :height="352"
-          show-ring
-        />
-      </div>
-    </ULandingSection>
+      :section="section"
+    />
 
-    <ULandingSection
-      :title="page.features.title"
-      :description="page.features.description"
-    >
-      <UPageGrid
-        :ui="{
-          wrapper: 'scaleAnimation'
+    <div ref="homeLandingSection3">
+      <Motion
+        ref="homeLandingSection3"
+        as="div"
+        class="h-full"
+        :initial="{ opacity: 0.5, y: 100, scale: 0.8 }"
+        :animate="{
+          opacity: section3InView ? 1 : 0.5,
+          y: section3InView ? 0 : 100,
+          scale: section3InView ? 1 : 0.8
         }"
+        :transition="{ duration: 1 }"
       >
-        <ULandingCard
-          v-for="(item, index) in page.features.items"
-          :key="index"
-          v-bind="item"
-        />
-      </UPageGrid>
-    </ULandingSection>
-
-    <ULandingSection
-      :headline="page.testimonials.headline"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-    >
-      <UPageColumns
-        :ui="{
-          wrapper: 'scaleAnimation'
-        }"
-      >
-        <div
-          v-for="(testimonial, index) in page.testimonials.items"
-          :key="index"
-          class="break-inside-avoid"
+        <ULandingSection
+          :title="page.features.title"
+          :description="page.features.description"
         >
-          <UCard>
-            <p class="text-gray-600 dark:text-gray-300">
-              "{{ testimonial.quote }}"
-            </p>
+          <UPageGrid>
+            <ULandingCard
+              v-for="(item, index) in page.features.items"
+              :key="index"
+              v-bind="item"
+            />
+          </UPageGrid>
+        </ULandingSection>
+      </Motion>
+    </div>
+
+    <div ref="homeLandingSection4">
+      <Motion
+        as="div"
+        :initial="{ opacity: 0.5, y: 100, scale: 0.8 }"
+        :animate="{
+          opacity: section4InView ? 1 : 0.5,
+          y: section4InView ? 0 : 100,
+          scale: section4InView ? 1 : 0.8
+        }"
+        :transition="{ duration: 1 }"
+      >
+        <ULandingSection
+          :headline="page.testimonials.headline"
+          :title="page.testimonials.title"
+          :description="page.testimonials.description"
+        >
+          <UPageColumns>
             <div
-              v-if="testimonial.author"
-              class="flex items-center gap-3 mt-6 relative"
+              v-for="(testimonial, index) in page.testimonials.items"
+              :key="index"
+              class="break-inside-avoid"
             >
-              <NuxtImg
-                v-if="testimonial.author.avatar"
-                :src="testimonial.author.avatar.src"
-                :alt="'Avatar of ' + testimonial.author.name"
-                size="md"
-                width="40"
-                height="40"
-                class="rounded-full"
-                loading="lazy"
-              />
-              <div>
-                <p
-                  v-if="testimonial.author.name"
-                  class="font-semibold text-gray-900 dark:text-white text-sm"
-                >
-                  {{ testimonial.author.name }}
+              <UCard>
+                <p class="text-gray-600 dark:text-gray-300">
+                  "{{ testimonial.quote }}"
                 </p>
-                <p
-                  v-if="testimonial.author.description"
-                  class="text-gray-500 dark:text-gray-400 text-sm"
+                <div
+                  v-if="testimonial.author"
+                  class="flex items-center gap-3 mt-6 relative"
                 >
-                  {{ testimonial.author.description }}
-                </p>
-              </div>
+                  <NuxtImg
+                    v-if="testimonial.author.avatar"
+                    :src="testimonial.author.avatar.src"
+                    :alt="'Avatar of ' + testimonial.author.name"
+                    size="md"
+                    width="40"
+                    height="40"
+                    class="rounded-full"
+                    loading="lazy"
+                  />
+                  <div>
+                    <p
+                      v-if="testimonial.author.name"
+                      class="font-semibold text-gray-900 dark:text-white text-sm"
+                    >
+                      {{ testimonial.author.name }}
+                    </p>
+                    <p
+                      v-if="testimonial.author.description"
+                      class="text-gray-500 dark:text-gray-400 text-sm"
+                    >
+                      {{ testimonial.author.description }}
+                    </p>
+                  </div>
+                </div>
+              </UCard>
             </div>
-          </UCard>
-        </div>
-      </UPageColumns>
-    </ULandingSection>
+          </UPageColumns>
+        </ULandingSection>
+      </Motion>
+    </div>
   </div>
 </template>
