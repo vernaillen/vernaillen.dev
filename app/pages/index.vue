@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Motion, useInView, useScroll, useAnimate } from 'motion-v'
+import { Motion, useInView, useScroll } from 'motion-v'
 
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 if (!page.value) {
