@@ -32,10 +32,10 @@ const sectionInView = useInView(homeLandingSection as Ref<Element | Element>)
     <Motion
       as="div"
       class="h-full"
-      :initial="{ opacity: 0.5, y: 100, scale: 0.8 }"
+      :initial="{ opacity: 0.5, y: 200, scale: 0.8 }"
       :animate="{
         opacity: sectionInView ? 1 : 0.5,
-        y: sectionInView ? 0 : 100,
+        y: sectionInView ? 0 : 200,
         scale: sectionInView ? 1 : 0.8
       }"
       :transition="{ duration: 1 }"

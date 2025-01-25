@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Motion, useInView, useScroll } from 'motion-v'
+import { Motion, useInView, useScroll, useAnimate } from 'motion-v'
 
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 if (!page.value) {
@@ -30,6 +30,17 @@ const homeLandingSection3 = ref<HTMLElement | null>(null)
 const section3InView = useInView(homeLandingSection3 as Ref<Element | Element>)
 const homeLandingSection4 = ref<HTMLElement | null>(null)
 const section4InView = useInView(homeLandingSection4 as Ref<Element | Element>)
+
+const getRandomTransformOrigin = () => {
+  const value = (16 + 40 * Math.random()) / 100
+  const value2 = (15 + 36 * Math.random()) / 100
+  return {
+    originX: value,
+    originY: value2
+  }
+}
+const getRandomDelay = () => -(Math.random() * 0.7 + 0.05)
+const randomDuration = () => Math.random() * 0.07 + 0.23
 </script>
 
 <template>
@@ -40,7 +51,6 @@ const section4InView = useInView(homeLandingSection4 as Ref<Element | Element>)
     <ULandingHero
       :title="page.hero.title"
       :description="page.hero.description"
-      :links="page.hero.links"
     >
       <template #title>
         <Motion
@@ -70,9 +80,30 @@ const section4InView = useInView(homeLandingSection4 as Ref<Element | Element>)
           </UBadge>
         </Motion>
       </template>
+      <template #links>
+        <Motion
+          v-for="(link, index) in page.hero.links"
+          :key="index"
+          as="div"
+          :animate="{
+            rotate: index % 2 === 0 ? [-1, 1.3, 0] : [1, -1.4, 0],
+            transition: {
+              delay: getRandomDelay(),
+              duration: randomDuration(),
+              repeat: 5
+            }
+          }"
+          :style="getRandomTransformOrigin()"
+        >
+          <UButton
+            v-bind="link"
+            @click="link.click"
+          />
+        </Motion>
+      </template>
     </ULandingHero>
 
-    <div class="mt-32">
+    <div class="mt-40">
       <HomeSection
         v-for="(section, index) in page.sections"
         :key="index"
@@ -85,10 +116,10 @@ const section4InView = useInView(homeLandingSection4 as Ref<Element | Element>)
         ref="homeLandingSection3"
         as="div"
         class="h-full"
-        :initial="{ opacity: 0.5, y: 100, scale: 0.8 }"
+        :initial="{ opacity: 0.5, y: 200, scale: 0.8 }"
         :animate="{
           opacity: section3InView ? 1 : 0.5,
-          y: section3InView ? 0 : 100,
+          y: section3InView ? 0 : 200,
           scale: section3InView ? 1 : 0.8
         }"
         :transition="{ duration: 1 }"
@@ -111,10 +142,10 @@ const section4InView = useInView(homeLandingSection4 as Ref<Element | Element>)
     <div ref="homeLandingSection4">
       <Motion
         as="div"
-        :initial="{ opacity: 0.5, y: 100, scale: 0.8 }"
+        :initial="{ opacity: 0.5, y: 200, scale: 0.8 }"
         :animate="{
           opacity: section4InView ? 1 : 0.5,
-          y: section4InView ? 0 : 100,
+          y: section4InView ? 0 : 200,
           scale: section4InView ? 1 : 0.8
         }"
         :transition="{ duration: 1 }"
