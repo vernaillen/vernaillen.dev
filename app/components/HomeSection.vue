@@ -28,9 +28,8 @@ const sectionInView = useInView(homeLandingSection as Ref<Element | Element>)
 </script>
 
 <template>
-  <div ref="homeLandingSection">
+  <div>
     <Motion
-      ref="homeLandingSection"
       as="div"
       class="h-full"
       :initial="{ opacity: 0.5, y: 100, scale: 0.8 }"
@@ -51,7 +50,10 @@ const sectionInView = useInView(homeLandingSection as Ref<Element | Element>)
           container: 'lg:items-start'
         }"
       >
-        <div class="h-full">
+        <div
+          ref="homeLandingSection"
+          class="h-full"
+        >
           <NuxtLink
             v-if="section.url"
             :to="section.url"

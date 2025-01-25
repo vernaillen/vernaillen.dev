@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useInView, Motion } from 'motion-v'
+import { Motion, useInView, useScroll } from 'motion-v'
 
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 if (!page.value) {
@@ -22,6 +22,10 @@ definePageMeta({
   colorMode: 'dark'
 })
 
+const { scrollY } = useScroll()
+useMotionValueEvent(scrollY, 'change', (latest) => {
+  console.log('Page scroll: ', latest)
+})
 const homeLandingSection3 = ref<HTMLElement | null>(null)
 const section3InView = useInView(homeLandingSection3 as Ref<Element | Element>)
 const homeLandingSection4 = ref<HTMLElement | null>(null)
@@ -68,11 +72,13 @@ const section4InView = useInView(homeLandingSection4 as Ref<Element | Element>)
       </template>
     </ULandingHero>
 
-    <HomeSection
-      v-for="(section, index) in page.sections"
-      :key="index"
-      :section="section"
-    />
+    <div class="mt-20">
+      <HomeSection
+        v-for="(section, index) in page.sections"
+        :key="index"
+        :section="section"
+      />
+    </div>
 
     <div ref="homeLandingSection3">
       <Motion
