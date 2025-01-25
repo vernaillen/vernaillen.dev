@@ -28,7 +28,7 @@ const sectionInView = useInView(homeLandingSection as Ref<Element | Element>)
 </script>
 
 <template>
-  <div>
+  <div ref="homeLandingSection">
     <Motion
       as="div"
       class="h-full"
@@ -47,11 +47,11 @@ const sectionInView = useInView(homeLandingSection as Ref<Element | Element>)
         :align="section.align"
         :features="section.features"
         :ui="{
+          wrapper: 'lg:items-start',
           container: 'lg:items-start'
         }"
       >
         <div
-          ref="homeLandingSection"
           class="h-full"
         >
           <NuxtLink

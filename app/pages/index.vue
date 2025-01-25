@@ -72,7 +72,7 @@ const section4InView = useInView(homeLandingSection4 as Ref<Element | Element>)
       </template>
     </ULandingHero>
 
-    <div class="mt-20">
+    <div class="mt-32">
       <HomeSection
         v-for="(section, index) in page.sections"
         :key="index"
