@@ -14,8 +14,8 @@ const isInView = useInView(scope as Ref<Element | Element>)
 <template>
   <Motion
     as="div"
-    :initial="{ opacity: 0, x: 0, y: 0, scale: 0.9 }"
-    :animate="{ opacity: isInView ? 1 : 0.5, x: isInView ? 0 : -40, y: isInView ? 0 : 20, scale: isInView ? 1 : 0.9 }"
+    :initial="{ opacity: 0, x: 0, y: 0 }"
+    :animate="{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 2, y: isInView ? 0 : 30 }"
     :transition="{ duration: 0.5 }"
   >
     <div
