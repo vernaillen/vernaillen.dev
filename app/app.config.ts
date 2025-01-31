@@ -85,9 +85,7 @@ export default defineAppConfig({
     header: {
       logo: 'absolute top-0',
       links: {
-        base: 'border-t-[3px] h-16 px-1',
-        inactive: 'border-transparent',
-        active: 'border-vernaillen-500'
+        base: 'h-16 px-1'
       }
     },
     aside: {

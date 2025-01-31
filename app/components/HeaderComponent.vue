@@ -17,6 +17,12 @@ const links = [
       />
     </template>
 
+    <template #center>
+      <MotionHeaderLinks
+        :links="links"
+        class="hidden lg:flex"
+      />
+    </template>
     <template #right>
       <UColorModeButton
         size="xs"
