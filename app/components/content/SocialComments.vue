@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <div
-    v-if="page.mastodonPost || page.twitterPost"
+    v-if="page.social"
     class="w-full pt-3 !text-sm !text-gray-400 dark:!text-gray-400 prose dark:prose-invert"
   >
     <UIcon
@@ -16,20 +16,15 @@ defineProps<{
       class="comments-icon w-4 h-4 -mb-[3px] mr-1"
     />
     comment on
-    <NuxtLink
-      v-if="page.mastodonPost"
-      :href="page.mastodonPost"
+    <UButton
+      v-for="social, index in page.social"
+      :key="index"
+      :to="social.url"
+      :icon="social.icon"
+      variant="outline"
+      size="xs"
       target="_blank"
-    >
-      mastodon
-    </NuxtLink>
-    <span v-if="page.mastodonPost && page.twitterPost"> or </span>
-    <NuxtLink
-      v-if="page.twitterPost"
-      :href="page.twitterPost"
-      target="_blank"
-    >
-      twitter
-    </NuxtLink>
+      class="mr-1 ring-primary-500/20"
+    />
   </div>
 </template>

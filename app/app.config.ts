@@ -35,10 +35,12 @@ export default defineAppConfig({
     gray: 'neutral',
     variables: {
       light: {
-        background: '255 255 255'
+        background: '255 255 255',
+        foreground: 'var(--color-gray-700)'
       },
       dark: {
-        background: '12 12 13'
+        background: '12 12 13',
+        foreground: 'var(--color-gray-200)'
       }
     },
     button: {

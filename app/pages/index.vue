@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Motion, useInView } from 'motion-v'
 
-const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
+const { data: page } = await useAsyncData('index', () => queryCollection('pages').path('/').first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }

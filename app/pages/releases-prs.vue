@@ -3,7 +3,7 @@ import { formatTimeAgo } from '@vueuse/core'
 import { useFetch } from 'nuxt/app'
 import type { ReleaseInfo, Contributions } from '../../types'
 
-const { data: page } = await useAsyncData('releases-prs', () => queryContent('/releases-prs').findOne())
+const { data: page } = await useAsyncData('releases-prs', () => queryCollection('pages').path('/releases-prs').first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }

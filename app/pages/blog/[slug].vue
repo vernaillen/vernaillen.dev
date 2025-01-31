@@ -1,24 +1,26 @@
 <script setup lang="ts">
-import { withoutTrailingSlash } from 'ufo'
-import type { BlogPost } from '~/types'
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 
 const route = useRoute()
 const img = useImage()
 
-const { data: post } = await useAsyncData(route.path, () => queryContent<BlogPost>(route.path).findOne())
+const { data: post } = await useAsyncData(route.path, () => queryCollection('blog').path(route.path).first())
 if (!post.value) {
   throw createError({ statusCode: 404, statusMessage: 'Post not found', fatal: true })
 }
 
-const { data: surround } = await useAsyncData(`${route.path}-surround`, () => queryContent('/blog')
-  .where({ _extension: 'md' })
-  .without(['body', 'excerpt'])
-  .sort({ date: -1 })
-  .findSurround(withoutTrailingSlash(route.path))
-, { default: () => [] })
-
-const title = post.value.head?.title || post.value.title
-const description = post.value.head?.description || post.value.description
+const { data: surroundData } = await useAsyncData(`${route.path}-surround`, () =>
+  queryCollectionItemSurroundings('blog', route.path)
+    .order('id', 'ASC')
+)
+const surround: Pick<ParsedContent, string>[] = surroundData.value?.map((item) => {
+  if (item) {
+    item._path = item.path as string
+  }
+  return item
+}) || []
+const title = post.value.title
+const description = post.value.description
 
 useSeoMeta({
   title,
@@ -29,7 +31,7 @@ useSeoMeta({
 defineOgImageComponent('Vernaillen', {
   title,
   description,
-  author: post.value.authors[0].name
+  author: post.value.authors[0]?.name || 'Wouter Vernaillen'
 })
 definePageMeta({
   colorMode: 'dark'
@@ -103,9 +105,9 @@ definePageMeta({
           :links="post.body.toc.links"
         >
           <template #bottom>
-            <hr v-if="post.mastodonPost || post.twitterPost">
+            <hr v-if="post.social">
             <SocialComments
-              v-if="post.mastodonPost || post.twitterPost"
+              v-if="post.social"
               :page="post"
             />
           </template>

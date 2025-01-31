@@ -25,9 +25,9 @@ export default <Partial<Config>>{
     './app/assets/svg/*.svg',
     './app/components/*.vue',
     './app/components/**/*.vue',
-    './app/content/**/*.{md,yml}',
     './app/layouts/**/*.vue',
-    './app/pages/**/*.vue'
+    './app/pages/**/*.vue',
+    './content/**/*.{md,yml}'
   ],
   theme: {
     colors: {
@@ -112,6 +112,11 @@ export default <Partial<Config>>{
       }
     }
   },
+  safelist: [
+    {
+      pattern: /(float-right|float-left|float-none|float-center|float-inline-start|float-inline-end|float-inline)/
+    }
+  ],
   plugins: [
     iconsPlugin({
       collections: {
