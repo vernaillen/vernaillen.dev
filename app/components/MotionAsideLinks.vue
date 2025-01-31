@@ -54,7 +54,7 @@ const setHoveredPath = (path: unknown) => {
 function openLink(link: AsideLink) {
   setTimeout(() => {
     router.push(link.to as string)
-  }, 100)
+  }, 300)
 }
 onMounted(() => {
   hoveredPath.value = route.path
