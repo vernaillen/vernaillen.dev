@@ -7,6 +7,7 @@ import type { AsideLink } from '#ui-pro/types'
 const router = useRouter()
 const route = useRoute()
 const appConfig = useAppConfig()
+const { isHeaderDialogOpen } = useUIState()
 
 const config = computed(() => ({
   wrapper: 'space-y-3 mb-3 lg:mb-6 -mx-1 lg:mx-0',
@@ -55,6 +56,9 @@ function openLink(link: AsideLink) {
   setTimeout(() => {
     router.push(link.to as string)
   }, 300)
+  setTimeout(() => {
+    isHeaderDialogOpen.value = false
+  }, 400)
 }
 onMounted(() => {
   hoveredPath.value = route.path
