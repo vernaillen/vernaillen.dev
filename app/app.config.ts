@@ -90,8 +90,8 @@ export default defineAppConfig({
     },
     aside: {
       links: {
-        wrapper: 'px-0 sm:px-32 md:px-48',
-        base: 'px-5 py-2 gap-1 block w-full mx-auto text-center'
+        wrapper: 'space-y-0 pt-5 sm:px-32 md:px-48',
+        base: 'px-5 py-3 my-0 block w-full mx-auto text-center'
       }
     },
     landing: {
