@@ -11,6 +11,7 @@ export interface Props {
   modifiers?: object
   opacity?: number
   showRing?: boolean
+  class?: string
 }
 const props = withDefaults(defineProps<Props>(), {
   placeholder: '/placeholder.svg',
@@ -47,7 +48,7 @@ const imageLifecycle = {
   <ClientOnly>
     <div
       v-bind="$attrs"
-      :class="showRing ? 'rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 p-2 align-top content-start' : 'p-0'"
+      :class="showRing ? props.class + ' rounded-xl ring-1 ring-inset ring-gray-900/10 dark:ring-white/10 p-2 align-top content-start' : props.class + ' p-0'"
     >
       <div class="overflow-hidden rounded-lg relative">
         <USkeleton class="absolute inset-0 h-full w-full opacity-10" />

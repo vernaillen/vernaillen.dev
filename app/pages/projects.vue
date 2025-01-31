@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('projects', () => queryContent('/projects').findOne())
+const { data: page } = await useAsyncData('projects', () => queryCollection('pages').path('/projects').first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }

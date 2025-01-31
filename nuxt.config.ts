@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@hypernym/nuxt-gsap',
+    '@nuxtjs/sitemap',
     '@nuxt/content',
     '@nuxt/eslint',
     '@nuxt/image',
@@ -12,8 +13,6 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/test-utils/module',
     '@nuxtjs/plausible',
-    '@nuxthq/studio',
-    '@nuxtjs/sitemap',
     '@vueuse/nuxt',
     'motion-v/nuxt',
     'nuxt-og-image',
@@ -46,10 +45,6 @@ export default defineNuxtConfig({
     preference: 'dark'
   },
 
-  ui: {
-    icons: ['heroicons', 'mdi', 'ic', 'logos', 'tabler', 'twemoji', 'ph']
-  },
-
   runtimeConfig: {
     public: {
       nuxtVersion: nuxtPkg.version
@@ -62,7 +57,6 @@ export default defineNuxtConfig({
   routeRules: {
     '/**': { prerender: true },
     '/releases-prs': { prerender: false },
-    '/api/search.json': { prerender: true },
     '/releases': { redirect: { to: '/releases-prs', statusCode: 301 } },
     '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
     '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
@@ -71,17 +65,8 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4
   },
-  experimental: {
-    buildCache: true
-  },
 
   compatibilityDate: '2025-01-01',
-
-  nitro: {
-    compressPublicAssets: {
-      brotli: true
-    }
-  },
 
   hooks: {
     'components:extend': (components) => {

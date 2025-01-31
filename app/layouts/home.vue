@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { Motion } from 'motion-v'
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
 import { useGsap } from '#gsap'
 
-const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation(), { default: () => [] })
-const { data: files } = useLazyFetch<ParsedContent[]>('/api/search.json', { default: () => [], server: false })
+const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('pages'), { default: () => [] })
 
 provide('navigation', navigation)
 
@@ -64,11 +62,5 @@ onMounted(() => {
     >
       <SvgoHomeLeft class="w-full" />
     </div>
-    <ClientOnly>
-      <LazyUContentSearch
-        :files="files"
-        :navigation="navigation"
-      />
-    </ClientOnly>
   </div>
 </template>
