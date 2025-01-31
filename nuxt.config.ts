@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/test-utils/module',
     '@nuxtjs/plausible',
-    '@nuxthq/studio',
     '@vueuse/nuxt',
     'motion-v/nuxt',
     'nuxt-og-image',
