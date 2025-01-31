@@ -88,39 +88,30 @@ const { data: commits } = await useFetch<CommitResponse[]>('/api/commits')
             name="i-logos-nuxt-icon"
           /> Nuxt {{ config.public.nuxtVersion }}
         </NuxtLink>
-        <br><br>
-        <span
-          v-if="commits?.length"
-          class="text-xs text-gray-500 dark:text-gray-400"
-        >
-          website last updated on <NuxtLink
-            :href="commits[0].html_url"
-            target="_blank"
-          >
-            <NuxtTime
-              :datetime="commits[0].commit.committer.date"
-              month="short"
-              day="numeric"
-              year="numeric"
-              locale="en-GB"
-            /> <UIcon
-              name="i-mdi-github"
-              class="-mb-[2px]"
-            />
-          </NuxtLink>
-        </span>
       </p>
     </template>
 
     <template #right>
-      <UButton
-        to="https://github.com/vernaillen/vernaillen.dev"
-        target="_blank"
-        icon="i-mdi-github"
-        aria-label="GitHub"
-        color="gray"
-        variant="ghost"
-      />
+      <span
+        v-if="commits?.length"
+        class="text-xs text-gray-500 dark:text-gray-400"
+      >
+        website last updated on <NuxtLink
+          :href="commits[0].html_url"
+          target="_blank"
+        >
+          <NuxtTime
+            :datetime="commits[0].commit.committer.date"
+            month="short"
+            day="numeric"
+            year="numeric"
+            locale="en-GB"
+          /> <UIcon
+            name="i-mdi-github"
+            class="-mb-[2px]"
+          />
+        </NuxtLink>
+      </span>
     </template>
   </UFooter>
 </template>
