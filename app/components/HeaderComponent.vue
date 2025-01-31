@@ -23,6 +23,11 @@ const links = [
         class="hidden lg:flex"
       />
     </template>
+    <template #panel>
+      <MotionAsideLinks
+        :links="links"
+      />
+    </template>
     <template #right>
       <UColorModeButton
         size="xs"

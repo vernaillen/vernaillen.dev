@@ -55,7 +55,6 @@ const { ui, attrs } = useUI('header.links', toRef(props, 'ui'), config, toRef(pr
 
 const hoveredPath = useState('hoveredPath', () => '')
 const setHoveredPath = (path: unknown) => {
-  console.log(path)
   hoveredPath.value = path as string
 }
 const route = useRoute()
