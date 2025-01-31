@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
 import { twMerge } from 'tailwind-merge'
-import { getULinkProps } from '#ui/utils'
 import type { DeepPartial } from '#ui/types'
 import type { AsideLink } from '#ui-pro/types'
 
+const router = useRouter()
+const route = useRoute()
 const appConfig = useAppConfig()
 
 const config = computed(() => ({
@@ -50,7 +51,11 @@ const hoveredPath = useState('hoveredPath', () => '')
 const setHoveredPath = (path: unknown) => {
   hoveredPath.value = path as string
 }
-const route = useRoute()
+function openLink(link: AsideLink) {
+  setTimeout(() => {
+    router.push(link.to as string)
+  }, 100)
+}
 onMounted(() => {
   hoveredPath.value = route.path
 })
@@ -66,12 +71,11 @@ onMounted(() => {
       v-for="(link, index) in links"
       :key="index"
       v-slot="{ isActive }"
-      v-bind="getULinkProps(link)"
       :class="ui.base"
       class="relative"
       :active-class="ui.active"
       :inactive-class="ui.inactive"
-      @click="link.click"
+      @click="openLink(link)"
       @mouseover="setHoveredPath(link.to)"
       @mouseleave="setHoveredPath(route.path)"
     >
