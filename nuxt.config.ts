@@ -55,8 +55,6 @@ export default defineNuxtConfig({
   build: { transpile: ['shiki'] },
 
   routeRules: {
-    '/**': { prerender: true },
-    '/releases-prs': { prerender: false },
     '/releases': { redirect: { to: '/releases-prs', statusCode: 301 } },
     '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
     '/plio/api/event': { proxy: 'https://plausible.io/api/event' }

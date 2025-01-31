@@ -18,16 +18,46 @@ export default defineAppConfig({
       to: '/projects'
     },
     {
-      label: 'Releases & PR\'s',
-      to: '/releases-prs'
-    },
-    {
       label: 'Blog',
       to: '/blog'
     },
     {
       label: 'About',
       to: '/about'
+    }
+  ],
+  projects: [
+    {
+      label: 'WPNuxt',
+      to: 'https://wpnuxt.com',
+      target: '_blank'
+    },
+    {
+      label: 'Nuxt Audiomotion Analyzer',
+      to: 'https://nuxt-audiomotion-analyzer.vercel.app/',
+      target: '_blank'
+    },
+    {
+      label: 'Radio App',
+      to: 'https://radio.vernaillen.dev/',
+      target: '_blank'
+    },
+    {
+      label: 'Test',
+      to: 'https://radio.vernaillen.dev/',
+      target: '_blank'
+    }
+  ],
+  otherWebsites: [
+    {
+      label: 'Harmonics.be',
+      to: 'https://harmonics.be',
+      target: '_blank'
+    },
+    {
+      label: 'My Links App',
+      to: 'https://links.vernaillen.dev',
+      target: '_blank'
     }
   ],
   ui: {

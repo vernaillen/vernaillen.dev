@@ -9,38 +9,11 @@ const links = [{
 },
 {
   label: 'Projects',
-  children: [
-    {
-      label: 'WPNuxt',
-      to: 'https://wpnuxt.com',
-      target: '_blank'
-    },
-    {
-      label: 'Nuxt Audiomotion Analyzer',
-      to: 'https://nuxt-audiomotion-analyzer.vercel.app/',
-      target: '_blank'
-    },
-    {
-      label: 'Radio App',
-      to: 'https://radio.vernaillen.dev/',
-      target: '_blank'
-    }
-  ]
+  children: useAppConfig().projects
 },
 {
   label: 'Other Websites',
-  children: [
-    {
-      label: 'Harmonics.be',
-      to: 'https://harmonics.be',
-      target: '_blank'
-    },
-    {
-      label: 'My Links App',
-      to: 'https://links.vernaillen.dev',
-      target: '_blank'
-    }
-  ]
+  children: useAppConfig().otherWebsites
 }]
 const { data: commits } = await useFetch<CommitResponse[]>('/api/commits')
 </script>
