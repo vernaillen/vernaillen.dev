@@ -18,10 +18,7 @@ const links = [
     </template>
 
     <template #center>
-      <MotionHeaderLinks
-        :links="links"
-        class="hidden lg:flex"
-      />
+      <MotionHeaderLinks :links="links" />
     </template>
     <template #panel>
       <MotionAsideLinks

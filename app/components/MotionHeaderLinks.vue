@@ -57,13 +57,13 @@ onMounted(() => {
 <template>
   <ul
     v-if="links?.length"
-    :class="ui.wrapper"
+    class="items-center gap-x-0 hidden lg:flex"
     v-bind="attrs"
   >
     <li
       v-for="(link, index) of links"
       :key="index"
-      class="relative"
+      class="relative w-full"
     >
       <UPopover
         v-if="link.children?.length"
@@ -107,7 +107,7 @@ onMounted(() => {
       <ULink
         v-else
         v-bind="getULinkProps(link)"
-        :class="ui.base"
+        class="text-sm/6 font-semibold flex items-center justify-center h-16 px-5"
         :active-class="ui.active"
         :inactive-class="ui.inactive"
         @click="link.click"
@@ -129,7 +129,9 @@ onMounted(() => {
         <Motion
           v-if="link.to === hoveredPath"
           as="div"
-          class="absolute top-0 left-0 h-[3px] bg-vernaillen-500/90 -z-10"
+          class="absolute w-full h-full
+          bg-primary-500 bg-opacity-10 dark:bg-opacity-5
+          border-t-[3px] border-vernaillen-500/90 -z-10"
           layout-id="navbar"
           aria-hidden="true"
           :style="{
@@ -137,10 +139,8 @@ onMounted(() => {
           }"
           :transition="{
             type: 'spring',
-            bounce: 0.5,
-            stiffness: 100,
-            damping: 9,
-            duration: 0.4
+            bounce: 0.2,
+            stiffness: 50
           }"
         />
       </ULink>

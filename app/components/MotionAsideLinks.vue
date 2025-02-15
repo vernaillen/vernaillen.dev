@@ -110,10 +110,8 @@ onMounted(() => {
         }"
         :transition="{
           type: 'spring',
-          bounce: 0.5,
-          stiffness: 100,
-          damping: 9,
-          duration: 0.4
+          bounce: 0.2,
+          stiffness: 50
         }"
       />
     </ULink>
