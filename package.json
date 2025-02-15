@@ -20,12 +20,12 @@
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "^1.7.0",
-    "@vueuse/nuxt": "^12.5.0",
-    "motion": "^12.0.6",
-    "motion-v": "^0.8.1",
+    "@vueuse/nuxt": "^12.6.1",
+    "motion": "^12.4.3",
+    "motion-v": "0.10.0-beta.1",
     "nuxt": "3.15.4",
     "nuxt-time": "^1.0.3",
-    "octokit": "^4.1.0",
+    "octokit": "^4.1.2",
     "vue3-lazyload": "^0.3.8"
   },
   "devDependencies": {
@@ -36,20 +36,20 @@
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/ph": "^1.2.2",
-    "@iconify-json/tabler": "^1.2.15",
+    "@iconify-json/tabler": "^1.2.16",
     "@iconify-json/twemoji": "^1.2.2",
-    "@iconify/utils": "^2.2.1",
-    "@nuxt/eslint": "^1.0.0",
+    "@iconify/utils": "^2.3.0",
+    "@nuxt/eslint": "^1.0.1",
     "@nuxt/test-utils": "^3.15.4",
     "@nuxtjs/plausible": "^1.2.0",
     "@nuxtjs/sitemap": "7.2.4",
     "@vue/test-utils": "^2.4.6",
-    "happy-dom": "^16.7.3",
+    "happy-dom": "^17.1.0",
     "nuxt-og-image": "4.1.2",
     "nuxt-svgo": "^4.0.14",
-    "playwright-core": "^1.50.0",
+    "playwright-core": "^1.50.1",
     "unlighthouse": "^0.15.0",
     "vite-plugin-eslint2": "^5.0.3",
-    "vitest": "^3.0.4"
+    "vitest": "^3.0.5"
   }
 }
