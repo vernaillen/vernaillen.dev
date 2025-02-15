@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
 import { getULinkProps } from '#ui/utils'
-import type { DeepPartial } from '#ui/types'
 import type { HeaderLink } from '#ui-pro/types'
 
 const appConfig = useAppConfig()
@@ -40,14 +39,6 @@ const props = defineProps({
   links: {
     type: Array as PropType<HeaderLink[]>,
     default: () => []
-  },
-  class: {
-    type: [String, Object, Array] as PropType<any>,
-    default: undefined
-  },
-  ui: {
-    type: Object as PropType<DeepPartial<typeof config.value>>,
-    default: () => ({})
   }
 })
 

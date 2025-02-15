@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
 import { twMerge } from 'tailwind-merge'
-import type { DeepPartial } from '#ui/types'
 import type { AsideLink } from '#ui-pro/types'
 
 const router = useRouter()
@@ -35,14 +34,6 @@ const props = defineProps({
   links: {
     type: Array as PropType<AsideLink[]>,
     default: () => []
-  },
-  class: {
-    type: [String, Object, Array] as PropType<any>,
-    default: undefined
-  },
-  ui: {
-    type: Object as PropType<DeepPartial<typeof config.value>>,
-    default: () => ({})
   }
 })
 
