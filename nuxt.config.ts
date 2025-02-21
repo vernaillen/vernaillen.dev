@@ -80,10 +80,10 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     },
-    checker: {
+    /* checker: {
       lintOnStart: true,
       fix: true
-    }
+    } */
   },
 
   fonts: {
