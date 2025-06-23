@@ -78,8 +78,8 @@
             y2="131.859"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="$primaryColor" />
+            <stop stop-color="var(--color-primary-500)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary-500)" />
         </linearGradient>
         <linearGradient
             id="paint1_linear_116:1140"
@@ -89,8 +89,8 @@
             y2="145.47"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" />
-            <stop offset="1" :stop-color="$primaryColor" stop-opacity="0" />
+            <stop stop-color="var(--color-primary-500)" />
+            <stop offset="1" stop-color="var(--color-primary-500)" stop-opacity="0" />
         </linearGradient>
         <linearGradient
             id="paint2_linear_116:1140"
@@ -100,8 +100,8 @@
             y2="125.507"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="$primaryColor" />
+            <stop stop-color="var(--color-primary-500)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary-500)" />
         </linearGradient>
         <linearGradient
             id="paint3_linear_116:1140"
@@ -111,8 +111,8 @@
             y2="143.95"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" />
-            <stop offset="1" :stop-color="$primaryColor" stop-opacity="0" />
+            <stop stop-color="var(--color-primary-500)" />
+            <stop offset="1" stop-color="var(--color-primary-500)" stop-opacity="0" />
         </linearGradient>
         <linearGradient
             id="paint4_linear_116:1140"
@@ -122,8 +122,8 @@
             y2="116.426"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="$primaryColor" />
+            <stop stop-color="var(--color-primary-500)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary-500)" />
         </linearGradient>
         <linearGradient
             id="paint5_linear_116:1140"
@@ -133,8 +133,8 @@
             y2="249.947"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" />
-            <stop offset="1" :stop-color="$primaryColor" stop-opacity="0" />
+            <stop stop-color="var(--color-primary-500)" />
+            <stop offset="1" stop-color="var(--color-primary-500)" stop-opacity="0" />
         </linearGradient>
         <linearGradient
             id="paint6_linear_116:1140"
@@ -144,8 +144,8 @@
             y2="148.369"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="$primaryColor" />
+            <stop stop-color="var(--color-primary-500)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary-500)" />
         </linearGradient>
         <linearGradient
             id="paint7_linear_116:1140"
@@ -155,8 +155,8 @@
             y2="168.552"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" />
-            <stop offset="1" :stop-color="$primaryColor" stop-opacity="0" />
+            <stop stop-color="var(--color-primary-500)" />
+            <stop offset="1" stop-color="var(--color-primary-500)" stop-opacity="0" />
         </linearGradient>
         <linearGradient
             id="paint8_linear_116:1140"
@@ -166,8 +166,8 @@
             y2="-29.8829"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="$primaryColor" />
+            <stop stop-color="var(--color-primary-500)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary-500)" />
         </linearGradient>
         <linearGradient
             id="paint9_linear_116:1140"
@@ -177,8 +177,8 @@
             y2="34.2741"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" />
-            <stop offset="1" :stop-color="$primaryColor" stop-opacity="0" />
+            <stop stop-color="var(--color-primary-500)" />
+            <stop offset="1" stop-color="var(--color-primary-500)" stop-opacity="0" />
         </linearGradient>
     </defs>
 </svg>

@@ -25,6 +25,13 @@ export interface CareerStep {
   id: string
 }
 
+export interface Technology {
+  label: string
+  icon: string
+  value: number
+  color: string
+  class: string
+}
 export interface ReleaseInfo {
   id: string
   type: string

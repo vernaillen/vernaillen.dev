@@ -1,123 +1,142 @@
 export default defineAppConfig({
-  longDateFormat: 'DD MMMM YYYY',
-  shortDateFormat: 'DD MMM YYYY',
-  meta: {
-    titleSuffix: ' | Wouter Vernaillen: Freelance Full Stack Developer'
-  },
-  navigation: [
-    {
-      label: 'Expertise',
-      to: '/expertise'
-    },
-    {
-      label: 'Career',
-      to: '/career'
-    },
-    {
-      label: 'Projects',
-      to: '/projects'
-    },
-    {
-      label: 'Blog',
-      to: '/blog'
-    },
-    {
-      label: 'About',
-      to: '/about'
-    }
-  ],
-  projects: [
-    {
-      label: 'WPNuxt',
-      to: 'https://wpnuxt.com',
-      target: '_blank'
-    },
-    {
-      label: 'Nuxt Audiomotion Analyzer',
-      to: 'https://nuxt-audiomotion-analyzer.vercel.app/',
-      target: '_blank'
-    },
-    {
-      label: 'Radio App',
-      to: 'https://radio.vernaillen.dev/',
-      target: '_blank'
-    },
-    {
-      label: 'Test',
-      to: 'https://radio.vernaillen.dev/',
-      target: '_blank'
-    }
-  ],
-  otherWebsites: [
-    {
-      label: 'Harmonics.be',
-      to: 'https://harmonics.be',
-      target: '_blank'
-    },
-    {
-      label: 'My Links App',
-      to: 'https://links.vernaillen.dev',
-      target: '_blank'
-    }
-  ],
   ui: {
-    primary: 'vernaillen',
-    gray: 'neutral',
-    variables: {
-      light: {
-        background: '255 255 255',
-        foreground: 'var(--color-gray-700)'
-      },
-      dark: {
-        background: '12 12 13',
-        foreground: 'var(--color-gray-200)'
-      }
+    colors: {
+      primary: 'vernaillen',
+      neutral: 'zinc'
     },
     button: {
-      variant: {
-        outline: 'ring-{color}-500/70',
-        subtle: 'text-{color}-500 dark:text-{color}-400 bg-{color}-50 hover:bg-{color}-100 disabled:bg-transparent dark:bg-{color}-950 dark:hover:bg-{color}-900 dark:disabled:bg-transparent focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-{color}-500 dark:focus-visible:ring-{color}-400'
+      slots: {
+        base: 'group gap-1',
+        trailingIcon: 'transition-all scale-70 opacity-80 group-hover:scale-80 group-hover:opacity-100 group-hover:translate-x-1'
+      },
+      variants: {
+        size: {
+          xl: {
+            base: 'gap-1'
+          }
+        }
       }
     },
-    main: {
-      wrapper: 'slide-enter-content'
-    },
+    navigationMenu: {
+      slots: {
+        root: '!p-0 top-0',
+        link: 'border-transparent border-b-4 gap-0 !p-0 text-[16px] before:!bg-transparent'
+      },
+      variants: {
+        orientation: {
+          horizontal: {
+            root: 'items-start h-full',
+            item: 'py-0'
+          }
+        }
+      }
+    }
+  },
+  uiPro: {
     header: {
-      logo: 'absolute top-0',
-      links: {
-        base: 'h-16 px-1'
+      slots: {
+        container: 'items-start',
+        left: 'items-start',
+        center: 'my-auto items-start',
+        right: 'my-auto',
+        header: 'items-start'
       }
     },
-    aside: {
-      links: {
-        wrapper: 'space-y-0 pt-5 sm:px-32 md:px-48',
-        base: 'px-5 py-3 my-0 block w-full mx-auto text-center'
+    footer: {
+      slots: {
+        container: 'mb-14',
+        left: 'text-center lg:text-left',
+        center: 'my-7 lg:my-0',
+        right: ''
       }
     },
-    landing: {
-      hero: {
-        wrapper: 'py-20 sm:py-24 md:py-36 relative',
-        headline: 'mt-0 mb-12 font-normal',
-        title: 'text-3xl sm:text-5xl md:text-6xl',
-        description: 'my-16 md:my-24 slide-enter slide-enter-stage5'
+    contentNavigation: {
+      slots: {
+        root: 'mobileMenu',
+        item: '',
+        link: 'justify-center p-0 text-xl gap-0 items-center text-center'
       }
     },
-    page: {
-      header: {
-        wrapper: 'py-[40px] ',
-        title: 'title-enter transition-all transform duration-300'
+    contentToc: {
+      slots: {
+        trigger: 'cursor-pointer'
       }
     },
-    blog: {
-      post: {
-        wrapper: 'lg:items-start gap-y-3',
-        title: 'text-ellipsis overflow-hidden',
-        image: {
-          wrapper: 'aspect-[21/10]'
+    pageHero: {
+      slots: {
+        container: 'py-12 sm:py-24 md:py-24 lg:py-24',
+        headline: 'mb-6 sm:mb-10 mx-auto w-fit px-3 py-1 text-lg bg-primary-50/20 dark:bg-primary-400/10 text-primary-500 dark:text-primary-400 rounded-lg',
+        title: 'mb-12',
+        description: 'text-gray-400 dark:text-gray-300 text-lg font-semibold',
+        links: 'mt-24'
+      }
+    },
+    pageHeader: {
+      slots: {
+        root: 'border-b-0 pb-3',
+        headline: 'font-normal text-gray-500 dark:text-gray-400',
+        title: 'text-3xl sm:text-4xl text-primary-500 text-pretty font-bold mt-5',
+        description: 'text-gray-500 dark:text-gray-400 text-lg font-normal mb-3',
+        links: 'flex flex-nowrap flex-row lg:flex-col lg:items-end gap-1.5'
+      }
+    },
+    pageGrid: {
+      base: 'lg:grid-cols-2'
+    },
+    pageSection: {
+      slots: {
+        container: 'lg:items-start',
+        description: 'flex gap-4'
+      },
+      variants: {
+        orientation: {
+          horizontal: {
+            container: 'lg:items-start'
+          },
+          vertical: {
+            description: 'flex-col'
+          }
+        },
+        reverse: {
+          false: {
+            wrapper: 'text-left lg:text-right',
+            links: 'lg:justify-end'
+          },
+          true: {
+            wrapper: 'lg:order-last text-left'
+          }
+        }
+      }
+    },
+    pageCard: {
+      slots: {
+        wrapper: 'p-4 sm:p-6'
+      },
+      variants: {
+        orientation: {
+          horizontal: {
+            container: 'lg:items-start'
+          }
+        }
+      }
+    },
+    blogPost: {
+      slots: {
+        header: 'aspect-[2.5]',
+        image: 'object-center',
+        footer: 'flex justify-end -mt-3 pr-4 sm:pr-6 pb-4'
+      }
+    },
+    prose: {
+      h1: {
+        slots: {
+          base: 'mb-0'
         }
       },
-      list: {
-        wrapper: 'md:grid md:grid-cols-2'
+      h2: {
+        slots: {
+          base: 'scroll-mt-70 lg:scroll-mt-28'
+        }
       }
     }
   },
@@ -125,27 +144,27 @@ export default defineAppConfig({
     {
       name: 'GitHub',
       url: 'https://github.com/vernaillen/',
-      icon: 'i-mdi-github'
+      icon: 'i-simple-icons-github'
     },
     {
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/woutervernaillen/',
-      icon: 'i-mdi-linkedin'
+      icon: 'i-simple-icons-linkedin'
     },
     {
       name: 'Instagram',
       url: 'https://www.instagram.com/woutervernaillen/',
-      icon: 'i-mdi-instagram'
+      icon: 'i-simple-icons-instagram'
     },
     {
       name: 'Twitter',
       url: 'https://twitter.com/vernaillen',
-      icon: 'i-mdi-twitter'
+      icon: 'i-simple-icons-twitter'
     },
     {
       name: 'Mastodon',
       url: 'https://fosstodon.org/@vernaillen',
-      icon: 'i-mdi-mastodon'
+      icon: 'i-simple-icons-mastodon'
     }
   ]
 })

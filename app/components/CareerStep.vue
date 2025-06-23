@@ -1,28 +1,24 @@
 <script setup lang="ts">
-import { useInView, Motion } from 'motion-v'
 import type { CareerStep } from '~~/types'
 
 defineProps<{
   careerStep: CareerStep
   index: number
 }>()
+const cStep = ref<HTMLDivElement | null>(null)
 
-const scope = ref<HTMLElement | null>(null)
-const isInView = useInView(scope as Ref<Element | Element>)
+onMounted(() => {
+  if (cStep.value) {
+    revealInView(cStep.value)
+  }
+})
 </script>
 
 <template>
-  <Motion
-    as="div"
-    :initial="{ opacity: 0, x: 0, y: 0 }"
-    :animate="{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 2, y: isInView ? 0 : 30 }"
-    :transition="{ duration: 0.5 }"
-  >
+  <div ref="cStep">
     <div
-      :id="careerStep.id"
-      ref="scope"
-      class="flex flex-start items-center prose pt-28 -mt-28 slide-enter"
-      :style="'--enter-stage:' + index + ';--enter-step:10ms;'"
+      :id="`careerStep-${careerStep.id}`"
+      class="flex flex-start items-center prose pt-28 -mt-28"
     >
       <div
         class="company-img bg-primary-500 drop-shadow-md hover:drop-shadow-lg shadow-light-400 flex items-center justify-center rounded-full overflow-hidden"
@@ -41,15 +37,12 @@ const isInView = useInView(scope as Ref<Element | Element>)
         {{ careerStep.text }}
       </h2>
     </div>
-    <div
-      class="border-l-2 border-primary slide-enter"
-      :style="'--enter-stage:' + (index + 2) + ';--enter-step:10ms;'"
-    >
+    <div class="ml-4 border-l-2 border-primary-500 slide-enter">
       <div
         class="ml-6 mb-6 pt-2 pb-2 font-medium text-base text-body-color"
       >
         <div
-          class="ml-1 mb-2 text-primary text-sm slide-enter"
+          class="ml-1 mb-2 text-primary-500 text-sm slide-enter"
           :style="'--enter-stage:' + (index + 2) + ';--enter-step:10ms;'"
         >
           {{ careerStep.date }}
@@ -116,7 +109,7 @@ const isInView = useInView(scope as Ref<Element | Element>)
         </div>
       </div>
     </div>
-  </Motion>
+  </div>
 </template>
 
 <style scoped>
@@ -125,7 +118,7 @@ const isInView = useInView(scope as Ref<Element | Element>)
   height: 34px;
   width: 34px;
   min-width: 34px;
-  margin-left: -16px;
+  margin-left: 0;
   margin-top: -7px;
   margin-right: 12px;
 }
