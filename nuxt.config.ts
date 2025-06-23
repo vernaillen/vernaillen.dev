@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/ui-pro',
     '@nuxt/content',
     '@nuxt/image',
+    '@nuxt/test-utils/module',
     'nuxt-svgo',
     'v-gsap-nuxt'
   ],
@@ -30,7 +31,7 @@ export default defineNuxtConfig({
 
   site: {
     name: 'Wouter Vernaillen',
-    url: 'https://vernaillen.vercel.app',
+    url: 'https://vernaillen.dev',
     description: 'Freelance Full Stack Developer',
     defaultLocale: 'en'
   },
