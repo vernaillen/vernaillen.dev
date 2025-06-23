@@ -22,7 +22,7 @@
         cx="227.5"
         cy="81.5"
         r="68.5"
-        :fill="$primaryColor"
+        fill="var(--color-primary-500)"
     />
     <mask
         id="mask0_116:1137"
@@ -38,7 +38,7 @@
         cx="227.5"
         cy="81.5"
         r="68.5"
-        :fill="$primaryColor"
+        fill="var(--color-primary-500)"
         />
     </mask>
     <g mask="url(#mask0_116:1137)">
@@ -94,8 +94,8 @@
             y2="27.0837"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="$primaryColor" />
+            <stop stop-color="var(--color-primary-500)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary-500)" />
         </linearGradient>
         <linearGradient
             id="paint1_linear_116:1137"
@@ -105,8 +105,8 @@
             y2="-2.91631"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" stop-opacity="0" />
-            <stop offset="1" :stop-color="$primaryColor" />
+            <stop stop-color="var(--color-primary-500)" stop-opacity="0" />
+            <stop offset="1" stop-color="var(--color-primary-500)" />
         </linearGradient>
         <radialGradient
             id="paint2_radial_116:1137"

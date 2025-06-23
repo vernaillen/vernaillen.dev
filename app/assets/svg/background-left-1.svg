@@ -19,10 +19,10 @@
             y2="-97.1485"
             gradientUnits="userSpaceOnUse"
             >
-            <stop :stop-color="$primaryColor" />
+            <stop stop-color="var(--color-primary-500)" />
             <stop
                 offset="1"
-                :stop-color="$primaryColor"
+                stop-color="var(--color-primary-500)"
                 stop-opacity="0"
             />
         </linearGradient>
