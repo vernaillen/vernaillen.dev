@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/ui-pro',
     '@nuxt/content',
     '@nuxt/image',
+    '@nuxt/test-utils/module',
     'nuxt-svgo',
     'v-gsap-nuxt'
   ],

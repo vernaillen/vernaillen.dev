@@ -11,6 +11,8 @@
     "postinstall": "nuxi prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "typecheck": "nuxi typecheck"
   },
   "dependencies": {
@@ -37,11 +39,16 @@
     "@iconify-json/twemoji": "^1.2.2",
     "@nuxt/eslint": "^1.4.1",
     "@nuxt/image": "^1.10.0",
+    "@nuxt/test-utils": "^3.19.1",
     "@nuxtjs/sitemap": "^7.4.1",
+    "@vue/test-utils": "^2.4.6",
     "eslint": "^9.29.0",
+    "happy-dom": "^18.0.1",
     "nuxt-svgo": "^4.2.2",
+    "playwright-core": "^1.53.1",
     "typescript": "5.8.3",
     "vite-plugin-eslint2": "^5.0.3",
+    "vitest": "^3.2.4",
     "vue-tsc": "2.2.10"
   },
   "pnpm": {
