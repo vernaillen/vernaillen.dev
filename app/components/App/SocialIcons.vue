@@ -1,0 +1,18 @@
+<template>
+  <UButton
+    to="https://github.com/vernaillen/vernaillen.dev"
+    target="_blank"
+    icon="i-simple-icons-github"
+    aria-label="GitHub"
+    color="neutral"
+    variant="soft"
+  />
+  <UButton
+    to="https://t.me/harmonicsbe"
+    target="_blank"
+    icon="i-simple-icons-telegram"
+    aria-label="Telegram"
+    color="neutral"
+    variant="soft"
+  />
+</template>
