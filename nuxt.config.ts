@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxt/ui-pro',
     '@nuxt/content',
     '@nuxt/image',
+    '@nuxtjs/plausible',
     '@nuxt/test-utils/module',
     'nuxt-svgo',
     'v-gsap-nuxt'
@@ -72,6 +73,11 @@ export default defineNuxtConfig({
     transpile: ['gsap']
   },
 
+  routeRules: {
+    '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
+    '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
+  },
+
   compatibilityDate: '2025-06-23',
 
   hooks: {
@@ -118,6 +124,10 @@ export default defineNuxtConfig({
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/vernaillennew'
     }
+  },
+
+  plausible: {
+    apiHost: 'https://vernaillen.dev/plio'
   },
 
   seo: {
