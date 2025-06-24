@@ -45,7 +45,7 @@ function toggleMenu() {
   useMobileNav().isMobileNavOpen.value = !useMobileNav().isMobileNavOpen.value
   setTimeout(() => {
     updateHighlight()
-  }, 10)
+  }, 100)
 }
 
 function isActive(item: NavigationMenuItem) {
@@ -73,8 +73,7 @@ function updateHighlight() {
         }
       })
       Flip.from(state, {
-        duration: 0.7,
-        ease: 'back.inOut(2)'
+        duration: 0.5
       })
     }
   }
@@ -115,6 +114,7 @@ watch(route, () => {
 
 <template>
   <UHeader
+    mode="drawer"
     :open="useMobileNav().isMobileNavOpen.value"
     :ui="{
       root: headerClass + ' myHeader transition-all duration-500',
@@ -135,7 +135,7 @@ watch(route, () => {
     </template>
 
     <template #body>
-      <ul class="isolate -mt-1.5 max-w-[400px] mx-auto">
+      <ul class="isolate -mt-1.5 max-w-[400px] py-10 mx-auto">
         <li
           v-for="(link, index) in navLinks"
           :key="index"

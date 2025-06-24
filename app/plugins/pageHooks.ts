@@ -10,7 +10,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     setTimeout(() => {
       isMobileNavOpen.value = false
       isMobileNavClosing.value = false
-    }, 200)
+    }, 150)
     isPageLoading.value = false
   })
 })
