@@ -29,6 +29,7 @@ const otherPosts = computed(() => posts.value?.slice(1))
       <BlogPost
         :post="post"
         :index="index"
+        orientation="vertical"
       />
     </div>
   </UBlogPosts>
