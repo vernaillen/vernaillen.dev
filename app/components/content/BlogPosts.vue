@@ -11,7 +11,7 @@ const otherPosts = computed(() => posts.value?.slice(1))
 </script>
 
 <template>
-  <UBlogPosts>
+  <UBlogPosts orientation="horizontal">
     <div
       v-if="latestPost"
       class="lg:col-span-3"

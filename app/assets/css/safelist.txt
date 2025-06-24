@@ -18,3 +18,8 @@ backdrop-blur-[5px]
 backdrop-blur-[6px]
 backdrop-blur-[7px]
 backdrop-blur-[8px]
+
+border-x-0
+border-t-2
+lg:border-x-0
+lg:border-t-2

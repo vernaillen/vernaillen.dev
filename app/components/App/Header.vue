@@ -2,9 +2,14 @@
 import type { ContentNavigationItem } from '@nuxt/content'
 import gsap from 'gsap'
 import { Flip } from 'gsap/Flip'
+import { tv } from '~/utils/tv'
 import { useMenuState, setHoveredItem, clearHoveredItem } from '~/composables/headerMenu'
+import theme from '#build/ui-pro/header'
 
 import type { NavigationMenuItem } from '#ui/types'
+
+const appConfig = useAppConfig() as Header['AppConfig']
+const ui = computed(() => tv({ extend: tv(theme), ...(appConfig.uiPro?.header || {}) })())
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 const route = useRoute()
@@ -19,20 +24,28 @@ const navLinks = computed<NavigationMenuItem[]>(() => [
 
 const highlight = ref<HTMLElement | null>(null)
 const menuState = useMenuState()
-const menuOpen = ref(false)
 
 function clickedLink(to: string) {
-  setTimeout(() => {
-    router.push(to)
-  }, 150)
   if (to === route.path) {
-    setTimeout(() => {
-      reloadNuxtApp({ path: to, ttl: 100 })
-    }, 100)
+    reloadNuxtApp({ path: to, ttl: 100 })
+  } else {
+    router.push(to)
   }
 }
 function openMenu(open: boolean) {
-  menuOpen.value = open
+  if (open) {
+    useMobileNav().isMobileNavOpen.value = true
+    updateHighlight()
+  } else {
+    // do not close menu here, it's too early
+    // let the pageHook close the menu upon page:finish
+  }
+}
+function toggleMenu() {
+  useMobileNav().isMobileNavOpen.value = !useMobileNav().isMobileNavOpen.value
+  setTimeout(() => {
+    updateHighlight()
+  }, 10)
 }
 
 function isActive(item: NavigationMenuItem) {
@@ -102,7 +115,7 @@ watch(route, () => {
 
 <template>
   <UHeader
-    :open="menuOpen"
+    :open="useMobileNav().isMobileNavOpen.value"
     :ui="{
       root: headerClass + ' myHeader transition-all duration-500',
       center: 'mt-0'
@@ -149,6 +162,17 @@ watch(route, () => {
           </div>
         </li>
       </ul>
+    </template>
+    <template #toggle>
+      <UButton
+        color="neutral"
+        variant="ghost"
+        :aria-label="useMobileNav().isMobileNavOpen.value ? 'close' : 'open'"
+        :icon="useMobileNav().isMobileNavOpen.value ? appConfig.ui.icons.close : appConfig.ui.icons.menu"
+        v-bind="useMobileNav().isMobileNavOpen.value"
+        :class="ui.toggle()"
+        @click="toggleMenu"
+      />
     </template>
     <UNavigationMenu :items="navLinks">
       <template #item="{ item }">

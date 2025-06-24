@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/plausible',
     '@nuxt/test-utils/module',
+    '@vueuse/nuxt',
     'nuxt-svgo',
     'v-gsap-nuxt'
   ],
@@ -76,6 +77,10 @@ export default defineNuxtConfig({
   routeRules: {
     '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
     '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
+  },
+
+  future: {
+    compatibilityVersion: 4
   },
 
   compatibilityDate: '2025-06-23',
