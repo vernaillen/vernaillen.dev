@@ -73,7 +73,8 @@ function updateHighlight() {
         }
       })
       Flip.from(state, {
-        duration: 0.5
+        duration: 0.7,
+        ease: 'back.inOut(2)'
       })
     }
   }
