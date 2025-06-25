@@ -5,6 +5,12 @@ import SplitText from 'gsap/SplitText'
 
 const textAnim = useTemplateRef('anim')
 
+const props = withDefaults(defineProps<{
+  delay?: number
+}>(), {
+  delay: 0
+})
+
 onMounted(() => {
   gsap.registerPlugin(SplitText)
 
@@ -19,11 +25,12 @@ onMounted(() => {
         toggleActions: 'play play resume reverse'
       },
       scaleY: 0.8,
-      y: 6,
+      y: 2,
       opacity: 0.3,
-      duration: 0.6,
-      stagger: 0.6 / splitText.chars.length,
-      ease: 'elastic.easeOut'
+      delay: props.delay,
+      duration: 1,
+      stagger: 0.3 / splitText.chars.length,
+      ease: 'elastic.inOut'
     })
   }
 })
@@ -32,7 +39,7 @@ onMounted(() => {
 <template>
   <span
     ref="anim"
-    class="anim inline-block opacity-30 scale-y-80 translate-y-[6px]"
+    class="anim inline-block opacity-30 scale-y-80 translate-y-[2px] px-[4px]"
   >
     <slot />
   </span>

@@ -19,11 +19,9 @@ const handleClick = (url: string) => {
   window.open(url, '_blank')
 }
 const sections = ref<HTMLElement[]>([])
-const outerWrappers = ref<HTMLElement[]>([])
 
 onMounted(() => {
   sections.value = gsap.utils.toArray('.project-card')
-  outerWrappers.value = gsap.utils.toArray('.project__outer')
 
   gsap.utils.toArray('.project-card').forEach((section) => {
     gsap.timeline({
