@@ -6,9 +6,9 @@ import SplitText from 'gsap/SplitText'
 const textAnim = useTemplateRef('anim')
 
 const props = withDefaults(defineProps<{
-  delay?: number
+  delay?: string
 }>(), {
-  delay: 0
+  delay: '0'
 })
 
 onMounted(() => {
@@ -27,9 +27,9 @@ onMounted(() => {
       scaleY: 0.8,
       y: 2,
       opacity: 0.3,
-      delay: props.delay,
+      delay: parseFloat(props.delay),
       duration: 1,
-      stagger: 0.3 / splitText.chars.length,
+      stagger: 0.5 / splitText.chars.length,
       ease: 'elastic.inOut'
     })
   }
