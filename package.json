@@ -25,7 +25,7 @@
     "better-sqlite3": "^12.0.0",
     "nuxt": "4.0.0-alpha.2",
     "tailwindcss": "^4.1.10",
-    "v-gsap-nuxt": "1.4.2",
+    "v-gsap-nuxt": "1.4.4",
     "vue3-lazyload": "^0.3.8"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "@nuxt/eslint": "^1.4.1",
     "@nuxt/image": "^1.10.0",
     "@nuxt/test-utils": "^3.19.1",
-    "@nuxtjs/sitemap": "^7.4.1",
+    "@nuxtjs/sitemap": "^7.4.2",
     "@vitest/coverage-v8": "3.2.4",
     "@vue/test-utils": "^2.4.6",
     "@vueuse/nuxt": "^13.4.0",

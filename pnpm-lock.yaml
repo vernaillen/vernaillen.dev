@@ -36,8 +36,8 @@ importers:
         specifier: ^4.1.10
         version: 4.1.10
       v-gsap-nuxt:
-        specifier: 1.4.2
-        version: 1.4.2(magicast@0.3.5)
+        specifier: 1.4.4
+        version: 1.4.4(magicast@0.3.5)
       vue3-lazyload:
         specifier: ^0.3.8
         version: 0.3.8(vue@3.5.17(typescript@5.8.3))
@@ -79,8 +79,8 @@ importers:
         specifier: ^3.19.1
         version: 3.19.1(@types/node@24.0.3)(@vue/test-utils@2.4.6)(happy-dom@18.0.1)(jiti@2.4.2)(lightningcss@1.30.1)(magicast@0.3.5)(playwright-core@1.53.1)(terser@5.43.1)(typescript@5.8.3)(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.3)(happy-dom@18.0.1)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(yaml@2.8.0)
       '@nuxtjs/sitemap':
-        specifier: ^7.4.1
-        version: 7.4.1(h3@1.15.3)(magicast@0.3.5)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))
+        specifier: ^7.4.2
+        version: 7.4.2(h3@1.15.3)(magicast@0.3.5)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))
       '@vitest/coverage-v8':
         specifier: 3.2.4
         version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.3)(happy-dom@18.0.1)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))
@@ -950,8 +950,8 @@ packages:
   '@nuxtjs/seo@3.0.3':
     resolution: {integrity: sha512-ZOTjo0tTGWSuW9LjMk2E8QwhsfhwWdGbcRlYgylvh6BYdn/6EnbUFf+HDIps1bKZ+f2Y7DFbuHBO8XmaiZmtzg==}
 
-  '@nuxtjs/sitemap@7.4.1':
-    resolution: {integrity: sha512-KtJYb8xbsObzDdbide336YMAAa4SsXhd4h+QmvZH4mkcByZadHseICD/A8WsAsOfg/YlQ/EcsMFEI0NAQWDj4g==}
+  '@nuxtjs/sitemap@7.4.2':
+    resolution: {integrity: sha512-tUQgCBy2Gnw+TB3xaVqzMgO5dtwNCyA38KcX7WbuGbvpRLNGLuw0ZVBRM/DYXZKey9V+hTpyKtMFLfpQ8YzJtA==}
     engines: {node: '>=18.0.0'}
 
   '@one-ini/wasm@0.1.1':
@@ -6040,8 +6040,8 @@ packages:
     resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
     hasBin: true
 
-  v-gsap-nuxt@1.4.2:
-    resolution: {integrity: sha512-koLnd9zcNddBUW0raaGwFOEzK8/zwMDrDB/Mq7TNYaEPoeKuAqH0YqEiAGgs7PkEBFKQnF0QYaCYYMe+mPghPw==}
+  v-gsap-nuxt@1.4.4:
+    resolution: {integrity: sha512-ygzTkdVmiHHytIS9Hw2xXeIuyLbKLKHGakPfYwLj3MA1OfaSCbANPTwEa2/4EkA9DyJA7xYwvO8T3Gf2+hc8kA==}
 
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
@@ -7964,7 +7964,7 @@ snapshots:
     dependencies:
       '@nuxt/kit': 3.17.5(magicast@0.3.5)
       '@nuxtjs/robots': 5.2.11(magicast@0.3.5)(vue@3.5.17(typescript@5.8.3))
-      '@nuxtjs/sitemap': 7.4.1(h3@1.15.3)(magicast@0.3.5)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))
+      '@nuxtjs/sitemap': 7.4.2(h3@1.15.3)(magicast@0.3.5)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))
       nuxt-link-checker: 4.3.1(db0@0.3.2(better-sqlite3@12.1.0))(ioredis@5.6.1)(magicast@0.3.5)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))
       nuxt-og-image: 5.1.7(@unhead/vue@2.0.10(vue@3.5.17(typescript@5.8.3)))(magicast@0.3.5)(unstorage@1.16.0(db0@0.3.2(better-sqlite3@12.1.0))(ioredis@5.6.1))(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))
       nuxt-schema-org: 5.0.5(@unhead/vue@2.0.10(vue@3.5.17(typescript@5.8.3)))(magicast@0.3.5)(vue@3.5.17(typescript@5.8.3))
@@ -8001,7 +8001,7 @@ snapshots:
       - vite
       - vue
 
-  '@nuxtjs/sitemap@7.4.1(h3@1.15.3)(magicast@0.3.5)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))':
+  '@nuxtjs/sitemap@7.4.2(h3@1.15.3)(magicast@0.3.5)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))(vue@3.5.17(typescript@5.8.3))':
     dependencies:
       '@nuxt/devtools-kit': 2.5.0(magicast@0.3.5)(vite@6.3.5(@types/node@24.0.3)(jiti@2.4.2)(lightningcss@1.30.1)(terser@5.43.1)(yaml@2.8.0))
       '@nuxt/kit': 3.17.5(magicast@0.3.5)
@@ -13779,7 +13779,7 @@ snapshots:
 
   uuid@11.1.0: {}
 
-  v-gsap-nuxt@1.4.2(magicast@0.3.5):
+  v-gsap-nuxt@1.4.4(magicast@0.3.5):
     dependencies:
       '@nuxt/kit': 3.17.5(magicast@0.3.5)
       defu: 6.1.4
