@@ -64,7 +64,7 @@ onMounted(() => {
         separator: 'opacity-0 h-0'
       }"
       :default-value="0"
-      class="sm:translate-x-[calc(100%-1rem)] w-1/2 gap-1"
+      class="sm:translate-x-[calc(100%-1rem)] w-full sm:w-1/2 gap-1"
       :items="steps"
     >
       <template #description="{ item }">
