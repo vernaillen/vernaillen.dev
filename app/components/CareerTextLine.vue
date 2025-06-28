@@ -12,14 +12,10 @@ const props = defineProps<{
 const line = ref<HTMLElement>()
 
 onMounted(() => {
-  gsap.set(line.value, {
-    opacity: 0.5,
-    x: props.place === 'left' ? -30 : 30
-  })
   gsap.to(line.value, {
     scrollTrigger: {
       trigger: line.value,
-      start: 'top 80%',
+      start: 'top 95%',
       end: 'top 30%',
       toggleActions: 'play play resume reverse'
     },
@@ -35,12 +31,12 @@ onMounted(() => {
 <template>
   <div
     ref="line"
-    class="flex flex-row p-1 align-top items-start"
-    :class="{ 'justify-end items-end': place === 'left' }"
+    class="flex flex-row p-1 align-top items-start translate-x-5"
+    :class="{ 'sm:justify-end sm:items-end sm:-translate-x-5': place === 'left' }"
   >
     <div
       class="flex items-start"
-      :class="{ 'order-last ml-2': place === 'left' }"
+      :class="{ 'sm:order-last sm:ml-2': place === 'left' }"
     >
       <UIcon
         :name="icon"

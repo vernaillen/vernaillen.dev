@@ -60,11 +60,11 @@ onMounted(() => {
       v-model="active"
       :ui="{
         title: 'text-xl text-primary font-bold py-3',
-        item: 'timeline-step opacity-20 gap-1 sm:gap-2 md:gap-3 even:flex-row-reverse even:-translate-x-[calc(100%-2rem)] even:text-right even:even-item',
+        item: 'timeline-step opacity-20 gap-1 sm:gap-2 md:gap-3 sm:even:flex-row-reverse sm:even:-translate-x-[calc(100%-2rem)] sm:even:text-right sm:even:even-item',
         separator: 'opacity-0 h-0'
       }"
       :default-value="0"
-      class="translate-x-[calc(100%-1rem)] w-1/2 gap-1"
+      class="sm:translate-x-[calc(100%-1rem)] w-1/2 gap-1"
       :items="steps"
     >
       <template #description="{ item }">
