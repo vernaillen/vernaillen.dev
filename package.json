@@ -46,6 +46,7 @@
     "@vue/test-utils": "^2.4.6",
     "@vueuse/nuxt": "^13.4.0",
     "eslint": "^9.30.0",
+    "happy-dom": "^18.0.1",
     "nuxt-svgo": "^4.2.2",
     "playwright-core": "^1.53.1",
     "typescript": "5.8.3",
