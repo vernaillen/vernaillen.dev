@@ -16,7 +16,7 @@ onMounted(() => {
         toggleActions: 'play play resume reverse'
       },
       scaleY: (anim as HTMLElement).tagName === 'H1' ? 0.8 : 1,
-      y: (anim as HTMLElement).tagName === 'H1' ? 2 : 0,
+      y: (anim as HTMLElement).tagName === 'H1' ? 3 : 0,
       opacity: 0.4,
       duration: 0.4,
       stagger: 0.4 / splitText.chars.length,

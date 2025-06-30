@@ -85,7 +85,7 @@ function updateHighlight(callback: () => void) {
         if (callback) {
           callback()
         }
-      }, 525)
+      }, 100)
     }
   }
 }

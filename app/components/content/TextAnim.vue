@@ -14,14 +14,14 @@ onMounted(() => {
     gsap.from(splitText.chars, {
       scrollTrigger: {
         trigger: textAnim.value,
-        start: 'top 80%',
+        start: 'top 70%',
         end: 'top 40%',
         toggleActions: 'play play resume reverse'
       },
-      scaleY: 0.8,
-      y: 6,
+      // scaleY: 0.8,
+      // y: 6,
       opacity: 0.3,
-      duration: 0.6,
+      duration: 0.5,
       stagger: 0.6 / splitText.chars.length,
       ease: 'elastic.easeOut'
     })
@@ -32,7 +32,7 @@ onMounted(() => {
 <template>
   <span
     ref="anim"
-    class="anim inline-block opacity-30 scale-y-80 translate-y-[6px]"
+    class="anim inline-block opacity-30"
   >
     <slot />
   </span>
