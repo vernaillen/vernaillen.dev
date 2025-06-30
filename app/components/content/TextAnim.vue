@@ -18,11 +18,12 @@ onMounted(() => {
         end: 'top 40%',
         toggleActions: 'play play resume reverse'
       },
-      // scaleY: 0.8,
-      // y: 6,
+      scaleY: 0.9,
+      y: 3,
+      delay: 0.2,
       opacity: 0.3,
-      duration: 0.5,
-      stagger: 0.6 / splitText.chars.length,
+      duration: 0.6,
+      stagger: 0.7 / splitText.chars.length,
       ease: 'elastic.easeOut'
     })
   }
@@ -32,7 +33,7 @@ onMounted(() => {
 <template>
   <span
     ref="anim"
-    class="anim inline-block opacity-30"
+    class="anim inline-block opacity-30 scale-90 translate-y-[3px]"
   >
     <slot />
   </span>

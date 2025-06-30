@@ -28,8 +28,8 @@ onMounted(() => {
       y: 4,
       opacity: 0.3,
       delay: parseFloat(props.delay),
-      duration: 0.1,
-      stagger: 0.1 / splitText.chars.length,
+      duration: 0.2,
+      stagger: 0.2 / splitText.chars.length,
       ease: 'elastic.easeOut'
     })
   }
