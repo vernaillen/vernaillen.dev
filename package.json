@@ -16,7 +16,7 @@
     "typecheck": "nuxi typecheck"
   },
   "dependencies": {
-    "@nuxt/content": "3.6.1",
+    "@nuxt/content": "3.6.3",
     "@nuxt/ui-pro": "^3.2.0",
     "@nuxtjs/plausible": "^1.2.0",
     "@nuxtjs/seo": "3.1.0",
@@ -53,7 +53,7 @@
     "vite-plugin-eslint2": "^5.0.3",
     "vitest": "^3.2.4",
     "vue": "^3.5.17",
-    "vue-tsc": "2.2.10"
+    "vue-tsc": "2.2.12"
   },
   "resolutions": {
     "@nuxt/kit": "4.0.0-alpha.4"
