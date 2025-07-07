@@ -84,6 +84,11 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-06-23',
+  nitro: {
+    devProxy: {
+      host: 'localhost'
+    }
+  },
 
   hooks: {
     'content:file:afterParse'(ctx) {
@@ -160,7 +165,6 @@ export default defineNuxtConfig({
       multipass: true
     }
   }
-
 })
 
 function processContent(ctx: FileAfterParseHook) {
