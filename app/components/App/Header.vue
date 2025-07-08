@@ -79,7 +79,7 @@ function updateHighlight(callback: () => void) {
       })
       Flip.from(state, {
         duration: 0.7,
-        ease: 'back.inOut(2)'
+        ease: 'power2.inOut(0.5)'
       })
       setTimeout(() => {
         if (callback) {
@@ -127,7 +127,7 @@ watch(route, () => {
   <UHeader
     mode="drawer"
     :menu="{
-      direction: 'top',
+      direction: 'bottom',
       handle: false
     }"
     :open="useMobileNav().isMobileNavOpen.value"
