@@ -6,7 +6,7 @@ import { tv } from '~/utils/tv'
 import { useMenuState, setHoveredItem, clearHoveredItem } from '~/composables/headerMenu'
 import theme from '#build/ui-pro/header'
 
-import type { NavigationMenuItem } from '#ui/types'
+import type { NavigationMenuItem, DrawerProps } from '#ui/types'
 
 const appConfig = useAppConfig() as Header['AppConfig']
 const ui = computed(() => tv({ extend: tv(theme), ...(appConfig.uiPro?.header || {}) })())
@@ -126,6 +126,10 @@ watch(route, () => {
 <template>
   <UHeader
     mode="drawer"
+    :menu="{
+      direction: 'top',
+      handle: false
+    }"
     :open="useMobileNav().isMobileNavOpen.value"
     :ui="{
       root: headerClass + ' myHeader transition-all duration-500',
