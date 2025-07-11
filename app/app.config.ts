@@ -30,6 +30,13 @@ export default defineAppConfig({
           }
         }
       }
+    },
+    accordion: {
+      slots: {
+        item: 'rounded-lg my-3 z-10 opacity-0 scale-95',
+        header: 'rounded-lg px-4 text-gray-700 bg-gray-100/50 shadow-lg hover:bg-primary-300 hover:bg-opacity-40 disabled:bg-gray-50',
+        trigger: 'cursor-pointer items-center flex justify-center'
+      }
     }
   },
   uiPro: {

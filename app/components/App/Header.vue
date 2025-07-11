@@ -6,7 +6,7 @@ import { tv } from '~/utils/tv'
 import { useMenuState, setHoveredItem, clearHoveredItem } from '~/composables/headerMenu'
 import theme from '#build/ui-pro/header'
 
-import type { NavigationMenuItem, DrawerProps } from '#ui/types'
+import type { NavigationMenuItem } from '#ui/types'
 
 const appConfig = useAppConfig() as Header['AppConfig']
 const ui = computed(() => tv({ extend: tv(theme), ...(appConfig.uiPro?.header || {}) })())
