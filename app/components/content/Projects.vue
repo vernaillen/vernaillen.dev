@@ -23,28 +23,25 @@ const sections = ref<HTMLElement[]>([])
 onMounted(() => {
   sections.value = gsap.utils.toArray('.project-card')
 
-  gsap.utils.toArray('.project-card').forEach((section) => {
+  sections.value.forEach((section) => {
     gsap.timeline({
       scrollTrigger: {
         trigger: section as gsap.DOMTarget,
+        toggleActions: 'play play resume reverse',
         // start: 'center center',
-        start: 'top 130px',
+        start: 'top 200px',
         end: () => '+=' + (section as HTMLElement).offsetHeight,
         // end: 'center top',
         scrub: true,
         pin: true,
         anticipatePin: 1
-      },
-      defaults: { ease: 'circle.inOut' }
-    })
-    /* tl.fromTo((section as HTMLElement).querySelector('.project__outer') as gsap.TweenTarget, {
+      }
+    }).to(section, {
+      opacity: 1,
       y: 0,
-      opacity: 1
-    }, {
-      y: -100,
-      duration: 2,
-      opacity: 0.5
-    }) */
+      duration: 0.4,
+      ease: 'power2.out'
+    })
   })
 })
 </script>
@@ -59,6 +56,7 @@ onMounted(() => {
       v-for="(project, index) in projects"
       :key="index"
       class="project-card mb-[500px] lg:mb-0"
+      :class="index === 0 ? 'opacity-100' : 'opacity-20'"
     >
       <UPageCard
         :description="project.description"

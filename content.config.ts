@@ -11,6 +11,7 @@ export default defineContentConfig({
         title: z.string(),
         description: z.string(),
         isblogpost: z.boolean(),
+        disableRevealInview: z.boolean(),
         image: z.string(),
         date: z.date(),
         badge: z.string(),

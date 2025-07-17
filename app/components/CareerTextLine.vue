@@ -21,8 +21,8 @@ onMounted(() => {
     },
     opacity: 1,
     x: 0,
-    duration: 0.5,
-    delay: 0.02 * props.index,
+    duration: 0.3,
+    delay: 0.01 * props.index,
     ease: 'sine.inOut'
   })
 })
@@ -31,8 +31,8 @@ onMounted(() => {
 <template>
   <div
     ref="line"
-    class="flex flex-row p-1 align-top items-start translate-x-5"
-    :class="{ 'sm:justify-end sm:items-end sm:-translate-x-5': place === 'left' }"
+    class="flex flex-row p-1 align-top items-start translate-x-3"
+    :class="{ 'sm:justify-end sm:items-end sm:-translate-x-3': place === 'left' }"
   >
     <div
       class="flex items-start"

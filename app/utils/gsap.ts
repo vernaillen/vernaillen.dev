@@ -8,18 +8,17 @@ export const reveal = (index?: number) => ({
 })
 
 export const revealInView = (el: HTMLElement, index?: number) => {
-  gsap.from(el, {
+  gsap.to(el, {
     scrollTrigger: {
       trigger: el,
       start: 'top 90%',
       end: 'top center',
-      toggleActions: 'play pause resume reset',
-      scrub: true
+      toggleActions: 'play play resume reverse'
     },
-    opacity: 0.5,
-    y: 50,
-    duration: 0.5,
+    opacity: 1,
+    y: 0,
+    duration: 0.4,
     ease: 'Power1.easeInOut',
-    delay: index ? index * 0.5 : 0
+    delay: index ? index * 0.05 : 0
   })
 }

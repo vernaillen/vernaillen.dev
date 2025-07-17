@@ -31,7 +31,13 @@ definePageMeta({
   colorMode: 'light'
 })
 const tocOpen = ref(false)
+const pageContent = ref<HTMLElement>()
 
+onMounted(() => {
+  if (pageContent.value && !page.value?.disableRevealInview) {
+    revealInView(pageContent.value)
+  }
+})
 watch(router.currentRoute, () => {
   tocOpen.value = false
 })
@@ -42,11 +48,16 @@ watch(router.currentRoute, () => {
     <PageHeader :page="page" />
     <UPage>
       <UPageBody>
-        <ContentRenderer
+        <div
           v-if="page"
-          :value="page"
+          ref="pageContent"
           class="pageContent"
-        />
+          :class="page.disableRevealInview ? '' : 'opacity-20 translate-y-5'"
+        >
+          <ContentRenderer
+            :value="page"
+          />
+        </div>
         <UContentSurround :surround="surround" />
       </UPageBody>
       <template

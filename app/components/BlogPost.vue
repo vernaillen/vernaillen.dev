@@ -1,5 +1,7 @@
 <script setup lang="ts">
 import type { BlogPost } from '~~/types'
+import { revealInView } from '~/utils/gsap'
+import gsap from 'gsap'
 
 const props = defineProps<{
   post: BlogPost
@@ -7,16 +9,37 @@ const props = defineProps<{
   index: number
 }>()
 
-const blogPost = ref<HTMLDivElement | null>(null)
+const blogPost = ref<HTMLDivElement>()
+const badge = ref<HTMLElement>()
+const date = ref<HTMLElement>()
 onMounted(() => {
   if (blogPost.value) {
     revealInView(blogPost.value, props.index)
+  }
+  if (badge.value) {
+    gsap.to(badge.value, {
+      opacity: 1,
+      scaleY: 1,
+      duration: 0.5,
+      ease: 'power1.inOut'
+    })
+  }
+  if (date.value) {
+    gsap.to(date.value, {
+      opacity: 1,
+      scaleY: 1,
+      duration: 0.5,
+      ease: 'power1.inOut'
+    })
   }
 })
 </script>
 
 <template>
-  <div ref="blogPost">
+  <div
+    ref="blogPost"
+    class="opacity-20 translate-y-5"
+  >
     <UBlogPost
       v-bind="post"
       variant="subtle"
@@ -27,18 +50,28 @@ onMounted(() => {
       }"
     >
       <template #badge>
-        <UBadge
-          v-if="post.badge"
-          variant="subtle"
+        <div
+          ref="badge"
+          class="opacity-0 scale-y-0"
         >
-          {{ post.badge }}
-        </UBadge>
+          <UBadge
+            v-if="post.badge"
+            variant="subtle"
+          >
+            {{ post.badge }}
+          </UBadge>
+        </div>
       </template>
       <template #date>
-        <Date
-          v-if="post.date"
-          :date="post.date"
-        />
+        <div
+          ref="date"
+          class="opacity-0 scale-y-0"
+        >
+          <Date
+            v-if="post.date"
+            :date="post.date"
+          />
+        </div>
       </template>
     </UBlogPost>
   </div>

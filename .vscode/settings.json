@@ -1,7 +1,13 @@
 {
   "eslint.useFlatConfig": true,
-  "circleci.persistedProjectSelection": [
-    "gh/vernaillen/vernaillen.dev"
-  ],
-  "circleci.filters.branchFilter": "allBranches"
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.classAttributes": ["class", "ui"],
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
 }

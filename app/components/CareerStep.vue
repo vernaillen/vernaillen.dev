@@ -5,17 +5,22 @@ defineProps<{
   careerStep: CareerStep
   index: number
 }>()
-const cStep = ref<HTMLDivElement | null>(null)
+const cStep = ref<HTMLDivElement>()
 
 onMounted(() => {
+  console.log(cStep.value)
   if (cStep.value) {
+    console.log(cStep.value)
     revealInView(cStep.value)
   }
 })
 </script>
 
 <template>
-  <div ref="cStep">
+  <div
+    ref="cStep"
+    class="opacity-0 translate-y-50"
+  >
     <div
       :id="`careerStep-${careerStep.id}`"
       class="flex flex-start items-center prose pt-28 -mt-28"
