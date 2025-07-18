@@ -157,7 +157,7 @@ watch(route, () => {
           class="p-0 h-full w-full relative"
           @mouseover="setHoveredItem(link)"
           @mouseleave="clearHoveredItem()"
-          @click="clickedLink(link.to as string)"
+          @click="goToLink(link.to as string)"
         >
           <div
             class="
