@@ -15,15 +15,16 @@ onMounted(() => {
   gsap.to(line.value, {
     scrollTrigger: {
       trigger: line.value,
-      start: 'top 95%',
+      start: 'top 90%',
       end: 'top 30%',
-      toggleActions: 'play play resume reverse'
+      toggleActions: 'play play resume reverse',
+      scrub: true
     },
     opacity: 1,
     x: 0,
     duration: 0.3,
-    delay: 0.01 * props.index,
-    ease: 'sine.inOut'
+    delay: 0.015 * props.index,
+    ease: 'power2.inOut'
   })
 })
 </script>

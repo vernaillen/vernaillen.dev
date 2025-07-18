@@ -52,7 +52,7 @@ watch(router.currentRoute, () => {
           v-if="page"
           ref="pageContent"
           class="pageContent"
-          :class="page.disableRevealInview ? '' : 'opacity-20 translate-y-5'"
+          :class="page.disableRevealInview ? '' : 'opacity-20 translate-y-4'"
         >
           <ContentRenderer
             :value="page"

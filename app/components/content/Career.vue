@@ -42,7 +42,7 @@ onMounted(() => {
         trigger: separator as HTMLElement,
         start: 'top 80%',
         end: 'top 30%',
-        toggleActions: 'play pause resume reset',
+        toggleActions: 'play play resume reset',
         scrub: true
       },
       height: '100%',

@@ -9,7 +9,13 @@ onMounted(() => {
   gsap.registerPlugin(SplitText)
 
   if (textAnim.value) {
-    gsap.set(textAnim.value, { opacity: 1, scaleY: 1, y: 0 })
+    gsap.to(textAnim.value, {
+      opacity: 1,
+      scaleY: 1,
+      y: 0,
+      duration: 0.5,
+      ease: 'power2.inOut'
+    })
     const splitText = new SplitText(textAnim.value, { type: 'chars' })
     gsap.from(splitText.chars, {
       scrollTrigger: {
@@ -20,9 +26,8 @@ onMounted(() => {
       },
       scaleY: 0.9,
       y: 3,
-      delay: 0.2,
       opacity: 0.3,
-      duration: 0.6,
+      duration: 0.5,
       stagger: 0.7 / splitText.chars.length,
       ease: 'elastic.easeOut'
     })
@@ -33,7 +38,7 @@ onMounted(() => {
 <template>
   <span
     ref="anim"
-    class="anim inline-block opacity-30 scale-90 translate-y-[3px]"
+    class="anim inline-block opacity-30 scaleY-90"
   >
     <slot />
   </span>
