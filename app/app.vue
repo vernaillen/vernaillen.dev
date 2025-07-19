@@ -34,7 +34,6 @@ console.warn = function (...args) {
   }
   origWarn.apply(console, args)
 }
-const pageHooks = usePageHooks()
 </script>
 
 <template>
@@ -43,7 +42,7 @@ const pageHooks = usePageHooks()
     <NuxtLoadingIndicator color="repeating-linear-gradient(to right,rgb(156 142 27/40%) 0%,rgb(156 142 27/60%) 80%,rgb(156 142 27/40%) 100%)" />
     <AppHeader />
     <NuxtLayout>
-      <NuxtPage v-show="!pageHooks.isPageLoading" />
+      <NuxtPage />
     </NuxtLayout>
     <AppFooter />
     <AppScrollHelpers />

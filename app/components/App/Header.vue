@@ -42,6 +42,7 @@ function openMenu(open: boolean) {
     // let the pageHook close the menu upon page:finish
 
     // update: test closing it anyway
+    usePageHooks().hidePageContent.value = true
     useMobileNav().isMobileNavOpen.value = false
   }
 }
