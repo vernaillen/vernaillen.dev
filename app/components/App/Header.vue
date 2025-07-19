@@ -40,6 +40,9 @@ function openMenu(open: boolean) {
   } else {
     // do not close menu here, it's too early
     // let the pageHook close the menu upon page:finish
+
+    // update: test closing it anyway
+    useMobileNav().isMobileNavOpen.value = false
   }
 }
 function toggleMenu() {
