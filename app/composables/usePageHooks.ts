@@ -2,11 +2,11 @@ import { createSharedComposable } from '@vueuse/core'
 
 const _isPageLoading = () => {
   const isPageLoading = ref(false)
-  const hidePageContent = ref(false)
+  const blurPageContent = ref(false)
 
   return {
     isPageLoading,
-    hidePageContent
+    blurPageContent
   }
 }
 export const usePageHooks = createSharedComposable(_isPageLoading)

@@ -29,20 +29,17 @@ function goToLink(to: string) {
   if (to === route.path) {
     reloadNuxtApp({ path: to, ttl: 100 })
   } else {
+    usePageHooks().blurPageContent.value = true
     router.push(to)
   }
 }
 
 function openMenu(open: boolean) {
+  console.log('openMenu', open)
   if (open) {
     useMobileNav().isMobileNavOpen.value = true
     updateHighlight()
   } else {
-    // do not close menu here, it's too early
-    // let the pageHook close the menu upon page:finish
-
-    // update: test closing it anyway
-    usePageHooks().hidePageContent.value = true
     useMobileNav().isMobileNavOpen.value = false
   }
 }

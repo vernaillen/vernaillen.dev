@@ -1,5 +1,5 @@
 const { isMobileNavOpen, isMobileNavClosing } = useMobileNav()
-const { isPageLoading, hidePageContent } = usePageHooks()
+const { isPageLoading, blurPageContent } = usePageHooks()
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook('page:start', () => {
@@ -12,6 +12,6 @@ export default defineNuxtPlugin((nuxtApp) => {
       isMobileNavClosing.value = false
     }, 150)
     isPageLoading.value = false
-    hidePageContent.value = false
+    blurPageContent.value = false
   })
 })
