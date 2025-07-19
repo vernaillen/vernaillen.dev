@@ -4,14 +4,14 @@ import { gsap } from 'gsap'
 const reveal = useTemplateRef('reveal')
 
 const props = defineProps<{
-  x?: number
-  y?: number
+  x?: string
+  y?: string
 }>()
 
 onMounted(() => {
   gsap.set(reveal.value, {
-    x: props.x,
-    y: props.y
+    x: props.x ? `${props.x}px` : '0',
+    y: props.y ? `${props.y}px` : '0'
   })
   if (reveal.value) {
     revealInView(reveal.value)

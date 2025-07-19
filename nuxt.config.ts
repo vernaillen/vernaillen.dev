@@ -132,7 +132,7 @@ export default defineNuxtConfig({
     provider: 'twicpics',
     format: ['webp'],
     twicpics: {
-      baseURL: 'https://vernaillen.twic.pics/vernaillennew'
+      baseURL: 'https://vernaillen.twic.pics/vernaillendev'
     }
   },
 

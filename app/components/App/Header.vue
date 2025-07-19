@@ -25,10 +25,6 @@ const navLinks = computed<NavigationMenuItem[]>(() => [
 const highlight = ref<HTMLElement | null>(null)
 const menuState = useMenuState()
 
-function clickedLink(to: string) {
-  updateHighlight(() => goToLink(to))
-}
-
 function goToLink(to: string) {
   if (to === route.path) {
     reloadNuxtApp({ path: to, ttl: 100 })
@@ -64,7 +60,7 @@ const headerClass = ref('border-transparent')
 
 const logo = ref<HTMLElement>()
 
-function updateHighlight(callback: () => void) {
+function updateHighlight() {
   if (highlight.value) {
     const navItems = gsap.utils.toArray<HTMLElement>('.nav-item')
     const state = Flip.getState('.nav-item, .nav-highlight')
@@ -81,11 +77,6 @@ function updateHighlight(callback: () => void) {
         duration: 0.7,
         ease: 'power2.inOut(0.5)'
       })
-      setTimeout(() => {
-        if (callback) {
-          callback()
-        }
-      }, 100)
     }
   }
 }
