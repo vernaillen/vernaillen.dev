@@ -36,7 +36,12 @@ export default defineContentConfig({
           value: z.number(),
           color: z.string(),
           class: z.string()
-        }))
+        })).optional(),
+        logos: z.array(z.object({
+          label: z.string(),
+          icon: z.string(),
+          url: z.string()
+        })).optional()
       })
     })
   }
