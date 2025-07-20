@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { useMediaQuery } from '@vueuse/core'
+
+const isMobile = useMediaQuery('(max-width: 639px)')
 const route = useRoute()
 const router = useRouter()
 
@@ -35,7 +38,7 @@ const pageContent = ref<HTMLElement>()
 
 onMounted(() => {
   if (pageContent.value && !page.value?.disableRevealInview) {
-    revealInView(pageContent.value)
+    revealInView(pageContent.value, isMobile.value ? 3 : 0)
   }
 })
 watch(router.currentRoute, () => {
@@ -52,7 +55,7 @@ watch(router.currentRoute, () => {
           v-if="page"
           ref="pageContent"
           class="pageContent"
-          :class="page.disableRevealInview ? '' : 'opacity-20 translate-y-4'"
+          :class="page.disableRevealInview ? '' : 'opacity-20 translate-y-5'"
         >
           <ContentRenderer
             :value="page"

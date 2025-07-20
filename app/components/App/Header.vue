@@ -29,13 +29,12 @@ function goToLink(to: string) {
   if (to === route.path) {
     reloadNuxtApp({ path: to, ttl: 100 })
   } else {
-    usePageHooks().blurPageContent.value = true
+    usePageHooks().hidePageContent.value = true
     router.push(to)
   }
 }
 
 function openMenu(open: boolean) {
-  console.log('openMenu', open)
   if (open) {
     useMobileNav().isMobileNavOpen.value = true
     updateHighlight()

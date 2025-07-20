@@ -7,7 +7,7 @@ const pageHooks = usePageHooks()
     <div id="top" />
     <UContainer
       class="transition-all duration-300"
-      :class="pageHooks.blurPageContent.value ? 'opacity-20 blur-xs' : 'opacity-100 blur-none'"
+      :class="pageHooks.hidePageContent.value ? 'opacity-0' : 'opacity-100'"
     >
       <slot />
     </UContainer>

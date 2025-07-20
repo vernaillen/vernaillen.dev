@@ -15,16 +15,15 @@ onMounted(() => {
   gsap.to(line.value, {
     scrollTrigger: {
       trigger: line.value,
-      start: 'top 90%',
+      start: 'top 85%',
       end: 'top 30%',
-      toggleActions: 'play play resume reverse',
-      scrub: true
+      toggleActions: 'play play resume reverse'
     },
     opacity: 1,
     x: 0,
-    duration: 0.3,
+    duration: 0.6,
     delay: 0.015 * props.index,
-    ease: 'power2.inOut'
+    ease: 'sine.inOut'
   })
 })
 </script>
@@ -32,8 +31,8 @@ onMounted(() => {
 <template>
   <div
     ref="line"
-    class="flex flex-row p-1 align-top items-start translate-x-3"
-    :class="{ 'sm:justify-end sm:items-end sm:-translate-x-3': place === 'left' }"
+    class="flex flex-row p-1 align-top items-start translate-x-5"
+    :class="{ 'sm:justify-end sm:items-end sm:-translate-x-5': place === 'left' }"
   >
     <div
       class="flex items-start"

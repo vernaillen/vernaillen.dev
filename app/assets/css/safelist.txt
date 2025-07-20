@@ -23,3 +23,8 @@ border-x-0
 border-t-2
 lg:border-x-0
 lg:border-t-2
+
+translate-x-5
+translate-y-5
+-translate-x-5
+-translate-y-5
