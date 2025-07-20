@@ -57,23 +57,24 @@ watch(router.currentRoute, () => {
     >
       <template #headline>
         <div class="flex justify-center text-3xl sm:text-4xl text-pretty tracking-tight font-bold text-highlighted">
-          <div>
+          <TextAnimHeader :delay="0">
             wouter
-          </div>
-          <div
+          </TextAnimHeader>
+          <TextAnimHeader
+            :delay="0.2"
             class="text-primary-500 font-semibold px-1"
           >
             on the
-          </div>
-          <div>
+          </TextAnimHeader>
+          <TextAnimHeader :delay="0.4">
             net
-          </div>
+          </TextAnimHeader>
         </div>
       </template>
       <Separator class="mt-10 mb-4" />
 
       <template #description>
-        <div class="text-sm mt-5">
+        <Reveal class="opacity-50 translate-y-0 text-sm mt-5">
           <div>
             ecstatic dance dj & trancedance facilitator
           </div>
@@ -85,7 +86,7 @@ watch(router.currentRoute, () => {
           >
             ... forever exploring & learning ...
           </div>
-        </div>
+        </Reveal>
       </template>
     </UPageHeader>
     <UPage>
@@ -140,6 +141,5 @@ watch(router.currentRoute, () => {
         </UContentToc>
       </template>
     </UPage>
-    <AppTextAnimations />
   </div>
 </template>

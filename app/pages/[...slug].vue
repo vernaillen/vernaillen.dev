@@ -86,6 +86,5 @@ watch(router.currentRoute, () => {
         </UContentToc>
       </template>
     </UPage>
-    <AppTextAnimations />
   </div>
 </template>

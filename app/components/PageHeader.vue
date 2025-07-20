@@ -9,9 +9,15 @@ defineProps<{
 <template>
   <UPageHeader
     v-if="page"
-    :title="page?.title"
-    :description="page?.description"
   >
+    <template #title>
+      <TextAnimHeader>{{ page?.title }}</TextAnimHeader>
+    </template>
+    <template #description>
+      <Reveal class="opacity-50 translate-y-0">
+        {{ page?.description }}
+      </Reveal>
+    </template>
     <div class="flex items-center justify-start">
       <Date
         v-if="page.date"

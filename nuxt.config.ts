@@ -3,18 +3,7 @@ import nuxtPkg from 'nuxt/package.json'
 
 export default defineNuxtConfig({
 
-  modules: [
-    '@nuxtjs/seo',
-    '@nuxt/eslint',
-    '@nuxt/ui-pro',
-    '@nuxt/content',
-    '@nuxt/image',
-    '@nuxtjs/plausible',
-    '@nuxt/test-utils/module',
-    '@vueuse/nuxt',
-    'nuxt-svgo',
-    'v-gsap-nuxt'
-  ],
+  modules: ['@nuxtjs/seo', '@nuxt/eslint', '@nuxt/ui-pro', '@nuxt/content', '@nuxt/image', '@nuxtjs/plausible', '@nuxt/test-utils/module', '@vueuse/nuxt', 'nuxt-svgo', 'v-gsap-nuxt', '@nuxt/scripts'],
 
   devtools: {
     enabled: true
