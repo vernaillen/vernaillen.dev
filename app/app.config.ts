@@ -87,9 +87,6 @@ export default defineAppConfig({
         links: 'flex flex-nowrap flex-row lg:flex-col lg:items-end gap-1.5'
       }
     },
-    pageGrid: {
-      base: 'lg:grid-cols-2'
-    },
     pageSection: {
       slots: {
         container: 'lg:items-start',

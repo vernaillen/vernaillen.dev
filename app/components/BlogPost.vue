@@ -6,6 +6,7 @@ import gsap from 'gsap'
 const props = defineProps<{
   post: BlogPost
   orientation: 'vertical' | 'horizontal'
+  isProject?: boolean
   index: number
 }>()
 
@@ -46,6 +47,7 @@ onMounted(() => {
       :to="post.path"
       :orientation="orientation"
       :ui="{
+        root: 'shadow-md',
         header: orientation === 'horizontal' ? 'lg:aspect-[2]' : ''
       }"
     >

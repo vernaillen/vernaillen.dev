@@ -24,7 +24,7 @@ onMounted(() => {
   <UAccordion
     v-model="active"
     :items="links"
-    class="max-w-xl mx-auto"
+    class="max-w-lg mx-auto"
   >
     <template #leading="{ item }">
       <UIcon
