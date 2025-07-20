@@ -8,17 +8,24 @@ const props = defineProps<{
 }>()
 
 const progress = ref(0)
+const meter = ref<HTMLElement>()
 onMounted(() => {
   gsap.to(progress, {
     value: props.technology.value,
     duration: 0.1,
-    delay: props.index * 0.05
+    delay: props.index * 0.08
   })
+  if (meter.value) {
+    revealInView(meter.value, props.index * 0.3)
+  }
 })
 </script>
 
 <template>
-  <div class="mb-3 flex items-center gap-2">
+  <div
+    ref="meter"
+    class="mb-3 flex items-center gap-2 translate-y-5 opacity-20"
+  >
     <span
       v-gsap.from="reveal(index)"
       class="w-32 flex items-center gap-2"

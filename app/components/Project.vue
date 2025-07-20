@@ -31,11 +31,12 @@ onMounted(() => {
         wrapper: 'order-last lg:order-last'
       }"
     >
-      <img
+      <NuxtImg
         :src="project.image.src"
         :alt="project.image.alt"
-        class="w-full rounded-t-lg"
-      >
+        class="w-full rounded-t-lg aspect-video object-cover"
+        format="webp"
+      />
       <template #footer>
         <UButton
           v-if="project.to"

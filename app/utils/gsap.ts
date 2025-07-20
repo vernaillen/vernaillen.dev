@@ -11,7 +11,7 @@ export const revealInView = (el: HTMLElement, index?: number) => {
   gsap.to(el, {
     scrollTrigger: {
       trigger: el,
-      start: 'top 85%',
+      start: 'top 90%',
       end: 'top center',
       toggleActions: 'play play resume reverse'
     },
