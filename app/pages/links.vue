@@ -51,7 +51,6 @@ watch(router.currentRoute, () => {
     <UPageHeader
       v-if="page"
       :ui="{
-        root: 'border-b-0 pb-3 justify-center',
         headline: 'justify-center',
         description: 'text-center'
       }"
@@ -101,7 +100,7 @@ watch(router.currentRoute, () => {
             <div
               v-for="logo, index in page.logos"
               :key="index"
-              class="px-1 pt-2 pb-4"
+              class="pt-2 pb-4"
             >
               <UButton
                 :icon="logo.icon"
@@ -109,9 +108,6 @@ watch(router.currentRoute, () => {
                 :aria-label="logo.label"
                 variant="ghost"
                 target="_blank"
-                :ui="{
-                  base: '!mx-10'
-                }"
               />
             </div>
           </div>
