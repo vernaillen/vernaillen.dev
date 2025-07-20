@@ -29,7 +29,14 @@ export default defineContentConfig({
           name: z.string(),
           url: z.string(),
           icon: z.string()
-        })).optional()
+        })).optional(),
+        expertise: z.array(z.object({
+          label: z.string(),
+          icon: z.string(),
+          value: z.number(),
+          color: z.string(),
+          class: z.string()
+        }))
       })
     })
   }
