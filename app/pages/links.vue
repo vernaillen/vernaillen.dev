@@ -57,24 +57,30 @@ watch(router.currentRoute, () => {
     >
       <template #headline>
         <div class="flex justify-center text-3xl sm:text-4xl text-pretty tracking-tight font-bold text-highlighted">
-          <TextAnimHeader :delay="0">
-            wouter
-          </TextAnimHeader>
-          <TextAnimHeader
-            :delay="0.2"
-            class="text-primary-500 font-semibold px-1"
-          >
-            on the
-          </TextAnimHeader>
-          <TextAnimHeader :delay="0.4">
-            net
-          </TextAnimHeader>
+          <div v-gsap.stagger.from="{ x: -25 }">
+            <TextAnimHeader :delay="0.4">
+              wouter
+            </TextAnimHeader>
+          </div>
+          <div v-gsap.stagger.from="{ scale: 1.4, y: -5 }">
+            <TextAnimHeader
+              :delay="0"
+              class="text-primary-500 font-semibold px-1"
+            >
+              on the
+            </TextAnimHeader>
+          </div>
+          <div v-gsap.stagger.from="{ x: 25 }">
+            <TextAnimHeader :delay="0.8">
+              net
+            </TextAnimHeader>
+          </div>
         </div>
       </template>
       <Separator class="mt-10 mb-4" />
 
       <template #description>
-        <Reveal class="opacity-50 translate-y-0 text-sm mt-5">
+        <Reveal class="opacity-50 translate-y-2 text-sm mt-5">
           <div>
             ecstatic dance dj & trancedance facilitator
           </div>
