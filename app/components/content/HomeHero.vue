@@ -1,14 +1,10 @@
 <script setup lang="ts">
 import { useTemplateRef } from 'vue'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const homeHero = useTemplateRef('homeHero')
 
 onMounted(() => {
-  console.log(homeHero.value)
-  gsap.registerPlugin(ScrollTrigger)
-
   gsap.timeline({
     scrollTrigger: {
       trigger: homeHero.value as gsap.DOMTarget,

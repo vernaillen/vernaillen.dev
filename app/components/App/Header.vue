@@ -82,7 +82,6 @@ function updateHighlight() {
 }
 
 onMounted(() => {
-  gsap.registerPlugin(Flip)
   gsap.to('.logo', {
     scrollTrigger: {
       start: 'top -70',

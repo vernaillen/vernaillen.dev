@@ -12,8 +12,6 @@ const props = withDefaults(defineProps<{
 })
 
 onMounted(() => {
-  gsap.registerPlugin(SplitText)
-
   if (textAnim.value) {
     gsap.set(textAnim.value, { opacity: 1, scaleY: 1, y: 0 })
     const splitText = new SplitText(textAnim.value, { type: 'chars' })

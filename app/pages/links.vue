@@ -57,21 +57,21 @@ watch(router.currentRoute, () => {
     >
       <template #headline>
         <div class="flex justify-center text-3xl sm:text-4xl text-pretty tracking-tight font-bold text-highlighted">
-          <div v-gsap.stagger.from="{ x: -25 }">
-            <TextAnimHeader :delay="0.4">
+          <div v-gsap.stagger.from="{ x: -30, delay: 0.1, ease: 'back.in' }">
+            <TextAnimHeader :delay="0.6">
               wouter
             </TextAnimHeader>
           </div>
-          <div v-gsap.stagger.from="{ scale: 1.4, y: -5 }">
+          <div v-gsap.stagger.from="{ scale: 1.6, y: -5, delay: 0.1, ease: 'back.inOut' }">
             <TextAnimHeader
-              :delay="0"
+              :delay="0.4"
               class="text-primary-500 font-semibold px-1"
             >
               on the
             </TextAnimHeader>
           </div>
-          <div v-gsap.stagger.from="{ x: 25 }">
-            <TextAnimHeader :delay="0.8">
+          <div v-gsap.stagger.from="{ x: 30, delay: 0.1, ease: 'back.in' }">
+            <TextAnimHeader :delay="1">
               net
             </TextAnimHeader>
           </div>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { TimelineItem } from '@nuxt/ui'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 defineProps<{
   steps: TimelineItem[]
@@ -12,8 +11,6 @@ const active = ref(0)
 
 // Note: This is for demonstration purposes only. Don't do this at home.
 onMounted(() => {
-  gsap.registerPlugin(ScrollTrigger)
-
   gsap.utils.toArray('.timeline-step').forEach((step, index) => {
     gsap.to(step as HTMLElement, {
       scrollTrigger: {

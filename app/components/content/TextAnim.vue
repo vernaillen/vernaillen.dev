@@ -6,8 +6,6 @@ import SplitText from 'gsap/SplitText'
 const textAnim = useTemplateRef('anim')
 
 onMounted(() => {
-  gsap.registerPlugin(SplitText)
-
   if (textAnim.value) {
     gsap.to(textAnim.value, {
       opacity: 1,

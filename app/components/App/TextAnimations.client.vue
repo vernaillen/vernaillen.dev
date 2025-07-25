@@ -1,11 +1,8 @@
 <script setup lang="ts">
 import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
 import SplitText from 'gsap/SplitText'
 
 onMounted(() => {
-  gsap.registerPlugin(ScrollTrigger, SplitText)
-
   gsap.utils.toArray('h1, h2').forEach((anim) => {
     const splitText = new SplitText(anim as HTMLElement, { type: 'chars' })
     gsap.from(splitText.chars, {

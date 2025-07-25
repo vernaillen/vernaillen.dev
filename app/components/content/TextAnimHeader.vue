@@ -10,8 +10,6 @@ const props = defineProps<{
 }>()
 
 onMounted(() => {
-  gsap.registerPlugin(SplitText)
-
   if (textAnim.value) {
     const splitText = new SplitText(textAnim.value as HTMLElement, { type: 'chars' })
     gsap.from(splitText.chars, {
