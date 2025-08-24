@@ -4,12 +4,12 @@ import gsap from 'gsap'
 import { Flip } from 'gsap/Flip'
 import { tv } from '~/utils/tv'
 import { useMenuState, setHoveredItem, clearHoveredItem } from '~/composables/headerMenu'
-import theme from '#build/ui-pro/header'
-
+import theme from '#build/ui/header'
+import type { UHeader } from '#ui/components'
 import type { NavigationMenuItem } from '#ui/types'
 
-const appConfig = useAppConfig() as Header['AppConfig']
-const ui = computed(() => tv({ extend: tv(theme), ...(appConfig.uiPro?.header || {}) })())
+const appConfig = useAppConfig() as UHeader['AppConfig']
+const ui = computed(() => tv({ extend: tv(theme), ...(appConfig.ui?.header || {}) })())
 
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 const route = useRoute()
