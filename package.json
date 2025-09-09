@@ -18,14 +18,14 @@
   "dependencies": {
     "@nuxt/content": "3.6.3",
     "@nuxt/scripts": "0.11.13",
-    "@nuxt/ui": "4.0.0-alpha.0",
-    "@nuxtjs/plausible": "^2.0.0",
+    "@nuxt/ui": "4.0.0-alpha.1",
+    "@nuxtjs/plausible": "^2.0.1",
     "@nuxtjs/seo": "3.1.0",
     "@unhead/vue": "^2.0.14",
-    "@vue/compiler-sfc": "^3.5.20",
+    "@vue/compiler-sfc": "^3.5.21",
     "better-sqlite3": "^12.2.0",
-    "nuxt": "4.0.3",
-    "tailwindcss": "^4.1.12",
+    "nuxt": "4.1.0",
+    "tailwindcss": "^4.1.13",
     "v-gsap-nuxt": "1.4.4",
     "vue-sanitize-directive": "^0.2.1",
     "vue3-lazyload": "^0.3.8"
@@ -39,9 +39,9 @@
     "@iconify-json/ic": "^1.2.4",
     "@iconify-json/ix": "^1.2.8",
     "@iconify-json/logos": "^1.2.9",
-    "@iconify-json/lucide": "^1.2.65",
+    "@iconify-json/lucide": "^1.2.66",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/simple-icons": "^1.2.49",
+    "@iconify-json/simple-icons": "^1.2.50",
     "@iconify-json/tabler": "^1.2.22",
     "@iconify-json/twemoji": "^1.2.4",
     "@nuxt/eslint": "^1.9.0",
@@ -51,16 +51,21 @@
     "@types/youtube": "^0.1.2",
     "@vitest/coverage-v8": "3.2.4",
     "@vue/test-utils": "^2.4.6",
-    "@vueuse/nuxt": "^13.8.0",
-    "eslint": "^9.34.0",
+    "@vueuse/nuxt": "^13.9.0",
+    "eslint": "^9.35.0",
     "happy-dom": "^18.0.1",
     "nuxt-svgo": "^4.2.6",
     "playwright-core": "^1.55.0",
     "typescript": "5.9.2",
     "vite-plugin-eslint2": "^5.0.4",
     "vitest": "^3.2.4",
-    "vue": "^3.5.20",
+    "vue": "^3.5.21",
     "vue-tsc": "3.0.6"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@latest"
+    }
   },
   "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }
