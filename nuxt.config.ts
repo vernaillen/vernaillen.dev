@@ -68,16 +68,7 @@ export default defineNuxtConfig({
     '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
   },
 
-  future: {
-    compatibilityVersion: 4
-  },
-
-  compatibilityDate: '2025-06-23',
-  nitro: {
-    devProxy: {
-      host: 'localhost'
-    }
-  },
+  compatibilityDate: '2025-09-20',
 
   hooks: {
     'content:file:afterParse'(ctx) {
