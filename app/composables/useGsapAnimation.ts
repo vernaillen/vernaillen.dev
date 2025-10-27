@@ -18,13 +18,21 @@ export function useGsapAnimation(
   target: Ref<HTMLElement | SVGElement | null> | HTMLElement | SVGElement | null,
   options: GsapAnimationOptions
 ) {
-  const { from, to, whenVisible = false, delay = 0, stagger, start = 'top 85%', end = 'top 30%', scrub } = options
+  const { from, to, whenVisible = false, delay = 0, stagger, start = 'top 85%', end = 'top 60%', scrub } = options
 
   onMounted(() => {
     const element = unref(target)
     if (!element) return
 
     const animVars: gsap.TweenVars = { ...(from || to) }
+
+    // Set subtle defaults
+    if (!animVars.ease) {
+      animVars.ease = 'power2.out'
+    }
+    if (!animVars.duration) {
+      animVars.duration = 0.6
+    }
 
     if (delay) {
       animVars.delay = delay / 1000 // Convert ms to seconds
@@ -39,7 +47,7 @@ export function useGsapAnimation(
         trigger: element,
         start,
         end,
-        toggleActions: 'play play resume reverse',
+        toggleActions: 'play none none reverse',
         ...(scrub !== undefined ? { scrub } : {})
       }
     }

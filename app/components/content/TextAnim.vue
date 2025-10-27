@@ -13,22 +13,22 @@ watch(fontsLoaded, (loaded) => {
       scaleY: 1,
       y: 0,
       duration: 0.5,
-      ease: 'power2.inOut'
+      ease: 'power2.out'
     })
     const splitText = new SplitText(textAnim.value, { type: 'chars' })
     gsap.from(splitText.chars, {
       scrollTrigger: {
         trigger: textAnim.value,
-        start: 'top 70%',
-        end: 'top 40%',
-        toggleActions: 'play play resume reverse'
+        start: 'top 75%',
+        end: 'top 55%',
+        toggleActions: 'play none none reverse'
       },
-      scaleY: 0.9,
-      y: 3,
-      opacity: 0.3,
+      scaleY: 0.92,
+      y: 2,
+      opacity: 0.4,
       duration: 0.5,
-      stagger: 0.7 / splitText.chars.length,
-      ease: 'elastic.easeOut'
+      stagger: 0.5 / splitText.chars.length,
+      ease: 'power2.out'
     })
   }
 })
