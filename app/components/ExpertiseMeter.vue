@@ -9,6 +9,8 @@ const props = defineProps<{
 
 const progress = ref(0)
 const meter = ref<HTMLElement>()
+const spanRef = ref<HTMLElement | null>(null)
+
 onMounted(() => {
   gsap.to(progress, {
     value: props.technology.value,
@@ -19,6 +21,10 @@ onMounted(() => {
     revealInView(meter.value, props.index * 0.3)
   }
 })
+
+useGsapAnimation(spanRef, {
+  from: reveal(props.index)
+})
 </script>
 
 <template>
@@ -27,7 +33,7 @@ onMounted(() => {
     class="mb-3 flex items-center gap-2 translate-y-5 opacity-20"
   >
     <span
-      v-gsap.from="reveal(index)"
+      ref="spanRef"
       class="w-32 flex items-center gap-2"
     >
       <UIcon

@@ -4,13 +4,14 @@ import gsap from 'gsap'
 import SplitText from 'gsap/SplitText'
 
 const textAnim = useTemplateRef('anim')
+const fontsLoaded = useFontsLoaded()
 
 const props = defineProps<{
   delay?: number
 }>()
 
-onMounted(() => {
-  if (textAnim.value) {
+watch(fontsLoaded, (loaded) => {
+  if (loaded && textAnim.value) {
     const splitText = new SplitText(textAnim.value as HTMLElement, { type: 'chars' })
     gsap.from(splitText.chars, {
       scrollTrigger: {

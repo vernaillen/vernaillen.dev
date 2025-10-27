@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import SplitText from 'gsap/SplitText'
 
 const textAnim = useTemplateRef('anim')
+const fontsLoaded = useFontsLoaded()
 
 const props = withDefaults(defineProps<{
   delay?: string
@@ -11,8 +12,8 @@ const props = withDefaults(defineProps<{
   delay: '0'
 })
 
-onMounted(() => {
-  if (textAnim.value) {
+watch(fontsLoaded, (loaded) => {
+  if (loaded && textAnim.value) {
     gsap.set(textAnim.value, { opacity: 1, scaleY: 1, y: 0 })
     const splitText = new SplitText(textAnim.value, { type: 'chars' })
     gsap.from(splitText.chars, {

@@ -1,5 +1,12 @@
 <script setup lang="ts">
+const imgRef = ref<HTMLElement | null>(null)
 
+useGsapAnimation(imgRef, {
+  from: {
+    opacity: 0.2,
+    scaleY: 0.6
+  }
+})
 </script>
 
 <template>
@@ -9,7 +16,7 @@
     }"
   >
     <img
-      v-gsap.from="{ opacity: 0.2, scaleY: 0.6 }"
+      ref="imgRef"
       src="/favicon.svg"
       class="w-10"
       alt="Vernaillen Logo"

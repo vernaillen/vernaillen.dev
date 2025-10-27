@@ -1,14 +1,26 @@
 <script setup lang="ts">
-withDefaults(defineProps<{
+const props = withDefaults(defineProps<{
   x?: string
 }
 >(), {
   x: '0'
 })
+
+const slideInRef = ref<HTMLElement | null>(null)
+
+useGsapAnimation(slideInRef, {
+  from: {
+    opacity: 0,
+    scale: 0.8,
+    x: Number(props.x)
+  },
+  whenVisible: true,
+  delay: 100
+})
 </script>
 
 <template>
-  <div v-gsap.whenVisible.delay-100.from="{ opacity: 0, scale: 0.8, x: Number(x) }">
+  <div ref="slideInRef">
     <slot />
   </div>
 </template>

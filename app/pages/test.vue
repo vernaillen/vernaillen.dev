@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import gsap from 'gsap'
 
+const timelineSection = ref<HTMLElement | null>(null)
+const h1Timeline = ref<HTMLElement | null>(null)
+const h2Timeline1 = ref<HTMLElement | null>(null)
+const h2Timeline2 = ref<HTMLElement | null>(null)
+
 onMounted(() => {
   const boxes = gsap.utils.toArray('.box')
 
@@ -14,6 +19,21 @@ onMounted(() => {
       x: 200
     })
   })
+
+  // Timeline animation
+  if (timelineSection.value && h1Timeline.value && h2Timeline1.value && h2Timeline2.value) {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: timelineSection.value,
+        start: 'top center',
+        toggleActions: 'play none none reverse'
+      }
+    })
+
+    tl.from(h1Timeline.value, { y: -100 })
+      .from(h2Timeline1.value, { y: 50, opacity: 0, stagger: 0.2 })
+      .from(h2Timeline2.value, { y: 50, opacity: 0, stagger: 0.2 }, '+=5')
+  }
 })
 definePageMeta({
   layout: 'default',
@@ -33,23 +53,23 @@ definePageMeta({
           </h1>
         </div>
         <section
-          v-gsap.timeline.whenVisible
+          ref="timelineSection"
           class="my-64"
         >
           <h1
-            v-gsap.add.from="{ y: -100 }"
+            ref="h1Timeline"
             class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted my-10"
           >
             Wouter Vernaillen
           </h1>
           <h2
-            v-gsap.add.from="{ y: 50, opacity: 0, stagger: 0.2 }"
+            ref="h2Timeline1"
             class="text-4xl sm:text-6xl text-pretty tracking-tight font-bold text-highlighted my-10"
           >
             Freelance Full Stack Developer
           </h2>
           <h2
-            v-gsap.delay(5).add.from="{ y: 50, opacity: 0, stagger: 0.2 }"
+            ref="h2Timeline2"
             class="text-3xl sm:text-5xl text-pretty tracking-tight font-bold text-highlighted my-10"
           >
             Java, Spring, Nuxt, DevOps

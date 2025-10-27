@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useMediaQuery } from '@vueuse/core'
+import gsap from 'gsap'
 
 const isMobile = useMediaQuery('(max-width: 639px)')
 const route = useRoute()
@@ -35,10 +36,40 @@ definePageMeta({
 })
 const tocOpen = ref(false)
 const pageContent = ref<HTMLElement>()
+const textDiv1 = ref<HTMLElement | null>(null)
+const textDiv2 = ref<HTMLElement | null>(null)
+const textDiv3 = ref<HTMLElement | null>(null)
 
 onMounted(() => {
   if (pageContent.value && !page.value?.disableRevealInview) {
     revealInView(pageContent.value, isMobile.value ? 3 : 0)
+  }
+
+  // Stagger animations for header text
+  if (textDiv1.value) {
+    gsap.from(textDiv1.value.children, {
+      x: -30,
+      delay: 0.1,
+      ease: 'back.in',
+      stagger: 0.1
+    })
+  }
+  if (textDiv2.value) {
+    gsap.from(textDiv2.value.children, {
+      scale: 1.6,
+      y: -5,
+      delay: 0.1,
+      ease: 'back.inOut',
+      stagger: 0.1
+    })
+  }
+  if (textDiv3.value) {
+    gsap.from(textDiv3.value.children, {
+      x: 30,
+      delay: 0.1,
+      ease: 'back.in',
+      stagger: 0.1
+    })
   }
 })
 watch(router.currentRoute, () => {
@@ -57,12 +88,12 @@ watch(router.currentRoute, () => {
     >
       <template #headline>
         <div class="flex justify-center text-3xl sm:text-4xl text-pretty tracking-tight font-bold text-highlighted">
-          <div v-gsap.stagger.from="{ x: -30, delay: 0.1, ease: 'back.in' }">
+          <div ref="textDiv1">
             <TextAnimHeader :delay="0.6">
               wouter
             </TextAnimHeader>
           </div>
-          <div v-gsap.stagger.from="{ scale: 1.6, y: -5, delay: 0.1, ease: 'back.inOut' }">
+          <div ref="textDiv2">
             <TextAnimHeader
               :delay="0.4"
               class="text-primary-500 font-semibold px-1"
@@ -70,7 +101,7 @@ watch(router.currentRoute, () => {
               on the
             </TextAnimHeader>
           </div>
-          <div v-gsap.stagger.from="{ x: 30, delay: 0.1, ease: 'back.in' }">
+          <div ref="textDiv3">
             <TextAnimHeader :delay="1">
               net
             </TextAnimHeader>

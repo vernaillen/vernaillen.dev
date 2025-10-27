@@ -2,6 +2,9 @@
 import gsap from 'gsap'
 
 const svgRight = ref<HTMLDivElement | null>(null)
+const circle1 = ref<SVGCircleElement | null>(null)
+const circle2 = ref<SVGCircleElement | null>(null)
+const circle3 = ref<SVGCircleElement | null>(null)
 
 onMounted(() => {
   setTimeout(() => {
@@ -32,6 +35,20 @@ onMounted(() => {
     opacity: 0.4
   })
 })
+
+useGsapAnimation(circle1, {
+  to: { r: 18 },
+  delay: 300
+})
+
+useGsapAnimation(circle2, {
+  to: { r: 35 },
+  delay: 300
+})
+
+useGsapAnimation(circle3, {
+  to: { r: 43 }
+})
 </script>
 
 <template>
@@ -54,13 +71,13 @@ onMounted(() => {
           fill="url(#paint0_linear_25:217)"
         />
         <circle
-          v-gsap.to="{ r: 18, delay: 0.3 }"
+          ref="circle1"
           cx="17.9997"
           cy="182"
           fill="url(#paint1_radial_25:217)"
         />
         <circle
-          v-gsap.to="{ r: 35, delay: 0.3 }"
+          ref="circle2"
           cx="76.9997"
           cy="288"
           fill="url(#paint1_radial_25:217)"
@@ -242,7 +259,7 @@ onMounted(() => {
         stroke="url(#paint4_linear_25:218)"
       />
       <circle
-        v-gsap.to="{ r: 43 }"
+        ref="circle3"
         cx="220"
         cy="63"
         fill="url(#paint5_radial_25:218)"

@@ -22,10 +22,10 @@ definePageMeta({
 onMounted(() => {
   const sections = gsap.utils.toArray('.homepageSection > div > div:nth-child(1)')
 
-  sections.forEach((section, _i) => {
-    gsap.from(section, {
+  sections.forEach((section) => {
+    gsap.from(section as HTMLElement, {
       scrollTrigger: {
-        trigger: section,
+        trigger: section as HTMLElement,
         start: 'top bottom',
         end: 'top 20%',
         scrub: true
@@ -38,10 +38,10 @@ onMounted(() => {
 
   const pictureSections = gsap.utils.toArray('.homepageSection > div > .homepageSectionPicture')
 
-  pictureSections.forEach((section, _i) => {
-    gsap.from(section, {
+  pictureSections.forEach((section) => {
+    gsap.from(section as HTMLElement, {
       scrollTrigger: {
-        trigger: section,
+        trigger: section as HTMLElement,
         start: 'top bottom',
         end: 'top 20%',
         scrub: true
