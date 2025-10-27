@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <div
     v-if="page.social"
-    class="w-full pt-3 !text-sm !text-gray-400 dark:!text-gray-400 prose dark:prose-invert"
+    class="w-full pt-3 text-sm text-gray-400 dark:text-gray-400 prose dark:prose-invert"
   >
     <UIcon
       name="i-mdi-comment-multiple-outline"
