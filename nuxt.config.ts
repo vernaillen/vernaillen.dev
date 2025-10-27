@@ -71,7 +71,7 @@ export default defineNuxtConfig({
     }
   },
   build: {
-    transpile: ['gsap']
+    transpile: ['gsap', '@vueuse/core']
   },
 
   routeRules: {
@@ -79,7 +79,7 @@ export default defineNuxtConfig({
     '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
   },
 
-  compatibilityDate: '2025-09-20',
+  compatibilityDate: '2025-10-27',
 
   hooks: {
     'content:file:afterParse'(ctx) {
@@ -122,6 +122,7 @@ export default defineNuxtConfig({
     domains: ['cdn.fosstodon.org', 'ui.nuxt.com'],
     provider: 'twicpics',
     format: ['webp'],
+    // @ts-expect-error - twicpics provider options
     twicpics: {
       baseURL: 'https://vernaillen.twic.pics/vernaillendev'
     }
