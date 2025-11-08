@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     '@nuxt/test-utils/module',
     '@vueuse/nuxt',
     'nuxt-svgo',
-    '@nuxt/scripts'
+    '@nuxt/scripts',
+    'nuxt-studio'
   ],
 
   devtools: {
@@ -43,14 +44,6 @@ export default defineNuxtConfig({
   },
 
   content: {
-    preview: {
-      api: 'https://api.nuxt.studio',
-      gitInfo: {
-        name: 'vernaillen.dev',
-        owner: 'vernaillen',
-        url: 'https://github.com/vernaillen/vernaillen.dev'
-      }
-    },
     build: {
       markdown: {
         rehypePlugins: {
@@ -146,6 +139,20 @@ export default defineNuxtConfig({
 
   sitemap: {
     sources: ['/api/sitemap']
+  },
+
+  studio: {
+    // Studio admin route (default: '/_studio')
+    route: '/_studio',
+
+    // GitHub repository configuration (owner and repo are required)
+    repository: {
+      provider: 'github', // only GitHub is currently supported
+      owner: 'vernaillen', // your GitHub username or organization
+      repo: 'vernaillen.dev', // your repository name
+      branch: 'main', // the branch to commit to (default: main)
+      rootDir: '' // optional: if your Nuxt app is in a subdirectory (default: '')
+    }
   },
 
   svgo: {
