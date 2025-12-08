@@ -67,6 +67,13 @@ export default defineNuxtConfig({
     transpile: ['gsap', '@vueuse/core']
   },
 
+  routeRules: {
+    '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
+    '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
+  },
+
+  compatibilityDate: '2025-10-27',
+
   vite: {
     optimizeDeps: {
       exclude: [
@@ -74,13 +81,6 @@ export default defineNuxtConfig({
       ]
     }
   },
-
-  routeRules: {
-    '/plio/js/script.js': { proxy: 'https://plausible.io/js/script.js' },
-    '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
-  },
-
-  compatibilityDate: '2025-10-27',
 
   hooks: {
     'content:file:afterParse'(ctx) {
