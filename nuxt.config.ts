@@ -34,7 +34,7 @@ export default defineNuxtConfig({
 
   site: {
     name: 'Wouter Vernaillen',
-    url: 'https://vernaillen.vercel.app',
+    url: 'https://vernaillen.dev',
     description: 'Freelance Full Stack Developer',
     defaultLocale: 'en'
   },
@@ -65,6 +65,14 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ['gsap', '@vueuse/core']
+  },
+
+  vite: {
+    optimizeDeps: {
+      exclude: [
+        '@nuxtjs/mdc'
+      ]
+    }
   },
 
   routeRules: {
