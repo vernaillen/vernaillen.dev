@@ -93,6 +93,9 @@ importers:
       '@iconify-json/twemoji':
         specifier: ^1.2.4
         version: 1.2.4
+      '@iconify/utils':
+        specifier: ^3.1.0
+        version: 3.1.0
       '@nuxt/eslint':
         specifier: ^1.12.1
         version: 1.12.1(@typescript-eslint/utils@8.49.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.3))(@vue/compiler-sfc@3.5.25)(eslint@9.39.1(jiti@2.6.1))(magicast@0.5.1)(typescript@5.9.3)(vite-plugin-eslint2@5.0.4(eslint@9.39.1(jiti@2.6.1))(rollup@4.53.3)(vite@7.2.7(@types/node@24.10.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2)))(vite@7.2.7(@types/node@24.10.2)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(yaml@2.8.2))
