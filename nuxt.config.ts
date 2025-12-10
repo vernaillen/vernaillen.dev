@@ -72,15 +72,8 @@ export default defineNuxtConfig({
     '/plio/api/event': { proxy: 'https://plausible.io/api/event' }
   },
 
-  compatibilityDate: '2025-10-27',
+  compatibilityDate: '2025-12-09',
 
-  vite: {
-    optimizeDeps: {
-      exclude: [
-        '@nuxtjs/mdc'
-      ]
-    }
-  },
 
   hooks: {
     'content:file:afterParse'(ctx) {
