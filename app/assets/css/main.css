@@ -94,7 +94,7 @@
   @apply leading-15;
 }
 
-.pageContent > h2:first-child {
+.pageContent > div > h2:first-child {
   @apply mt-0;
 }
 

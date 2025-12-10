@@ -18,7 +18,7 @@ defineProps<{
         {{ page?.description }}
       </Reveal>
     </template>
-    <div class="flex items-center justify-start">
+    <Reveal class="flex items-center justify-start">
       <Date
         v-if="page.date"
         :date="page.date"
@@ -40,11 +40,11 @@ defineProps<{
           height="20"
           fit="cover"
           format="webp"
-          class="rounded-full opacity-60 group-hover:opacity-70 transition-opacity duration-300"
+          class="rounded-full opacity-70 group-hover:opacity-90 transition-opacity duration-300"
         />
         Wouter Vernaillen
       </UButton>
-    </div>
+    </Reveal>
     <Separator class="mt-10 mb-4" />
   </UPageHeader>
 </template>
