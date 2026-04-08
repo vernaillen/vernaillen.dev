@@ -21,7 +21,7 @@
     "@nuxt/content": "^3.9.0",
     "@nuxt/scripts": "^0.13.0",
     "@nuxt/ui": "^4.2.1",
-    "@nuxtjs/plausible": "^2.0.1",
+    "@nuxtjs/plausible": "^3.0.0",
     "@nuxtjs/seo": "^3.2.2",
     "@unhead/vue": "^2.0.19",
     "@vue/compiler-sfc": "^3.5.25",
