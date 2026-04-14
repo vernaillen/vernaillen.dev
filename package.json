@@ -23,7 +23,7 @@
     "@nuxt/ui": "^4.2.1",
     "@nuxtjs/plausible": "^2.0.1",
     "@nuxtjs/seo": "^3.2.2",
-    "@unhead/vue": "^2.0.19",
+    "@unhead/vue": "^3.0.0",
     "@vue/compiler-sfc": "^3.5.25",
     "better-sqlite3": "^12.5.0",
     "gsap": "3.13.0",
