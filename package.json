@@ -63,7 +63,7 @@
     "nuxt-svgo": "^4.2.6",
     "playwright-core": "^1.57.0",
     "release-it": "^19.0.6",
-    "typescript": "5.9.3",
+    "typescript": "6.0.3",
     "vite-plugin-eslint2": "^5.0.4",
     "vitest": "^4.0.15",
     "vue": "^3.5.25",
